@@ -9715,23 +9715,610 @@ textarea.custom-input {
 }
 
 /* ==========================================================================
-   Responsive Adaptations
+   CRO CONVERSION ACCELERATOR STYLES (Frank & Harri Patisserie Kew)
+   ========================================================================== */
+.pdp-cro-section {
+  padding: 4.5rem 0 3.5rem;
+  background: #ffffff;
+  border-top: 1px solid rgba(167, 178, 163, 0.28);
+}
+
+.cro-section-header {
+  margin-bottom: 2.5rem;
+  max-width: 680px;
+}
+
+.cro-section-header.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cro-kicker {
+  display: inline-block;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fh-primary-dark, #3a4736);
+  margin-bottom: 0.45rem;
+}
+
+.cro-title {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  font-weight: 400;
+  color: var(--fh-charcoal, #151814);
+  line-height: 1.2;
+  margin: 0 0 0.65rem;
+  letter-spacing: -0.01em;
+}
+
+.cro-desc {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--fh-charcoal-muted, #575d53);
+  margin: 0;
+}
+
+/* 1. Trust & Risk Reversal Grid */
+.cro-trust-banner {
+  margin-bottom: 4rem;
+}
+
+.cro-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.cro-trust-card {
+  background: var(--fh-bg, #faf8f5);
+  border: 1px solid rgba(167, 178, 163, 0.35);
+  border-radius: 18px;
+  padding: 1.75rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.cro-trust-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(21, 24, 20, 0.06);
+  border-color: var(--fh-primary, #a7b2a3);
+}
+
+.cro-card-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(167, 178, 163, 0.2);
+  color: var(--fh-primary-dark, #3a4736);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cro-card-title {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fh-charcoal, #151814);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.cro-card-text {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: var(--fh-charcoal-muted, #575d53);
+  margin: 0;
+}
+
+/* 2. Sizing & Portion Decision Cards */
+.cro-portion-decision-wrap {
+  margin-bottom: 4rem;
+  padding: 2.5rem;
+  background: var(--fh-bg, #faf8f5);
+  border: 1px solid rgba(167, 178, 163, 0.35);
+  border-radius: 24px;
+}
+
+.cro-portion-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.cro-portion-modal-btn {
+  background: #ffffff;
+  border: 1.5px solid var(--fh-primary-dark, #3a4736);
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--fh-primary-dark, #3a4736);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cro-portion-modal-btn:hover {
+  background: var(--fh-primary-dark, #3a4736);
+  color: #ffffff;
+}
+
+.cro-portion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cro-portion-card {
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid rgba(167, 178, 163, 0.35);
+  border-radius: 18px;
+  padding: 1.85rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  cursor: pointer;
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cro-portion-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--fh-primary-dark, #3a4736);
+  box-shadow: 0 12px 30px rgba(58, 71, 54, 0.12);
+}
+
+.cro-portion-card.featured {
+  border-color: var(--fh-primary-dark, #3a4736);
+  box-shadow: 0 8px 24px rgba(58, 71, 54, 0.1);
+  background: linear-gradient(180deg, #ffffff 0%, #faf8f5 100%);
+}
+
+.cro-portion-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fh-charcoal-muted, #575d53);
+  background: rgba(167, 178, 163, 0.2);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.cro-portion-badge.highlight {
+  background: var(--fh-primary-dark, #3a4736);
+  color: #ffffff;
+}
+
+.cro-portion-name {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--fh-charcoal, #151814);
+  margin: 0;
+}
+
+.cro-portion-serves {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.85rem;
+  color: var(--fh-charcoal, #151814);
+  flex-wrap: wrap;
+}
+
+.cro-portion-serves strong {
+  color: var(--fh-primary-dark, #3a4736);
+  font-size: 1rem;
+}
+
+.cro-portion-dot {
+  color: rgba(167, 178, 163, 0.8);
+}
+
+.cro-portion-desc {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--fh-charcoal-muted, #575d53);
+  margin: 0;
+  flex: 1;
+}
+
+.cro-portion-action {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--fh-primary-dark, #3a4736);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 0.5rem;
+}
+
+/* 3. Social Proof Grid */
+.cro-social-proof-wrap {
+  margin-bottom: 4rem;
+}
+
+.cro-rating-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(167, 178, 163, 0.18);
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.cro-stars {
+  color: #e5a93b;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+}
+
+.cro-rating-text {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--fh-charcoal, #151814);
+}
+
+.cro-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cro-review-card {
+  background: var(--fh-bg, #faf8f5);
+  border: 1px solid rgba(167, 178, 163, 0.35);
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.cro-review-stars {
+  color: #e5a93b;
+  font-size: 0.88rem;
+  letter-spacing: 2px;
+}
+
+.cro-review-quote {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--fh-charcoal, #151814);
+  margin: 0;
+  font-style: italic;
+}
+
+.cro-reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cro-reviewer-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--fh-primary-dark, #3a4736);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.cro-reviewer-name {
+  display: block;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--fh-charcoal, #151814);
+}
+
+.cro-reviewer-loc {
+  display: block;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.7rem;
+  color: var(--fh-charcoal-light, #7c8378);
+}
+
+/* 4. Interactive FAQ Accordion */
+.cro-faq-wrap {
+  margin-bottom: 4rem;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cro-faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cro-faq-item {
+  background: var(--fh-bg, #faf8f5);
+  border: 1px solid rgba(167, 178, 163, 0.35);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.cro-faq-item[open] {
+  border-color: var(--fh-primary-dark, #3a4736);
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(21, 24, 20, 0.04);
+}
+
+.cro-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.15rem 1.4rem;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--fh-charcoal, #151814);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.cro-faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.cro-faq-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--fh-primary-dark, #3a4736);
+  font-weight: 400;
+  transition: transform 0.22s ease;
+}
+
+.cro-faq-item[open] .cro-faq-icon {
+  transform: rotate(45deg);
+}
+
+.cro-faq-answer {
+  padding: 0 1.4rem 1.25rem;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--fh-charcoal-muted, #575d53);
+}
+
+.cro-faq-answer p {
+  margin: 0;
+}
+
+/* 5. Concierge Strip */
+.cro-concierge-strip {
+  background: linear-gradient(135deg, #1f261d 0%, #151814 100%);
+  border-radius: 22px;
+  padding: 2.75rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  color: #ffffff;
+}
+
+.cro-concierge-kicker {
+  display: inline-block;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #d4af37;
+  margin-bottom: 0.45rem;
+}
+
+.cro-concierge-title {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.cro-concierge-desc {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0;
+  max-width: 540px;
+}
+
+.cro-concierge-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.cro-concierge-actions .btn-outline-pill {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.cro-concierge-actions .btn-outline-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+/* ==========================================================================
+   HIGH-CONVERTING MOBILE STICKY BOTTOM ACTION BAR
+   ========================================================================== */
+.pdp-sticky-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 850;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(167, 178, 163, 0.35);
+  box-shadow: 0 -8px 24px rgba(21, 24, 20, 0.08);
+  padding: 10px 16px;
+  transform: translateY(110%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: none;
+}
+
+.pdp-sticky-bottom-bar.visible {
+  transform: translateY(0);
+}
+
+.pdp-sticky-bar-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pdp-sticky-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.pdp-sticky-title {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--fh-charcoal, #151814);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pdp-sticky-price {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--fh-primary-dark, #3a4736);
+}
+
+.pdp-sticky-btn {
+  background: var(--fh-primary-dark, #3a4736);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(58, 71, 54, 0.25);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.pdp-sticky-btn:hover {
+  background: #2a3427;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVENESS ADAPTATIONS (PRODUCT.HTML)
    ========================================================================== */
 @media (max-width: 992px) {
   .pdp-sketch-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2.25rem;
+  }
+
+  .pdp-config-sticky-wrap {
+    position: static !important;
+  }
+
+  .cro-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cro-portion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cro-portion-card.featured {
+    grid-column: span 2;
+  }
+
+  .cro-reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cro-concierge-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.25rem 2rem;
+  }
+
+  .pdp-sticky-bottom-bar {
+    display: block;
   }
 }
 
 @media (max-width: 680px) {
+  .pdp-sketch-main {
+    padding: 1.25rem 0 3.5rem;
+  }
+
   .pdp-sketch-tabs {
-    gap: 6px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 4px 2px 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+
+  .pdp-sketch-tabs::-webkit-scrollbar {
+    display: none;
   }
   
   .pdp-sketch-tab {
-    padding: 8px 4px 6px;
-    min-height: 64px;
+    flex: 0 0 calc(20% - 7px);
+    min-width: 66px;
+    scroll-snap-align: start;
+    padding: 10px 4px 8px;
+    min-height: 68px;
   }
   
   .sketch-tab-title {
@@ -9742,22 +10329,153 @@ textarea.custom-input {
     font-size: 0.6rem;
   }
 
-  .pdp-popup-container {
-    padding: 1.15rem 1.1rem;
-  }
-
-  .pdp-popup-action-bar {
+  .pdp-minimal-action-bar {
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
   }
 
-  .pdp-action-controls {
-    justify-content: space-between;
+  .pdp-qty-stepper {
+    width: 100%;
+    justify-content: center;
+    height: 44px;
   }
 
   .pdp-sketch-add-btn {
-    flex: 1;
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    min-height: 48px;
+  }
+
+  .pdp-reassurance-row {
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 8px;
+    font-size: 0.72rem;
+  }
+
+  /* Bottom sheet modal on mobile */
+  .pdp-selection-popup-modal {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .pdp-popup-dialog {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    max-height: 90vh;
+    transform: translateY(100%);
+  }
+
+  .pdp-selection-popup-modal.open .pdp-popup-dialog {
+    transform: translateY(0);
+  }
+
+  .pdp-modal-step-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .pdp-modal-body-scroll {
+    padding: 1.25rem 1.1rem;
+    max-height: calc(90vh - 145px);
+  }
+
+  .pdp-modal-footer {
+    padding: 0.85rem 1.15rem;
+  }
+
+  /* CRO section mobile adjustments */
+  .pdp-cro-section {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .cro-trust-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cro-portion-decision-wrap {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .cro-portion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cro-portion-card.featured {
+    grid-column: span 1;
+  }
+
+  .cro-concierge-strip {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .cro-concierge-actions {
+    width: 100%;
+  }
+
+  .cro-concierge-actions button,
+  .cro-concierge-actions a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .pdp-hero-badge-wrap {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .pdp-lead-badge-pill,
+  .pdp-dietary-badge {
+    font-size: 0.65rem;
+    padding: 4px 9px;
+  }
+
+  .pdp-plaque-overlay-disc {
+    padding: 6px 14px;
+    max-width: 90%;
+  }
+
+  .pdp-plaque-overlay-text {
+    font-size: clamp(0.95rem, 3.8vw, 1.2rem);
+    white-space: normal;
+    text-align: center;
+  }
+
+  .pdp-sketch-thumbnails {
+    gap: 8px;
+  }
+
+  .pdp-thumb-pill {
+    font-size: 0.58rem;
+    padding: 2px 6px;
+    bottom: 5px;
+  }
+
+  .pdp-editorial-heading {
+    font-size: 1.2rem;
+  }
+
+  .pdp-cake-title {
+    font-size: 1.85rem;
+  }
+
+  .pdp-price-amount {
+    font-size: 1.75rem;
+  }
+
+  .cro-title {
+    font-size: 1.75rem;
   }
 }
 
