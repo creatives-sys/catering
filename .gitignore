@@ -1,0 +1,13 @@
+# Development screenshots and references
+preview_*.png
+reference_video.mp4
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & scratch
+*.log
+.vscode/
+.idea/

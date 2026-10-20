@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Sellers — Frank & Harri Patisserie Kew · Melbourne</title>
+  <meta name="description" content="Explore Melbourne's most coveted patisserie creations: The 5-layer Bruce Chocolate Cake, cultured Lescure butter croissants, and burnt Basque cheesecake.">
+  
+  <!-- Modern Clean Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-collection-page="bestsellers">
+
+  <!-- ========================================================================
+       Top Announcement Ribbon (Exact match to reference: Sage Green #a7b2a3)
+       ======================================================================== -->
+  <div class="top-brand-bar">
+    <div class="top-brand-container">
+      <div class="top-brand-left">Kew Boutique Pâtisserie</div>
+      <div class="top-brand-center">
+        <span class="top-brand-bullet">•</span>
+        <span>Complimentary Melbourne Metro Delivery On Orders Over $150 · 72h Pre-Order For Celebration Cakes</span>
+      </div>
+      <div class="top-brand-right">Tue–Sat 7:30am – 3:30pm</div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Pierre Hermé Paris Inspired Luxury Header (Exact Match to Reference Image)
+       ======================================================================== -->
+  <header class="ph-header" id="siteHeader">
+    <!-- Middle Main Bar: La Maison / Our locations | Brand Wordmark | Utilities -->
+    <div class="ph-main-bar">
+      <div class="ph-main-container">
+
+        <!-- Left: Mobile Hamburger (on mobile) & La Maison / Our locations (on desktop) -->
+        <div class="ph-left-wrap">
+          <button class="ph-mobile-toggle" id="phNavToggle" aria-label="Open mobile menu" title="Open Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <line x1="3" y1="7" x2="21" y2="7"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="17" x2="21" y2="17"></line>
+            </svg>
+          </button>
+          <nav class="ph-left-nav" aria-label="Brand links">
+            <a href="index.html#boutiqueSection" class="ph-nav-link">La Maison</a>
+            <a href="index.html#boutiqueSection" class="ph-nav-link">Our Boutique</a>
+          </nav>
+        </div>
+
+        <!-- Center: Centered Luxury Wordmark with Sage Dot -->
+        <div class="ph-brand-center">
+          <a href="index.html" class="ph-brand-link" aria-label="Frank & Harri Homepage">
+            <span class="ph-brand-title">FRANK & HARRI<span class="ph-dot">.</span></span>
+            <span class="ph-brand-sub">KEW · MELBOURNE</span>
+          </a>
+        </div>
+
+        <!-- Right: Minimal Utility Actions: Currency, Search, Account, Bag -->
+        <div class="ph-right-actions">
+          <!-- Currency / Region Selector -->
+          <div class="ph-currency-wrap">
+            <button class="ph-currency-btn" id="currencyToggleBtn" aria-label="Select currency" aria-expanded="false">
+              <span id="currentCurrencyLabel">AU</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="ph-currency-dropdown" id="currencyDropdown">
+              <button class="ph-curr-opt active" data-curr="AU">AU $ (AUD)</button>
+              <button class="ph-curr-opt" data-curr="US">US $ (USD)</button>
+              <button class="ph-curr-opt" data-curr="EU">€ (EUR)</button>
+              <button class="ph-curr-opt" data-curr="UK">£ (GBP)</button>
+            </div>
+          </div>
+
+          <!-- Search Icon Button -->
+          <button class="ph-icon-btn" id="headerSearchToggleBtn" aria-label="Search creations" title="Search">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="11" cy="11" r="7.5"></circle>
+              <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+            </svg>
+          </button>
+
+          <!-- Account Icon Button -->
+          <button class="ph-icon-btn" id="accountBtn" aria-label="My Account" title="My Account">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          <!-- Shopping Bag Icon (live count badge) -->
+          <button class="ph-icon-btn ph-bag-btn" id="cartOpenBtn" aria-label="View shopping bag" title="Shopping Bag">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M6 7h12l1.2 14H4.8L6 7z"></path>
+              <path d="M9 7V5a3 3 0 0 1 6 0V7"></path>
+            </svg>
+            <span class="cart-counter" id="cartCountBadge">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Row: Centered Category Navigation Bar (Exact match to reference image) -->
+    <nav class="ph-category-bar" aria-label="Creations categories">
+      <div class="ph-category-container">
+        <ul class="ph-category-list" id="headerCategoryList">
+          <li><a href="index.html#catalogSection" class="ph-cat-link" data-cat="all">ALL CREATIONS</a></li>
+          <li><a href="bestsellers.html" class="ph-cat-link active" data-cat="bestsellers">BEST SELLERS</a></li>
+          <li><a href="birthday-cakes.html" class="ph-cat-link" data-cat="birthday-cakes">BIRTHDAY CAKES</a></li>
+          <li><a href="gluten-free.html" class="ph-cat-link" data-cat="gluten-free">GLUTEN-FREE</a></li>
+          <li><a href="tarts-pastries.html" class="ph-cat-link" data-cat="pastries">TARTS & PASTRIES</a></li>
+          <li><a href="catering.html" class="ph-cat-link" data-cat="catering">CATERING</a></li>
+          <li><a href="sales-department.html" class="ph-cat-link" data-cat="sales">SALES DEPARTMENT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Slide-Down Minimalist Search Drawer -->
+    <div class="ph-search-drawer" id="phSearchDrawer" aria-hidden="true">
+      <div class="ph-search-inner">
+        <div class="ph-search-field-wrap">
+          <svg class="ph-search-lens-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="globalSearchInput" class="ph-search-input"
+            placeholder="Search celebration cakes, viennoiseries, flavours, catering..." aria-label="Search creations">
+          <button class="search-submit-circle" id="searchSubmitBtn" aria-label="Execute search">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+        <button class="ph-search-close-btn" id="phSearchCloseBtn" aria-label="Close search">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Backdrop for Luxury Slide-Out Navigation Drawer -->
+  <div class="ph-drawer-backdrop" id="phNavBackdrop" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       Luxury Slide-Out Navigation Drawer (Mobile & Tablet)
+       ======================================================================== -->
+  <aside class="ph-nav-drawer" id="phNavDrawer" aria-label="Boutique Navigation Drawer" aria-hidden="true">
+    <div class="ph-nav-drawer-header">
+      <div class="ph-drawer-brand">
+        <span class="ph-brand-title" style="font-size: 1.25rem;">FRANK & HARRI<span class="ph-dot">.</span></span>
+        <span class="ph-brand-sub" style="font-size: 0.58rem;">KEW · MELBOURNE</span>
+      </div>
+      <button class="drawer-close-btn" id="phNavCloseBtn" aria-label="Close navigation menu">✕</button>
+    </div>
+
+    <div class="ph-nav-drawer-body">
+      <!-- High-Fashion Numbered Navigation Links -->
+      <nav class="ph-drawer-nav-list" aria-label="Expanded Menu">
+        <a href="index.html#catalogSection" class="ph-drawer-nav-item" data-drawer-cat="all" data-drawer-link>
+          <span class="ph-nav-num">01</span>
+          <span class="ph-nav-text">All Collections</span>
+        </a>
+        <a href="bestsellers.html" class="ph-drawer-nav-item active" data-drawer-cat="bestsellers" data-drawer-link>
+          <span class="ph-nav-num">02</span>
+          <span class="ph-nav-text">Best Sellers ★</span>
+        </a>
+        <a href="birthday-cakes.html" class="ph-drawer-nav-item" data-drawer-cat="birthday-cakes" data-drawer-link>
+          <span class="ph-nav-num">03</span>
+          <span class="ph-nav-text">Birthday Cakes 🎂</span>
+        </a>
+        <a href="gluten-free.html" class="ph-drawer-nav-item" data-drawer-cat="gluten-free" data-drawer-link>
+          <span class="ph-nav-num">04</span>
+          <span class="ph-nav-text">Gluten-Free Atelier 🌾</span>
+        </a>
+        <a href="tarts-pastries.html" class="ph-drawer-nav-item" data-drawer-cat="pastries" data-drawer-link>
+          <span class="ph-nav-num">05</span>
+          <span class="ph-nav-text">Tarts & Pastries 🥐</span>
+        </a>
+        <a href="catering.html" class="ph-drawer-nav-item" data-drawer-cat="catering" data-drawer-link>
+          <span class="ph-nav-num">06</span>
+          <span class="ph-nav-text">Catering & Banquets 🥂</span>
+        </a>
+        <a href="sales-department.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">07</span>
+          <span class="ph-nav-text">Sales Department ✉</span>
+        </a>
+        <a href="index.html#signatureSection" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">08</span>
+          <span class="ph-nav-text">The Bruce Cake Configurator</span>
+        </a>
+        <a href="index.html#portionSection" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">09</span>
+          <span class="ph-nav-text">Cake Portion Calculator</span>
+        </a>
+        <a href="index.html#cinemaSection" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">10</span>
+          <span class="ph-nav-text">Inside the Kew Atelier (Film)</span>
+        </a>
+        <a href="index.html#boutiqueSection" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">11</span>
+          <span class="ph-nav-text">Kew Junction Boutique & Hours</span>
+        </a>
+      </nav>
+
+      <!-- Fast Action Buttons -->
+      <div class="ph-drawer-actions">
+        <button class="btn-primary open-catering-trigger" style="width: 100%; justify-content: center;"
+          data-drawer-link>
+          <span>Enquire For Catering ↗</span>
+        </button>
+        <button class="btn-outline-pill open-pdf-menu-trigger"
+          style="width: 100%; justify-content: center; margin-top: 0.65rem;" data-drawer-link>
+          <span>View Menu (PDF) 📄</span>
+        </button>
+      </div>
+
+      <!-- Currency Switcher for Mobile -->
+      <div class="ph-drawer-curr-box">
+        <div class="ph-drawer-subheading">Currency & Region</div>
+        <div class="ph-drawer-curr-row">
+          <button class="ph-curr-pill" data-curr="US">USD ($)</button>
+          <button class="ph-curr-pill active" data-curr="AU">AUD ($)</button>
+          <button class="ph-curr-pill" data-curr="EU">EUR (€)</button>
+          <button class="ph-curr-pill" data-curr="UK">GBP (£)</button>
+        </div>
+      </div>
+
+      <!-- Boutique Summary Card -->
+      <div class="ph-drawer-boutique-info">
+        <div class="ph-drawer-info-title">La Maison · Kew Junction</div>
+        <p class="ph-drawer-info-text">
+          <strong>259 High St, Kew VIC 3101</strong><br>
+          Tram 48 & 109 Outside<br>
+          <span style="color: var(--fh-primary-dark); font-weight: 500;">Tue–Fri 7:30am–3:30pm · Sat
+            8:00am–3:30pm</span>
+        </p>
+        <div class="ph-drawer-socials">
+          <a href="https://www.instagram.com/frankandharripatisserie/" target="_blank" rel="noopener">Instagram</a>
+          <span>·</span>
+          <a href="https://www.facebook.com/frankandharri" target="_blank" rel="noopener">Facebook</a>
+          <span>·</span>
+          <a href="https://www.tiktok.com/@frankandharripatisserie" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       DEDICATED COLLECTION PAGE: BEST SELLERS
+       ======================================================================== -->
+  <main class="catalog-section" id="catalogSection">
+    <div class="container">
+      
+      <!-- Breadcrumb Trail -->
+      <nav class="collection-breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html" class="breadcrumb-link" id="breadcrumbHome">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="index.html#collectionsShowcaseSection" class="breadcrumb-link" id="breadcrumbCollections">Collections</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current" id="breadcrumbCurrent">Best Sellers</span>
+      </nav>
+
+      <!-- Collection Page Header -->
+      <div class="collection-page-header">
+        <div class="collection-page-info">
+          <div class="collection-eyebrow" id="collectionEyebrow">Atelier Icons</div>
+          <h1 class="collection-hero-title" id="catalogTitle">Best Sellers</h1>
+          <p class="collection-description" id="collectionDescription">
+            Melbourne’s most coveted cakes and morning pastries — from the legendary 5-layer Bruce Chocolate Cake to cultured Lescure croissants and burnt Basque cheesecake.
+          </p>
+        </div>
+        
+        <div class="collection-stats-pill">
+          <span class="collection-count-num" id="productsCountBadge">8 Creations</span>
+          <button class="btn-reset-filters" id="resetAllFiltersTopBtn" style="display: none;">Reset Filters</button>
+        </div>
+      </div>
+
+      <!-- Collection Quick Switcher Pills -->
+      <div class="collection-switcher-bar">
+        <div class="collection-switcher-scroll">
+          <a href="index.html#catalogSection" class="col-switch-btn" data-col="all"><span>All Creations</span></a>
+          <a href="bestsellers.html" class="col-switch-btn active" data-col="bestsellers"><span>★ Best Sellers</span></a>
+          <a href="birthday-cakes.html" class="col-switch-btn" data-col="birthday-cakes"><span>🎂 Birthday Cakes</span></a>
+          <a href="gluten-free.html" class="col-switch-btn" data-col="gluten-free"><span>🌾 Gluten-Free</span></a>
+          <a href="tarts-pastries.html" class="col-switch-btn" data-col="pastries"><span>🥐 Tarts & Pastries</span></a>
+          <a href="catering.html" class="col-switch-btn" data-col="catering"><span>🥂 Catering</span></a>
+        </div>
+      </div>
+
+      <!-- Advanced Multi-Filter Toolbar -->
+      <div class="collection-filter-toolbar">
+        <div class="filter-controls-left">
+          
+          <!-- Dietary Dropdown -->
+          <div class="filter-dropdown-wrap">
+            <button class="filter-dropdown-btn" id="dietaryFilterBtn" aria-expanded="false" aria-haspopup="true">
+              <span class="filter-btn-label" id="selectedDietaryLabel">Dietary: All</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="filter-menu-dropdown" id="dietaryDropdown">
+              <button class="filter-menu-opt active" data-dietary="all">All Dietaries</button>
+              <button class="filter-menu-opt" data-dietary="gluten-free">100% Gluten-Free (GF)</button>
+              <button class="filter-menu-opt" data-dietary="vegetarian">Vegetarian Friendly</button>
+              <button class="filter-menu-opt" data-dietary="nut-free">Nut-Free / Nut-Friendly</button>
+              <button class="filter-menu-opt" data-dietary="dairy-free">Dairy-Free</button>
+            </div>
+          </div>
+
+          <!-- Notice / Lead Time Dropdown -->
+          <div class="filter-dropdown-wrap">
+            <button class="filter-dropdown-btn" id="leadTimeFilterBtn" aria-expanded="false" aria-haspopup="true">
+              <span class="filter-btn-label" id="selectedLeadTimeLabel">Notice: All</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="filter-menu-dropdown" id="leadTimeDropdown">
+              <button class="filter-menu-opt active" data-lead="all">All Notice Windows</button>
+              <button class="filter-menu-opt" data-lead="today">Available Today (Daily)</button>
+              <button class="filter-menu-opt" data-lead="24h">24 Hours Notice</button>
+              <button class="filter-menu-opt" data-lead="48h">48 Hours Notice</button>
+              <button class="filter-menu-opt" data-lead="72h">72 Hours Pre-Order</button>
+            </div>
+          </div>
+
+          <!-- Price Range Dropdown -->
+          <div class="filter-dropdown-wrap">
+            <button class="filter-dropdown-btn" id="priceFilterBtn" aria-expanded="false" aria-haspopup="true">
+              <span class="filter-btn-label" id="selectedPriceLabel">Price: All</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="filter-menu-dropdown" id="priceDropdown">
+              <button class="filter-menu-opt active" data-price="all">All Prices</button>
+              <button class="filter-menu-opt" data-price="under50">Under $50</button>
+              <button class="filter-menu-opt" data-price="50to100">$50 — $100</button>
+              <button class="filter-menu-opt" data-price="100to150">$100 — $150</button>
+              <button class="filter-menu-opt" data-price="over150">$150 and above</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="filter-controls-right">
+          <!-- Sort Dropdown -->
+          <div class="filter-dropdown-wrap">
+            <button class="filter-dropdown-btn sort-btn" id="sortPillBtn" aria-expanded="false" aria-haspopup="true">
+              <span id="selectedSortLabel">Sort By: Featured</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="filter-menu-dropdown filter-menu-right" id="sortDropdown">
+              <button class="filter-menu-opt active" data-sort="default">Featured</button>
+              <button class="filter-menu-opt" data-sort="price-low">Price: Low to High</button>
+              <button class="filter-menu-opt" data-sort="price-high">Price: High to Low</button>
+              <button class="filter-menu-opt" data-sort="name">Name: A to Z</button>
+            </div>
+          </div>
+
+          <button class="pill-view-all-btn" id="viewAllBtn" title="Reset all filters">Reset Filters</button>
+        </div>
+      </div>
+
+      <!-- Active Filter Chips -->
+      <div class="active-filters-bar" id="activeFiltersBar" style="display: none;">
+        <span class="active-filters-label">Active Filters:</span>
+        <div class="active-chips-container" id="activeChipsContainer"></div>
+        <button class="btn-clear-chips" id="clearAllChipsBtn">Clear All</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered dynamically by app.js based on bestsellers collection -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       Modals (Cart, Quick View, Checkout, Backdrop)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+
+  <!-- Slide-Out Shopping Bag Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Shopping Bag <span id="cartDrawerCount">(0)</span></h3>
+      <button class="drawer-close-btn" id="cartCloseBtn" aria-label="Close bag">✕</button>
+    </div>
+
+    <!-- Free Melbourne Metro Delivery Meter ($150 unlock) -->
+    <div class="cart-shipping-meter" id="cartShippingMeter">
+      <div class="cart-meter-label" id="cartMeterLabel">
+        <span>Melbourne Metro Delivery:</span>
+        <strong id="cartMeterDiff">Add $150.00 to unlock FREE delivery</strong>
+      </div>
+      <div class="cart-meter-bar">
+        <div class="cart-meter-fill" id="cartMeterFill" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="drawer-body" id="cartDrawerBody">
+      <div class="cart-empty-state" id="cartEmptyState">
+        <p>Your bag is currently empty.</p>
+        <button class="btn-primary" onclick="window.fhApp.closeAllModals?.() || document.getElementById('cartDrawer').classList.remove('open')" style="margin-top: 1rem;">
+          Continue Exploring
+        </button>
+      </div>
+      <div class="cart-items-list" id="cartItemsList" style="display: none;"></div>
+    </div>
+    <div class="drawer-footer" id="cartFooter" style="display: none;">
+      <div class="drawer-subtotal-row">
+        <span>Estimated Total</span>
+        <span class="drawer-subtotal-val" id="cartSubtotal">$0.00</span>
+      </div>
+      <p style="font-size: 0.72rem; color: var(--fh-charcoal-light); margin-bottom: 0.75rem;">
+        Pickup date & custom plaque inscriptions verified at checkout.
+      </p>
+      <button class="btn-primary" id="checkoutBtn" style="width: 100%; justify-content: center;">
+        Proceed to Reservation
+      </button>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="quick-view-modal" id="quickViewModal" aria-label="Quick View">
+    <div class="qv-modal-inner">
+      <button class="qv-close-btn" id="qvCloseBtn" aria-label="Close quick view">✕</button>
+      <div class="qv-grid">
+        <div class="qv-media">
+          <img src="" alt="" id="qvImage" class="qv-main-img">
+        </div>
+        <div class="qv-details">
+          <span class="qv-category" id="qvCategory">Atelier Selection</span>
+          <h2 class="qv-title" id="qvTitle">Product Name</h2>
+          <div class="qv-price" id="qvPrice">$0.00</div>
+          <p class="qv-description" id="qvDescription"></p>
+          <div class="qv-meta-box">
+            <div class="qv-meta-item">
+              <span class="qv-meta-label">Flavor Notes:</span>
+              <span class="qv-meta-val" id="qvFlavours"></span>
+            </div>
+            <div class="qv-meta-item">
+              <span class="qv-meta-label">Allergens:</span>
+              <span class="qv-meta-val" id="qvAllergens"></span>
+            </div>
+            <div class="qv-meta-item">
+              <span class="qv-meta-label">Lead Time:</span>
+              <span class="qv-meta-val" id="qvLeadTime"></span>
+            </div>
+          </div>
+          <div class="qv-sizes-section">
+            <div class="qv-section-title">Select Size / Portions:</div>
+            <div class="qv-sizes-list" id="qvSizesList"></div>
+          </div>
+          <div class="qv-actions">
+            <button class="btn-primary" id="qvAddToCartBtn" style="width: 100%; justify-content: center;">
+              Add to Bag
+            </button>
+            <a href="#" id="qvDetailLink" class="btn-secondary" style="width: 100%; justify-content: center; margin-top: 0.5rem; text-decoration: none; display: flex;">
+              <span>View Full Atelier Details ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MULTI-STEP GUIDED CELEBRATION CHECKOUT JOURNEY
+       ======================================================================== -->
+  <div class="checkout-journey-modal" id="journeyModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="checkout-journey-backdrop" id="journeyBackdrop"></div>
+    <div class="checkout-journey-dialog">
+      
+      <!-- Modal Header -->
+      <div class="checkout-journey-header">
+        <div>
+          <span class="checkout-journey-brand-eyebrow">Frank & Harri · Kew Atelier</span>
+          <h2 class="checkout-journey-title" id="journeyHeaderTitle">Celebration Order & Reservation</h2>
+        </div>
+        <button type="button" class="checkout-journey-close" id="journeyCloseBtn" aria-label="Close reservation">✕</button>
+      </div>
+
+      <!-- 4-Step Stepper Ribbon -->
+      <div class="journey-stepper">
+        <div class="journey-stepper-line"></div>
+        <div class="journey-step-item active" data-step="1" id="stepIndicator1">
+          <span class="journey-step-num">1</span>
+          <span>Occasion</span>
+        </div>
+        <div class="journey-step-item" data-step="2" id="stepIndicator2">
+          <span class="journey-step-num">2</span>
+          <span>Fulfillment</span>
+        </div>
+        <div class="journey-step-item" data-step="3" id="stepIndicator3">
+          <span class="journey-step-num">3</span>
+          <span>Gift Note</span>
+        </div>
+        <div class="journey-step-item" data-step="4" id="stepIndicator4">
+          <span class="journey-step-num">4</span>
+          <span>Confirm</span>
+        </div>
+      </div>
+
+      <!-- Stepper Body Content Panels -->
+      <div class="checkout-journey-body">
+        
+        <!-- STEP 1: Occasion & Contact Details -->
+        <div class="journey-panel active" id="journeyPanel1">
+          <h3 class="journey-section-title">What are we celebrating?</h3>
+          <p class="journey-section-subtitle">Select your celebration so our pâtissiers can style your creation with occasion-perfect elegance.</p>
+
+          <div class="journey-occasion-grid" id="journeyOccasionGrid">
+            <button type="button" class="journey-occasion-btn active" data-occasion="Birthday">
+              <span class="journey-occasion-icon">🎂</span>
+              <span class="journey-occasion-name">Birthday</span>
+            </button>
+            <button type="button" class="journey-occasion-btn" data-occasion="Wedding / Engagement">
+              <span class="journey-occasion-icon">💍</span>
+              <span class="journey-occasion-name">Wedding</span>
+            </button>
+            <button type="button" class="journey-occasion-btn" data-occasion="Anniversary">
+              <span class="journey-occasion-icon">🥂</span>
+              <span class="journey-occasion-name">Anniversary</span>
+            </button>
+            <button type="button" class="journey-occasion-btn" data-occasion="Milestone / Baby">
+              <span class="journey-occasion-icon">🎉</span>
+              <span class="journey-occasion-name">Milestone</span>
+            </button>
+            <button type="button" class="journey-occasion-btn" data-occasion="Corporate / Event">
+              <span class="journey-occasion-icon">🏢</span>
+              <span class="journey-occasion-name">Corporate</span>
+            </button>
+            <button type="button" class="journey-occasion-btn" data-occasion="Dinner Party / Gathering">
+              <span class="journey-occasion-icon">🍽️</span>
+              <span class="journey-occasion-name">Dinner Party</span>
+            </button>
+          </div>
+
+          <div class="journey-form-group">
+            <label class="journey-label" for="journeyCelebrantName">Celebrant's Name (Optional)</label>
+            <input type="text" id="journeyCelebrantName" class="journey-input" placeholder="e.g. Sarah / The Robertson Family">
+          </div>
+
+          <div class="journey-form-row">
+            <div>
+              <label class="journey-label" for="journeyFirstName">First Name *</label>
+              <input type="text" id="journeyFirstName" class="journey-input" required placeholder="Claire">
+            </div>
+            <div>
+              <label class="journey-label" for="journeyLastName">Last Name *</label>
+              <input type="text" id="journeyLastName" class="journey-input" required placeholder="Delacour">
+            </div>
+          </div>
+
+          <div class="journey-form-row">
+            <div>
+              <label class="journey-label" for="journeyEmail">Email Address (for Receipt & Tracking) *</label>
+              <input type="email" id="journeyEmail" class="journey-input" required placeholder="claire@example.com">
+            </div>
+            <div>
+              <label class="journey-label" for="journeyPhone">Australian Mobile (for SMS Dispatch) *</label>
+              <input type="tel" id="journeyPhone" class="journey-input" required placeholder="0400 123 456">
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: Fulfillment & Logistics -->
+        <div class="journey-panel" id="journeyPanel2">
+          <h3 class="journey-section-title">How would you like to receive your order?</h3>
+          <p class="journey-section-subtitle">Collect fresh from our Kew ovens or opt for chilled Melbourne metro courier transit.</p>
+
+          <div class="journey-fulfillment-cards">
+            <button type="button" class="journey-method-card active" id="journeyMethodCardPickup">
+              <div class="journey-method-title">
+                <span>Boutique Pickup</span>
+                <span style="color: #3b6b47;">Free</span>
+              </div>
+              <div class="journey-method-sub">
+                259 High Street, Kew VIC. Fresh from our temperature-controlled display.
+              </div>
+            </button>
+            <button type="button" class="journey-method-card" id="journeyMethodCardDelivery">
+              <div class="journey-method-title">
+                <span>Melbourne Metro Courier</span>
+                <span id="journeyDeliveryFeeLabel">$15.00</span>
+              </div>
+              <div class="journey-method-sub">
+                Refrigerated van dispatch across Melbourne metro. Free on orders over $150.
+              </div>
+            </button>
+          </div>
+
+          <!-- Pickup Details Box -->
+          <div id="journeyPickupDetailsBox" class="journey-pickup-info-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div class="journey-pickup-text">
+              <strong>Frank & Harri Boutique Pâtisserie</strong>
+              259 High Street, Kew VIC 3101 · Easy 15-min pickup parking right out front.
+              <br><small style="color: var(--fh-charcoal-muted);">Opening Hours: Tuesday – Saturday, 7:30am – 3:30pm (Sunday & Monday closed for dough resting)</small>
+            </div>
+          </div>
+
+          <!-- Delivery Address Fields (Shown if Delivery chosen) -->
+          <div id="journeyDeliveryAddressBox" style="display: none;">
+            <div class="journey-form-group">
+              <label class="journey-label" for="journeyStreetAddress">Street Address *</label>
+              <input type="text" id="journeyStreetAddress" class="journey-input" placeholder="e.g. 42 Cotham Road">
+            </div>
+            <div class="journey-form-row">
+              <div>
+                <label class="journey-label" for="journeySuburb">Suburb *</label>
+                <input type="text" id="journeySuburb" class="journey-input" placeholder="e.g. Kew / Hawthorn / Richmond">
+              </div>
+              <div>
+                <label class="journey-label" for="journeyPostcode">Postcode *</label>
+                <input type="text" id="journeyPostcode" class="journey-input" placeholder="e.g. 3101">
+              </div>
+            </div>
+            <div class="journey-form-group">
+              <label class="journey-label" for="journeyDeliveryNotes">Delivery Instructions (Gate code, concierge, ring bell)</label>
+              <input type="text" id="journeyDeliveryNotes" class="journey-input" placeholder="e.g. Leave with building concierge on Level 1">
+            </div>
+          </div>
+
+          <!-- Schedule Review Row -->
+          <div style="background: #fafbfa; border: 1px solid var(--fh-border); border-radius: var(--radius-sm); padding: 0.9rem 1.15rem; margin-top: 1rem;">
+            <div style="font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fh-primary-dark); margin-bottom: 0.25rem;">
+              Confirmed Date & Collection Window
+            </div>
+            <div style="font-size: 0.9rem; font-weight: 600; color: var(--fh-charcoal);" id="journeyConfirmedDateTime">
+              Tuesday, 20 October · Morning Slot (8:00am – 10:30am)
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Handwritten Gift Note & Baker's Special Touch -->
+        <div class="journey-panel" id="journeyPanel3">
+          <h3 class="journey-section-title">Complimentary Handwritten Gift Card</h3>
+          <p class="journey-section-subtitle">Every celebration order includes our embossed Frank & Harri keepsake card, handwritten in ink by our atelier team.</p>
+
+          <div class="journey-card-preview">
+            <div class="journey-card-seal">FRANK & HARRI · ATELIER KEW</div>
+            <div class="journey-card-content" id="journeyLiveCardText">Wishing you the most wonderful and joyous birthday celebration!</div>
+          </div>
+
+          <div class="journey-form-group">
+            <label class="journey-label" for="journeyGiftNoteInput">Your Message for the Gift Card (Max 140 chars)</label>
+            <textarea id="journeyGiftNoteInput" class="journey-textarea" maxlength="140" placeholder="Write your heartfelt message here..."></textarea>
+          </div>
+
+          <div class="journey-form-group">
+            <label class="journey-label" for="journeyBakersNote">Special Dietary or Handling Notes for our Chefs</label>
+            <input type="text" id="journeyBakersNote" class="journey-input" placeholder="e.g. Severe peanut allergy at party; please pack in sealed transport box">
+          </div>
+        </div>
+
+        <!-- STEP 4: Review Order & Payment Simulation -->
+        <div class="journey-panel" id="journeyPanel4">
+          <h3 class="journey-section-title">Review & Complete Reservation</h3>
+          <p class="journey-section-subtitle">Verify your celebration creation details and confirm your reservation with our Kew team.</p>
+
+          <div class="journey-review-list" id="journeyReviewItemsList">
+            <!-- Dynamically populated from Cart -->
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <label class="journey-label">Select Payment Method</label>
+            <div class="journey-payment-methods">
+              <button type="button" class="journey-pay-btn active" data-pay="card">💳 Credit Card</button>
+              <button type="button" class="journey-pay-btn" data-pay="applepay"> Apple Pay</button>
+              <button type="button" class="journey-pay-btn" data-pay="shoppay">⚡ Shop Pay</button>
+            </div>
+            <div id="journeyCardFields">
+              <div class="journey-form-group">
+                <input type="text" class="journey-input" placeholder="Card number: 4532 •••• •••• 8820" value="4532 •••• •••• 8820" readonly>
+              </div>
+              <div class="journey-form-row">
+                <input type="text" class="journey-input" placeholder="MM/YY" value="12/28" readonly>
+                <input type="text" class="journey-input" placeholder="CVC" value="882" readonly>
+              </div>
+            </div>
+          </div>
+
+          <div class="journey-security-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span>256-Bit SSL Encrypted · 100% Melbourne Artisan Freshness Guarantee</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer Action Controls -->
+      <div class="checkout-journey-footer">
+        <button type="button" class="journey-btn-back" id="journeyBtnBack" style="visibility: hidden;">
+          ← Previous
+        </button>
+        <button type="button" class="journey-btn-next" id="journeyBtnNext">
+          <span>Continue to Fulfillment</span>
+          <span>→</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       CELEBRATION ORDER CONFIRMATION & LIVE TRACKER
+       ======================================================================== -->
+  <div class="checkout-journey-modal" id="orderConfirmModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="checkout-journey-backdrop" id="orderConfirmBackdrop"></div>
+    <div class="checkout-journey-dialog order-confirm-dialog">
+      
+      <div class="order-confirm-header">
+        <div class="order-confirm-icon-wrap">✓</div>
+        <span class="checkout-journey-brand-eyebrow">FRANK & HARRI · ATELIER KEW</span>
+        <h2 class="order-confirm-title">Celebration Order Reserved!</h2>
+        <p style="font-size: 0.86rem; color: var(--fh-charcoal-muted); margin: 0;">
+          Your order has been scheduled in our Kew bakehouse ovens. A detailed confirmation has been dispatched to your email.
+        </p>
+        <div class="order-confirm-ref" id="orderConfirmNumber">ORDER #FH-2026-84912</div>
+      </div>
+
+      <!-- 4-Stage Visual Timeline Tracker -->
+      <div class="order-timeline-card">
+        <div class="order-timeline-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Live Pâtisserie Progress Tracker</span>
+        </div>
+        <div class="order-timeline-steps">
+          <div class="order-timeline-step active">
+            <div class="order-timeline-dot"></div>
+            <span class="order-timeline-step-name">1. Order Confirmed & Booked</span>
+            <span class="order-timeline-step-desc">Entered into our Kew daily production master sheet. Ingredients reserved.</span>
+          </div>
+          <div class="order-timeline-step active">
+            <div class="order-timeline-dot"></div>
+            <span class="order-timeline-step-name">2. 72-Hour Lamination & Artisan Bake</span>
+            <span class="order-timeline-step-desc">Lescure butter lamination and slow-baked buttermilk sponges prepared fresh.</span>
+          </div>
+          <div class="order-timeline-step">
+            <div class="order-timeline-dot"></div>
+            <span class="order-timeline-step-name">3. Hand-Piped Inscription & Final Dressing</span>
+            <span class="order-timeline-step-desc">White chocolate piped plaque, Swiss meringue buttercream, and head chef sign-off.</span>
+          </div>
+          <div class="order-timeline-step">
+            <div class="order-timeline-dot"></div>
+            <span class="order-timeline-step-name">4. Ready for Kew Collection / Metro Dispatch</span>
+            <span class="order-timeline-step-desc">Kept refrigerated below 4°C in our bespoke presentation box ready for your celebration.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-confirm-actions">
+        <a id="addToCalendarBtn" class="btn-calendar-add" href="#" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>Add Collection Date to Google Calendar</span>
+        </a>
+        <button type="button" class="btn-primary" onclick="window.print()" style="justify-content: center;">
+          <span>Print Celebration Order Slip</span>
+        </button>
+        <button type="button" class="journey-btn-back" id="orderConfirmDoneBtn" style="justify-content: center; width: 100%;">
+          Return to Atelier Showcase
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PDF Menu Viewer Modal -->
+  <div class="pdf-modal" id="pdfMenuModal">
+    <div class="pdf-modal-inner">
+      <div class="pdf-modal-header">
+        <div class="pdf-brand-tag">FRANK & HARRI · ATELIER MENU</div>
+        <button class="pdf-modal-close" id="pdfModalCloseBtn">✕</button>
+      </div>
+      <div class="pdf-viewer-frame">
+        <div class="pdf-document-card">
+          <div class="pdf-doc-title">Boutique Patisserie & Catering Repertoire</div>
+          <p style="font-size: 0.9rem; color: var(--fh-charcoal-muted); margin-bottom: 1.5rem;">
+            Handcrafted daily at 259 High St, Kew VIC 3101.
+          </p>
+          <div class="pdf-action-row">
+            <a href="assets/images/real/bruce-layer-cake.png" download class="btn-primary">Download Menu (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Kew Atelier Concierge Modal (Event & Catering Inquiry)
+       ======================================================================== -->
+  <div class="catering-modal" id="cateringInquiryModal" role="dialog" aria-modal="true" aria-label="Kew Atelier Concierge Catering Inquiry">
+    <div class="catering-modal-inner">
+      <button class="catering-modal-close" id="cateringModalCloseBtn" aria-label="Close dialog">✕</button>
+      
+      <div class="catering-modal-header">
+        <span class="catering-kicker">KEW ATELIER CONCIERGE</span>
+        <h3 class="catering-modal-title">Event & Catering Enquiry</h3>
+        <p class="catering-modal-desc">
+          From milestone weddings and cocktail celebrations to corporate breakfast viennoiserie boxes.
+        </p>
+      </div>
+
+      <div class="catering-modal-notice">
+        <div>✓ Whole celebration cakes require <strong>72 hours advance notice</strong>.</div>
+        <div>✓ Melbourne Metro delivery or boutique collection (11am – 3pm) at 259 High St, Kew.</div>
+      </div>
+
+      <form class="catering-form" id="cateringInquiryForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="catName">Your Name *</label>
+            <input type="text" id="catName" class="custom-input" required placeholder="Sophie Laurent">
+          </div>
+          <div class="form-group">
+            <label for="catEmail">Email Address *</label>
+            <input type="email" id="catEmail" class="custom-input" required placeholder="sophie@example.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="catDate">Event Date *</label>
+            <input type="date" id="catDate" class="custom-input" required>
+          </div>
+          <div class="form-group">
+            <label for="catGuests">Estimated Guests *</label>
+            <input type="number" id="catGuests" class="custom-input" min="5" max="500" placeholder="e.g. 45" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="catStyle">Event Style & Collection</label>
+          <select id="catStyle" class="custom-input">
+            <option value="Event Catering & Grazing">Event Catering & Grazing Banquets</option>
+            <option value="Celebration Cakes & Dessert Table">Celebration Cakes & Dessert Table</option>
+            <option value="Morning Viennoiserie Boxes">Morning Viennoiserie Breakfast Boxes</option>
+            <option value="100% Gluten-Free Atelier Catering">100% Gluten-Free Atelier Catering</option>
+            <option value="Corporate / Custom Order">Corporate Function / Bespoke Order</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="catNotes">Event Details & Dietary Notes</label>
+          <textarea id="catNotes" class="custom-input" rows="3" placeholder="Desired cake styles, grazing requirements, dietary needs..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+          <span>Submit Concierge Enquiry ↗</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Ultra-Minimal Footer (Rivet Reference Cleanliness)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="brand-wordmark" style="font-size: 1.85rem;">
+            Frank & Harri<span class="dot">.</span>
+          </div>
+          <p>
+            An artisanal boutique pâtisserie nestled on High Street in Kew Junction, Melbourne. Scratch baking, French
+            viennoiserie, celebration cakes, and specialty coffee.
+          </p>
+          <div style="margin-top: 1rem; font-size: 0.82rem; color: var(--fh-charcoal-light);">
+            📍 259 High St, Kew VIC 3101 · Tram 48 & 109
+          </div>
+        </div>
+
+        <div class="footer-links-row">
+          <div class="footer-col">
+            <h4>Creations</h4>
+            <ul>
+              <li><a href="index.html#signatureSection">The Bruce Cake</a></li>
+              <li><a href="index.html#catalogSection">Celebration Cakes</a></li>
+              <li><a href="index.html#catalogSection">French Viennoiserie</a></li>
+              <li><a href="index.html#portionSection">Portion Guide</a></li>
+              <li><a href="#" class="open-pdf-menu-trigger">Spring/Summer Menu PDF</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Boutique & Catering</h4>
+            <ul>
+              <li><a href="index.html#boutiqueSection">GBP Kew Info</a></li>
+              <li><a href="index.html#cinemaSection">Atelier Film</a></li>
+              <li><a href="index.html#reviewsSection">Customer Reviews</a></li>
+              <li><a href="#" class="open-catering-trigger">Catering Inquiries</a></li>
+              <li><a href="mailto:info@frankandharri.com.au">info@frankandharri.com.au</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Social Hub</h4>
+            <ul>
+              <li><a href="https://www.instagram.com/frankandharripatisserie/" target="_blank" rel="noopener">Instagram
+                  (@frankandharripatisserie)</a></li>
+              <li><a href="https://www.facebook.com/frankandharri" target="_blank" rel="noopener">Facebook (5.0 ★ · 9
+                  votes)</a></li>
+              <li><a href="https://www.tiktok.com/@frankandharripatisserie" target="_blank" rel="noopener">TikTok</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Frank & Harri Patisserie Pty Ltd. Handcrafted in Kew, Victoria 3101.
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <span
+            style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Apple
+            Pay</span>
+          <span
+            style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Google
+            Pay</span>
+          <span
+            style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Visa
+            / Mastercard</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
