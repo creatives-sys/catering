@@ -8543,7 +8543,14 @@ textarea.custom-input {
   background: var(--fh-primary-dark, #3a4736);
 }
 
-/* 3 Editorial Underlined Sections (Exact headers from user's notebook sketch!) */
+/* ==========================================================================
+   FULL-WIDTH EDITORIAL SECTION: The Art of Creation, Allergens, Preservation
+   ========================================================================== */
+.pdp-editorial-fullwidth-section {
+  width: 100%;
+  margin-top: 3.5rem;
+}
+
 .pdp-editorial-sections {
   margin-top: 1.25rem;
   display: flex;
@@ -8556,10 +8563,35 @@ textarea.custom-input {
   box-shadow: 0 10px 28px rgba(21, 24, 20, 0.04);
 }
 
+.pdp-editorial-sections.full-width {
+  margin-top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1.15fr;
+  gap: 2.75rem;
+  background: #ffffff;
+  padding: 2.75rem 3rem;
+  border-radius: 24px;
+  border: 1px solid rgba(167, 178, 163, 0.35);
+  box-shadow: 0 12px 36px rgba(21, 24, 20, 0.04);
+}
+
 .pdp-editorial-block {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.pdp-editorial-sections.full-width .pdp-editorial-block:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1.4rem;
+  bottom: 0;
+  width: 1px;
+  background: rgba(167, 178, 163, 0.22);
 }
 
 .pdp-editorial-head-row {
@@ -8570,20 +8602,22 @@ textarea.custom-input {
 
 .pdp-editorial-heading {
   font-family: var(--font-brand, 'Jost', sans-serif);
-  font-size: 1.12rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--fh-charcoal, #151814);
-  letter-spacing: -0.01em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   margin: 0;
 }
 
 /* Underline strictly reflecting user's notebook sketch */
 .pdp-editorial-underline {
-  width: 58px;
+  width: 52px;
   height: 2px;
   background: var(--fh-primary, #a7b2a3);
   border-radius: 999px;
   position: relative;
+  margin-top: 2px;
 }
 
 .pdp-editorial-underline::after {
@@ -8591,7 +8625,7 @@ textarea.custom-input {
   position: absolute;
   top: 4px;
   left: 0;
-  width: 34px;
+  width: 30px;
   height: 1.5px;
   background: rgba(167, 178, 163, 0.5);
   border-radius: 999px;
@@ -8601,8 +8635,8 @@ textarea.custom-input {
   font-family: var(--font-brand, 'Jost', sans-serif);
   font-size: 0.88rem;
   color: var(--fh-charcoal-muted, #575d53);
-  line-height: 1.65;
-  margin: 0.35rem 0 0;
+  line-height: 1.68;
+  margin: 0.25rem 0 0;
 }
 
 .pdp-editorial-copy strong {
@@ -10289,6 +10323,26 @@ textarea.custom-input {
     padding: 2.25rem 2rem;
   }
 
+  .pdp-editorial-fullwidth-section {
+    margin-top: 2.5rem;
+  }
+
+  .pdp-editorial-sections.full-width {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    padding: 2.25rem 2rem;
+    border-radius: 20px;
+  }
+
+  .pdp-editorial-sections.full-width .pdp-editorial-block:not(:last-child)::after {
+    display: none;
+  }
+
+  .pdp-editorial-sections.full-width .pdp-editorial-block:not(:last-child) {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(167, 178, 163, 0.25);
+  }
+
   .pdp-sticky-bottom-bar {
     display: block;
   }
@@ -10462,8 +10516,23 @@ textarea.custom-input {
     bottom: 5px;
   }
 
+  .pdp-editorial-fullwidth-section {
+    margin-top: 1.75rem;
+  }
+
+  .pdp-editorial-sections.full-width {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+    gap: 1.5rem;
+  }
+
   .pdp-editorial-heading {
-    font-size: 1.2rem;
+    font-size: 0.96rem;
+  }
+
+  .pdp-editorial-copy {
+    font-size: 0.84rem;
+    line-height: 1.6;
   }
 
   .pdp-cake-title {
