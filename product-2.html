@@ -364,74 +364,148 @@
 
       </section>
 
-      <!-- ====================================================================
-           3. HORIZONTAL SELECTOR BAR:
-              [ Size ] [ Flavour ] [ Plaque ] [ Touch ] [ Notes ]
-              Encapsulated box matching sketch, opens the Selection Popup Modal!
-           ==================================================================== -->
-      <section class="pdp2-selector-wrapper" aria-label="Customization Steps">
-        <div class="pdp2-selector-grid" role="tablist">
-          
-          <!-- Box 1: Size -->
-          <button type="button" class="pdp2-selector-tab pdp-sketch-tab active" id="stepBoxSize" data-step="size" role="tab" aria-selected="true" onclick="window.openSelectionPopup('size')">
-            <span class="pdp2-tab-check sketch-tab-check" id="checkSize">✓</span>
-            <span class="pdp2-tab-title sketch-tab-title">Size</span>
-            <span class="pdp2-tab-sub sketch-tab-sub" id="tabSummarySize">Select</span>
-          </button>
+      <!-- DIRECT ON-PAGE SELECTION CONTROLS (No popups, no selection journey) -->
+      <section class="pdp2-direct-section" aria-label="Direct Selection Controls">
+        <div class="pdp-direct-options-wrap" style="max-width: 760px; margin: 0 auto 2.5rem;">
 
-          <!-- Box 2: Flavour -->
-          <button type="button" class="pdp2-selector-tab pdp-sketch-tab" id="stepBoxFlavour" data-step="flavour" role="tab" aria-selected="false" onclick="window.openSelectionPopup('flavour')">
-            <span class="pdp2-tab-check sketch-tab-check" id="checkFlavour">✓</span>
-            <span class="pdp2-tab-title sketch-tab-title">Flavour</span>
-            <span class="pdp2-tab-sub sketch-tab-sub" id="tabSummaryFlavour">Select</span>
-          </button>
-
-          <!-- Box 3: Plaque -->
-          <button type="button" class="pdp2-selector-tab pdp-sketch-tab" id="stepBoxPlaque" data-step="plaque" role="tab" aria-selected="false" onclick="window.openSelectionPopup('plaque')">
-            <span class="pdp2-tab-check sketch-tab-check" id="checkPlaque">✓</span>
-            <span class="pdp2-tab-title sketch-tab-title">Plaque</span>
-            <span class="pdp2-tab-sub sketch-tab-sub" id="tabSummaryPlaque">Choose</span>
-          </button>
-
-          <!-- Box 4: Touch -->
-          <button type="button" class="pdp2-selector-tab pdp-sketch-tab" id="stepBoxTouch" data-step="touch" role="tab" aria-selected="false" onclick="window.openSelectionPopup('touch')">
-            <span class="pdp2-tab-check sketch-tab-check" id="checkTouch">✓</span>
-            <span class="pdp2-tab-title sketch-tab-title">Touch</span>
-            <span class="pdp2-tab-sub sketch-tab-sub" id="tabSummaryTouch">Extras</span>
-          </button>
-
-          <!-- Box 5: Notes -->
-          <button type="button" class="pdp2-selector-tab pdp-sketch-tab" id="stepBoxNotes" data-step="notes" role="tab" aria-selected="false" onclick="window.openSelectionPopup('notes')">
-            <span class="pdp2-tab-check sketch-tab-check" id="checkNotes">✓</span>
-            <span class="pdp2-tab-title sketch-tab-title">Notes</span>
-            <span class="pdp2-tab-sub sketch-tab-sub" id="tabSummaryNotes">Atelier</span>
-          </button>
-
-        </div>
-      </section>
-
-      <!-- ====================================================================
-           4. PRICE & ACTION STRIP
-              Live Price + Required Progress + Stepper + Add to Shopping Bag
-           ==================================================================== -->
-      <section class="pdp2-action-strip" aria-label="Purchase Action Bar">
-        <div class="pdp2-action-price-group">
-          <strong class="pdp2-action-price" id="pdpPrice">$109.00</strong>
-          <span class="pdp-progress-fraction" id="pdpProgressFraction">0 / 3 Required Selected</span>
-        </div>
-
-        <div class="pdp2-action-controls">
-          <div class="pdp-qty-stepper">
-            <button type="button" class="pdp-stepper-btn" id="pdpQtyDec" aria-label="Decrease quantity">−</button>
-            <span class="pdp-stepper-val" id="pdpQtyVal">1</span>
-            <button type="button" class="pdp-stepper-btn" id="pdpQtyInc" aria-label="Increase quantity">+</button>
+          <!-- 1. Format / Size Selection (Direct Interactive Cards) -->
+          <div class="pdp-option-group" id="pdpSizeGroup">
+            <div class="pdp-option-head">
+              <span class="pdp-option-label">1. Select Format & Servings</span>
+              <button type="button" class="pdp-portion-guide-trigger" id="openPortionGuideBtn">Portion Guide ↗</button>
+            </div>
+            <div class="pdp-sizes-grid" id="pdpSizesGrid">
+              <button class="pdp-size-btn active" type="button" data-size-idx="0">
+                <span class="pdp-size-name">6" Petite</span>
+                <span class="pdp-size-serves">Serves 7–8</span>
+                <span class="pdp-size-price">$109.00</span>
+              </button>
+              <button class="pdp-size-btn" type="button" data-size-idx="1">
+                <span class="pdp-size-name">9" Grand</span>
+                <span class="pdp-size-serves">Serves 12–14</span>
+                <span class="pdp-size-price">$159.00</span>
+              </button>
+              <button class="pdp-size-btn" type="button" data-size-idx="2">
+                <span class="pdp-size-name">12" Banquet</span>
+                <span class="pdp-size-serves">Serves 20–22</span>
+                <span class="pdp-size-price">$209.00</span>
+              </button>
+            </div>
           </div>
 
-          <!-- Without selection no add to cart guard -->
-          <button type="button" class="pdp-sketch-add-btn disabled" id="pdpAddToCartBtn" aria-disabled="true">
-            <span id="pdpAddBtnText">Complete Selections to Add to Bag (0/3)</span>
-            <span id="pdpAddBtnPrice">— $109.00</span>
-          </button>
+          <!-- 2. Flavour / Ganache Harmony (Curated Luxury Dropdown) -->
+          <div class="pdp-option-group" id="pdpFlavourGroup">
+            <div class="pdp-option-head">
+              <label class="pdp-option-label" for="pdpFlavourSelect">2. Flavour & Ganache Recipe</label>
+              <span class="pdp-option-badge">Signature Atelier</span>
+            </div>
+            <div class="pdp-flavour-select-wrap">
+              <select id="pdpFlavourSelect" class="pdp-flavour-select" aria-label="Select Flavour & Ganache Recipe">
+                <option value="Belgian Dark Chocolate Fudge" selected>Belgian Dark Chocolate Fudge — Buttermilk cake & slow-cooked fudge ganache (Signature)</option>
+                <option value="Victorian Vanilla Bean & Raspberry Curd">Victorian Vanilla Bean & Raspberry Curd — Madagascar vanilla sponge & house coulis</option>
+                <option value="Roasted Hazelnut Praline & Gianduja">Roasted Piedmont Hazelnut Praline & Gianduja Ganache</option>
+                <option value="Meyer Lemon Curd & Passionfruit">Meyer Lemon Curd & Passionfruit — Tangy citrus curd & airy meringue</option>
+              </select>
+              <div class="pdp-select-arrow" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Complimentary Chocolate Inscription Plaque (Inline & Optional) -->
+          <div class="pdp-option-group pdp-plaque-card-box" id="pdpPlaqueGroup">
+            <label class="pdp-sketch-toggle-label" for="pdpPlaqueToggle">
+              <input type="checkbox" id="pdpPlaqueToggle" class="pdp-min-checkbox">
+              <div class="pdp-sketch-toggle-text">
+                <strong class="pdp-plaque-title">Add hand-piped chocolate message plaque</strong>
+                <span class="pdp-free-tag">+ Complimentary Free</span>
+              </div>
+            </label>
+
+            <div class="pdp-plaque-drawer" id="pdpPlaqueDrawer">
+              <div class="pdp-input-field-wrap">
+                <input type="text" id="pdpPlaqueInput" class="pdp-plaque-input" maxlength="32"
+                  placeholder="e.g. Happy 30th Birthday Claire!" aria-label="Custom plaque inscription">
+                <span id="pdpPlaqueCount" class="pdp-char-counter">0/32</span>
+              </div>
+              <div class="pdp-preset-chips">
+                <span class="pdp-preset-label">Suggestions:</span>
+                <button type="button" class="pdp-chip-btn"
+                  onclick="window.fhApp.setPlaquePreset('Happy Birthday!')">Happy Birthday!</button>
+                <button type="button" class="pdp-chip-btn"
+                  onclick="window.fhApp.setPlaquePreset('Congratulations!')">Congratulations!</button>
+                <button type="button" class="pdp-chip-btn" onclick="window.fhApp.setPlaquePreset('We Love You!')">We
+                  Love You!</button>
+              </div>
+            </div>
+            <div class="pdp-plaque-note">
+              <span>Leave unchecked for classic French finish with gold leaf. Inscription is hand-piped on a dark Belgian chocolate plaque.</span>
+            </div>
+          </div>
+
+          <!-- 4. Celebration Finishing Touches (Inline Optional Add-ons) -->
+          <div class="pdp-option-group" id="pdpTouchesGroup">
+            <div class="pdp-option-head">
+              <span class="pdp-option-label">Finishing Touches <span class="pdp-optional-tag">(Optional)</span></span>
+              <span class="pdp-option-hint">1-click additions</span>
+            </div>
+            <div class="pdp-touches-inline-grid">
+              <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Gold Birthday Candles (12pk)"
+                data-price="8.50">
+                <div class="touch-card-info">
+                  <strong>Gold Beeswax Candles (12pk)</strong>
+                  <span>Tall celebratory metallic tapers</span>
+                </div>
+                <div class="touch-card-price">+$8.50</div>
+              </button>
+              <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Atelier Crystal Cake Knife"
+                data-price="18.00">
+                <div class="touch-card-info">
+                  <strong>Atelier Gold Cake Knife</strong>
+                  <span>Serrated server for razor-sharp slices</span>
+                </div>
+                <div class="touch-card-price">+$18.00</div>
+              </button>
+              <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Artisan Macarons Box (6pk)"
+                data-price="24.00">
+                <div class="touch-card-info">
+                  <strong>French Macarons Box (6pk)</strong>
+                  <span>Vanilla, salted caramel, pistachio</span>
+                </div>
+                <div class="touch-card-price">+$24.00</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- 5. Dietary Notes & Special Instructions (Inline Collapsible) -->
+          <details class="pdp-notes-accordion">
+            <summary class="pdp-notes-summary">
+              <span>+ Special Dietary Notes or Pickup Instructions (Optional)</span>
+              <span>▼</span>
+            </summary>
+            <div class="pdp-notes-content">
+              <textarea id="pdpOrderNotes" class="pdp-order-notes"
+                placeholder="e.g. Nut allergy in party, keep on dry ice, or pickup hour notes..."
+                rows="2"></textarea>
+            </div>
+          </details>
+
+          <!-- 6. Direct Action Bar: Quantity Stepper + Add to Shopping Bag Button -->
+          <div class="pdp-direct-action-bar">
+            <div class="pdp-qty-stepper">
+              <button type="button" class="pdp-stepper-btn" id="pdpQtyDec" aria-label="Decrease quantity">−</button>
+              <span class="pdp-stepper-val" id="pdpQtyVal">1</span>
+              <button type="button" class="pdp-stepper-btn" id="pdpQtyInc" aria-label="Increase quantity">+</button>
+            </div>
+
+            <button type="button" class="pdp-direct-add-btn" id="pdpAddToCartBtn">
+              <span id="pdpAddBtnText">Add to Shopping Bag</span>
+              <span id="pdpAddBtnPrice">— $109.00</span>
+            </button>
+          </div>
+
         </div>
       </section>
 
@@ -489,188 +563,7 @@
 
     </div>
 
-    <!-- ========================================================================
-         SELECTION POPUP MODAL (Selection comes as popup)
-         Opens when clicking any of the 5 selector tabs or the Add-to-Bag button
-         ======================================================================== -->
-    <div class="pdp-selection-popup-modal" id="pdpSelectionModal" aria-hidden="true" role="dialog" aria-modal="true">
-      <div class="pdp-popup-backdrop" id="pdpSelectionModalBackdrop" onclick="window.closeSelectionPopup()"></div>
-      <div class="pdp-popup-dialog" id="pdpPopupPanel">
-        
-        <!-- Modal Top Bar -->
-        <div class="pdp-modal-top-bar">
-          <div class="pdp-modal-header-titles">
-            <span class="pdp-modal-kicker" id="popupKicker">STEP 1 OF 3 REQUIRED</span>
-            <h3 class="pdp-modal-title" id="popupTitle">Select Format & Servings</h3>
-          </div>
-          <button type="button" class="pdp-modal-close-icon" id="closeSelectionPopupBtn" onclick="window.closeSelectionPopup()" aria-label="Close selection popup">✕</button>
-        </div>
-
-        <!-- Step Switcher Ribbon inside Popup -->
-        <div class="pdp-modal-step-nav" role="tablist">
-          <button type="button" class="pdp-modal-nav-tab active" id="modalNavSize" onclick="window.switchPopupTab('size')">
-            <span class="modal-nav-dot" id="modalDotSize">01</span>
-            <span>Size</span>
-          </button>
-          <button type="button" class="pdp-modal-nav-tab" id="modalNavFlavour" onclick="window.switchPopupTab('flavour')">
-            <span class="modal-nav-dot" id="modalDotFlavour">02</span>
-            <span>Flavour</span>
-          </button>
-          <button type="button" class="pdp-modal-nav-tab" id="modalNavPlaque" onclick="window.switchPopupTab('plaque')">
-            <span class="modal-nav-dot" id="modalDotPlaque">03</span>
-            <span>Plaque</span>
-          </button>
-          <button type="button" class="pdp-modal-nav-tab" id="modalNavTouch" onclick="window.switchPopupTab('touch')">
-            <span class="modal-nav-dot" id="modalDotTouch">04</span>
-            <span>Touch</span>
-          </button>
-          <button type="button" class="pdp-modal-nav-tab" id="modalNavNotes" onclick="window.switchPopupTab('notes')">
-            <span class="modal-nav-dot" id="modalDotNotes">05</span>
-            <span>Notes</span>
-          </button>
-        </div>
-
-        <!-- Popup Scrollable Body -->
-        <div class="pdp-modal-body-scroll">
-          
-          <!-- POPUP PANEL 1: SIZE -->
-          <div class="pdp-popup-body active" id="popupPanelSize">
-            <div class="pdp-panel-guide-row">
-              <span class="pdp-panel-guide-text">Choose diameter and guest servings</span>
-              <button type="button" class="pdp-portion-guide-trigger" id="openPortionGuideBtn">Portion Guide ↗</button>
-            </div>
-            <div class="pdp-sizes-grid" id="pdpSizesGrid">
-              <!-- Populated dynamically from product.sizes in app.js -->
-            </div>
-            <button type="button" class="pdp-panel-next-btn" onclick="window.switchPopupTab('flavour')">
-              <span>Confirm Format & Continue to Flavour →</span>
-            </button>
-          </div>
-
-          <!-- POPUP PANEL 2: FLAVOUR -->
-          <div class="pdp-popup-body" id="popupPanelFlavour">
-            <div class="pdp-panel-guide-row">
-              <span class="pdp-panel-guide-text">Select your artisan sponge and ganache harmony</span>
-            </div>
-            <div class="pdp-flavour-cards-grid" id="pdpFlavourPills">
-              <button type="button" class="pdp-flavour-pill-card" data-flavour="Belgian Dark Chocolate Fudge">
-                <strong class="flavour-pill-title">Belgian Chocolate Fudge</strong>
-                <span class="flavour-pill-desc">Buttermilk chocolate cake & slow-cooked fudge ganache</span>
-              </button>
-              <button type="button" class="pdp-flavour-pill-card" data-flavour="Victorian Vanilla Bean & Raspberry Curd">
-                <strong class="flavour-pill-title">Vanilla Bean & Raspberry Curd</strong>
-                <span class="flavour-pill-desc">Madagascar vanilla sponge, house raspberry coulis & Swiss buttercream</span>
-              </button>
-              <button type="button" class="pdp-flavour-pill-card" data-flavour="Roasted Hazelnut Praline & Gianduja">
-                <strong class="flavour-pill-title">Hazelnut Praline & Gianduja</strong>
-                <span class="flavour-pill-desc">Chocolate sponge, roasted Piedmont hazelnut praline & gianduja</span>
-              </button>
-              <button type="button" class="pdp-flavour-pill-card" data-flavour="Meyer Lemon Curd & Passionfruit">
-                <strong class="flavour-pill-title">Meyer Lemon & Passionfruit</strong>
-                <span class="flavour-pill-desc">Tangy Victorian citrus curd, light vanilla sponge & airy meringue</span>
-              </button>
-            </div>
-            <button type="button" class="pdp-panel-next-btn" onclick="window.switchPopupTab('plaque')">
-              <span>Confirm Flavour & Continue to Plaque →</span>
-            </button>
-          </div>
-
-          <!-- POPUP PANEL 3: PLAQUE -->
-          <div class="pdp-popup-body" id="popupPanelPlaque">
-            <div class="pdp-panel-guide-row">
-              <span class="pdp-panel-guide-text">Personalised hand-piped chocolate plaque</span>
-            </div>
-            
-            <label class="pdp-sketch-toggle-label" for="pdpPlaqueToggle">
-              <input type="checkbox" id="pdpPlaqueToggle" class="pdp-min-checkbox">
-              <div class="pdp-sketch-toggle-text">
-                <strong>Add hand-piped chocolate message plaque</strong>
-                <span class="pdp-free-tag">+ Complimentary</span>
-              </div>
-            </label>
-
-            <div class="pdp-plaque-drawer" id="pdpPlaqueDrawer">
-              <div class="pdp-input-field-wrap">
-                <input type="text" id="pdpPlaqueInput" class="pdp-plaque-input" maxlength="32" placeholder="e.g. Happy 30th Birthday Claire!">
-                <span id="pdpPlaqueCount" class="pdp-char-counter">0/32</span>
-              </div>
-              <div class="pdp-preset-chips">
-                <button type="button" class="pdp-chip-btn" onclick="window.fhApp.setPlaquePreset('Happy Birthday!')">Happy Birthday!</button>
-                <button type="button" class="pdp-chip-btn" onclick="window.fhApp.setPlaquePreset('Congratulations!')">Congratulations!</button>
-                <button type="button" class="pdp-chip-btn" onclick="window.fhApp.setPlaquePreset('We Love You!')">We Love You!</button>
-              </div>
-            </div>
-
-            <div style="margin-top: 1rem;">
-              <button type="button" class="pdp-classic-finish-btn" id="pdpClassicFinishBtn" onclick="window.confirmClassicFinish()">
-                <span>✓ Classic Atelier Finish (No Plaque Needed)</span>
-              </button>
-            </div>
-
-            <button type="button" class="pdp-panel-next-btn" onclick="window.switchPopupTab('touch')">
-              <span>Confirm Plaque & View Finishing Touches →</span>
-            </button>
-          </div>
-
-          <!-- POPUP PANEL 4: TOUCH -->
-          <div class="pdp-popup-body" id="popupPanelTouch">
-            <div class="pdp-panel-guide-row">
-              <span class="pdp-panel-guide-text">Optional celebration accessories & candles</span>
-            </div>
-            <div class="pdp-touches-grid">
-              <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Gold Birthday Candles (12pk)" data-price="8.50">
-                <div class="touch-card-info">
-                  <strong>Gold Celebration Candles (12pk)</strong>
-                  <span>Tall metallic celebratory beeswax taper candles</span>
-                </div>
-                <div class="touch-card-price">+$8.50</div>
-              </button>
-              <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Atelier Crystal Cake Knife" data-price="18.00">
-                <div class="touch-card-info">
-                  <strong>Atelier Gold Cake Knife</strong>
-                  <span>Serrated celebration server for razor-sharp slices</span>
-                </div>
-                <div class="touch-card-price">+$18.00</div>
-              </button>
-              <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Artisan Macarons Box (6pk)" data-price="24.00">
-                <div class="touch-card-info">
-                  <strong>French Macarons Atelier Box (6pk)</strong>
-                  <span>Vanilla, salted caramel, pistachio, and raspberry</span>
-                </div>
-                <div class="touch-card-price">+$24.00</div>
-              </button>
-            </div>
-            <button type="button" class="pdp-panel-next-btn" onclick="window.switchPopupTab('notes')">
-              <span>Proceed to Special Notes →</span>
-            </button>
-          </div>
-
-          <!-- POPUP PANEL 5: NOTES -->
-          <div class="pdp-popup-body" id="popupPanelNotes">
-            <div class="pdp-panel-guide-row">
-              <span class="pdp-panel-guide-text">Special dietary notes or pickup instructions</span>
-            </div>
-            <textarea id="pdpOrderNotes" class="pdp-order-notes" placeholder="e.g. Nut allergy in party, please keep cake on dry ice, or pickup time notes..." rows="3"></textarea>
-            <div class="pdp-notes-hint">
-              <span>💡 For custom tiered wedding cakes or catering banquets, please visit our <a href="sales-department.html#quoteRequestSection" style="color: var(--fh-primary-dark); text-decoration: underline;">Sales Department</a>.</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Modal Footer Bar with Live Price & Save Button -->
-        <div class="pdp-modal-footer">
-          <div class="pdp-modal-footer-price">
-            <span class="pdp-footer-price-kicker">Subtotal Investment</span>
-            <strong class="pdp-footer-price-val" id="pdpModalPrice">$109.00</strong>
-          </div>
-          <button type="button" class="pdp-modal-save-btn" onclick="window.closeSelectionPopup()">
-            <span>Save & Return to Creation ✓</span>
-          </button>
-        </div>
-
-      </div>
-    </div>
+    <!-- Selection popup modal decommissioned in favor of direct on-page selections -->
 
     <!-- Floating Toast Feedback -->
     <div class="pdp-studio-toast" id="pdpStudioToast" aria-live="polite">

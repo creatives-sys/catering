@@ -353,121 +353,187 @@
               </div>
 
               <p class="pdp-cake-subtitle" id="pdpDescription">
-                Five whisper-thin layers of buttermilk chocolate cake bound by slow-tempered Belgian chocolate fudge.
-                Please complete the selections below to proceed.
+                Five whisper-thin layers of buttermilk chocolate cake bound by slow-tempered Belgian chocolate fudge. Handcrafted from scratch daily in our Kew boutique atelier using cultured French Lescure butter and single-origin chocolate.
               </p>
+            </div>
 
-              <!-- Sketched Section Title: Complete to proceed. -->
-              <div class="pdp-complete-proceed-header">
-                <div class="pdp-proceed-title-wrap">
-                  <h2 class="pdp-complete-title">Complete to proceed.</h2>
-                  <span class="pdp-proceed-subtitle">Tap each option box to customize in popup</span>
+            <!-- DIRECT ON-PAGE SELECTION CONTROLS (No popups, no selection journey) -->
+            <div class="pdp-direct-options-wrap">
+
+              <!-- 1. Format / Size Selection (Direct Interactive Cards) -->
+              <div class="pdp-option-group" id="pdpSizeGroup">
+                <div class="pdp-option-head">
+                  <span class="pdp-option-label">1. Select Format & Servings</span>
+                  <button type="button" class="pdp-portion-guide-trigger" id="openPortionGuideBtn">Portion Guide ↗</button>
                 </div>
-                <div class="pdp-proceed-status">
-                  <span class="pdp-progress-fraction" id="pdpProgressFraction">0 / 3 Required Selected</span>
+                <div class="pdp-sizes-grid" id="pdpSizesGrid">
+                  <button class="pdp-size-btn active" type="button" data-size-idx="0">
+                    <span class="pdp-size-name">6" Petite</span>
+                    <span class="pdp-size-serves">Serves 7–8</span>
+                    <span class="pdp-size-price">$109.00</span>
+                  </button>
+                  <button class="pdp-size-btn" type="button" data-size-idx="1">
+                    <span class="pdp-size-name">9" Grand</span>
+                    <span class="pdp-size-serves">Serves 12–14</span>
+                    <span class="pdp-size-price">$159.00</span>
+                  </button>
+                  <button class="pdp-size-btn" type="button" data-size-idx="2">
+                    <span class="pdp-size-name">12" Banquet</span>
+                    <span class="pdp-size-serves">Serves 20–22</span>
+                    <span class="pdp-size-price">$209.00</span>
+                  </button>
                 </div>
               </div>
-            </div>
 
-            <!-- 5 Selector Boxes in a Row (Exact match to notebook sketch: Size with ✓, Flavour, Plaque, Touch, Notes) -->
-            <div class="pdp-sketch-tabs" role="tablist" aria-label="Customization Steps">
+              <!-- 2. Flavour / Ganache Harmony (Curated Luxury Dropdown) -->
+              <div class="pdp-option-group" id="pdpFlavourGroup">
+                <div class="pdp-option-head">
+                  <label class="pdp-option-label" for="pdpFlavourSelect">2. Flavour & Ganache Recipe</label>
+                  <span class="pdp-option-badge">Signature Atelier</span>
+                </div>
+                <div class="pdp-flavour-select-wrap">
+                  <select id="pdpFlavourSelect" class="pdp-flavour-select" aria-label="Select Flavour & Ganache Recipe">
+                    <option value="Belgian Dark Chocolate Fudge" selected>Belgian Dark Chocolate Fudge — Buttermilk cake & slow-cooked fudge ganache (Signature)</option>
+                    <option value="Victorian Vanilla Bean & Raspberry Curd">Victorian Vanilla Bean & Raspberry Curd — Madagascar vanilla sponge & house coulis</option>
+                    <option value="Roasted Hazelnut Praline & Gianduja">Roasted Piedmont Hazelnut Praline & Gianduja Ganache</option>
+                    <option value="Meyer Lemon Curd & Passionfruit">Meyer Lemon Curd & Passionfruit — Tangy citrus curd & airy meringue</option>
+                  </select>
+                  <div class="pdp-select-arrow" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
 
-              <!-- Tab 1: Size (shows ✓ when chosen) -->
-              <button type="button" class="pdp-sketch-tab active" id="stepBoxSize" data-step="size" role="tab"
-                aria-selected="true" onclick="window.openSelectionPopup('size')">
-                <span class="sketch-tab-check" id="checkSize">✓</span>
-                <span class="sketch-tab-title">Size</span>
-                <span class="sketch-tab-sub" id="tabSummarySize">Select</span>
-              </button>
+              <!-- 3. Complimentary Chocolate Inscription Plaque (Inline & Optional) -->
+              <div class="pdp-option-group pdp-plaque-card-box" id="pdpPlaqueGroup">
+                <label class="pdp-sketch-toggle-label" for="pdpPlaqueToggle">
+                  <input type="checkbox" id="pdpPlaqueToggle" class="pdp-min-checkbox">
+                  <div class="pdp-sketch-toggle-text">
+                    <strong class="pdp-plaque-title">Add hand-piped chocolate message plaque</strong>
+                    <span class="pdp-free-tag">+ Complimentary Free</span>
+                  </div>
+                </label>
 
-              <!-- Tab 2: Flavour (shows ✓ when chosen) -->
-              <button type="button" class="pdp-sketch-tab" id="stepBoxFlavour" data-step="flavour" role="tab"
-                aria-selected="false" onclick="window.openSelectionPopup('flavour')">
-                <span class="sketch-tab-check" id="checkFlavour">✓</span>
-                <span class="sketch-tab-title">Flavour</span>
-                <span class="sketch-tab-sub" id="tabSummaryFlavour">Select</span>
-              </button>
+                <div class="pdp-plaque-drawer" id="pdpPlaqueDrawer">
+                  <div class="pdp-input-field-wrap">
+                    <input type="text" id="pdpPlaqueInput" class="pdp-plaque-input" maxlength="32"
+                      placeholder="e.g. Happy 30th Birthday Claire!" aria-label="Custom plaque inscription">
+                    <span id="pdpPlaqueCount" class="pdp-char-counter">0/32</span>
+                  </div>
+                  <div class="pdp-preset-chips">
+                    <span class="pdp-preset-label">Suggestions:</span>
+                    <button type="button" class="pdp-chip-btn"
+                      onclick="window.fhApp.setPlaquePreset('Happy Birthday!')">Happy Birthday!</button>
+                    <button type="button" class="pdp-chip-btn"
+                      onclick="window.fhApp.setPlaquePreset('Congratulations!')">Congratulations!</button>
+                    <button type="button" class="pdp-chip-btn" onclick="window.fhApp.setPlaquePreset('We Love You!')">We
+                      Love You!</button>
+                  </div>
+                </div>
+                <div class="pdp-plaque-note">
+                  <span>Leave unchecked for classic French finish with gold leaf. Inscription is hand-piped on a dark Belgian chocolate plaque.</span>
+                </div>
+              </div>
 
-              <!-- Tab 3: Plaque (shows ✓ when chosen) -->
-              <button type="button" class="pdp-sketch-tab" id="stepBoxPlaque" data-step="plaque" role="tab"
-                aria-selected="false" onclick="window.openSelectionPopup('plaque')">
-                <span class="sketch-tab-check" id="checkPlaque">✓</span>
-                <span class="sketch-tab-title">Plaque</span>
-                <span class="sketch-tab-sub" id="tabSummaryPlaque">Choose</span>
-              </button>
+              <!-- 4. Celebration Finishing Touches (Inline Optional Add-ons) -->
+              <div class="pdp-option-group" id="pdpTouchesGroup">
+                <div class="pdp-option-head">
+                  <span class="pdp-option-label">Finishing Touches <span class="pdp-optional-tag">(Optional)</span></span>
+                  <span class="pdp-option-hint">1-click additions</span>
+                </div>
+                <div class="pdp-touches-inline-grid">
+                  <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Gold Birthday Candles (12pk)"
+                    data-price="8.50">
+                    <div class="touch-card-info">
+                      <strong>Gold Beeswax Candles (12pk)</strong>
+                      <span>Tall celebratory metallic tapers</span>
+                    </div>
+                    <div class="touch-card-price">+$8.50</div>
+                  </button>
+                  <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Atelier Crystal Cake Knife"
+                    data-price="18.00">
+                    <div class="touch-card-info">
+                      <strong>Atelier Gold Cake Knife</strong>
+                      <span>Serrated server for razor-sharp slices</span>
+                    </div>
+                    <div class="touch-card-price">+$18.00</div>
+                  </button>
+                  <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Artisan Macarons Box (6pk)"
+                    data-price="24.00">
+                    <div class="touch-card-info">
+                      <strong>French Macarons Box (6pk)</strong>
+                      <span>Vanilla, salted caramel, pistachio</span>
+                    </div>
+                    <div class="touch-card-price">+$24.00</div>
+                  </button>
+                </div>
+              </div>
 
-              <!-- Tab 4: Touch (shows ✓ when chosen) -->
-              <button type="button" class="pdp-sketch-tab" id="stepBoxTouch" data-step="touch" role="tab"
-                aria-selected="false" onclick="window.openSelectionPopup('touch')">
-                <span class="sketch-tab-check" id="checkTouch">✓</span>
-                <span class="sketch-tab-title">Touch</span>
-                <span class="sketch-tab-sub" id="tabSummaryTouch">Extras</span>
-              </button>
+              <!-- 5. Dietary Notes & Special Instructions (Inline Collapsible) -->
+              <details class="pdp-notes-accordion">
+                <summary class="pdp-notes-summary">
+                  <span>+ Special Dietary Notes or Pickup Instructions (Optional)</span>
+                  <span>▼</span>
+                </summary>
+                <div class="pdp-notes-content">
+                  <textarea id="pdpOrderNotes" class="pdp-order-notes"
+                    placeholder="e.g. Nut allergy in party, keep on dry ice, or pickup hour notes..."
+                    rows="2"></textarea>
+                </div>
+              </details>
 
-              <!-- Tab 5: Notes (shows ✓ when chosen) -->
-              <button type="button" class="pdp-sketch-tab" id="stepBoxNotes" data-step="notes" role="tab"
-                aria-selected="false" onclick="window.openSelectionPopup('notes')">
-                <span class="sketch-tab-check" id="checkNotes">✓</span>
-                <span class="sketch-tab-title">Notes</span>
-                <span class="sketch-tab-sub" id="tabSummaryNotes">Atelier</span>
-              </button>
+              <!-- 6. Direct Action Bar: Quantity Stepper + Add to Shopping Bag Button -->
+              <div class="pdp-direct-action-bar">
+                <div class="pdp-qty-stepper">
+                  <button type="button" class="pdp-stepper-btn" id="pdpQtyDec" aria-label="Decrease quantity">−</button>
+                  <span class="pdp-stepper-val" id="pdpQtyVal">1</span>
+                  <button type="button" class="pdp-stepper-btn" id="pdpQtyInc" aria-label="Increase quantity">+</button>
+                </div>
 
-            </div>
-
-            <!-- Minimal Selected Configuration Summary Bar -->
-            <div class="pdp-minimal-summary-card">
-              <div class="pdp-summary-card-head">
-                <span class="pdp-summary-card-title">Your Atelier Selection</span>
-                <button type="button" class="pdp-open-popup-btn" onclick="window.openSelectionPopup('size')">
-                  <span>Open Selection Popup ↗</span>
+                <button type="button" class="pdp-direct-add-btn" id="pdpAddToCartBtn">
+                  <span id="pdpAddBtnText">Add to Shopping Bag</span>
+                  <span id="pdpAddBtnPrice">— $109.00</span>
                 </button>
               </div>
-              <div class="pdp-summary-pills-row">
-                <div class="pdp-sum-pill" id="chipSize" onclick="window.openSelectionPopup('size')">
-                  <span class="pdp-sum-dot"></span>
-                  <span class="pdp-sum-label">Format:</span>
-                  <strong class="pdp-sum-val" id="pdpSumSize">Select format</strong>
+
+              <!-- 7. Delivery / Atelier Reassurance Strip -->
+              <div class="pdp-reassurance-grid">
+                <div class="pdp-reassurance-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="1" y="3" width="15" height="13" rx="2" />
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 8" />
+                    <circle cx="5.5" cy="18.5" r="2.5" />
+                    <circle cx="18.5" cy="18.5" r="2.5" />
+                  </svg>
+                  <div>
+                    <strong>Melbourne Metro Delivery</strong>
+                    <span>Refrigerated courier &lt; 4°C · Free over $150</span>
+                  </div>
                 </div>
-                <div class="pdp-sum-pill" id="chipFlavour" onclick="window.openSelectionPopup('flavour')">
-                  <span class="pdp-sum-dot"></span>
-                  <span class="pdp-sum-label">Flavour:</span>
-                  <strong class="pdp-sum-val" id="pdpSumFlavour">Select flavour</strong>
+                <div class="pdp-reassurance-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  <div>
+                    <strong>Kew Boutique Pickup</strong>
+                    <span>Complimentary pickup at 259 High St</span>
+                  </div>
                 </div>
-                <div class="pdp-sum-pill" id="chipPlaque" onclick="window.openSelectionPopup('plaque')">
-                  <span class="pdp-sum-dot"></span>
-                  <span class="pdp-sum-label">Finish:</span>
-                  <strong class="pdp-sum-val" id="pdpSumPlaque">Choose finish</strong>
-                </div>
-                <div class="pdp-sum-pill" id="chipAddons" style="display: none;"
-                  onclick="window.openSelectionPopup('touch')">
-                  <span class="pdp-sum-dot"></span>
-                  <span class="pdp-sum-label">Extras:</span>
-                  <strong class="pdp-sum-val" id="pdpSumAddons"></strong>
+                <div class="pdp-reassurance-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <div>
+                    <strong>72-Hour Notice Bake</strong>
+                    <span>Handcrafted fresh the morning of your event</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Action Bar (Minimal: Quantity Stepper + Add to Shopping Bag Button) -->
-            <div class="pdp-minimal-action-bar">
-              <div class="pdp-qty-stepper">
-                <button type="button" class="pdp-stepper-btn" id="pdpQtyDec" aria-label="Decrease quantity">−</button>
-                <span class="pdp-stepper-val" id="pdpQtyVal">1</span>
-                <button type="button" class="pdp-stepper-btn" id="pdpQtyInc" aria-label="Increase quantity">+</button>
-              </div>
-
-              <!-- "without selection no add to cart" Action Button -->
-              <button type="button" class="pdp-sketch-add-btn disabled" id="pdpAddToCartBtn" aria-disabled="true">
-                <span id="pdpAddBtnText">Complete Selections to Add to Bag (0/3)</span>
-                <span id="pdpAddBtnPrice">— $109.00</span>
-              </button>
-            </div>
-
-            <div class="pdp-reassurance-row">
-              <span>🔒 256-Bit SSL Encrypted</span>
-              <span>•</span>
-              <span>🎂 Handcrafted from Scratch in Kew</span>
-              <span>•</span>
-              <span>❄️ Kept Refrigerated &lt; 4°C</span>
             </div>
 
           </div>
@@ -479,23 +545,34 @@
 
   <!-- ========================================================================
        SECTION 2: EDITORIAL TRANSPARENCY (Full-Width Atelier Care & Provenance)
-       The art of Creation · Allergens & Dietary Transparency · Preservation & serving
+       The art of Creation · Allergens & Dietary Transparency · Preservation & serving  <!-- ========================================================================
+       SECTION 2: EDITORIAL TRANSPARENCY (Full-Width Atelier Care & Provenance)
        ======================================================================== -->
   <section class="pdp-editorial-section" id="pdpEditorialSection" aria-label="Atelier Transparency and Care">
     <div class="container">
-      <div class="cro-section-header">
+      <div class="cro-section-header center">
         <span class="cro-kicker">KEW ATELIER TRANSPARENCY</span>
-        <h2 class="cro-title">The Craft of Pâtisserie & Pure Provenance</h2>
+        <h2 class="cro-title">The Craft of Pâtisserie &amp; Pure Provenance</h2>
         <p class="cro-desc">From cultured French butter to single-origin Belgian chocolate, discover the provenance, allergen care, and slicing rituals behind our atelier creations.</p>
       </div>
 
-      <div class="pdp-editorial-sections full-width">
+      <div class="pdp-editorial-grid">
         <!-- Block 1: The art of Creation -->
-        <article class="pdp-editorial-block">
-          <div class="pdp-editorial-head-row">
-            <h3 class="pdp-editorial-heading">The art of Creation</h3>
+        <article class="pdp-editorial-card">
+          <div class="pdp-ed-card-top">
+            <div class="pdp-ed-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <span class="pdp-ed-num">01 · ATELIER CRAFT</span>
           </div>
-          <div class="pdp-editorial-underline"></div>
+          <h3 class="pdp-editorial-heading">The Art of Creation</h3>
+          <div class="pdp-editorial-tags">
+            <span class="pdp-ed-tag">Lescure French Butter</span>
+            <span class="pdp-ed-tag">Belgian Cacao</span>
+            <span class="pdp-ed-tag">Maldon Sea Salt</span>
+          </div>
           <p class="pdp-editorial-copy" id="pdpTabCraftText">
             Crafted daily in our Kew boutique atelier using cultured Lescure French butter and single-origin Belgian
             chocolate. Five whisper-thin buttermilk sponge layers bound by slow-tempered chocolate fudge, Madagascar
@@ -504,11 +581,20 @@
         </article>
 
         <!-- Block 2: Allergens & Dietary Transparency -->
-        <article class="pdp-editorial-block">
-          <div class="pdp-editorial-head-row">
-            <h3 class="pdp-editorial-heading">Allergens & Dietary Transparency</h3>
+        <article class="pdp-editorial-card">
+          <div class="pdp-ed-card-top">
+            <div class="pdp-ed-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <span class="pdp-ed-num">02 · ALLERGEN INTEGRITY</span>
           </div>
-          <div class="pdp-editorial-underline"></div>
+          <h3 class="pdp-editorial-heading">Allergens &amp; Dietary Transparency</h3>
+          <div class="pdp-editorial-tags">
+            <span class="pdp-ed-tag tag-alert">Gluten, Dairy, Egg</span>
+            <span class="pdp-ed-tag tag-success">Dedicated GF Range</span>
+          </div>
           <p class="pdp-editorial-copy" id="pdpTabAllergensText">
             Contains gluten, dairy, egg. Facility handles tree nuts, sesame, and soy. Dedicated gluten-free
             preparations are available across our flourless citrus tortes, almond ricotta cakes, and San Sebastián
@@ -517,11 +603,22 @@
         </article>
 
         <!-- Block 3: Preservation & serving -->
-        <article class="pdp-editorial-block">
-          <div class="pdp-editorial-head-row">
-            <h3 class="pdp-editorial-heading">Preservation & serving</h3>
+        <article class="pdp-editorial-card">
+          <div class="pdp-ed-card-top">
+            <div class="pdp-ed-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <span class="pdp-ed-num">03 · SERVING RITUAL</span>
           </div>
-          <div class="pdp-editorial-underline"></div>
+          <h3 class="pdp-editorial-heading">Preservation &amp; Slicing</h3>
+          <div class="pdp-editorial-tags">
+            <span class="pdp-ed-tag">45m Room Temp</span>
+            <span class="pdp-ed-tag">&lt; 4°C Chilled</span>
+            <span class="pdp-ed-tag">Best within 4 Days</span>
+          </div>
           <p class="pdp-editorial-copy" id="pdpTabServingText">
             <strong>Serving Ritual:</strong> Bring cake to room temperature 45 minutes prior to slicing for a silky,
             melting ganache texture. Dip a long thin knife in hot water and wipe dry between each cut.<br><br>
@@ -534,11 +631,11 @@
   </section>
 
   <!-- ========================================================================
-       SECTION 3: ATELIER COMMITMENT & RISK REVERSAL (Theme #a7b2a3 Cards)
+       SECTION 3: ATELIER COMMITMENT & RISK REVERSAL
        ======================================================================== -->
   <section class="pdp-trust-section" id="pdpTrustSection" aria-label="Customer Reassurance & Atelier Guarantees">
     <div class="container">
-      <div class="cro-section-header">
+      <div class="cro-section-header center">
         <span class="cro-kicker">KEW ATELIER COMMITMENT</span>
         <h2 class="cro-title">Baked with Care, Reserved for Your Moment</h2>
         <p class="cro-desc">Every celebration cake is handcrafted to order from scratch using French Lescure butter
@@ -547,12 +644,14 @@
 
       <div class="cro-trust-grid">
         <div class="cro-trust-card">
-          <div class="cro-card-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path
-                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7 7 0 1 1 19 12a1 1 0 0 1-2 0 5 5 0 1 0-4 4.93z" />
-              <circle cx="12" cy="12" r="2" />
-            </svg>
+          <div class="cro-trust-top">
+            <div class="cro-card-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7 7 0 1 1 19 12a1 1 0 0 1-2 0 5 5 0 1 0-4 4.93z" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </div>
+            <span class="cro-trust-badge">PROMISE 01</span>
           </div>
           <h3 class="cro-card-title">Morning-Of Scratch Baking</h3>
           <p class="cro-card-text">Baked fresh the morning of your event in our Kew boutique. We never freeze
@@ -560,13 +659,16 @@
         </div>
 
         <div class="cro-trust-card">
-          <div class="cro-card-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="1" y="3" width="15" height="13" rx="2" />
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-              <circle cx="5.5" cy="18.5" r="2.5" />
-              <circle cx="18.5" cy="18.5" r="2.5" />
-            </svg>
+          <div class="cro-trust-top">
+            <div class="cro-card-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="1" y="3" width="15" height="13" rx="2" />
+                <polygon points="16 8 20 8 23 11 23 16 16 16 8" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </div>
+            <span class="cro-trust-badge">PROMISE 02</span>
           </div>
           <h3 class="cro-card-title">Refrigerated Safe Transit</h3>
           <p class="cro-card-text">Delivered in temperature-controlled courier vans below 4°C, or collect direct
@@ -574,11 +676,14 @@
         </div>
 
         <div class="cro-trust-card">
-          <div class="cro-card-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
+          <div class="cro-trust-top">
+            <div class="cro-card-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <span class="cro-trust-badge">PROMISE 03</span>
           </div>
           <h3 class="cro-card-title">72-Hour Notice Guarantee</h3>
           <p class="cro-card-text">Guaranteed oven slot & pastry chef allocation. Need it faster? Call our Kew team
@@ -586,10 +691,13 @@
         </div>
 
         <div class="cro-trust-card">
-          <div class="cro-card-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
+          <div class="cro-trust-top">
+            <div class="cro-card-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <span class="cro-trust-badge">PROMISE 04</span>
           </div>
           <h3 class="cro-card-title">Dedicated Dietary Integrity</h3>
           <p class="cro-card-text">Strict sanitation protocols for 100% Gluten-Free, Nut-Free, and Dairy-Free
@@ -609,13 +717,17 @@
           <span class="cro-stars">★★★★★</span>
           <span class="cro-rating-text">4.9 ★ Rating from over 380+ Melbourne Celebration Hosts</span>
         </div>
-        <h2 class="cro-title">Loved Across Melbourne & Boroondara</h2>
+        <h2 class="cro-title">Loved Across Melbourne &amp; Boroondara</h2>
         <p class="cro-desc">Verified reflections from hosts, wedding coordinators, and celebration planners across Melbourne.</p>
       </div>
 
       <div class="cro-reviews-grid">
         <div class="cro-review-card">
-          <div class="cro-review-stars">★★★★★</div>
+          <div class="cro-review-card-top">
+            <div class="cro-review-stars">★★★★★</div>
+            <span class="cro-verified-tag">✓ Verified Host</span>
+          </div>
+          <div class="cro-review-occasion">Milestone 30th Birthday · Kew</div>
           <p class="cro-review-quote">"Ordered the Bruce cake for my 30th birthday in Kew. Guests were taking photos
             of the layers before even cutting it. The slow-tempered chocolate fudge ganache with sea salt is pure
             perfection."</p>
@@ -623,13 +735,17 @@
             <div class="cro-reviewer-avatar">CD</div>
             <div>
               <strong class="cro-reviewer-name">Claire D.</strong>
-              <span class="cro-reviewer-loc">Verified Order · Kew Boutique Pickup</span>
+              <span class="cro-reviewer-loc">Kew Boutique Pickup · Bruce Cake 9"</span>
             </div>
           </div>
         </div>
 
         <div class="cro-review-card">
-          <div class="cro-review-stars">★★★★★</div>
+          <div class="cro-review-card-top">
+            <div class="cro-review-stars">★★★★★</div>
+            <span class="cro-verified-tag">✓ Verified Host</span>
+          </div>
+          <div class="cro-review-occasion">South Yarra Celebration · Chilled Delivery</div>
           <p class="cro-review-quote">"The chocolate plaque was piped with exquisite calligraphy. We opted for
             chilled metro delivery to South Yarra and the cake arrived in pristine, refrigerated condition. Five
             stars without hesitation."</p>
@@ -637,20 +753,24 @@
             <div class="cro-reviewer-avatar">ML</div>
             <div>
               <strong class="cro-reviewer-name">Marcus L.</strong>
-              <span class="cro-reviewer-loc">Verified Order · Melbourne Metro Delivery</span>
+              <span class="cro-reviewer-loc">Melbourne Metro Courier · 12" Banquet</span>
             </div>
           </div>
         </div>
 
         <div class="cro-review-card">
-          <div class="cro-review-stars">★★★★★</div>
+          <div class="cro-review-card-top">
+            <div class="cro-review-stars">★★★★★</div>
+            <span class="cro-verified-tag">✓ Verified Host</span>
+          </div>
+          <div class="cro-review-occasion">Richmond Engagement Reception</div>
           <p class="cro-review-quote">"Ordered the 100% gluten-free flourless creation for our engagement party.
             Nobody could believe it was gluten-free — moist, intensely flavorful, and gone within ten minutes!"</p>
           <div class="cro-reviewer-info">
             <div class="cro-reviewer-avatar">SK</div>
             <div>
               <strong class="cro-reviewer-name">Sophie K.</strong>
-              <span class="cro-reviewer-loc">Verified Order · Richmond Celebration</span>
+              <span class="cro-reviewer-loc">Richmond Event · Gluten-Free Flourless</span>
             </div>
           </div>
         </div>
@@ -673,20 +793,37 @@
         <div class="cro-faq-accordion">
           <details class="cro-faq-item" open>
             <summary class="cro-faq-question">
-              <span>How should I transport the cake if collecting from Kew?</span>
-              <span class="cro-faq-icon">+</span>
+              <div class="cro-faq-q-text">
+                <span class="cro-faq-badge">Transport &amp; Handling</span>
+                <span class="cro-faq-title">How should I transport the cake if collecting from Kew?</span>
+              </div>
+              <span class="cro-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="cro-faq-answer">
               <p>Always place your cake box <strong>flat on the front passenger floor</strong> of your vehicle, never
                 on an angled car seat or in a warm boot. Put your vehicle's air conditioning on high. Once home,
                 immediately transfer the box into your refrigerator below 4°C until 45 minutes prior to slicing.</p>
+              <div class="cro-faq-callout">
+                💡 <strong>Pâtissier Tip:</strong> We provide sturdy, presentation-grade transport boxes with reinforced bases so your cake stays immaculate during car journeys.
+              </div>
             </div>
           </details>
 
           <details class="cro-faq-item">
             <summary class="cro-faq-question">
-              <span>How far in advance do I need to place my order?</span>
-              <span class="cro-faq-icon">+</span>
+              <div class="cro-faq-q-text">
+                <span class="cro-faq-badge">Bakehouse Schedule</span>
+                <span class="cro-faq-title">How far in advance do I need to place my order?</span>
+              </div>
+              <span class="cro-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="cro-faq-answer">
               <p>We require a minimum of <strong>72 hours advance notice</strong> for celebration cakes to slow-temper
@@ -699,20 +836,34 @@
 
           <details class="cro-faq-item">
             <summary class="cro-faq-question">
-              <span>Can I customise the chocolate message plaque?</span>
-              <span class="cro-faq-icon">+</span>
+              <div class="cro-faq-q-text">
+                <span class="cro-faq-badge">Hand-Piped Plaque</span>
+                <span class="cro-faq-title">Can I customise the chocolate message plaque?</span>
+              </div>
+              <span class="cro-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="cro-faq-answer">
-              <p>Yes! Every celebration cake includes a complimentary hand-piped dark chocolate plaque. In Step 3 of
-                the configurator above, you can type your custom message (up to 32 characters) or select presets like
-                "Happy Birthday!", "Congratulations!" or choose the Classic Atelier finish with no plaque.</p>
+              <p>Yes! Every celebration cake includes a complimentary hand-piped dark chocolate plaque. In the options
+                section above, simply tick the chocolate plaque checkbox to type your custom inscription (up to 32 characters) or select presets like
+                "Happy Birthday!", "Congratulations!" or choose no plaque.</p>
             </div>
           </details>
 
           <details class="cro-faq-item">
             <summary class="cro-faq-question">
-              <span>How long will the cake stay fresh after collection?</span>
-              <span class="cro-faq-icon">+</span>
+              <div class="cro-faq-q-text">
+                <span class="cro-faq-badge">Freshness &amp; Storage</span>
+                <span class="cro-faq-title">How long will the cake stay fresh after collection?</span>
+              </div>
+              <span class="cro-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="cro-faq-answer">
               <p>Our cakes are best enjoyed within <strong>4 days of collection</strong> when stored in their original
@@ -724,8 +875,15 @@
 
           <details class="cro-faq-item">
             <summary class="cro-faq-question">
-              <span>What are your Melbourne delivery areas and fees?</span>
-              <span class="cro-faq-icon">+</span>
+              <div class="cro-faq-q-text">
+                <span class="cro-faq-badge">Melbourne Delivery</span>
+                <span class="cro-faq-title">What are your Melbourne delivery areas and fees?</span>
+              </div>
+              <span class="cro-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </summary>
             <div class="cro-faq-answer">
               <p>We deliver across Melbourne Metro via dedicated refrigerated courier vans. Delivery is
@@ -746,10 +904,10 @@
     <div class="container">
       <div class="cro-concierge-strip">
         <div class="cro-concierge-content">
-          <span class="cro-concierge-kicker">NEED CUSTOM WEDDING TIERS OR 50+ GUEST BANQUET?</span>
-          <h3 class="cro-concierge-title">Let Our Atelier Concierge Curate Your Celebration</h3>
-          <p class="cro-concierge-desc">From tiered architectural wedding cakes to morning viennoiserie grazing
-            banquets, our Kew chefs work directly with event hosts across Melbourne.</p>
+          <span class="cro-concierge-kicker">BESPOKE EVENT CURATION</span>
+          <h3 class="cro-concierge-title">Need Custom Wedding Tiers or 50+ Guest Banquets?</h3>
+          <p class="cro-concierge-desc">From tiered architectural celebration cakes to morning viennoiserie grazing
+            tables, our Kew pastry chefs consult directly with Melbourne event hosts.</p>
         </div>
         <div class="cro-concierge-actions">
           <button type="button" class="btn-primary open-catering-trigger">
@@ -763,205 +921,7 @@
     </div>
   </section>
 
-    <!-- ========================================================================
-         SELECTION POPUP MODAL (Exact match to notebook sketch "[ Popup ]")
-         Opens when clicking any of the 5 selector tabs or "Open Selection Popup"
-         ======================================================================== -->
-    <div class="pdp-selection-popup-modal" id="pdpSelectionModal" aria-hidden="true" role="dialog" aria-modal="true">
-      <div class="pdp-popup-backdrop" id="pdpSelectionModalBackdrop" onclick="window.closeSelectionPopup()"></div>
-      <div class="pdp-popup-dialog" id="pdpPopupPanel">
-
-        <!-- Modal Top Bar -->
-        <div class="pdp-modal-top-bar">
-          <div class="pdp-modal-header-titles">
-            <span class="pdp-modal-kicker" id="popupKicker">STEP 1 OF 3 REQUIRED</span>
-            <h3 class="pdp-modal-title" id="popupTitle">Select Format & Servings</h3>
-          </div>
-          <button type="button" class="pdp-modal-close-icon" id="closeSelectionPopupBtn"
-            onclick="window.closeSelectionPopup()" aria-label="Close selection popup">✕</button>
-        </div>
-
-        <!-- Step Switcher Ribbon inside Popup -->
-        <div class="pdp-modal-step-nav" role="tablist">
-          <button type="button" class="pdp-modal-nav-tab active" id="modalNavSize"
-            onclick="window.switchPopupTab('size')">
-            <span class="modal-nav-dot" id="modalDotSize">01</span>
-            <span>Size</span>
-          </button>
-          <button type="button" class="pdp-modal-nav-tab" id="modalNavFlavour"
-            onclick="window.switchPopupTab('flavour')">
-            <span class="modal-nav-dot" id="modalDotFlavour">02</span>
-            <span>Flavour</span>
-          </button>
-          <button type="button" class="pdp-modal-nav-tab" id="modalNavPlaque" onclick="window.switchPopupTab('plaque')">
-            <span class="modal-nav-dot" id="modalDotPlaque">03</span>
-            <span>Plaque</span>
-          </button>
-          <button type="button" class="pdp-modal-nav-tab" id="modalNavTouch" onclick="window.switchPopupTab('touch')">
-            <span class="modal-nav-dot" id="modalDotTouch">04</span>
-            <span>Touch</span>
-          </button>
-          <button type="button" class="pdp-modal-nav-tab" id="modalNavNotes" onclick="window.switchPopupTab('notes')">
-            <span class="modal-nav-dot" id="modalDotNotes">05</span>
-            <span>Notes</span>
-          </button>
-        </div>
-
-        <!-- Popup Scrollable Body -->
-        <div class="pdp-modal-body-scroll">
-
-          <!-- POPUP PANEL 1: SIZE -->
-          <div class="pdp-popup-body active" id="popupPanelSize">
-            <div class="pdp-panel-guide-row">
-              <span class="pdp-panel-guide-text">Choose diameter and guest servings</span>
-              <button type="button" class="pdp-portion-guide-trigger" id="openPortionGuideBtn">Portion Guide ↗</button>
-            </div>
-            <div class="pdp-sizes-grid" id="pdpSizesGrid">
-              <!-- Populated dynamically from product.sizes in app.js -->
-            </div>
-            <button type="button" class="pdp-panel-next-btn" onclick="window.switchPopupTab('flavour')">
-              <span>Confirm Format & Continue to Flavour →</span>
-            </button>
-          </div>
-
-          <!-- POPUP PANEL 2: FLAVOUR -->
-          <div class="pdp-popup-body" id="popupPanelFlavour">
-            <div class="pdp-panel-guide-row">
-              <span class="pdp-panel-guide-text">Select your artisan sponge and ganache harmony</span>
-            </div>
-            <div class="pdp-flavour-cards-grid" id="pdpFlavourPills">
-              <button type="button" class="pdp-flavour-pill-card" data-flavour="Belgian Dark Chocolate Fudge">
-                <strong class="flavour-pill-title">Belgian Chocolate Fudge</strong>
-                <span class="flavour-pill-desc">Buttermilk chocolate cake & slow-cooked fudge ganache</span>
-              </button>
-              <button type="button" class="pdp-flavour-pill-card"
-                data-flavour="Victorian Vanilla Bean & Raspberry Curd">
-                <strong class="flavour-pill-title">Vanilla Bean & Raspberry Curd</strong>
-                <span class="flavour-pill-desc">Madagascar vanilla sponge, house raspberry coulis & Swiss
-                  buttercream</span>
-              </button>
-              <button type="button" class="pdp-flavour-pill-card" data-flavour="Roasted Hazelnut Praline & Gianduja">
-                <strong class="flavour-pill-title">Hazelnut Praline & Gianduja</strong>
-                <span class="flavour-pill-desc">Chocolate sponge, roasted Piedmont hazelnut praline & gianduja</span>
-              </button>
-              <button type="button" class="pdp-flavour-pill-card" data-flavour="Meyer Lemon Curd & Passionfruit">
-                <strong class="flavour-pill-title">Meyer Lemon & Passionfruit</strong>
-                <span class="flavour-pill-desc">Tangy Victorian citrus curd, light vanilla sponge & airy meringue</span>
-              </button>
-            </div>
-            <button type="button" class="pdp-panel-next-btn" onclick="window.switchPopupTab('plaque')">
-              <span>Confirm Flavour & Continue to Plaque →</span>
-            </button>
-          </div>
-
-          <!-- POPUP PANEL 3: PLAQUE -->
-          <div class="pdp-popup-body" id="popupPanelPlaque">
-            <div class="pdp-panel-guide-row">
-              <span class="pdp-panel-guide-text">Personalised hand-piped chocolate plaque</span>
-            </div>
-
-            <label class="pdp-sketch-toggle-label" for="pdpPlaqueToggle">
-              <input type="checkbox" id="pdpPlaqueToggle" class="pdp-min-checkbox">
-              <div class="pdp-sketch-toggle-text">
-                <strong>Add hand-piped chocolate message plaque</strong>
-                <span class="pdp-free-tag">+ Complimentary</span>
-              </div>
-            </label>
-
-            <div class="pdp-plaque-drawer" id="pdpPlaqueDrawer">
-              <div class="pdp-input-field-wrap">
-                <input type="text" id="pdpPlaqueInput" class="pdp-plaque-input" maxlength="32"
-                  placeholder="e.g. Happy 30th Birthday Claire!">
-                <span id="pdpPlaqueCount" class="pdp-char-counter">0/32</span>
-              </div>
-              <div class="pdp-preset-chips">
-                <button type="button" class="pdp-chip-btn"
-                  onclick="window.fhApp.setPlaquePreset('Happy Birthday!')">Happy Birthday!</button>
-                <button type="button" class="pdp-chip-btn"
-                  onclick="window.fhApp.setPlaquePreset('Congratulations!')">Congratulations!</button>
-                <button type="button" class="pdp-chip-btn" onclick="window.fhApp.setPlaquePreset('We Love You!')">We
-                  Love You!</button>
-              </div>
-            </div>
-
-            <div style="margin-top: 1rem;">
-              <button type="button" class="pdp-classic-finish-btn" id="pdpClassicFinishBtn"
-                onclick="window.confirmClassicFinish()">
-                <span>✓ Classic Atelier Finish (No Plaque Needed)</span>
-              </button>
-            </div>
-
-            <button type="button" class="pdp-panel-next-btn" onclick="window.switchPopupTab('touch')">
-              <span>Confirm Plaque & View Finishing Touches →</span>
-            </button>
-          </div>
-
-          <!-- POPUP PANEL 4: TOUCH -->
-          <div class="pdp-popup-body" id="popupPanelTouch">
-            <div class="pdp-panel-guide-row">
-              <span class="pdp-panel-guide-text">Optional celebration accessories & candles</span>
-            </div>
-            <div class="pdp-touches-grid">
-              <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Gold Birthday Candles (12pk)"
-                data-price="8.50">
-                <div class="touch-card-info">
-                  <strong>Gold Celebration Candles (12pk)</strong>
-                  <span>Tall metallic celebratory beeswax taper candles</span>
-                </div>
-                <div class="touch-card-price">+$8.50</div>
-              </button>
-              <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Atelier Crystal Cake Knife"
-                data-price="18.00">
-                <div class="touch-card-info">
-                  <strong>Atelier Gold Cake Knife</strong>
-                  <span>Serrated celebration server for razor-sharp slices</span>
-                </div>
-                <div class="touch-card-price">+$18.00</div>
-              </button>
-              <button type="button" class="pdp-touch-card pdp-quick-addon-btn" data-name="Artisan Macarons Box (6pk)"
-                data-price="24.00">
-                <div class="touch-card-info">
-                  <strong>French Macarons Atelier Box (6pk)</strong>
-                  <span>Vanilla, salted caramel, pistachio, and raspberry</span>
-                </div>
-                <div class="touch-card-price">+$24.00</div>
-              </button>
-            </div>
-            <button type="button" class="pdp-panel-next-btn" onclick="window.switchPopupTab('notes')">
-              <span>Proceed to Special Notes →</span>
-            </button>
-          </div>
-
-          <!-- POPUP PANEL 5: NOTES -->
-          <div class="pdp-popup-body" id="popupPanelNotes">
-            <div class="pdp-panel-guide-row">
-              <span class="pdp-panel-guide-text">Special dietary notes or pickup instructions</span>
-            </div>
-            <textarea id="pdpOrderNotes" class="pdp-order-notes"
-              placeholder="e.g. Nut allergy in party, please keep cake on dry ice, or pickup time notes..."
-              rows="3"></textarea>
-            <div class="pdp-notes-hint">
-              <span>💡 For custom tiered wedding cakes or catering banquets, please visit our <a
-                  href="sales-department.html#quoteRequestSection"
-                  style="color: var(--fh-primary-dark); text-decoration: underline;">Sales Department</a>.</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Modal Footer Bar with Live Price & Save Button -->
-        <div class="pdp-modal-footer">
-          <div class="pdp-modal-footer-price">
-            <span class="pdp-footer-price-kicker">Subtotal Investment</span>
-            <strong class="pdp-footer-price-val" id="pdpModalPrice">$109.00</strong>
-          </div>
-          <button type="button" class="pdp-modal-save-btn" onclick="window.closeSelectionPopup()">
-            <span>Save & Return to Creation ✓</span>
-          </button>
-        </div>
-
-      </div>
-    </div>
+    <!-- Direct On-Page Selections active - popup modal decommissioned -->
 
     <!-- Floating Toast Feedback -->
     <div class="pdp-studio-toast" id="pdpStudioToast" aria-live="polite">
@@ -1421,8 +1381,8 @@
         <strong class="pdp-sticky-title" id="pdpStickyTitle">Bruce Chocolate Cake</strong>
         <span class="pdp-sticky-price" id="pdpStickyPrice">$109.00</span>
       </div>
-      <button type="button" class="pdp-sticky-btn" id="pdpStickyBtn" onclick="window.openSelectionPopup('size')">
-        <span>Customize & Order →</span>
+      <button type="button" class="pdp-sticky-btn" id="pdpStickyBtn" onclick="document.getElementById('pdpAddToCartBtn').click()">
+        <span>Add to Bag →</span>
       </button>
     </div>
   </aside>

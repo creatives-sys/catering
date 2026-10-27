@@ -2257,11 +2257,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mockupImg2) mockupImg2.src = 'assets/images/real/cake-tasting-box.png';
     if (mockupImg3) mockupImg3.src = 'assets/images/bruce-cake-3.png';
 
-    // 3 Mockups Progress Selection State ("without selection no add to cart")
+    // Selection state (defaults to valid size and flavour, no popup required)
     const mockupSelections = {
-      size: false,
-      flavour: false,
-      plaque: false
+      size: true,
+      flavour: true,
+      plaque: true
     };
 
     // Dietary Badge
@@ -2569,22 +2569,15 @@ document.addEventListener('DOMContentLoaded', () => {
         else fraction.classList.remove('completed');
       }
 
-      // Add to Bag Button State
+      // Add to Bag Button State - always enabled for instant purchase
       const addBtn = document.getElementById('pdpAddToCartBtn');
       const addBtnText = document.getElementById('pdpAddBtnText');
-
-      if (count === 3) {
-        if (addBtn) {
-          addBtn.classList.remove('disabled');
-          addBtn.setAttribute('aria-disabled', 'false');
-        }
-        if (addBtnText) addBtnText.textContent = '✓ Add to Shopping Bag';
-      } else {
-        if (addBtn) {
-          addBtn.classList.add('disabled');
-          addBtn.setAttribute('aria-disabled', 'true');
-        }
-        if (addBtnText) addBtnText.textContent = `Complete Selections to Add to Bag (${count}/3)`;
+      if (addBtn) {
+        addBtn.classList.remove('disabled');
+        addBtn.setAttribute('aria-disabled', 'false');
+      }
+      if (addBtnText) {
+        addBtnText.textContent = 'Add to Shopping Bag';
       }
     }
 
@@ -2592,7 +2585,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sizesGrid) {
       if (product.sizes && product.sizes.length > 0) {
         sizesGrid.innerHTML = product.sizes.map((s, idx) => `
-          <button class="pdp-size-btn" type="button" data-size-idx="${idx}">
+          <button class="pdp-size-btn ${idx === 0 ? 'active' : ''}" type="button" data-size-idx="${idx}">
             <span class="pdp-size-name">${s.name}</span>
             <span class="pdp-size-serves">${s.serves}</span>
             <span class="pdp-size-price">$${s.price.toFixed(2)}</span>
@@ -2613,7 +2606,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         selectedSize = { name: 'Standard Format', serves: 'Daily Artisan Batch', price: product.price };
         sizesGrid.innerHTML = `
-          <button class="pdp-size-btn" type="button">
+          <button class="pdp-size-btn active" type="button">
             <span class="pdp-size-name">Standard Atelier Format</span>
             <span class="pdp-size-serves">Freshly Prepared Daily</span>
             <span class="pdp-size-price">$${product.price.toFixed(2)}</span>
@@ -2628,13 +2621,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Step 2: Sponge & Flavour Harmony Selection
+    // Step 2: Direct Flavour Dropdown & Pills
+    const flavourGroup = document.getElementById('pdpFlavourGroup');
+    if (flavourGroup) {
+      flavourGroup.style.display = isCakeCreation ? 'flex' : 'none';
+    }
+    const flavourSelect = document.getElementById('pdpFlavourSelect');
+    if (flavourSelect) {
+      flavourSelect.addEventListener('change', (e) => {
+        selectedFlavour = e.target.value;
+        mockupSelections.flavour = true;
+        updateCreationSummary();
+        updatePriceDisplay();
+      });
+    }
+
     const flavourPills = document.querySelectorAll('#pdpFlavourPills .pdp-flavour-pill-card, #pdpFlavourPills .pdp-min-pill, #toolPanelFlavour .pdp-min-pill, .pdp-options-minimal-row .pdp-min-pill');
     flavourPills.forEach(pill => {
       pill.addEventListener('click', () => {
         flavourPills.forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
         selectedFlavour = pill.getAttribute('data-flavour') || pill.textContent.trim();
+        if (flavourSelect) flavourSelect.value = selectedFlavour;
         mockupSelections.flavour = true;
         updateCreationSummary();
         updateMockupProgress();
@@ -2642,7 +2650,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Step 3: Complimentary Chocolate Inscription Plaque (Sleek Collapsible Toggle)
-    const plaqueSection = document.getElementById('pdpPlaqueSection');
+    const plaqueSection = document.getElementById('pdpPlaqueGroup') || document.getElementById('pdpPlaqueSection');
     const plaqueToggle = document.getElementById('pdpPlaqueToggle');
     const plaqueDrawer = document.getElementById('pdpPlaqueDrawer');
     const plaqueInput = document.getElementById('pdpPlaqueInput');
@@ -2651,7 +2659,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const plaqueLiveOverlay = document.getElementById('pdpPlaqueLiveOverlay');
 
     if (plaqueSection) {
-      plaqueSection.style.display = (isCakeCreation || (product.collections && product.collections.includes('birthday-cakes'))) ? 'block' : 'none';
+      plaqueSection.style.display = (isCakeCreation || (product.collections && product.collections.includes('birthday-cakes'))) ? 'flex' : 'none';
     }
 
     function updatePlaqueLive(val) {
@@ -2839,100 +2847,19 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --------------------------------------------------------------------------
-    // Popup Modal Configurator Logic (Selection comes as popup)
+    // Direct Selection Configurator (Frictionless, no popups)
     // --------------------------------------------------------------------------
-    const selectionModal = document.getElementById('pdpSelectionModal');
-
-    window.openSelectionPopup = function(tabKey) {
-      if (selectionModal) {
-        selectionModal.classList.add('open');
-        selectionModal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
-      window.switchPopupTab(tabKey || 'size');
+    window.openSelectionPopup = function() {
+      const sizeGroup = document.getElementById('pdpSizeGroup') || document.getElementById('pdpAddToCartBtn');
+      if (sizeGroup) sizeGroup.scrollIntoView({ behavior: 'smooth', block: 'center' });
     };
 
-    window.closeSelectionPopup = function() {
-      if (selectionModal) {
-        selectionModal.classList.remove('open');
-        selectionModal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
-      updateCreationSummary();
-      updateMockupProgress();
-    };
-
-    // Close on Escape key
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && selectionModal && selectionModal.classList.contains('open')) {
-        window.closeSelectionPopup();
-      }
-    });
-
-    const tabMeta = {
-      'size': { kicker: 'STEP 1 OF 3 REQUIRED', title: 'Select Format & Servings' },
-      'flavour': { kicker: 'STEP 2 OF 3 REQUIRED', title: 'Select Flavour Recipe & Ganache' },
-      'plaque': { kicker: 'STEP 3 OF 3 REQUIRED', title: 'Personalised Inscription & Plaque' },
-      'touch': { kicker: 'OPTIONAL CELEBRATION TOUCHES', title: 'Candles, Cake Knife & Macarons' },
-      'notes': { kicker: 'ATELIER CHEF NOTES', title: 'Dietary & Delivery Instructions' }
-    };
-
-    window.switchPopupTab = function(tabKey) {
-      const targetKey = tabKey || 'size';
-      const capKey = targetKey.charAt(0).toUpperCase() + targetKey.slice(1);
-
-      // 1. Update Main Page Tabs in Right Column
-      document.querySelectorAll('.pdp-sketch-tab').forEach(tab => {
-        const step = tab.getAttribute('data-step');
-        if (step === targetKey) {
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-        } else {
-          tab.classList.remove('active');
-          tab.setAttribute('aria-selected', 'false');
-        }
-      });
-
-      // 2. Update Popup Modal Step Navigation Ribbon
-      document.querySelectorAll('.pdp-modal-nav-tab').forEach(tab => {
-        if (tab.id === `modalNav${capKey}`) {
-          tab.classList.add('active');
-        } else {
-          tab.classList.remove('active');
-        }
-      });
-
-      // 3. Show Corresponding Popup Panel
-      document.querySelectorAll('.pdp-popup-body').forEach(panel => {
-        if (panel.id === `popupPanel${capKey}`) {
-          panel.classList.add('active');
-        } else {
-          panel.classList.remove('active');
-        }
-      });
-
-      // 4. Update Modal Header Kicker and Title
-      const meta = tabMeta[targetKey] || tabMeta['size'];
-      const popupKicker = document.getElementById('popupKicker');
-      const popupTitle = document.getElementById('popupTitle');
-      if (popupKicker) popupKicker.textContent = meta.kicker;
-      if (popupTitle) popupTitle.textContent = meta.title;
-
-      // Scroll modal body to top smoothly
-      const modalScroll = document.querySelector('.pdp-modal-body-scroll');
-      if (modalScroll) modalScroll.scrollTop = 0;
-    };
-
-    // Alias for backwards compatibility
+    window.closeSelectionPopup = function() {};
+    window.switchPopupTab = function() {};
     window.selectSketchTab = window.openSelectionPopup;
 
-    // Notes textarea input sync with checkmark
+    // Notes textarea input sync
     const notesInput = document.getElementById('pdpOrderNotes');
-    if (notesInput) {
-      notesInput.addEventListener('input', () => {
-        updateMockupProgress();
-      });
-    }
 
     // Floating Studio Toast
     function showStudioToast(msg) {
@@ -2945,51 +2872,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // 3. Main Add to Bag Action (CRITICAL REQUIREMENT: Without selection no add to cart)
+    // Direct Add to Bag Action (Instant, frictionless, no blocking popup)
     function handleAddToCart() {
-      // Guard: Check if required selections (size, flavour, plaque) are completed
-      if (!mockupSelections.size || !mockupSelections.flavour || !mockupSelections.plaque) {
-        let missingTab = 'size';
-        let missingName = 'Size & Format';
-        let missingBtnId = 'stepBoxSize';
-
-        if (!mockupSelections.size) {
-          missingTab = 'size';
-          missingName = 'Format & Size';
-          missingBtnId = 'stepBoxSize';
-        } else if (!mockupSelections.flavour) {
-          missingTab = 'flavour';
-          missingName = 'Flavour Recipe';
-          missingBtnId = 'stepBoxFlavour';
-        } else if (!mockupSelections.plaque) {
-          missingTab = 'plaque';
-          missingName = 'Inscription or Classic Finish';
-          missingBtnId = 'stepBoxPlaque';
-        }
-
-        // Open popup modal immediately to the missing step
-        window.openSelectionPopup(missingTab);
-
-        // Visual shake feedback on the button and missing tab
-        const addBtn = document.getElementById('pdpAddToCartBtn');
-        const missingTabBtn = document.getElementById(missingBtnId);
-        const popupPanel = document.getElementById('pdpPopupPanel');
-
-        addBtn?.classList.add('shake-card');
-        missingTabBtn?.classList.add('shake-card');
-        popupPanel?.classList.add('shake-card');
-
-        setTimeout(() => {
-          addBtn?.classList.remove('shake-card');
-          missingTabBtn?.classList.remove('shake-card');
-          popupPanel?.classList.remove('shake-card');
-        }, 500);
-
-        showStudioToast(`⚠️ Please complete ${missingName} before adding to bag!`);
-        return; // Guard active! Strictly block addition
-      }
-
-      // If all selections completed, proceed to add to shopping bag!
       const hasPlaque = !!(plaqueToggle && plaqueToggle.checked);
       const plaqueText = hasPlaque ? (plaqueInput?.value.trim() || 'Happy Birthday!') : 'Classic Atelier Finish';
       const totalAmount = calculateTotal();
@@ -3033,9 +2917,18 @@ document.addEventListener('DOMContentLoaded', () => {
         bagBtn.style.transform = 'scale(1.15)';
         setTimeout(() => bagBtn.style.transform = '', 250);
       }
+
+      // Automatically open shopping bag drawer for instant clarity
+      const cartDrawer = document.getElementById('cartDrawer');
+      const modalBackdrop = document.getElementById('modalBackdrop') || document.getElementById('cartBackdrop');
+      if (cartDrawer) {
+        cartDrawer.classList.add('open');
+        if (modalBackdrop) modalBackdrop.classList.add('active');
+      }
     }
 
     document.getElementById('pdpAddToCartBtn')?.addEventListener('click', handleAddToCart);
+    document.getElementById('pdpStickyBtn')?.addEventListener('click', handleAddToCart);
 
     // Initial price, plaque, and 3-mockup selection display
     updatePriceDisplay();
