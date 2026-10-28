@@ -54,9 +54,8 @@ while ($listener.IsListening) {
             $response.ContentLength64 = $fileInfo.Length
 
             if ($request.HttpMethod -ne "HEAD") {
-                $fs = [System.IO.File]::OpenRead($localPath)
-                $fs.CopyTo($response.OutputStream)
-                $fs.Close()
+                $bytes = [System.IO.File]::ReadAllBytes($localPath)
+                $response.OutputStream.Write($bytes, 0, $bytes.Length)
             }
         } else {
             $response.StatusCode = 404

@@ -4605,7 +4605,974 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // --------------------------------------------------------------------------
+  // 19. Product-3: Minimalist Direct PDP (Live Frank & Harri Matching Layout)
+  // --------------------------------------------------------------------------
+  function initProduct3Page() {
+    const pdp3Main = document.getElementById('pdp3Main');
+    if (!pdp3Main && document.body.getAttribute('data-page') !== 'product-3') return;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id') || 'bruce-chocolate-cake';
+    const product = products.find(p => p.id === productId) || products[0];
+
+    // Page Title & Headings
+    document.title = `${product.name} — Frank & Harri Patisserie Kew · Melbourne`;
+    const bcTitle = document.getElementById('pdp3BreadcrumbTitle');
+    if (bcTitle) bcTitle.textContent = product.name;
+    const bcCat = document.getElementById('pdp3BreadcrumbCategory');
+    if (bcCat) {
+      bcCat.textContent = product.categoryLabel || 'Birthday Cakes';
+      bcCat.href = product.collections && product.collections.length ? `${product.collections[0]}.html` : 'birthday-cakes.html';
+    }
+
+    const titleEl = document.getElementById('pdp3Title');
+    if (titleEl) titleEl.textContent = product.name;
+
+    const dockTitle = document.getElementById('pdp3DockTitle');
+    if (dockTitle) dockTitle.textContent = product.name;
+
+    // Gallery & Hero setup
+    const heroImg = document.getElementById('pdp3HeroImg');
+    const dockImg = document.getElementById('pdp3DockImg');
+    if (heroImg && product.image) {
+      heroImg.src = product.image;
+      heroImg.alt = product.name;
+    }
+    if (dockImg && product.image) {
+      dockImg.src = product.image;
+    }
+
+    // Perspective Thumbnails
+    const thumbBtns = document.querySelectorAll('.pdp3-thumb-btn');
+    thumbBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        thumbBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const targetSrc = btn.getAttribute('data-src');
+        if (heroImg && targetSrc) {
+          heroImg.style.opacity = '0.5';
+          setTimeout(() => {
+            heroImg.src = targetSrc;
+            heroImg.style.opacity = '1';
+          }, 120);
+        }
+      });
+    });
+
+    // Sizing Options
+    const bruceSizes = [
+      { name: '6"', label: '6" - (serves 7–8)', serves: 'serves 7–8', price: 109.00 },
+      { name: '9"', label: '9" - (serves 12-14)', serves: 'serves 12-14', price: 159.00 },
+      { name: '12"', label: '12" - (serves 20-22)', serves: 'serves 20-22', price: 209.00 }
+    ];
+
+    // Use custom product sizes if defined, otherwise default to bruceSizes
+    const sizes = (product.sizes && product.sizes.length > 0) ? product.sizes.map((s) => ({
+      name: s.name,
+      label: `${s.name} - (${s.serves})`,
+      serves: s.serves,
+      price: s.price
+    })) : bruceSizes;
+
+    let selectedSize = sizes[0];
+    let hasPlaque = false;
+    let plaqueText = '';
+    let quantity = 1;
+    let selectedDate = 'Fri, 31 Oct';
+    let selectedTime = '11:00am – 1:00pm';
+    let selectedAddons = [];
+
+    // DOM Elements
+    const priceDisplay = document.getElementById('pdp3PriceDisplay');
+    const selectedSizeLabel = document.getElementById('pdp3SelectedSizeLabel');
+    const selectedPlaqueLabel = document.getElementById('pdp3SelectedPlaqueLabel');
+    const selectedDateLabel = document.getElementById('pdp3SelectedDateLabel');
+    const plaqueInputWrap = document.getElementById('pdp3PlaqueInputWrap');
+    const plaqueInput = document.getElementById('pdp3PlaqueInput');
+    const plaqueCounter = document.getElementById('pdp3CharCount');
+    const plaqueOverlay = document.getElementById('pdp3PlaqueOverlay');
+    const plaquePreviewText = document.getElementById('pdp3PlaquePreviewText');
+    const qtyInput = document.getElementById('pdp3QtyInput');
+    const qtyMinus = document.getElementById('pdp3QtyMinus');
+    const qtyPlus = document.getElementById('pdp3QtyPlus');
+    const addBtn = document.getElementById('pdp3AddToCartBtn');
+    const addBtnText = document.getElementById('pdp3AddBtnText');
+    const expressBtn = document.getElementById('pdp3ExpressBtn');
+    const dockPrice = document.getElementById('pdp3DockPrice');
+    const dockVariant = document.getElementById('pdp3DockVariant');
+    const dockAddBtn = document.getElementById('pdp3DockAddBtn');
+
+    // Calculate dynamic pricing
+    function calculateUnitPrice() {
+      const sizePrice = selectedSize.price || 109.00;
+      const plaquePrice = hasPlaque ? 7.90 : 0;
+      const addonsPrice = selectedAddons.reduce((sum, item) => sum + item.price, 0);
+      return sizePrice + plaquePrice + addonsPrice;
+    }
+
+    function updateView() {
+      const unitPrice = calculateUnitPrice();
+      const total = unitPrice * quantity;
+
+      if (priceDisplay) priceDisplay.textContent = `$${unitPrice.toFixed(2)}`;
+      if (addBtnText) addBtnText.textContent = `Add to Bag — $${total.toFixed(2)} AUD`;
+      if (selectedSizeLabel) selectedSizeLabel.textContent = `${selectedSize.name} - (${selectedSize.serves})`;
+      if (selectedPlaqueLabel) selectedPlaqueLabel.textContent = hasPlaque ? 'Plaque (+$7.90)' : 'No plaque';
+      if (selectedDateLabel) selectedDateLabel.textContent = `${selectedDate} · ${selectedTime}`;
+      if (dockPrice) dockPrice.textContent = `$${unitPrice.toFixed(2)}`;
+      if (dockVariant) dockVariant.textContent = `${selectedSize.name} (${selectedSize.serves})`;
+    }
+
+    // ------------------------------------------------------------------------
+    // 1. Size Pill Buttons
+    // ------------------------------------------------------------------------
+    const sizePillBtns = document.querySelectorAll('.pdp3-sizes-list .pdp3-pill-btn');
+    sizePillBtns.forEach((btn, idx) => {
+      btn.addEventListener('click', () => {
+        sizePillBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (sizes[idx]) {
+          selectedSize = sizes[idx];
+        } else {
+          const parsedPrice = parseFloat(btn.getAttribute('data-price')) || 109.00;
+          selectedSize = {
+            name: btn.getAttribute('data-size') || '6"',
+            label: `${btn.getAttribute('data-size')} - (${btn.getAttribute('data-serves')})`,
+            serves: btn.getAttribute('data-serves') || 'serves 7–8',
+            price: parsedPrice
+          };
+        }
+        updateView();
+      });
+    });
+
+    // ------------------------------------------------------------------------
+    // 2. Plaque Toggle Buttons & Live Overlay Sync
+    // ------------------------------------------------------------------------
+    const plaqueBtns = document.querySelectorAll('.pdp3-plaque-btn');
+    plaqueBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        plaqueBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const isYes = btn.getAttribute('data-plaque') === 'yes';
+        hasPlaque = isYes;
+
+        if (hasPlaque) {
+          if (plaqueInputWrap) plaqueInputWrap.style.display = 'flex';
+          if (plaqueOverlay) plaqueOverlay.classList.add('visible');
+          if (plaqueInput && !plaqueInput.value.trim()) {
+            plaqueInput.value = 'Happy Birthday!';
+            plaqueText = 'Happy Birthday!';
+          } else if (plaqueInput) {
+            plaqueText = plaqueInput.value.trim();
+          }
+          if (plaquePreviewText) plaquePreviewText.textContent = plaqueText || 'Happy Birthday!';
+          if (plaqueCounter && plaqueInput) plaqueCounter.textContent = `${plaqueInput.value.length} / 28`;
+        } else {
+          if (plaqueInputWrap) plaqueInputWrap.style.display = 'none';
+          if (plaqueOverlay) plaqueOverlay.classList.remove('visible');
+        }
+        updateView();
+      });
+    });
+
+    // Plaque custom text input live preview
+    if (plaqueInput) {
+      plaqueInput.addEventListener('input', (e) => {
+        plaqueText = e.target.value;
+        if (plaqueCounter) plaqueCounter.textContent = `${plaqueText.length} / 28`;
+        if (plaquePreviewText) plaquePreviewText.textContent = plaqueText.trim() || 'Happy Birthday!';
+      });
+    }
+
+    // ------------------------------------------------------------------------
+    // 3. Pick-Up / Delivery Date & Time Window Selector
+    // ------------------------------------------------------------------------
+    const datePills = document.querySelectorAll('.pdp3-date-pill');
+    datePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        datePills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        selectedDate = pill.getAttribute('data-date') || 'Fri, 31 Oct';
+        updateView();
+      });
+    });
+
+    const customDateInput = document.getElementById('pdp3CustomDateInput');
+    if (customDateInput) {
+      // Set minimum date to 72h from now
+      const minDate = new Date();
+      minDate.setDate(minDate.getDate() + 3);
+      customDateInput.min = minDate.toISOString().split('T')[0];
+
+      customDateInput.addEventListener('change', (e) => {
+        if (!e.target.value) return;
+        const pickedDate = new Date(e.target.value + 'T00:00:00');
+        const formatted = pickedDate.toLocaleDateString('en-AU', {
+          weekday: 'short',
+          day: 'numeric',
+          month: 'short'
+        });
+        selectedDate = formatted;
+        datePills.forEach(p => p.classList.remove('active'));
+        const calLabel = customDateInput.closest('.pdp3-date-picker-btn');
+        if (calLabel) {
+          const numSpan = calLabel.querySelector('.pdp3-date-num');
+          if (numSpan) numSpan.textContent = formatted;
+        }
+        updateView();
+        showToast(`Celebration date set: ${formatted}`);
+      });
+    }
+
+    const slotBtns = document.querySelectorAll('.pdp3-slot-btn');
+    slotBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        slotBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedTime = btn.getAttribute('data-slot') || '11:00am – 1:00pm';
+        updateView();
+      });
+    });
+
+    // ------------------------------------------------------------------------
+    // 4. Celebration Party Add-ons & Handwritten Gift Note
+    // ------------------------------------------------------------------------
+    const addonCheckboxes = document.querySelectorAll('.pdp3-addon-checkbox');
+    const giftNoteWrap = document.getElementById('pdp3GiftNoteWrap');
+    const giftNoteInput = document.getElementById('pdp3GiftNoteText');
+    const giftNoteCount = document.getElementById('pdp3GiftNoteCount');
+
+    addonCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const card = checkbox.closest('.pdp3-addon-card');
+        const name = checkbox.getAttribute('data-addon-name') || '';
+        const price = parseFloat(checkbox.getAttribute('data-addon-price')) || 0;
+
+        if (checkbox.checked) {
+          if (card) card.classList.add('selected');
+          if (!selectedAddons.some(a => a.name === name)) {
+            selectedAddons.push({ name, price });
+          }
+          if (checkbox.id === 'addonGiftCard' && giftNoteWrap) {
+            giftNoteWrap.style.display = 'flex';
+          }
+        } else {
+          if (card) card.classList.remove('selected');
+          selectedAddons = selectedAddons.filter(a => a.name !== name);
+          if (checkbox.id === 'addonGiftCard' && giftNoteWrap) {
+            giftNoteWrap.style.display = 'none';
+          }
+        }
+        updateView();
+      });
+    });
+
+    if (giftNoteInput && giftNoteCount) {
+      giftNoteInput.addEventListener('input', (e) => {
+        giftNoteCount.textContent = `${e.target.value.length} / 160 characters`;
+      });
+    }
+
+    // ------------------------------------------------------------------------
+    // 5. Quantity Stepper
+    // ------------------------------------------------------------------------
+    if (qtyMinus) {
+      qtyMinus.addEventListener('click', () => {
+        if (quantity > 1) {
+          quantity--;
+          if (qtyInput) qtyInput.value = quantity;
+          updateView();
+        }
+      });
+    }
+
+    if (qtyPlus) {
+      qtyPlus.addEventListener('click', () => {
+        if (quantity < 20) {
+          quantity++;
+          if (qtyInput) qtyInput.value = quantity;
+          updateView();
+        }
+      });
+    }
+
+    if (qtyInput) {
+      qtyInput.addEventListener('change', (e) => {
+        let val = parseInt(e.target.value, 10);
+        if (isNaN(val) || val < 1) val = 1;
+        if (val > 20) val = 20;
+        quantity = val;
+        e.target.value = quantity;
+        updateView();
+      });
+    }
+
+    // ------------------------------------------------------------------------
+    // 6. Add to Bag & Express Checkout Actions
+    // ------------------------------------------------------------------------
+    function executeAddToCart() {
+      const unitPrice = calculateUnitPrice();
+      const activeImg = heroImg ? heroImg.src : (product.image || 'assets/images/bruce-cake-1.png');
+      const customNote = giftNoteInput ? giftNoteInput.value.trim() : '';
+
+      const addonsPayload = selectedAddons.map(a => {
+        if (a.name.includes('Gift Card') && customNote) {
+          return `${a.name} (Note: "${customNote}")`;
+        }
+        return a.name;
+      });
+
+      addToCart({
+        id: product.id,
+        name: `${product.name} (${selectedSize.name})`,
+        price: unitPrice,
+        image: activeImg,
+        size: `${selectedSize.name} - (${selectedSize.serves})`,
+        hasPlaque: hasPlaque,
+        plaqueText: hasPlaque ? (plaqueText || 'Happy Birthday!') : '',
+        fulfillment: 'pickup',
+        date: selectedDate,
+        timeSlot: selectedTime,
+        addons: addonsPayload,
+        qty: quantity
+      });
+    }
+
+    if (addBtn) {
+      addBtn.addEventListener('click', executeAddToCart);
+    }
+
+    if (dockAddBtn) {
+      dockAddBtn.addEventListener('click', executeAddToCart);
+    }
+
+    if (expressBtn) {
+      expressBtn.addEventListener('click', () => {
+        executeAddToCart();
+        showToast('Proceeding to Express 1-Click Checkout...');
+      });
+    }
+
+    // ------------------------------------------------------------------------
+    // 7. VERY HIGHLY INTERACTIVE TESTIMONIALS SYSTEM (#pdp3Reviews)
+    // ------------------------------------------------------------------------
+    
+    // (a) Category Filter Tabs
+    const filterTabs = document.querySelectorAll('#pdp3ReviewFilterTabs .pdp3-tab-pill');
+    const reviewCards = document.querySelectorAll('#pdp3ReviewsGrid .pdp3-review-card');
+    const barRows = document.querySelectorAll('.pdp3-breakdown-col .pdp3-bar-row');
+    const reviewsGrid = document.getElementById('pdp3ReviewsGrid');
+
+    function applyReviewFilter(categoryFilter = 'all', starsFilter = null) {
+      let visibleCount = 0;
+      reviewCards.forEach(card => {
+        const cats = (card.getAttribute('data-category') || '').toLowerCase().split(' ');
+        const cardStars = card.getAttribute('data-stars');
+
+        let matchCategory = (categoryFilter === 'all') || cats.includes(categoryFilter);
+        let matchStars = (!starsFilter || starsFilter === 'all') || (cardStars === starsFilter);
+
+        if (matchCategory && matchStars) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      // Smoothly re-center carousel track on filter change
+      if (reviewsGrid) {
+        reviewsGrid.scrollTo({ left: 0, behavior: 'smooth' });
+        updateCarouselProgress();
+      }
+      return visibleCount;
+    }
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        barRows.forEach(r => r.classList.remove('active'));
+        const filter = tab.getAttribute('data-filter') || 'all';
+        applyReviewFilter(filter, null);
+      });
+    });
+
+    // (b) Rating Breakdown Interactive Filter Rows
+    barRows.forEach(row => {
+      row.addEventListener('click', () => {
+        const isCurrentActive = row.classList.contains('active');
+        barRows.forEach(r => r.classList.remove('active'));
+        filterTabs.forEach(t => t.classList.remove('active'));
+
+        const starsFilter = row.getAttribute('data-filter-stars');
+        if (isCurrentActive && starsFilter !== 'all') {
+          // Reset filter
+          const allTab = document.querySelector('#pdp3ReviewFilterTabs [data-filter="all"]');
+          if (allTab) allTab.classList.add('active');
+          applyReviewFilter('all', null);
+        } else {
+          row.classList.add('active');
+          applyReviewFilter('all', starsFilter);
+        }
+      });
+    });
+
+    // (c) Horizontal Scroll Carousel Controls, Progress & Auto-Glide
+    const scrollPrevBtn = document.getElementById('pdp3ScrollPrevBtn');
+    const scrollNextBtn = document.getElementById('pdp3ScrollNextBtn');
+    const autoScrollToggle = document.getElementById('pdp3AutoScrollToggle');
+    const carouselProgressBar = document.getElementById('pdp3CarouselProgress');
+
+    function updateCarouselProgress() {
+      if (!reviewsGrid || !carouselProgressBar) return;
+      const maxScroll = reviewsGrid.scrollWidth - reviewsGrid.clientWidth;
+      if (maxScroll <= 0) {
+        carouselProgressBar.style.width = '100%';
+        return;
+      }
+      const pct = Math.max(15, Math.min(100, Math.round(((reviewsGrid.scrollLeft + 10) / maxScroll) * 100)));
+      carouselProgressBar.style.width = `${pct}%`;
+    }
+
+    if (scrollPrevBtn && reviewsGrid) {
+      scrollPrevBtn.addEventListener('click', () => {
+        reviewsGrid.scrollBy({ left: -360, behavior: 'smooth' });
+      });
+    }
+
+    if (scrollNextBtn && reviewsGrid) {
+      scrollNextBtn.addEventListener('click', () => {
+        reviewsGrid.scrollBy({ left: 360, behavior: 'smooth' });
+      });
+    }
+
+    if (reviewsGrid) {
+      reviewsGrid.addEventListener('scroll', updateCarouselProgress, { passive: true });
+      window.addEventListener('resize', updateCarouselProgress);
+      setTimeout(updateCarouselProgress, 300);
+    }
+
+    // Continuous auto-glide timer
+    let isAutoScrollActive = true;
+    let isUserHovering = false;
+    let autoScrollInterval = null;
+
+    function startAutoScroll() {
+      if (autoScrollInterval) clearInterval(autoScrollInterval);
+      autoScrollInterval = setInterval(() => {
+        if (!isAutoScrollActive || isUserHovering || !reviewsGrid) return;
+        const maxScroll = reviewsGrid.scrollWidth - reviewsGrid.clientWidth;
+        if (reviewsGrid.scrollLeft >= maxScroll - 25) {
+          reviewsGrid.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          reviewsGrid.scrollBy({ left: 360, behavior: 'smooth' });
+        }
+      }, 3600);
+    }
+
+    if (reviewsGrid) {
+      reviewsGrid.addEventListener('mouseenter', () => { isUserHovering = true; });
+      reviewsGrid.addEventListener('mouseleave', () => { isUserHovering = false; });
+      reviewsGrid.addEventListener('touchstart', () => { isUserHovering = true; }, { passive: true });
+      reviewsGrid.addEventListener('touchend', () => { setTimeout(() => { isUserHovering = false; }, 2500); }, { passive: true });
+      startAutoScroll();
+    }
+
+    if (autoScrollToggle) {
+      autoScrollToggle.addEventListener('click', () => {
+        isAutoScrollActive = !isAutoScrollActive;
+        if (isAutoScrollActive) {
+          autoScrollToggle.classList.add('active');
+          autoScrollToggle.innerHTML = '<span class="pdp3-auto-dot"></span><span class="pdp3-auto-text">Auto-Glide</span>';
+          showToast('Reviews auto-glide enabled');
+        } else {
+          autoScrollToggle.classList.remove('active');
+          autoScrollToggle.innerHTML = '<span class="pdp3-auto-text">▶ Resume Glide</span>';
+          showToast('Reviews auto-glide paused');
+        }
+      });
+    }
+
+    // Drag-to-scroll implementation for smooth mouse drag
+    if (reviewsGrid) {
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      reviewsGrid.addEventListener('mousedown', (e) => {
+        if (e.target.closest('button') || e.target.closest('a')) return;
+        isDown = true;
+        startX = e.pageX - reviewsGrid.offsetLeft;
+        scrollLeft = reviewsGrid.scrollLeft;
+      });
+
+      reviewsGrid.addEventListener('mouseleave', () => { isDown = false; });
+      reviewsGrid.addEventListener('mouseup', () => { isDown = false; });
+      reviewsGrid.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - reviewsGrid.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        reviewsGrid.scrollLeft = scrollLeft - walk;
+      });
+    }
+
+    // (d) Sort Reviews Dropdown
+    const sortSelect = document.getElementById('pdp3SortSelect');
+
+    if (sortSelect && reviewsGrid) {
+      sortSelect.addEventListener('change', (e) => {
+        const sortMode = e.target.value;
+        const cardsArray = Array.from(reviewsGrid.querySelectorAll('.pdp3-review-card'));
+
+        cardsArray.sort((a, b) => {
+          if (sortMode === 'helpful') {
+            const hA = parseInt(a.getAttribute('data-helpful') || '0', 10);
+            const hB = parseInt(b.getAttribute('data-helpful') || '0', 10);
+            return hB - hA;
+          } else if (sortMode === 'highest') {
+            const sA = parseInt(a.getAttribute('data-stars') || '5', 10);
+            const sB = parseInt(b.getAttribute('data-stars') || '5', 10);
+            return sB - sA;
+          } else if (sortMode === 'recent') {
+            const dA = new Date(a.getAttribute('data-date') || '2026-01-01').getTime();
+            const dB = new Date(b.getAttribute('data-date') || '2026-01-01').getTime();
+            return dB - dA;
+          }
+          return 0;
+        });
+
+        cardsArray.forEach(card => reviewsGrid.appendChild(card));
+        reviewsGrid.scrollTo({ left: 0, behavior: 'smooth' });
+        updateCarouselProgress();
+      });
+    }
+
+    // (d) Interactive Helpful Vote Buttons (with LocalStorage persistence)
+    function setupHelpfulButtons(container = document) {
+      const helpfulBtns = container.querySelectorAll('.pdp3-helpful-btn');
+      helpfulBtns.forEach(btn => {
+        const revId = btn.getAttribute('data-review-id');
+        const countSpan = btn.querySelector('.pdp3-helpful-count');
+
+        // Check if already voted
+        if (revId && localStorage.getItem(`fh_helpful_voted_${revId}`)) {
+          btn.classList.add('voted');
+        }
+
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (btn.classList.contains('voted')) {
+            showToast('You found this review helpful.');
+            return;
+          }
+
+          let currentCount = parseInt(countSpan ? countSpan.textContent : '0', 10) || 0;
+          currentCount++;
+          if (countSpan) countSpan.textContent = currentCount;
+          btn.classList.add('voted');
+
+          // Update card data attribute for sorting
+          const parentCard = btn.closest('.pdp3-review-card');
+          if (parentCard) parentCard.setAttribute('data-helpful', currentCount);
+
+          if (revId) {
+            localStorage.setItem(`fh_helpful_voted_${revId}`, 'true');
+          }
+          showToast('Thank you for your feedback! Marked as helpful.');
+        });
+      });
+    }
+    setupHelpfulButtons();
+
+    // (e) Customer Photo Spotlight Lightbox Modal
+    const spotlightBackdrop = document.getElementById('pdp3SpotlightBackdrop');
+    const spotlightImg = document.getElementById('pdp3SpotlightImg');
+    const spotlightAuthor = document.getElementById('pdp3SpotlightAuthor');
+    const spotlightQuote = document.getElementById('pdp3SpotlightQuote');
+    const spotlightOccasion = document.getElementById('pdp3SpotlightOccasion');
+    const closeSpotlightBtn = document.getElementById('pdp3CloseSpotlightBtn');
+
+    window.pdp3OpenSpotlight = function(imgSrc, author, quote, occasion) {
+      if (!spotlightBackdrop) return;
+      if (spotlightImg && imgSrc) spotlightImg.src = imgSrc;
+      if (spotlightAuthor) spotlightAuthor.textContent = author || 'Verified Customer';
+      if (spotlightQuote) spotlightQuote.textContent = quote ? `"${quote}"` : '';
+      if (spotlightOccasion) spotlightOccasion.textContent = occasion || 'Celebration Spotlight';
+      spotlightBackdrop.classList.add('open');
+      spotlightBackdrop.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+
+    function closeSpotlightModal() {
+      if (!spotlightBackdrop) return;
+      spotlightBackdrop.classList.remove('open');
+      spotlightBackdrop.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    if (closeSpotlightBtn) {
+      closeSpotlightBtn.addEventListener('click', closeSpotlightModal);
+    }
+
+    if (spotlightBackdrop) {
+      spotlightBackdrop.addEventListener('click', (e) => {
+        if (e.target === spotlightBackdrop) closeSpotlightModal();
+      });
+    }
+
+    // Reel cards click triggers spotlight
+    const reelCards = document.querySelectorAll('.pdp3-reel-card');
+    reelCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const photo = card.getAttribute('data-photo');
+        const author = card.getAttribute('data-author');
+        const caption = card.getAttribute('data-caption');
+        const occasion = card.getAttribute('data-occasion');
+        window.pdp3OpenSpotlight(photo, author, caption, occasion);
+      });
+    });
+
+    // (f) "Write an Atelier Review" Modal & Interactive 5-Star Picker
+    const reviewModalBackdrop = document.getElementById('pdp3ReviewModalBackdrop');
+    const openReviewModalBtn = document.getElementById('pdp3OpenReviewModalBtn');
+    const closeReviewModalBtn = document.getElementById('pdp3CloseReviewModalBtn');
+    const reviewForm = document.getElementById('pdp3ReviewForm');
+    const starPicker = document.getElementById('pdp3StarPicker');
+    const starLabel = document.getElementById('pdp3StarRatingText');
+    let reviewRating = 5;
+
+    const starDescriptions = {
+      1: '1 Star · Poor Experience',
+      2: '2 Stars · Fair Experience',
+      3: '3 Stars · Good & Enjoyable',
+      4: '4 Stars · Wonderful Experience',
+      5: '5 Stars · Exceptional Celebration'
+    };
+
+    function openReviewModal() {
+      if (!reviewModalBackdrop) return;
+      reviewModalBackdrop.classList.add('open');
+      reviewModalBackdrop.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeReviewModal() {
+      if (!reviewModalBackdrop) return;
+      reviewModalBackdrop.classList.remove('open');
+      reviewModalBackdrop.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    if (openReviewModalBtn) {
+      openReviewModalBtn.addEventListener('click', openReviewModal);
+    }
+
+    if (closeReviewModalBtn) {
+      closeReviewModalBtn.addEventListener('click', closeReviewModal);
+    }
+
+    if (reviewModalBackdrop) {
+      reviewModalBackdrop.addEventListener('click', (e) => {
+        if (e.target === reviewModalBackdrop) closeReviewModal();
+      });
+    }
+
+    // Keyboard ESC listener for all pdp3 modals
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSpotlightModal();
+        closeReviewModal();
+      }
+    });
+
+    // Interactive Star Picker
+    if (starPicker) {
+      const starBtns = starPicker.querySelectorAll('.pdp3-star-btn');
+      
+      function renderStars(count) {
+        starBtns.forEach(btn => {
+          const val = parseInt(btn.getAttribute('data-val'), 10);
+          if (val <= count) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+        if (starLabel && starDescriptions[count]) {
+          starLabel.textContent = starDescriptions[count];
+        }
+      }
+
+      starBtns.forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          const val = parseInt(btn.getAttribute('data-val'), 10);
+          renderStars(val);
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          renderStars(reviewRating);
+        });
+
+        btn.addEventListener('click', () => {
+          reviewRating = parseInt(btn.getAttribute('data-val'), 10);
+          renderStars(reviewRating);
+        });
+      });
+    }
+
+    // Submit New Review Form
+    if (reviewForm) {
+      reviewForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const author = document.getElementById('revAuthor') ? document.getElementById('revAuthor').value.trim() : 'Guest';
+        const loc = document.getElementById('revLoc') ? document.getElementById('revLoc').value.trim() : 'Melbourne';
+        const occasion = document.getElementById('revOccasion') ? document.getElementById('revOccasion').value : 'Milestone Celebration';
+        const sizeChosen = document.getElementById('revSize') ? document.getElementById('revSize').value : '9" Classic';
+        const headline = document.getElementById('revTitle') ? document.getElementById('revTitle').value.trim() : 'Spectacular chocolate cake';
+        const body = document.getElementById('revBody') ? document.getElementById('revBody').value.trim() : '';
+
+        // Generate initials
+        const nameParts = author.split(' ');
+        const initials = (nameParts[0] ? nameParts[0][0] : 'G') + (nameParts[1] ? nameParts[1][0] : '');
+
+        const starGoldIcons = '★'.repeat(reviewRating) + '☆'.repeat(5 - reviewRating);
+        const newRevId = `rev_user_${Date.now()}`;
+
+        // Create new article card
+        const newCard = document.createElement('article');
+        newCard.className = 'pdp3-review-card';
+        newCard.setAttribute('data-category', 'milestone dinner');
+        newCard.setAttribute('data-stars', reviewRating.toString());
+        newCard.setAttribute('data-helpful', '1');
+        newCard.setAttribute('data-date', new Date().toISOString().split('T')[0]);
+        newCard.style.animation = 'pdp3ModalZoom 0.35s ease';
+
+        newCard.innerHTML = `
+          <div class="pdp3-review-top">
+            <div class="pdp3-reviewer-profile">
+              <div class="pdp3-avatar-circle" style="background: rgba(58, 71, 54, 0.15); color: #3a4736;">${initials.toUpperCase()}</div>
+              <div class="pdp3-reviewer-meta">
+                <div class="pdp3-reviewer-name-row">
+                  <strong class="pdp3-reviewer-name">${author}</strong>
+                  <span class="pdp3-verified-badge" title="Verified Frank & Harri Boutique Customer">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Verified Order
+                  </span>
+                </div>
+                <span class="pdp3-reviewer-loc">${loc} · Ordered ${sizeChosen}</span>
+              </div>
+            </div>
+            <span class="pdp3-review-date">Just now</span>
+          </div>
+
+          <div class="pdp3-review-stars-row">
+            <span class="pdp3-stars-gold">${starGoldIcons}</span>
+            <span class="pdp3-badge-pill">${occasion}</span>
+          </div>
+
+          <h3 class="pdp3-review-headline">"${headline}"</h3>
+          <p class="pdp3-review-body">${body}</p>
+
+          <div class="pdp3-review-foot">
+            <button type="button" class="pdp3-helpful-btn voted" data-review-id="${newRevId}" aria-label="Mark review as helpful">
+              <span class="pdp3-thumb-icon">👍</span>
+              <span>Helpful (<span class="pdp3-helpful-count">1</span>)</span>
+            </button>
+            <span class="pdp3-purchased-variant">Format: ${sizeChosen}</span>
+          </div>
+        `;
+
+        if (reviewsGrid) {
+          reviewsGrid.insertBefore(newCard, reviewsGrid.firstChild);
+        }
+
+        // Wire helpful button on new card
+        setupHelpfulButtons(newCard);
+
+        // Update total review count displays (128 -> 129)
+        const ratingCounts = document.querySelectorAll('.pdp3-rating-count, .pdp3-score-caption');
+        ratingCounts.forEach(el => {
+          el.textContent = el.textContent.replace('128', '129');
+        });
+
+        const allTabBtn = document.querySelector('#pdp3ReviewFilterTabs [data-filter="all"]');
+        if (allTabBtn) allTabBtn.textContent = 'All Reviews (129)';
+
+        // Close modal, reset form and notify user
+        closeReviewModal();
+        reviewForm.reset();
+        reviewRating = 5;
+        if (starPicker) {
+          const starBtns = starPicker.querySelectorAll('.pdp3-star-btn');
+          starBtns.forEach(btn => btn.classList.add('active'));
+          if (starLabel) starLabel.textContent = starDescriptions[5];
+        }
+
+        showToast(`Thank you, ${author}! Your verified celebration review has been published.`);
+      });
+    }
+
+    // (g) Load More Reviews Button
+    const loadMoreBtn = document.getElementById('pdp3LoadMoreReviewsBtn');
+    if (loadMoreBtn && reviewsGrid) {
+      loadMoreBtn.addEventListener('click', () => {
+        const extraCard1 = document.createElement('article');
+        extraCard1.className = 'pdp3-review-card';
+        extraCard1.setAttribute('data-category', 'milestone dinner');
+        extraCard1.setAttribute('data-stars', '5');
+        extraCard1.setAttribute('data-helpful', '14');
+        extraCard1.setAttribute('data-date', '2026-09-28');
+        extraCard1.innerHTML = `
+          <div class="pdp3-review-top">
+            <div class="pdp3-reviewer-profile">
+              <div class="pdp3-avatar-circle">AK</div>
+              <div class="pdp3-reviewer-meta">
+                <div class="pdp3-reviewer-name-row">
+                  <strong class="pdp3-reviewer-name">Amelia K.</strong>
+                  <span class="pdp3-verified-badge">✓ Verified Order</span>
+                </div>
+                <span class="pdp3-reviewer-loc">Armadale VIC · Ordered 9" Classic</span>
+              </div>
+            </div>
+            <span class="pdp3-review-date">4 weeks ago</span>
+          </div>
+          <div class="pdp3-review-stars-row">
+            <span class="pdp3-stars-gold">★★★★★</span>
+            <span class="pdp3-badge-pill">Milestone 21st Birthday</span>
+          </div>
+          <h3 class="pdp3-review-headline">"The texture of the buttermilk layers is sublime."</h3>
+          <p class="pdp3-review-body">We have ordered celebration cakes from several top Melbourne patisseries, but Frank & Harri's chocolate fudge frosting remains unmatched. Elegant, not overly sugary, and looked gorgeous in photos.</p>
+          <div class="pdp3-review-foot">
+            <button type="button" class="pdp3-helpful-btn" data-review-id="rev_extra_1">
+              <span class="pdp3-thumb-icon">👍</span>
+              <span>Helpful (<span class="pdp3-helpful-count">14</span>)</span>
+            </button>
+            <span class="pdp3-purchased-variant">Format: 9" - (serves 12-14)</span>
+          </div>
+        `;
+
+        const extraCard2 = document.createElement('article');
+        extraCard2.className = 'pdp3-review-card';
+        extraCard2.setAttribute('data-category', 'plaque dinner');
+        extraCard2.setAttribute('data-stars', '5');
+        extraCard2.setAttribute('data-helpful', '11');
+        extraCard2.setAttribute('data-date', '2026-09-20');
+        extraCard2.innerHTML = `
+          <div class="pdp3-review-top">
+            <div class="pdp3-reviewer-profile">
+              <div class="pdp3-avatar-circle">TS</div>
+              <div class="pdp3-reviewer-meta">
+                <div class="pdp3-reviewer-name-row">
+                  <strong class="pdp3-reviewer-name">Tom & Sarah H.</strong>
+                  <span class="pdp3-verified-badge">✓ Verified Order</span>
+                </div>
+                <span class="pdp3-reviewer-loc">Malvern VIC · Ordered 6" Petite</span>
+              </div>
+            </div>
+            <span class="pdp3-review-date">1 month ago</span>
+          </div>
+          <div class="pdp3-review-stars-row">
+            <span class="pdp3-stars-gold">★★★★★</span>
+            <span class="pdp3-badge-pill">Family Gathering</span>
+          </div>
+          <h3 class="pdp3-review-headline">"Devoured within 10 minutes at the dinner table."</h3>
+          <p class="pdp3-review-body">The chocolate plaque was so meticulously piped. Picked up smoothly on Saturday morning in Kew. Will definitely order again for Christmas!</p>
+          <div class="pdp3-review-foot">
+            <button type="button" class="pdp3-helpful-btn" data-review-id="rev_extra_2">
+              <span class="pdp3-thumb-icon">👍</span>
+              <span>Helpful (<span class="pdp3-helpful-count">11</span>)</span>
+            </button>
+            <span class="pdp3-purchased-variant">Format: 6" - (serves 7–8)</span>
+          </div>
+        `;
+
+        reviewsGrid.appendChild(extraCard1);
+        reviewsGrid.appendChild(extraCard2);
+        setupHelpfulButtons(extraCard1);
+        setupHelpfulButtons(extraCard2);
+
+        loadMoreBtn.innerHTML = '<span>All 128 Verified Reviews Loaded ✓</span>';
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.style.opacity = '0.6';
+        loadMoreBtn.style.cursor = 'default';
+        showToast('All customer celebration reviews loaded.');
+      });
+    }
+
+    // Sync right details height with left gallery on desktop to eliminate white space
+    function syncPdp3ColumnHeights() {
+      const gallery = document.querySelector('.pdp3-gallery');
+      const details = document.querySelector('.pdp3-details');
+      const grid = document.querySelector('.pdp3-grid');
+      if (!gallery || !details) return;
+
+      if (window.innerWidth >= 993) {
+        const galleryHeight = Math.round(gallery.getBoundingClientRect().height);
+        if (galleryHeight > 250) {
+          details.style.maxHeight = `${galleryHeight}px`;
+          details.style.setProperty('--pdp3-gallery-height', `${galleryHeight}px`);
+          if (grid) grid.style.setProperty('--pdp3-gallery-height', `${galleryHeight}px`);
+        }
+      } else {
+        details.style.maxHeight = '';
+        details.style.removeProperty('--pdp3-gallery-height');
+      }
+    }
+
+    syncPdp3ColumnHeights();
+    window.addEventListener('resize', syncPdp3ColumnHeights);
+    window.addEventListener('load', syncPdp3ColumnHeights);
+    if (heroImg) {
+      if (heroImg.complete) {
+        syncPdp3ColumnHeights();
+      } else {
+        heroImg.addEventListener('load', syncPdp3ColumnHeights);
+      }
+    }
+
+    // ResizeObserver watches gallery height changes (image load, dynamic resize)
+    if (window.ResizeObserver) {
+      const gallery = document.querySelector('.pdp3-gallery');
+      if (gallery) {
+        const ro = new ResizeObserver(() => {
+          syncPdp3ColumnHeights();
+        });
+        ro.observe(gallery);
+      }
+    }
+
+    // Scroll hint fade logic
+    const detailsConsole = document.querySelector('.pdp3-details');
+    const scrollHintBar = document.getElementById('pdp3ScrollHintBar');
+    if (detailsConsole && scrollHintBar) {
+      detailsConsole.addEventListener('scroll', () => {
+        if (detailsConsole.scrollTop > 35) {
+          scrollHintBar.classList.add('hidden');
+        } else {
+          scrollHintBar.classList.remove('hidden');
+        }
+      }, { passive: true });
+    }
+
+    // Test scroll param support
+    const scrollParam = urlParams.get('scroll');
+    if (scrollParam && detailsConsole) {
+      setTimeout(() => {
+        detailsConsole.scrollTop = parseInt(scrollParam, 10) || 500;
+      }, 300);
+    }
+
+    // Initial View Sync
+    updateView();
+  }
+
   initProductDetailPage();
+  initProduct3Page();
   initSalesDepartmentPage();
   initCateringWorkflow();
   updateCartUI();

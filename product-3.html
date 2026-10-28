@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruce Chocolate Cake — Frank & Harri Patisserie Kew · Melbourne</title>
+  <meta name="description"
+    content="Our most loved chocolate cake. Five thinner layers of rich buttermilk chocolate cake bound by smooth Belgian chocolate fudge frosting. Handcrafted in Kew, Melbourne.">
+
+  <!-- Frank & Harri Authentic Typography: Cormorant Garamond (Serif), Jost (Clean Sans), Caveat (Hand-Piped Plaque Script) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3.4">
+</head>
+
+<body data-page="product-3">
+
+  <!-- ========================================================================
+       Top Announcement Ribbon (Exact match to reference: Sage Green #a7b2a3)
+       ======================================================================== -->
+  <div class="top-brand-bar">
+    <div class="top-brand-container">
+      <div class="top-brand-left">Kew Boutique Pâtisserie</div>
+      <div class="top-brand-center">
+        <span class="top-brand-bullet">•</span>
+        <span>Complimentary Melbourne Metro Delivery On Orders Over $150 · 72h Pre-Order For Celebration Cakes</span>
+      </div>
+      <div class="top-brand-right">Tue–Sat 7:30am – 3:30pm</div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Pierre Hermé Paris Inspired Luxury Header (Frank & Harri Authentic)
+       ======================================================================== -->
+  <header class="ph-header" id="siteHeader">
+    <div class="ph-main-bar">
+      <div class="ph-main-container">
+
+        <!-- Left: Mobile Hamburger & La Maison / Our locations -->
+        <div class="ph-left-wrap">
+          <button class="ph-mobile-toggle" id="phNavToggle" aria-label="Open mobile menu" title="Open Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <line x1="3" y1="7" x2="21" y2="7"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="17" x2="21" y2="17"></line>
+            </svg>
+          </button>
+          <nav class="ph-left-nav" aria-label="Brand links">
+            <a href="index.html#boutiqueSection" class="ph-nav-link">La Maison</a>
+            <a href="index.html#boutiqueSection" class="ph-nav-link">Our Boutique</a>
+          </nav>
+        </div>
+
+        <!-- Center: Centered Luxury Wordmark with Sage Dot -->
+        <div class="ph-brand-center">
+          <a href="index.html" class="ph-brand-link" aria-label="Frank & Harri Homepage">
+            <span class="ph-brand-title">FRANK & HARRI<span class="ph-dot">.</span></span>
+            <span class="ph-brand-sub">KEW · MELBOURNE</span>
+          </a>
+        </div>
+
+        <!-- Right: Minimal Utility Actions: Currency, Search, Account, Bag -->
+        <div class="ph-right-actions">
+          <!-- Currency / Region Selector -->
+          <div class="ph-currency-wrap">
+            <button class="ph-currency-btn" id="currencyToggleBtn" aria-label="Select currency" aria-expanded="false">
+              <span id="currentCurrencyLabel">AU</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="ph-currency-dropdown" id="currencyDropdown">
+              <button class="ph-curr-opt active" data-curr="AU">AU $ (AUD)</button>
+              <button class="ph-curr-opt" data-curr="US">US $ (USD)</button>
+              <button class="ph-curr-opt" data-curr="EU">€ (EUR)</button>
+              <button class="ph-curr-opt" data-curr="UK">£ (GBP)</button>
+            </div>
+          </div>
+
+          <!-- Search Icon Button -->
+          <button class="ph-icon-btn" id="headerSearchToggleBtn" aria-label="Search creations" title="Search">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="11" cy="11" r="7.5"></circle>
+              <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+            </svg>
+          </button>
+
+          <!-- Account Icon Button -->
+          <button class="ph-icon-btn" id="accountBtn" aria-label="My Account" title="My Account">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          <!-- Shopping Bag Icon (live count badge) -->
+          <button class="ph-icon-btn ph-bag-btn" id="cartOpenBtn" aria-label="View shopping bag" title="Shopping Bag">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M6 7h12l1.2 14H4.8L6 7z"></path>
+              <path d="M9 7V5a3 3 0 0 1 6 0V7"></path>
+            </svg>
+            <span class="cart-counter" id="cartCountBadge">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Row: Centered Category Navigation Bar -->
+    <nav class="ph-category-bar" aria-label="Creations categories">
+      <div class="ph-category-container">
+        <ul class="ph-category-list">
+          <li><a href="bestsellers.html" class="ph-cat-link" data-cat="bestsellers">BEST SELLERS</a></li>
+          <li><a href="birthday-cakes.html" class="ph-cat-link active" data-cat="birthday-cakes">BIRTHDAY CAKES</a></li>
+          <li><a href="gluten-free.html" class="ph-cat-link" data-cat="gluten-free">GLUTEN-FREE</a></li>
+          <li><a href="tarts-pastries.html" class="ph-cat-link" data-cat="pastries">TARTS & PASTRIES</a></li>
+          <li><a href="catering.html" class="ph-cat-link" data-cat="catering">CATERING</a></li>
+          <li><a href="sales-department.html" class="ph-cat-link">SALES DEPARTMENT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Slide-Down Minimalist Search Drawer -->
+    <div class="ph-search-drawer" id="phSearchDrawer" aria-hidden="true">
+      <div class="ph-search-inner">
+        <div class="ph-search-field-wrap">
+          <svg class="ph-search-lens-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="globalSearchInput" class="ph-search-input"
+            placeholder="Search celebration cakes, viennoiseries, flavours, catering..." aria-label="Search creations">
+          <button class="search-submit-circle" id="searchSubmitBtn" aria-label="Execute search">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+        <button class="ph-search-close-btn" id="phSearchCloseBtn" aria-label="Close search">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Backdrop for Luxury Slide-Out Navigation Drawer -->
+  <div class="ph-drawer-backdrop" id="phNavBackdrop" aria-hidden="true"></div>
+
+  <!-- Luxury Slide-Out Navigation Drawer (Mobile & Tablet) -->
+  <aside class="ph-nav-drawer" id="phNavDrawer" aria-label="Boutique Navigation Drawer" aria-hidden="true">
+    <div class="ph-nav-drawer-header">
+      <div class="ph-drawer-brand">
+        <span class="ph-brand-title" style="font-size: 1.25rem;">FRANK & HARRI<span class="ph-dot">.</span></span>
+        <span class="ph-brand-sub" style="font-size: 0.58rem;">KEW · MELBOURNE</span>
+      </div>
+      <button class="drawer-close-btn" id="phNavCloseBtn" aria-label="Close navigation menu">✕</button>
+    </div>
+
+    <div class="ph-nav-drawer-body">
+      <nav class="ph-drawer-nav-list" aria-label="Mobile Navigation">
+        <a href="bestsellers.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">01</span>
+          <span class="ph-nav-text">Best Sellers Collection</span>
+        </a>
+        <a href="birthday-cakes.html" class="ph-drawer-nav-item active" data-drawer-link>
+          <span class="ph-nav-num">02</span>
+          <span class="ph-nav-text">Celebration & Birthday Cakes</span>
+        </a>
+        <a href="gluten-free.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">03</span>
+          <span class="ph-nav-text">Gluten-Free Masterworks</span>
+        </a>
+        <a href="tarts-pastries.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">04</span>
+          <span class="ph-nav-text">Tarts, Pastries & Viennoiserie</span>
+        </a>
+        <a href="catering.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">05</span>
+          <span class="ph-nav-text">Event Catering & Grazing</span>
+        </a>
+        <a href="sales-department.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">06</span>
+          <span class="ph-nav-text">Corporate & Bulk Gifting</span>
+        </a>
+        <a href="index.html#signatureSection" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">07</span>
+          <span class="ph-nav-text">The Iconic Bruce Cake</span>
+        </a>
+        <a href="index.html#boutiqueSection" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">08</span>
+          <span class="ph-nav-text">Kew Junction Boutique & Hours</span>
+        </a>
+      </nav>
+
+      <div class="ph-drawer-actions">
+        <button class="btn-primary open-catering-trigger" style="width: 100%; justify-content: center;"
+          data-drawer-link>
+          <span>Enquire For Catering ↗</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Breadcrumbs & Layout Switcher Bar
+       ======================================================================== -->
+  <div class="pdp-breadcrumb-bar">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+      <nav class="pdp-breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="pdp-bc-sep">/</span>
+        <a href="birthday-cakes.html" id="pdp3BreadcrumbCategory">Birthday Cakes</a>
+        <span class="pdp-bc-sep">/</span>
+        <span class="pdp-bc-current" id="pdp3BreadcrumbTitle">Bruce Chocolate Cake</span>
+      </nav>
+
+      <!-- Layout Switcher (Allows comparing layouts) -->
+      <div class="pdp-layout-switcher">
+        <span class="switcher-label">Reference Layout:</span>
+        <a href="product.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 1 (Split)</a>
+        <a href="product-2.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 2 (Triptych)</a>
+        <a href="product-3.html?id=bruce-chocolate-cake" class="layout-toggle-btn active">Layout 3 (Minimal Direct)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       PRODUCT-3 MAIN: MINIMAL, MOST CONVEYING & DIRECT PDP
+       Matches: https://www.frankandharri.com.au/products/bruce-chocolate-cake
+       - Clean 2-column e-commerce PDP
+       - Direct Size Pills (6", 9", 12")
+       - Direct Plaque Option (No plaque / Plaque +$7.90) with inline message field
+       - Live visual chocolate plaque overlay on the cake
+       - Quantity stepper + prominent "Add to Bag" button
+       - Boutique collection & Melbourne delivery highlights
+       - Minimalist collapsible accordions
+       ======================================================================== -->
+  <main class="pdp3-main" id="pdp3Main">
+    <div class="pdp3-container">
+      <div class="pdp3-grid">
+
+        <!-- ==================================================================
+             LEFT COLUMN: Visual Gallery & Live Plaque Preview
+             ================================================================== -->
+        <div class="pdp3-gallery">
+          <div class="pdp3-hero-frame">
+            <span class="pdp3-hero-badge">
+              <span class="pdp3-badge-dot"></span>
+              SIGNATURE · 5-LAYER CHOCOLATE
+            </span>
+
+            <img src="assets/images/bruce-cake-1.png" alt="Bruce Chocolate Cake" id="pdp3HeroImg" class="pdp3-hero-img">
+
+            <!-- Live Hand-Piped Chocolate Plaque Medallion Overlay -->
+            <div class="pdp3-plaque-overlay" id="pdp3PlaqueOverlay" aria-hidden="true">
+              <div class="pdp3-plaque-disc">
+                <span class="pdp3-plaque-text" id="pdp3PlaquePreviewText">Happy Birthday!</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clickable Perspectives / Gallery Thumbnails -->
+          <div class="pdp3-thumbs" role="tablist" aria-label="Cake perspectives">
+            <button type="button" class="pdp3-thumb-btn active" data-src="assets/images/bruce-cake-1.png"
+              aria-label="Front cake view">
+              <img src="assets/images/bruce-cake-1.png" alt="Front View">
+              <span class="pdp3-thumb-label">Whole Cake</span>
+            </button>
+            <button type="button" class="pdp3-thumb-btn" data-src="assets/images/bruce-cake-2.png"
+              aria-label="5-Layer slice detail">
+              <img src="assets/images/bruce-cake-2.png" alt="Slice Detail">
+              <span class="pdp3-thumb-label">5-Layer Slice</span>
+            </button>
+            <button type="button" class="pdp3-thumb-btn" data-src="assets/images/bruce-cake-3.png"
+              aria-label="Presentation and plaque">
+              <img src="assets/images/bruce-cake-3.png" alt="Plaque Detail">
+              <span class="pdp3-thumb-label">Plaque & Box</span>
+            </button>
+          </div>
+
+          <!-- Atelier Assurance Card -->
+          <div class="pdp3-atelier-note">
+            <div class="pdp3-note-icon">🎂</div>
+            <div class="pdp3-note-text">
+              <strong>Hand-baked fresh to order in Kew</strong> using Belgian dark chocolate fudge frosting and cultured
+              buttermilk sponge. Presented in bespoke Frank & Harri bakery packaging with reinforced flat-carry base.
+            </div>
+          </div>
+
+          <!-- Left Column Order Snapshot & Atelier Promise (Balances Layout Height & Eliminates Dead White Space) -->
+          <div class="pdp3-left-perks">
+            <div class="pdp3-left-perk">
+              <span class="pdp3-left-perk-icon">⏱️</span>
+              <div class="pdp3-left-perk-info">
+                <strong>72-Hour Handcrafted Notice</strong>
+                <span>Allows overnight Belgian chocolate chilling</span>
+              </div>
+            </div>
+            <div class="pdp3-left-perk">
+              <span class="pdp3-left-perk-icon">📍</span>
+              <div class="pdp3-left-perk-info">
+                <strong>259 High St, Kew Boutique</strong>
+                <span>Dedicated express pick-up bay on site</span>
+              </div>
+            </div>
+            <div class="pdp3-left-perk">
+              <span class="pdp3-left-perk-icon">✨</span>
+              <div class="pdp3-left-perk-info">
+                <strong>Complimentary Gold Presentation</strong>
+                <span>Ribbon-tied gift box & cake care protocol</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             RIGHT COLUMN: Direct Purchasing & Customization Console
+             ================================================================== -->
+        <div class="pdp3-details">
+          <!-- Atelier Eyebrow -->
+          <div class="pdp3-eyebrow">
+            <span>CELEBRATION CAKES</span>
+            <span class="pdp3-eyebrow-sep">/</span>
+            <span>KEW ATELIER</span>
+          </div>
+
+          <!-- Product Title -->
+          <h1 class="pdp3-title" id="pdp3Title">Bruce Chocolate Cake</h1>
+
+          <!-- Live Rating Snippet & Scarcity Badge (Conversion Booster) -->
+          <div class="pdp3-rating-badge-row">
+            <a href="#pdp3Reviews" class="pdp3-stars-link" aria-label="Jump to customer reviews">
+              <span class="pdp3-stars-icons">★★★★★</span>
+              <span class="pdp3-rating-score">4.9</span>
+              <span class="pdp3-rating-count">(128 reviews)</span>
+            </a>
+            <span class="pdp3-earliest-badge">
+              <span class="pdp3-live-dot"></span>
+              Freshly baked in Kew · Earliest pick-up: <strong id="pdp3EarliestDate">Fri, 31 Oct</strong>
+            </span>
+          </div>
+
+          <!-- Price & Tax Banner -->
+          <div class="pdp3-price-bar">
+            <div class="pdp3-price-wrap">
+              <span class="pdp3-price" id="pdp3PriceDisplay">$109.00</span>
+              <span class="pdp3-currency">AUD</span>
+            </div>
+            <div class="pdp3-tax-wrap">
+              <span class="pdp3-tax-text">Tax included.</span>
+              <span class="pdp3-stock-badge">✓ In Stock for Pre-Order</span>
+            </div>
+          </div>
+
+          <!-- Live Editorial Description (Direct from frankandharri.com.au) -->
+          <div class="pdp3-desc-block">
+            <p class="pdp3-desc-lead">
+              Our most loved chocolate cake. Rich chocolate buttermilk layers with smooth chocolate fudge frosting.
+              Cake is 5 thinner layers (approx. 5 inches high).
+            </p>
+            <p class="pdp3-serves-hint">
+              *Serving sizes are based on dessert serves (approx. 1" × 2" × 6").
+            </p>
+          </div>
+
+          <div class="pdp3-divider"></div>
+
+          <!-- ================================================================
+               OPTION 1: SIZE SELECTION (Direct interactive pill cards)
+               ================================================================ -->
+          <div class="pdp3-option-group" id="pdp3SizeGroup">
+            <div class="pdp3-option-header">
+              <label class="pdp3-option-label">1. Size</label>
+              <div class="pdp3-size-header-actions">
+                <span class="pdp3-option-sub" id="pdp3SelectedSizeLabel">6" - (serves 7–8)</span>
+                <a href="#cakePortionSection" class="pdp3-size-guide-pill-link" title="Jump to Visual Portion Guide & Slices Photo">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+                  <span>Portion Guide &amp; Photo</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="pdp3-pills-list pdp3-sizes-list">
+              <!-- Size 1: 6" -->
+              <button type="button" class="pdp3-pill-btn active" data-size-idx="0" data-size="6&quot;"
+                data-serves="serves 7–8" data-price="109.00">
+                <div class="pdp3-pill-radio">
+                  <span class="pdp3-radio-dot"></span>
+                </div>
+                <div class="pdp3-pill-info">
+                  <span class="pdp3-pill-title">6" - (serves 7–8)</span>
+                  <span class="pdp3-pill-meta">Petite Celebration · 5 layers</span>
+                </div>
+                <span class="pdp3-pill-price">$109.00</span>
+              </button>
+
+              <!-- Size 2: 9" -->
+              <button type="button" class="pdp3-pill-btn" data-size-idx="1" data-size="9&quot;"
+                data-serves="serves 12-14" data-price="159.00">
+                <div class="pdp3-pill-radio">
+                  <span class="pdp3-radio-dot"></span>
+                </div>
+                <div class="pdp3-pill-info">
+                  <span class="pdp3-pill-title">9" - (serves 12-14)</span>
+                  <span class="pdp3-pill-meta">Classic Celebration · 5 layers</span>
+                </div>
+                <span class="pdp3-pill-price">$159.00</span>
+              </button>
+
+              <!-- Size 3: 12" -->
+              <button type="button" class="pdp3-pill-btn" data-size-idx="2" data-size="12&quot;"
+                data-serves="serves 20-22" data-price="209.00">
+                <div class="pdp3-pill-radio">
+                  <span class="pdp3-radio-dot"></span>
+                </div>
+                <div class="pdp3-pill-info">
+                  <span class="pdp3-pill-title">12" - (serves 20-22)</span>
+                  <span class="pdp3-pill-meta">Grand Banquet · 5 layers</span>
+                </div>
+                <span class="pdp3-pill-price">$209.00</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ================================================================
+               OPTION 2: ADD PLAQUE $7.9 (Direct interactive pill cards)
+               ================================================================ -->
+          <div class="pdp3-option-group" id="pdp3PlaqueGroup" style="margin-top: 1.4rem;">
+            <div class="pdp3-option-header">
+              <label class="pdp3-option-label">2. Add plaque $7.9</label>
+              <span class="pdp3-option-sub" id="pdp3SelectedPlaqueLabel">No plaque</span>
+            </div>
+
+            <div class="pdp3-plaque-pills-row">
+              <button type="button" class="pdp3-pill-btn pdp3-plaque-btn active" data-plaque="no" data-cost="0">
+                <div class="pdp3-pill-radio">
+                  <span class="pdp3-radio-dot"></span>
+                </div>
+                <span class="pdp3-pill-title">No plaque</span>
+                <span class="pdp3-pill-price">$0.00</span>
+              </button>
+
+              <button type="button" class="pdp3-pill-btn pdp3-plaque-btn" data-plaque="yes" data-cost="7.90">
+                <div class="pdp3-pill-radio">
+                  <span class="pdp3-radio-dot"></span>
+                </div>
+                <span class="pdp3-pill-title">Plaque</span>
+                <span class="pdp3-pill-price">+$7.90</span>
+              </button>
+            </div>
+
+            <!-- Slide-Down Smooth Plaque Inscription Input -->
+            <div class="pdp3-plaque-input-wrap" id="pdp3PlaqueInputWrap" style="display: none;">
+              <div class="pdp3-input-header">
+                <label for="pdp3PlaqueInput" class="pdp3-input-label">
+                  Custom Inscription (Hand-piped in dark Belgian chocolate)
+                </label>
+                <span class="pdp3-char-count" id="pdp3CharCount">0 / 28</span>
+              </div>
+              <div class="pdp3-input-field-wrap">
+                <input type="text" id="pdp3PlaqueInput" class="pdp3-custom-input"
+                  placeholder="e.g. Happy 30th Bruce!" maxlength="28" autocomplete="off">
+              </div>
+              <span class="pdp3-input-hint">Live preview updates directly on the cake photo above.</span>
+            </div>
+          </div>
+
+          <!-- ================================================================
+               OPTION 3: PICK-UP / DELIVERY DATE & TIME WINDOW (Friction Killer)
+               ================================================================ -->
+          <div class="pdp3-option-group" id="pdp3DateGroup" style="margin-top: 1.4rem;">
+            <div class="pdp3-option-header">
+              <label class="pdp3-option-label">3. Pick-Up or Delivery Date</label>
+              <span class="pdp3-option-sub" id="pdp3SelectedDateLabel">Fri, 31 Oct · 11am–1pm</span>
+            </div>
+
+            <!-- Quick Date Pills (Min 72h lead time calculated) -->
+            <div class="pdp3-date-pills-row">
+              <button type="button" class="pdp3-date-pill active" data-date="Fri, 31 Oct">
+                <span class="pdp3-date-day">Fri</span>
+                <span class="pdp3-date-num">31 Oct</span>
+                <span class="pdp3-date-tag">Earliest</span>
+              </button>
+              <button type="button" class="pdp3-date-pill" data-date="Sat, 1 Nov">
+                <span class="pdp3-date-day">Sat</span>
+                <span class="pdp3-date-num">1 Nov</span>
+                <span class="pdp3-date-tag">Weekend</span>
+              </button>
+              <button type="button" class="pdp3-date-pill" data-date="Tue, 4 Nov">
+                <span class="pdp3-date-day">Tue</span>
+                <span class="pdp3-date-num">4 Nov</span>
+                <span class="pdp3-date-tag">Next Week</span>
+              </button>
+              <label class="pdp3-date-picker-btn" title="Choose specific celebration date">
+                <span class="pdp3-date-day">Calendar</span>
+                <span class="pdp3-date-num">📅 Select</span>
+                <input type="date" id="pdp3CustomDateInput" class="pdp3-hidden-date-input" aria-label="Select custom date">
+              </label>
+            </div>
+
+            <!-- Time Window Selector -->
+            <div class="pdp3-time-row">
+              <span class="pdp3-time-label">Atelier Pick-Up Window:</span>
+              <div class="pdp3-time-slots">
+                <button type="button" class="pdp3-slot-btn active" data-slot="11:00am – 1:00pm">
+                  <span>11:00am – 1:00pm</span>
+                </button>
+                <button type="button" class="pdp3-slot-btn" data-slot="1:00pm – 3:30pm">
+                  <span>1:00pm – 3:30pm</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================================================================
+               OPTION 4: CELEBRATION PARTY ADD-ONS (High AOV Booster)
+               ================================================================ -->
+          <div class="pdp3-option-group pdp3-addons-group" id="pdp3AddonsGroup" style="margin-top: 1.4rem;">
+            <div class="pdp3-option-header">
+              <label class="pdp3-option-label">4. Celebration Party Essentials</label>
+              <span class="pdp3-option-sub">Pre-packed inside your cake box</span>
+            </div>
+
+            <div class="pdp3-addons-list">
+              <!-- Add-on 1: Beeswax Candles -->
+              <label class="pdp3-addon-card" id="addonCardCandles">
+                <input type="checkbox" class="pdp3-addon-checkbox" id="addonCandles" data-addon-name="Gold Beeswax Candles (Pack of 12)" data-addon-price="6.50">
+                <div class="pdp3-addon-check-box">
+                  <span class="pdp3-check-mark">✓</span>
+                </div>
+                <div class="pdp3-addon-info">
+                  <span class="pdp3-addon-title">🕯️ Tall Gold-Dipped Beeswax Candles (Pack of 12)</span>
+                  <span class="pdp3-addon-sub">Slow-burning, natural Australian beeswax for milestone photos</span>
+                </div>
+                <span class="pdp3-addon-price">+$6.50</span>
+              </label>
+
+              <!-- Add-on 2: Handwritten Gift Card -->
+              <label class="pdp3-addon-card" id="addonCardCard">
+                <input type="checkbox" class="pdp3-addon-checkbox" id="addonGiftCard" data-addon-name="Letterpress Gift Card with Handwritten Note" data-addon-price="5.00">
+                <div class="pdp3-addon-check-box">
+                  <span class="pdp3-check-mark">✓</span>
+                </div>
+                <div class="pdp3-addon-info">
+                  <span class="pdp3-addon-title">💌 Letterpress Gift Card with Handwritten Note</span>
+                  <span class="pdp3-addon-sub">Bespoke heavy cardstock hand-inked by our atelier</span>
+                </div>
+                <span class="pdp3-addon-price">+$5.00</span>
+              </label>
+
+              <!-- Slide-down Gift Card Message -->
+              <div class="pdp3-giftnote-wrap" id="pdp3GiftNoteWrap" style="display: none;">
+                <textarea id="pdp3GiftNoteText" class="pdp3-giftnote-input" rows="2" placeholder="Write your heartfelt card message here... (e.g. Wishing you the happiest birthday!)" maxlength="160"></textarea>
+                <div class="pdp3-giftnote-counter" id="pdp3GiftNoteCount">0 / 160 characters</div>
+              </div>
+
+              <!-- Add-on 3: Celebration Sparklers -->
+              <label class="pdp3-addon-card" id="addonCardSparklers">
+                <input type="checkbox" class="pdp3-addon-checkbox" id="addonSparklers" data-addon-name="Artisan Gold Celebration Sparklers (Pack of 2)" data-addon-price="7.50">
+                <div class="pdp3-addon-check-box">
+                  <span class="pdp3-check-mark">✓</span>
+                </div>
+                <div class="pdp3-addon-info">
+                  <span class="pdp3-addon-title">✨ Artisan Gold Celebration Sparklers (Pack of 2)</span>
+                  <span class="pdp3-addon-sub">Food-safe, smokeless celebration sparklers for cake reveal</span>
+                </div>
+                <span class="pdp3-addon-price">+$7.50</span>
+              </label>
+
+              <!-- Add-on 4: Acrylic Cake Topper -->
+              <label class="pdp3-addon-card" id="addonCardTopper">
+                <input type="checkbox" class="pdp3-addon-checkbox" id="addonTopper" data-addon-name="Acrylic 'Happy Birthday' Keepsake Topper" data-addon-price="12.00">
+                <div class="pdp3-addon-check-box">
+                  <span class="pdp3-check-mark">✓</span>
+                </div>
+                <div class="pdp3-addon-info">
+                  <span class="pdp3-addon-title">🎂 Acrylic 'Happy Birthday' Keepsake Topper</span>
+                  <span class="pdp3-addon-sub">Reusable mirror-gold calligraphy topper</span>
+                </div>
+                <span class="pdp3-addon-price">+$12.00</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- ================================================================
+               QUANTITY STEPPER & ADD TO CART ACTION
+               ================================================================ -->
+          <div class="pdp3-purchase-block">
+            <div class="pdp3-action-row">
+              <!-- Quantity Stepper -->
+              <div class="pdp3-qty-wrap" aria-label="Select quantity">
+                <button type="button" class="pdp3-qty-btn" id="pdp3QtyMinus" aria-label="Decrease quantity">−</button>
+                <input type="number" id="pdp3QtyInput" class="pdp3-qty-input" value="1" min="1" max="20"
+                  aria-label="Quantity">
+                <button type="button" class="pdp3-qty-btn" id="pdp3QtyPlus" aria-label="Increase quantity">+</button>
+              </div>
+
+              <!-- Primary CTA Button -->
+              <button type="button" class="pdp3-add-cart-btn" id="pdp3AddToCartBtn">
+                <span class="pdp3-btn-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 7h12l1.2 14H4.8L6 7z"></path>
+                    <path d="M9 7V5a3 3 0 0 1 6 0V7"></path>
+                  </svg>
+                </span>
+                <span class="pdp3-btn-text" id="pdp3AddBtnText">Add to Bag — $109.00 AUD</span>
+              </button>
+            </div>
+
+            <!-- Express 1-Click Checkout Button (Apple Pay / Google Pay / Shop Pay) -->
+            <button type="button" class="pdp3-express-btn" id="pdp3ExpressBtn">
+              <span class="pdp3-express-label">Express 1-Click Checkout with</span>
+              <span class="pdp3-express-badges">
+                <span class="pdp3-brand-badge"> Pay</span>
+                <span class="pdp3-brand-badge">G Pay</span>
+                <span class="pdp3-brand-badge">shop Pay</span>
+              </span>
+            </button>
+
+            <!-- Fast Concierge / Telephone Assist -->
+            <div class="pdp3-secondary-actions">
+              <button type="button" class="pdp3-text-action open-catering-trigger">
+                <span>Need custom styling, corporate invoicing or alternate time? Chat with Atelier Concierge ↗</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ================================================================
+               PARTY-READY & SAFE TRANSPORT GUARANTEE BADGES
+               ================================================================ -->
+          <div class="pdp3-safe-badges-grid">
+            <div class="pdp3-safe-badge">
+              <span class="pdp3-safe-icon">📦</span>
+              <div class="pdp3-safe-info">
+                <strong>Reinforced Box</strong>
+                <span>Zero-slip flat car transport</span>
+              </div>
+            </div>
+            <div class="pdp3-safe-badge">
+              <span class="pdp3-safe-icon">❄️</span>
+              <div class="pdp3-safe-info">
+                <strong>Chilled Atelier Safe</strong>
+                <span>Tempering guide included</span>
+              </div>
+            </div>
+            <div class="pdp3-safe-badge">
+              <span class="pdp3-safe-icon">🍰</span>
+              <div class="pdp3-safe-info">
+                <strong>Portion Protocol</strong>
+                <span>Clean cutting guide sheet</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================================================================
+               FULFILLMENT REASSURANCE STRIP (Pick-up, Delivery, Notice)
+               ================================================================ -->
+          <div class="pdp3-perks-card">
+            <div class="pdp3-perk-item">
+              <div class="pdp3-perk-icon">🏪</div>
+              <div class="pdp3-perk-content">
+                <strong>Boutique Pick-up in Kew</strong>
+                <p>Pick-up between 11:00am and 3:00pm on your selected date. 259 High St, Kew VIC 3101.</p>
+              </div>
+            </div>
+
+            <div class="pdp3-perk-item">
+              <div class="pdp3-perk-icon">🚚</div>
+              <div class="pdp3-perk-content">
+                <strong>Melbourne Metro Delivery</strong>
+                <p>Refrigerated courier delivery available across eligible Melbourne postcodes at checkout.</p>
+              </div>
+            </div>
+
+            <div class="pdp3-perk-item">
+              <div class="pdp3-perk-icon">⏱️</div>
+              <div class="pdp3-perk-content">
+                <strong>72 Hours Advance Notice</strong>
+                <p>Celebration cakes require 72 hours pre-order for meticulous hand layering and chilling.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================================================================
+               MINIMALIST COLLAPSIBLE ACCORDIONS
+               ================================================================ -->
+          <div class="pdp3-accordions-group">
+            <!-- Accordion 1: Collection & Transport -->
+            <details class="pdp3-accordion">
+              <summary class="pdp3-acc-summary">
+                <span class="pdp3-acc-title">Collection &amp; Storage Instructions</span>
+                <svg class="pdp3-acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </summary>
+              <div class="pdp3-acc-body">
+                <ul>
+                  <li><strong>Collection Window:</strong> Pick-up between 11:00am and 3:00pm on your selected date. If you require an alternative time within business hours, please email <em>info@frankandharri.com.au</em>.</li>
+                  <li><strong>Vehicle Transport:</strong> Always transport cake boxes flat on the car floor or boot liner with air conditioning running. Never transport on an angled passenger seat or in a passenger's lap.</li>
+                  <li><strong>Serving Temperature:</strong> Keep refrigerated until 1–2 hours before cutting. Bringing to room temperature ensures the Belgian fudge frosting achieves its signature silky, melt-in-mouth texture.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Accordion 2: Allergens & Ingredients -->
+            <details class="pdp3-accordion">
+              <summary class="pdp3-acc-summary">
+                <span class="pdp3-acc-title">Allergens & Ingredients</span>
+                <svg class="pdp3-acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </summary>
+              <div class="pdp3-acc-body">
+                <p><strong>Contains:</strong> Gluten, dairy, egg.</p>
+                <p><strong>Atelier Notice:</strong> Handcrafted in a boutique environment where eggs, sesame, soy, tree nuts, and gluten are present.</p>
+                <p><strong>Key Ingredients:</strong> Unbleached wheat flour, cultured buttermilk, Belgian dark cocoa & chocolate couverture, Victorian cultured butter, free-range eggs, Madagascar bourbon vanilla, pure cane sugar, sea salt.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- Floating Scroll Affordance Hint for Desktop (Fades on Scroll) -->
+          <div class="pdp3-scroll-hint-bar" id="pdp3ScrollHintBar">
+            <a href="#cakePortionSection" style="color: inherit; text-decoration: none;">
+              <span>Scroll for cake portion sizing visualizer, customer reviews & party add-ons ↓</span>
+            </a>
+          </div>
+
+          <!-- Bottom Jump Link to Testimonials & Portion Sizing -->
+          <div class="pdp3-details-bottom-hint" style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="#cakePortionSection" class="pdp3-jump-portion-pill">
+              <span>Cake Portion Sizing Guide ↓</span>
+            </a>
+            <a href="#pdp3Reviews" class="pdp3-jump-reviews-btn">
+              <span>View 128 Customer Reviews & Celebration Photos ↓</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ====================================================================
+           MINIMAL CAKE PORTION SIZING SECTION (#cakePortionSection)
+           - Pure minimalist aesthetic matching Frank & Harri theme
+           - Exact Cormorant Garamond Italic theme typography
+           - Signature sage backdrop (#a7b2a3) with marble cake slices photo
+           ==================================================================== -->
+      <section class="pdp3-portion-section" id="cakePortionSection" aria-label="Cake Portion Sizing Guide">
+        <div class="pdp3-portion-inner">
+          <h2 class="pdp3-portion-title">Cake Portion Sizing</h2>
+          
+          <div class="pdp3-portion-text">
+            <p class="pdp3-portion-subhead">Dessert vs Coffee size portions</p>
+            <p class="pdp3-portion-spec">*Dessert size: 1 inch &times; 2 inches &times; 4 inches</p>
+            <p class="pdp3-portion-spec">*Coffee size: 1 inch &times; 1 inch &times; 4 inches</p>
+            <p class="pdp3-portion-note">(Actual quantities may vary, depending on the person cutting up your cake)</p>
+          </div>
+
+          <div class="pdp3-portion-photo-frame">
+            <img src="assets/images/cake-portion-slices.png" alt="Cake Portion Sizing - Dessert vs Coffee size portions" class="pdp3-portion-hero-img" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           VERY HIGHLY INTERACTIVE TESTIMONIALS & REVIEWS SECTION (#pdp3Reviews)
+           - Live rating score & breakdown with interactive star filters
+           - Real Customer Photo Highlights Reel
+           - Category Filter Tabs (All, 30th/Milestone, Dinner Parties, Plaque, Photos)
+           - Sort Dropdown (Most Helpful, Highest Rated, Most Recent)
+           - Interactive Review Cards with live Helpful buttons
+           - "Write an Atelier Review" modal with interactive star picker
+           - Customer Photo Spotlight Lightbox
+           ==================================================================== -->
+      <section class="pdp3-reviews-section" id="pdp3Reviews" aria-label="Customer Reviews and Testimonials">
+        
+        <!-- Section Header -->
+        <div class="pdp3-reviews-header">
+          <span class="pdp3-reviews-kicker">VERIFIED CELEBRATION REVIEWS</span>
+          <h2 class="pdp3-reviews-title">Loved Across Melbourne Celebrations</h2>
+          <p class="pdp3-reviews-sub">
+            Over 120+ 5-star celebrations across Kew, Hawthorn, South Yarra, and greater Melbourne
+          </p>
+        </div>
+
+        <!-- Rating Summary Card & Star Breakdown -->
+        <div class="pdp3-reviews-summary-card">
+          <!-- Col 1: Big Score -->
+          <div class="pdp3-score-col">
+            <span class="pdp3-big-number">4.9</span>
+            <div class="pdp3-stars-wrap">
+              <span class="pdp3-stars-gold">★★★★★</span>
+              <span class="pdp3-score-caption">Based on 128 verified orders</span>
+            </div>
+            <div class="pdp3-recommend-tag">
+              <span class="pdp3-check-pill">✓</span>
+              <span><strong>99% of hosts</strong> would order again</span>
+            </div>
+          </div>
+
+          <!-- Col 2: Interactive Rating Bars -->
+          <div class="pdp3-breakdown-col" aria-label="Rating breakdown filter">
+            <div class="pdp3-bar-row active" data-filter-stars="all" title="Show all reviews">
+              <span class="pdp3-bar-label">5 Stars</span>
+              <div class="pdp3-bar-track">
+                <div class="pdp3-bar-fill" style="width: 94%;"></div>
+              </div>
+              <span class="pdp3-bar-percent">94% (120)</span>
+            </div>
+
+            <div class="pdp3-bar-row" data-filter-stars="4" title="Filter 4-star reviews">
+              <span class="pdp3-bar-label">4 Stars</span>
+              <div class="pdp3-bar-track">
+                <div class="pdp3-bar-fill" style="width: 6%;"></div>
+              </div>
+              <span class="pdp3-bar-percent">6% (8)</span>
+            </div>
+
+            <div class="pdp3-bar-row" data-filter-stars="3" title="0 reviews">
+              <span class="pdp3-bar-label">3 Stars</span>
+              <div class="pdp3-bar-track">
+                <div class="pdp3-bar-fill" style="width: 0%;"></div>
+              </div>
+              <span class="pdp3-bar-percent">0%</span>
+            </div>
+
+            <div class="pdp3-bar-row" data-filter-stars="2" title="0 reviews">
+              <span class="pdp3-bar-label">2 Stars</span>
+              <div class="pdp3-bar-track">
+                <div class="pdp3-bar-fill" style="width: 0%;"></div>
+              </div>
+              <span class="pdp3-bar-percent">0%</span>
+            </div>
+
+            <div class="pdp3-bar-row" data-filter-stars="1" title="0 reviews">
+              <span class="pdp3-bar-label">1 Star</span>
+              <div class="pdp3-bar-track">
+                <div class="pdp3-bar-fill" style="width: 0%;"></div>
+              </div>
+              <span class="pdp3-bar-percent">0%</span>
+            </div>
+          </div>
+
+          <!-- Col 3: Review CTA Box -->
+          <div class="pdp3-cta-col">
+            <div class="pdp3-photo-stat">
+              <span class="pdp3-cam-icon">📸</span>
+              <div>
+                <strong>18 Customer Photos</strong>
+                <span>Real celebration tables & slices</span>
+              </div>
+            </div>
+            <button type="button" class="pdp3-write-review-btn" id="pdp3OpenReviewModalBtn">
+              <span>Write an Atelier Review ✍️</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             Interactive Customer Photo Reel (Clickable Spotlight Carousel)
+             ==================================================================== -->
+        <div class="pdp3-photo-reel-wrap">
+          <div class="pdp3-reel-header">
+            <span class="pdp3-reel-title">📸 Real Celebration Moments (#FrankAndHarriMoments)</span>
+            <span class="pdp3-reel-hint">Click any photo to view celebration details</span>
+          </div>
+
+          <div class="pdp3-photo-reel" id="pdp3PhotoReel">
+            <!-- Photo 1 -->
+            <div class="pdp3-reel-card" data-photo="assets/images/bruce-cake-2.png" data-author="Charlotte D. · Hawthorn" data-caption="The five layers held up beautifully for our dinner party of 14. Rich, velvety, and not overly sweet!" data-occasion="30th Birthday">
+              <div class="pdp3-reel-img-box">
+                <img src="assets/images/bruce-cake-2.png" alt="Customer Photo - Sliced Bruce Cake">
+                <span class="pdp3-reel-zoom-icon">🔍</span>
+              </div>
+              <div class="pdp3-reel-caption">
+                <strong>Charlotte D. · Hawthorn</strong>
+                <span>30th Birthday · 9" Classic</span>
+              </div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="pdp3-reel-card" data-photo="assets/images/bruce-cake-3.png" data-author="Marcus & Liam · South Yarra" data-caption="The hand-piped chocolate plaque was the absolute highlight of the table!" data-occasion="Milestone Celebration">
+              <div class="pdp3-reel-img-box">
+                <img src="assets/images/bruce-cake-3.png" alt="Customer Photo - Plaque Detail">
+                <span class="pdp3-reel-zoom-icon">🔍</span>
+              </div>
+              <div class="pdp3-reel-caption">
+                <strong>Marcus & Liam · South Yarra</strong>
+                <span>Milestone Celebration · 12" Grand</span>
+              </div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="pdp3-reel-card" data-photo="assets/images/bruce-cake-1.png" data-author="Sophia T. · Kew" data-caption="Collected at 11am in Kew. Transported completely flat with zero movement in the car." data-occasion="Family Dinner">
+              <div class="pdp3-reel-img-box">
+                <img src="assets/images/bruce-cake-1.png" alt="Customer Photo - Whole Cake Ready for Table">
+                <span class="pdp3-reel-zoom-icon">🔍</span>
+              </div>
+              <div class="pdp3-reel-caption">
+                <strong>Sophia T. · Kew</strong>
+                <span>Family Birthday · 6" Petite</span>
+              </div>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="pdp3-reel-card" data-photo="assets/images/real/cake-tasting-box.png" data-author="Elena & James · Toorak" data-caption="We paired the Bruce Chocolate Cake with the tasting box for our 35-guest milestone." data-occasion="40th Milestone">
+              <div class="pdp3-reel-img-box">
+                <img src="assets/images/real/cake-tasting-box.png" alt="Customer Photo - Dessert Table Pairing">
+                <span class="pdp3-reel-zoom-icon">🔍</span>
+              </div>
+              <div class="pdp3-reel-caption">
+                <strong>Elena & James · Toorak</strong>
+                <span>40th Milestone · Dessert Table</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             Animated Testimonials Marquee Ticker (Continuous Horizontal Glide)
+             ==================================================================== -->
+        <div class="pdp3-marquee-wrap" aria-hidden="true">
+          <div class="pdp3-marquee-track">
+            <div class="pdp3-marquee-item">⭐️ "Easily Melbourne's most decadent chocolate cake." <span class="pdp3-mq-author">— Charlotte D.</span></div>
+            <div class="pdp3-marquee-item">⭐️ "Fed 16 dessert serves with plenty of delicious leftovers." <span class="pdp3-mq-author">— Marcus & Liam</span></div>
+            <div class="pdp3-marquee-item">⭐️ "The gold-piped chocolate plaque was such a luxurious personal touch." <span class="pdp3-mq-author">— Sophia T.</span></div>
+            <div class="pdp3-marquee-item">⭐️ "Pure chocolate heaven with a glass of Pinot Noir." <span class="pdp3-mq-author">— David & Anna M.</span></div>
+            <div class="pdp3-marquee-item">⭐️ "Pristine packaging and effortless collection on High Street." <span class="pdp3-mq-author">— Claire V.</span></div>
+            <div class="pdp3-marquee-item">⭐️ "You can taste the genuine Belgian couverture." <span class="pdp3-mq-author">— Julian R.</span></div>
+            <!-- Duplicated items for seamless continuous infinite scroll -->
+            <div class="pdp3-marquee-item">⭐️ "Easily Melbourne's most decadent chocolate cake." <span class="pdp3-mq-author">— Charlotte D.</span></div>
+            <div class="pdp3-marquee-item">⭐️ "Fed 16 dessert serves with plenty of delicious leftovers." <span class="pdp3-mq-author">— Marcus & Liam</span></div>
+            <div class="pdp3-marquee-item">⭐️ "The gold-piped chocolate plaque was such a luxurious personal touch." <span class="pdp3-mq-author">— Sophia T.</span></div>
+            <div class="pdp3-marquee-item">⭐️ "Pure chocolate heaven with a glass of Pinot Noir." <span class="pdp3-mq-author">— David & Anna M.</span></div>
+            <div class="pdp3-marquee-item">⭐️ "Pristine packaging and effortless collection on High Street." <span class="pdp3-mq-author">— Claire V.</span></div>
+            <div class="pdp3-marquee-item">⭐️ "You can taste the genuine Belgian couverture." <span class="pdp3-mq-author">— Julian R.</span></div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             Interactive Filter, Sort & Horizontal Carousel Navigation Toolbar
+             ==================================================================== -->
+        <div class="pdp3-reviews-toolbar">
+          <!-- Filter Tabs -->
+          <div class="pdp3-filter-tabs" id="pdp3ReviewFilterTabs" role="tablist">
+            <button type="button" class="pdp3-tab-pill active" data-filter="all">All Reviews (128)</button>
+            <button type="button" class="pdp3-tab-pill" data-filter="milestone">🎂 30th & 40th Milestones (52)</button>
+            <button type="button" class="pdp3-tab-pill" data-filter="dinner">🥂 Dinner Parties (38)</button>
+            <button type="button" class="pdp3-tab-pill" data-filter="plaque">🏷️ Custom Plaque (24)</button>
+            <button type="button" class="pdp3-tab-pill" data-filter="photos">📸 With Customer Photos (18)</button>
+          </div>
+
+          <div class="pdp3-toolbar-right">
+            <!-- Animated Carousel Navigation Controls -->
+            <div class="pdp3-carousel-controls">
+              <button type="button" class="pdp3-carousel-nav-btn" id="pdp3ScrollPrevBtn" aria-label="Scroll reviews left">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="pdp3-carousel-nav-btn" id="pdp3ScrollNextBtn" aria-label="Scroll reviews right">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <button type="button" class="pdp3-auto-scroll-btn active" id="pdp3AutoScrollToggle" aria-label="Toggle auto glide">
+                <span class="pdp3-auto-dot"></span>
+                <span class="pdp3-auto-text">Auto-Glide</span>
+              </button>
+            </div>
+
+            <!-- Sort Select -->
+            <div class="pdp3-sort-wrap">
+              <label for="pdp3SortSelect" class="pdp3-sort-label">Sort:</label>
+              <select id="pdp3SortSelect" class="pdp3-sort-select">
+                <option value="helpful">Most Helpful</option>
+                <option value="highest">Highest Rating (5★)</option>
+                <option value="recent">Most Recent</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             Animated Horizontal Scrolling Reviews Track
+             ==================================================================== -->
+        <div class="pdp3-reviews-grid" id="pdp3ReviewsGrid">
+          
+          <!-- Review 1: Charlotte D. (Hawthorn) -->
+          <article class="pdp3-review-card" data-category="milestone photos plaque" data-stars="5" data-helpful="38" data-date="2026-10-24">
+            <div class="pdp3-review-top">
+              <div class="pdp3-reviewer-profile">
+                <div class="pdp3-avatar-circle">CD</div>
+                <div class="pdp3-reviewer-meta">
+                  <div class="pdp3-reviewer-name-row">
+                    <strong class="pdp3-reviewer-name">Charlotte D.</strong>
+                    <span class="pdp3-verified-badge" title="Verified Frank & Harri Boutique Customer">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Verified Order
+                    </span>
+                  </div>
+                  <span class="pdp3-reviewer-loc">Hawthorn, Melbourne · Ordered 9" Classic with Custom Plaque</span>
+                </div>
+              </div>
+              <span class="pdp3-review-date">3 days ago</span>
+            </div>
+
+            <div class="pdp3-review-stars-row">
+              <span class="pdp3-stars-gold">★★★★★</span>
+              <span class="pdp3-badge-pill">30th Birthday Party</span>
+            </div>
+
+            <h3 class="pdp3-review-headline">"Easily Melbourne's most decadent chocolate cake. Left our guests speechless."</h3>
+            
+            <p class="pdp3-review-body">
+              I spent weeks looking for a chocolate cake for my partner's 30th that wasn't overly sugary or dry. The Bruce cake is in a league of its own. The five buttermilk layers are moist and deep, and the slow-tempered chocolate fudge frosting was rich without being cloying. Transported like a dream on our car floor from Kew. Every single guest asked where it was from!
+            </p>
+
+            <!-- Customer Photo Thumbnail -->
+            <div class="pdp3-review-photo-preview" onclick="window.pdp3OpenSpotlight('assets/images/bruce-cake-2.png', 'Charlotte D. · Hawthorn', 'The five layers held up beautifully for our dinner party of 14.', '30th Birthday')">
+              <img src="assets/images/bruce-cake-2.png" alt="Customer party photo">
+              <span class="pdp3-photo-badge">📸 View Party Photo</span>
+            </div>
+
+            <div class="pdp3-review-foot">
+              <button type="button" class="pdp3-helpful-btn" data-review-id="rev1" aria-label="Mark review as helpful">
+                <span class="pdp3-thumb-icon">👍</span>
+                <span>Helpful (<span class="pdp3-helpful-count">38</span>)</span>
+              </button>
+              <span class="pdp3-purchased-variant">Format: 9" - (serves 12-14) · Plaque: "Happy 30th Tom!"</span>
+            </div>
+          </article>
+
+          <!-- Review 2: Marcus & Liam (South Yarra) -->
+          <article class="pdp3-review-card" data-category="dinner milestone" data-stars="5" data-helpful="29" data-date="2026-10-21">
+            <div class="pdp3-review-top">
+              <div class="pdp3-reviewer-profile">
+                <div class="pdp3-avatar-circle">ML</div>
+                <div class="pdp3-reviewer-meta">
+                  <div class="pdp3-reviewer-name-row">
+                    <strong class="pdp3-reviewer-name">Marcus & Liam</strong>
+                    <span class="pdp3-verified-badge" title="Verified Frank & Harri Boutique Customer">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Verified Order
+                    </span>
+                  </div>
+                  <span class="pdp3-reviewer-loc">South Yarra, Melbourne · Ordered 12" Grand Banquet</span>
+                </div>
+              </div>
+              <span class="pdp3-review-date">1 week ago</span>
+            </div>
+
+            <div class="pdp3-review-stars-row">
+              <span class="pdp3-stars-gold">★★★★★</span>
+              <span class="pdp3-badge-pill">Private Dinner Party (16 Guests)</span>
+            </div>
+
+            <h3 class="pdp3-review-headline">"Fed 16 dessert serves with plenty of delicious leftover slices for morning coffee."</h3>
+            
+            <p class="pdp3-review-body">
+              We hosted a private dinner party and needed a showstopper dessert. Frank & Harri delivered perfection. The 12" cake has incredible presence on the table. Following their instructions to bring it to room temp for 90 minutes made the fudge frosting completely melt-in-mouth. The Lescure butter richness shines through.
+            </p>
+
+            <div class="pdp3-review-foot">
+              <button type="button" class="pdp3-helpful-btn" data-review-id="rev2" aria-label="Mark review as helpful">
+                <span class="pdp3-thumb-icon">👍</span>
+                <span>Helpful (<span class="pdp3-helpful-count">29</span>)</span>
+              </button>
+              <span class="pdp3-purchased-variant">Format: 12" - (serves 20-22) · No plaque</span>
+            </div>
+          </article>
+
+          <!-- Review 3: Sophia T. (Kew) -->
+          <article class="pdp3-review-card" data-category="photos plaque" data-stars="5" data-helpful="24" data-date="2026-10-18">
+            <div class="pdp3-review-top">
+              <div class="pdp3-reviewer-profile">
+                <div class="pdp3-avatar-circle">ST</div>
+                <div class="pdp3-reviewer-meta">
+                  <div class="pdp3-reviewer-name-row">
+                    <strong class="pdp3-reviewer-name">Sophia T.</strong>
+                    <span class="pdp3-verified-badge" title="Verified Frank & Harri Boutique Customer">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Verified Order
+                    </span>
+                  </div>
+                  <span class="pdp3-reviewer-loc">Kew VIC · Ordered 6" Petite with Plaque</span>
+                </div>
+              </div>
+              <span class="pdp3-review-date">2 weeks ago</span>
+            </div>
+
+            <div class="pdp3-review-stars-row">
+              <span class="pdp3-stars-gold">★★★★★</span>
+              <span class="pdp3-badge-pill">Family Birthday</span>
+            </div>
+
+            <h3 class="pdp3-review-headline">"The gold-piped chocolate plaque was such a luxurious personal touch."</h3>
+            
+            <p class="pdp3-review-body">
+              Ordered the 6" for an intimate family dinner. The size was surprisingly generous—we got 8 full dessert portions out of it. The bespoke sugar plaque piped in Belgian dark chocolate looked so elegant and artisanal compared to generic printed toppers. Pickup at the Kew boutique was prompt and friendly.
+            </p>
+
+            <!-- Customer Photo Thumbnail -->
+            <div class="pdp3-review-photo-preview" onclick="window.pdp3OpenSpotlight('assets/images/bruce-cake-3.png', 'Sophia T. · Kew', 'The bespoke sugar plaque piped in Belgian dark chocolate looked so elegant.', 'Family Birthday')">
+              <img src="assets/images/bruce-cake-3.png" alt="Customer plaque photo">
+              <span class="pdp3-photo-badge">📸 View Plaque Photo</span>
+            </div>
+
+            <div class="pdp3-review-foot">
+              <button type="button" class="pdp3-helpful-btn" data-review-id="rev3" aria-label="Mark review as helpful">
+                <span class="pdp3-thumb-icon">👍</span>
+                <span>Helpful (<span class="pdp3-helpful-count">24</span>)</span>
+              </button>
+              <span class="pdp3-purchased-variant">Format: 6" - (serves 7–8) · Plaque: "Happy 60th Mum"</span>
+            </div>
+          </article>
+
+          <!-- Review 4: Julian R. (Toorak) -->
+          <article class="pdp3-review-card" data-category="milestone" data-stars="5" data-helpful="21" data-date="2026-10-15">
+            <div class="pdp3-review-top">
+              <div class="pdp3-reviewer-profile">
+                <div class="pdp3-avatar-circle">JR</div>
+                <div class="pdp3-reviewer-meta">
+                  <div class="pdp3-reviewer-name-row">
+                    <strong class="pdp3-reviewer-name">Julian R.</strong>
+                    <span class="pdp3-verified-badge" title="Verified Frank & Harri Boutique Customer">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Verified Order
+                    </span>
+                  </div>
+                  <span class="pdp3-reviewer-loc">Toorak VIC · Ordered 9" Classic</span>
+                </div>
+              </div>
+              <span class="pdp3-review-date">2 weeks ago</span>
+            </div>
+
+            <div class="pdp3-review-stars-row">
+              <span class="pdp3-stars-gold">★★★★★</span>
+              <span class="pdp3-badge-pill">40th Milestone Celebration</span>
+            </div>
+
+            <h3 class="pdp3-review-headline">"The gold beeswax candles in the photo reel looked stunning on it."</h3>
+            
+            <p class="pdp3-review-body">
+              Adding the Australian beeswax candles directly on the product page saved me a trip to a boutique gift shop. The cake itself was an absolute triumph. You can taste the genuine Belgian couverture—none of that artificial sweetness you find in commercial bakeries. 10/10 will be our family's tradition.
+            </p>
+
+            <div class="pdp3-review-foot">
+              <button type="button" class="pdp3-helpful-btn" data-review-id="rev4" aria-label="Mark review as helpful">
+                <span class="pdp3-thumb-icon">👍</span>
+                <span>Helpful (<span class="pdp3-helpful-count">21</span>)</span>
+              </button>
+              <span class="pdp3-purchased-variant">Format: 9" - (serves 12-14) · Pre-packed Gold Candles</span>
+            </div>
+          </article>
+
+          <!-- Review 5: Claire V. (Richmond) -->
+          <article class="pdp3-review-card" data-category="dinner" data-stars="5" data-helpful="17" data-date="2026-10-10">
+            <div class="pdp3-review-top">
+              <div class="pdp3-reviewer-profile">
+                <div class="pdp3-avatar-circle">CV</div>
+                <div class="pdp3-reviewer-meta">
+                  <div class="pdp3-reviewer-name-row">
+                    <strong class="pdp3-reviewer-name">Claire V.</strong>
+                    <span class="pdp3-verified-badge" title="Verified Frank & Harri Boutique Customer">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Verified Order
+                    </span>
+                  </div>
+                  <span class="pdp3-reviewer-loc">Richmond VIC · Ordered 9" Classic</span>
+                </div>
+              </div>
+              <span class="pdp3-review-date">3 weeks ago</span>
+            </div>
+
+            <div class="pdp3-review-stars-row">
+              <span class="pdp3-stars-gold">★★★★★</span>
+              <span class="pdp3-badge-pill">Surprise Office Farewell</span>
+            </div>
+
+            <h3 class="pdp3-review-headline">"Pristine packaging and effortless collection on High Street."</h3>
+            
+            <p class="pdp3-review-body">
+              I was terrified of transporting a five-layer cake in Melbourne traffic, but Frank & Harri's rigid flat-base packaging kept it completely locked in place. The cake stayed immaculate. The team in Kew even helped me carry it to the car. Truly boutique service to match world-class patisserie.
+            </p>
+
+            <div class="pdp3-review-foot">
+              <button type="button" class="pdp3-helpful-btn" data-review-id="rev5" aria-label="Mark review as helpful">
+                <span class="pdp3-thumb-icon">👍</span>
+                <span>Helpful (<span class="pdp3-helpful-count">17</span>)</span>
+              </button>
+              <span class="pdp3-purchased-variant">Format: 9" - (serves 12-14) · No plaque</span>
+            </div>
+          </article>
+
+          <!-- Review 6: David & Anna M. (Kew) -->
+          <article class="pdp3-review-card" data-category="dinner" data-stars="5" data-helpful="15" data-date="2026-10-05">
+            <div class="pdp3-review-top">
+              <div class="pdp3-reviewer-profile">
+                <div class="pdp3-avatar-circle">DM</div>
+                <div class="pdp3-reviewer-meta">
+                  <div class="pdp3-reviewer-name-row">
+                    <strong class="pdp3-reviewer-name">David & Anna M.</strong>
+                    <span class="pdp3-verified-badge" title="Verified Frank & Harri Boutique Customer">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Verified Order
+                    </span>
+                  </div>
+                  <span class="pdp3-reviewer-loc">Kew Junction VIC · Ordered 6" Petite</span>
+                </div>
+              </div>
+              <span class="pdp3-review-date">3 weeks ago</span>
+            </div>
+
+            <div class="pdp3-review-stars-row">
+              <span class="pdp3-stars-gold">★★★★★</span>
+              <span class="pdp3-badge-pill">Anniversary Dinner</span>
+            </div>
+
+            <h3 class="pdp3-review-headline">"Even better with a glass of Pinot Noir. Pure chocolate heaven."</h3>
+            
+            <p class="pdp3-review-body">
+              As local Kew residents, we've enjoyed their morning viennoiserie for years, but this was our first whole cake order. The buttermilk sponge gives it a subtle tang that balances the rich dark chocolate fudge frosting so elegantly. Truly a Melbourne benchmark.
+            </p>
+
+            <div class="pdp3-review-foot">
+              <button type="button" class="pdp3-helpful-btn" data-review-id="rev6" aria-label="Mark review as helpful">
+                <span class="pdp3-thumb-icon">👍</span>
+                <span>Helpful (<span class="pdp3-helpful-count">15</span>)</span>
+              </button>
+              <span class="pdp3-purchased-variant">Format: 6" - (serves 7–8) · No plaque</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Horizontal Carousel Progress Bar & Swipe Indicator -->
+        <div class="pdp3-carousel-progress-wrap" aria-hidden="true">
+          <div class="pdp3-carousel-progress-track">
+            <div class="pdp3-carousel-progress-thumb" id="pdp3CarouselProgress" style="width: 25%;"></div>
+          </div>
+          <span class="pdp3-carousel-hint">Swipe or use arrows to view all celebration reviews ↔</span>
+        </div>
+
+        <!-- Load More Reviews Button -->
+        <div class="pdp3-reviews-more-wrap">
+          <button type="button" class="pdp3-load-more-btn" id="pdp3LoadMoreReviewsBtn">
+            <span>Show More Verified Reviews (122 remaining) ↓</span>
+          </button>
+        </div>
+
+      </section>
+
+      <!-- ====================================================================
+           MODAL 1: Interactive Review Submission Modal (#pdp3ReviewModal)
+           ==================================================================== -->
+      <div class="pdp3-modal-backdrop" id="pdp3ReviewModalBackdrop" aria-hidden="true">
+        <div class="pdp3-review-dialog" role="dialog" aria-modal="true" aria-labelledby="pdp3ModalTitle">
+          <div class="pdp3-modal-header">
+            <div>
+              <span class="pdp3-modal-kicker">KEW ATELIER GUESTBOOK</span>
+              <h3 class="pdp3-modal-title" id="pdp3ModalTitle">Share Your Celebration Experience</h3>
+            </div>
+            <button type="button" class="pdp3-modal-close" id="pdp3CloseReviewModalBtn" aria-label="Close dialog">✕</button>
+          </div>
+
+          <form class="pdp3-review-form" id="pdp3ReviewForm">
+            <!-- Star rating interactive selector -->
+            <div class="pdp3-form-group">
+              <label class="pdp3-form-label">Overall Rating *</label>
+              <div class="pdp3-star-picker" id="pdp3StarPicker">
+                <button type="button" class="pdp3-star-btn active" data-val="1">★</button>
+                <button type="button" class="pdp3-star-btn active" data-val="2">★</button>
+                <button type="button" class="pdp3-star-btn active" data-val="3">★</button>
+                <button type="button" class="pdp3-star-btn active" data-val="4">★</button>
+                <button type="button" class="pdp3-star-btn active" data-val="5">★</button>
+                <span class="pdp3-star-label" id="pdp3StarRatingText">5 Stars · Exceptional Celebration</span>
+              </div>
+            </div>
+
+            <div class="pdp3-form-row">
+              <div class="pdp3-form-group">
+                <label for="revAuthor" class="pdp3-form-label">Your Name *</label>
+                <input type="text" id="revAuthor" class="pdp3-input" placeholder="e.g. Eleanor Vance" required>
+              </div>
+              <div class="pdp3-form-group">
+                <label for="revLoc" class="pdp3-form-label">Suburb / City *</label>
+                <input type="text" id="revLoc" class="pdp3-input" placeholder="e.g. Hawthorn, Melbourne" required>
+              </div>
+            </div>
+
+            <div class="pdp3-form-row">
+              <div class="pdp3-form-group">
+                <label for="revOccasion" class="pdp3-form-label">Celebration Occasion *</label>
+                <select id="revOccasion" class="pdp3-input">
+                  <option value="30th & 40th Milestone Birthday">30th & 40th Milestone Birthday</option>
+                  <option value="Family Birthday Party">Family Birthday Party</option>
+                  <option value="Private Dinner Party">Private Dinner Party</option>
+                  <option value="Anniversary & Milestone">Anniversary & Milestone</option>
+                  <option value="Corporate / Office Event">Corporate / Office Event</option>
+                </select>
+              </div>
+              <div class="pdp3-form-group">
+                <label for="revSize" class="pdp3-form-label">Format Ordered *</label>
+                <select id="revSize" class="pdp3-input">
+                  <option value="6&quot; Petite (Serves 7–8)">6" Petite (Serves 7–8)</option>
+                  <option value="9&quot; Classic (Serves 12–14)" selected>9" Classic (Serves 12–14)</option>
+                  <option value="12&quot; Grand (Serves 20–22)">12" Grand (Serves 20–22)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="pdp3-form-group">
+              <label for="revTitle" class="pdp3-form-label">Review Headline *</label>
+              <input type="text" id="revTitle" class="pdp3-input" placeholder="e.g. The highlight of our birthday dinner!" required>
+            </div>
+
+            <div class="pdp3-form-group">
+              <label for="revBody" class="pdp3-form-label">Your Story & Flavour Experience *</label>
+              <textarea id="revBody" class="pdp3-input" rows="4" placeholder="How did the cake taste? How did your guests react? Did the packaging travel well?" required></textarea>
+            </div>
+
+            <button type="submit" class="pdp3-submit-review-btn">
+              <span>Publish Verified Review ↗</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           MODAL 2: Interactive Customer Photo Spotlight Lightbox
+           ==================================================================== -->
+      <div class="pdp3-modal-backdrop" id="pdp3SpotlightBackdrop" aria-hidden="true">
+        <div class="pdp3-spotlight-dialog" role="dialog" aria-modal="true" aria-label="Customer Photo Spotlight">
+          <button type="button" class="pdp3-modal-close pdp3-spotlight-close" id="pdp3CloseSpotlightBtn" aria-label="Close photo view">✕</button>
+          
+          <div class="pdp3-spotlight-content">
+            <div class="pdp3-spotlight-img-wrap">
+              <img src="assets/images/bruce-cake-2.png" id="pdp3SpotlightImg" alt="Enlarged celebration photo">
+            </div>
+            <div class="pdp3-spotlight-info">
+              <span class="pdp3-spotlight-kicker" id="pdp3SpotlightOccasion">30th Birthday Celebration</span>
+              <p class="pdp3-spotlight-quote" id="pdp3SpotlightQuote">"The five layers held up beautifully for our dinner party of 14."</p>
+              <div class="pdp3-spotlight-author-box">
+                <strong id="pdp3SpotlightAuthor">Charlotte D. · Hawthorn</strong>
+                <span>Verified Bruce Chocolate Cake Celebration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           CURATED ATELIER PAIRINGS (From the Same Kew Kitchen)
+           ==================================================================== -->
+      <section class="pdp3-pairings-section" aria-label="Pairing creations">
+        <div class="pdp3-pairings-header">
+          <span class="pdp3-pairings-kicker">CURATED COMPLEMENTS</span>
+          <h2 class="pdp3-pairings-title">You May Also Desire</h2>
+          <p class="pdp3-pairings-sub">Artisanal creations crafted fresh in our Kew atelier</p>
+        </div>
+
+        <div class="pdp3-pairings-grid">
+          <!-- Pairing 1 -->
+          <article class="pdp3-pairing-card">
+            <a href="product-3.html?id=audrey-vintage-cake" class="pdp3-pair-img-link">
+              <img src="assets/images/real/audrey-vintage-cake.jpg" alt="Audrey Vintage Lambeth Cake">
+              <span class="pdp3-pair-tag">CELEBRATION</span>
+            </a>
+            <div class="pdp3-pair-info">
+              <h3 class="pdp3-pair-name"><a href="product-3.html?id=audrey-vintage-cake">Audrey Vintage Lambeth Cake</a></h3>
+              <p class="pdp3-pair-desc">Vintage piped ruffles with vanilla bean sponge and raspberry compote.</p>
+              <div class="pdp3-pair-foot">
+                <span class="pdp3-pair-price">$115.00 AUD</span>
+                <a href="product-3.html?id=audrey-vintage-cake" class="pdp3-pair-cta">View Cake →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pairing 2 -->
+          <article class="pdp3-pairing-card">
+            <a href="product-3.html?id=flourless-orange-cake" class="pdp3-pair-img-link">
+              <img src="assets/images/real/flourless-orange-cake.png" alt="Flourless Orange & Almond Cake">
+              <span class="pdp3-pair-tag">100% GLUTEN-FREE</span>
+            </a>
+            <div class="pdp3-pair-info">
+              <h3 class="pdp3-pair-name"><a href="product-3.html?id=flourless-orange-cake">Flourless Orange & Almond Cake</a></h3>
+              <p class="pdp3-pair-desc">Whole slow-poached Riverina oranges with Valencia almond meal.</p>
+              <div class="pdp3-pair-foot">
+                <span class="pdp3-pair-price">$88.00 AUD</span>
+                <a href="product-3.html?id=flourless-orange-cake" class="pdp3-pair-cta">View Cake →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pairing 3 -->
+          <article class="pdp3-pairing-card">
+            <a href="product-3.html?id=cake-tasting-box" class="pdp3-pair-img-link">
+              <img src="assets/images/real/cake-tasting-box.png" alt="Signature Atelier Tasting Box">
+              <span class="pdp3-pair-tag">POPULAR</span>
+            </a>
+            <div class="pdp3-pair-info">
+              <h3 class="pdp3-pair-name"><a href="product-3.html?id=cake-tasting-box">Signature Atelier Tasting Box</a></h3>
+              <p class="pdp3-pair-desc">Four iconic cake slices including the Bruce Chocolate Cake.</p>
+              <div class="pdp3-pair-foot">
+                <span class="pdp3-pair-price">$45.00 AUD</span>
+                <a href="product-3.html?id=cake-tasting-box" class="pdp3-pair-cta">View Cake →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       STICKY MOBILE ACTION DOCK (< 768px viewport)
+       ======================================================================== -->
+  <aside class="pdp3-mobile-dock" id="pdp3MobileDock" aria-label="Quick order bar">
+    <div class="pdp3-dock-inner">
+      <div class="pdp3-dock-product">
+        <img src="assets/images/bruce-cake-1.png" alt="Bruce Cake" id="pdp3DockImg" class="pdp3-dock-thumb">
+        <div class="pdp3-dock-text">
+          <strong class="pdp3-dock-name" id="pdp3DockTitle">Bruce Chocolate Cake</strong>
+          <span class="pdp3-dock-sub"><span id="pdp3DockPrice">$109.00</span> · <span id="pdp3DockVariant">6" Petite</span></span>
+        </div>
+      </div>
+      <button type="button" class="pdp3-dock-btn" id="pdp3DockAddBtn">
+        Add to Bag
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Luxury Slide-Out Shopping Bag Drawer (Frank & Harri Global)
+       ======================================================================== -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag Drawer" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrap">
+        <span class="cart-kicker">VOTRE PANIER</span>
+        <h3 class="cart-drawer-title">Shopping Bag</h3>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close bag">✕</button>
+    </div>
+
+    <!-- Free Delivery Progress Meter -->
+    <div class="cart-progress-box">
+      <div class="cart-progress-text" id="cartDeliveryMsg">
+        Add $41.00 more for Complimentary Melbourne Metro Delivery
+      </div>
+      <div class="cart-progress-bar">
+        <div class="cart-progress-fill" id="cartProgressFill" style="width: 72%;"></div>
+      </div>
+    </div>
+
+    <div class="cart-items-container" id="cartItemsList">
+      <!-- Items dynamically populated via app.js -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal (AUD)</span>
+        <span class="cart-subtotal" id="cartSubtotalDisplay">$0.00</span>
+      </div>
+      <p class="cart-footnote">Taxes included. Delivery or boutique collection selected at next step.</p>
+      <div class="cart-action-group">
+        <button class="btn-primary" id="checkoutBtn" style="width: 100%; justify-content: center;">
+          <span>Proceed to Secure Checkout · 256-Bit</span>
+        </button>
+        <button class="cart-clear-btn" id="clearCartBtn">Clear Bag</button>
+      </div>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop" aria-hidden="true"></div>
+
+  <!-- Kew Atelier Concierge Modal (Event & Catering Inquiry) -->
+  <div class="catering-modal" id="cateringInquiryModal" role="dialog" aria-modal="true"
+    aria-label="Kew Atelier Concierge Catering Inquiry">
+    <div class="catering-modal-inner">
+      <button class="catering-modal-close" id="cateringModalCloseBtn" aria-label="Close dialog">✕</button>
+
+      <div class="catering-modal-header">
+        <span class="catering-kicker">KEW ATELIER CONCIERGE</span>
+        <h3 class="catering-modal-title">Event Catering & Grazing Enquiry</h3>
+        <p class="catering-modal-desc">
+          Artisanal viennoiserie morning boxes, savory quiches, and bespoke celebration packages handcrafted in Kew, Melbourne.
+        </p>
+      </div>
+
+      <div class="catering-modal-notice">
+        <div>✓ Whole celebration cakes require <strong>72 hours advance notice</strong>.</div>
+        <div>✓ Melbourne Metro delivery or boutique collection (11am – 3pm) at 259 High St, Kew.</div>
+      </div>
+
+      <form class="catering-form" id="cateringInquiryForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="catName">Your Name *</label>
+            <input type="text" id="catName" class="custom-input" required placeholder="Claire Delacour">
+          </div>
+          <div class="form-group">
+            <label for="catEmail">Email Address *</label>
+            <input type="email" id="catEmail" class="custom-input" required placeholder="claire@event.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="catDate">Event Date *</label>
+            <input type="date" id="catDate" class="custom-input" required>
+          </div>
+          <div class="form-group">
+            <label for="catGuests">Estimated Guests *</label>
+            <input type="number" id="catGuests" class="custom-input" min="5" max="500" placeholder="e.g. 40" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="catStyle">Event Style & Collection</label>
+          <select id="catStyle" class="custom-input">
+            <option value="Event Catering & Grazing">Event Catering & Grazing Banquets</option>
+            <option value="Morning Viennoiserie Boxes">Morning Viennoiserie Breakfast Boxes</option>
+            <option value="Celebration Cakes & Dessert Table">Celebration Cakes & Dessert Table</option>
+            <option value="100% Gluten-Free Atelier Catering">100% Gluten-Free Atelier Catering</option>
+            <option value="Corporate / Custom Order">Corporate Function / Bespoke Order</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="catNotes">Event Details & Dietary Notes</label>
+          <textarea id="catNotes" class="custom-input" rows="3"
+            placeholder="Tell us about your event, preferred items, dietary requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+          <span>Submit Concierge Enquiry ↗</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Ultra-Minimal Footer (Rivet Reference Cleanliness)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="brand-wordmark" style="font-size: 1.85rem;">
+            Frank & Harri<span class="dot">.</span>
+          </div>
+          <p>
+            An artisanal boutique pâtisserie nestled on High Street in Kew Junction, Melbourne. Scratch baking, French
+            viennoiserie, celebration cakes, and specialty coffee.
+          </p>
+          <div style="margin-top: 1rem; font-size: 0.82rem; color: var(--fh-charcoal-light);">
+            📍 259 High St, Kew VIC 3101 · Tram 48 & 109 Outside
+          </div>
+        </div>
+
+        <div class="footer-links-row">
+          <div class="footer-col">
+            <h4>Creations</h4>
+            <ul>
+              <li><a href="index.html#signatureSection">The Bruce Cake</a></li>
+              <li><a href="birthday-cakes.html">Celebration Cakes</a></li>
+              <li><a href="tarts-pastries.html">French Viennoiserie</a></li>
+              <li><a href="gluten-free.html">Gluten-Free Cakes</a></li>
+              <li><a href="#" class="open-pdf-menu-trigger">Spring/Summer Menu PDF</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Boutique & Catering</h4>
+            <ul>
+              <li><a href="index.html#boutiqueSection">Kew Junction Boutique</a></li>
+              <li><a href="catering.html">Atelier Catering</a></li>
+              <li><a href="sales-department.html">Sales Department</a></li>
+              <li><a href="mailto:info@frankandharri.com.au">info@frankandharri.com.au</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Social Hub</h4>
+            <ul>
+              <li><a href="https://www.instagram.com/frankandharripatisserie/" target="_blank" rel="noopener">Instagram (@frankandharripatisserie)</a></li>
+              <li><a href="https://www.facebook.com/frankandharri" target="_blank" rel="noopener">Facebook (5.0 ★)</a></li>
+              <li><a href="https://www.tiktok.com/@frankandharripatisserie" target="_blank" rel="noopener">TikTok</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Frank & Harri Patisserie Pty Ltd. Handcrafted in Kew, Victoria 3101.
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <span style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Apple Pay</span>
+          <span style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Google Pay</span>
+          <span style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Visa / Mastercard</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application JS -->
+  <script src="app.js?v=3.4"></script>
+</body>
+</html>
