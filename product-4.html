@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruce Chocolate Cake · Frank & Harri Patisserie Kew — Melbourne</title>
+  <meta name="description"
+    content="Our most loved chocolate cake. Five thinner layers of rich buttermilk chocolate cake bound by smooth Belgian chocolate fudge frosting. Handcrafted in Kew, Melbourne.">
+
+  <!-- Frank & Harri Authentic Typography: Cormorant Garamond (Serif), Jost (Clean Sans), Caveat (Hand-Piped Plaque Script) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3.5">
+</head>
+
+<body data-page="product-4">
+
+  <!-- ========================================================================
+       Top Announcement Ribbon (Exact match to reference: Sage Green #a7b2a3)
+       ======================================================================== -->
+  <div class="top-brand-bar">
+    <div class="top-brand-container">
+      <div class="top-brand-left">Kew Boutique Pâtisserie</div>
+      <div class="top-brand-center">
+        <span class="top-brand-bullet">•</span>
+        <span>Complimentary Melbourne Metro Delivery On Orders Over $150 · 72h Pre-Order For Celebration Cakes</span>
+      </div>
+      <div class="top-brand-right">Tue–Sat 7:30am – 3:30pm</div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Pierre Hermé Paris Inspired Luxury Header (Frank & Harri Authentic)
+       ======================================================================== -->
+  <header class="ph-header" id="siteHeader">
+    <div class="ph-main-bar">
+      <div class="ph-main-container">
+
+        <!-- Left: Mobile Hamburger & La Maison / Our locations -->
+        <div class="ph-left-wrap">
+          <button class="ph-mobile-toggle" id="phNavToggle" aria-label="Open mobile menu" title="Open Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <line x1="3" y1="7" x2="21" y2="7"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="17" x2="21" y2="17"></line>
+            </svg>
+          </button>
+          <nav class="ph-left-nav" aria-label="Brand links">
+            <a href="index.html#boutiqueSection" class="ph-nav-link">La Maison</a>
+            <a href="index.html#boutiqueSection" class="ph-nav-link">Our Boutique</a>
+          </nav>
+        </div>
+
+        <!-- Center: Centered Luxury Wordmark with Sage Dot -->
+        <div class="ph-brand-center">
+          <a href="index.html" class="ph-brand-link" aria-label="Frank & Harri Homepage">
+            <span class="ph-brand-title">FRANK & HARRI<span class="ph-dot">.</span></span>
+            <span class="ph-brand-sub">KEW · MELBOURNE</span>
+          </a>
+        </div>
+
+        <!-- Right: Minimal Utility Actions: Currency, Search, Account, Bag -->
+        <div class="ph-right-actions">
+          <!-- Currency / Region Selector -->
+          <div class="ph-currency-wrap">
+            <button class="ph-currency-btn" id="currencyToggleBtn" aria-label="Select currency" aria-expanded="false">
+              <span id="currentCurrencyLabel">AU</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="ph-currency-dropdown" id="currencyDropdown">
+              <button class="ph-curr-opt active" data-curr="AU">AU $ (AUD)</button>
+              <button class="ph-curr-opt" data-curr="US">US $ (USD)</button>
+              <button class="ph-curr-opt" data-curr="EU">€ (EUR)</button>
+              <button class="ph-curr-opt" data-curr="UK">£ (GBP)</button>
+            </div>
+          </div>
+
+          <!-- Search Icon Button -->
+          <button class="ph-icon-btn" id="headerSearchToggleBtn" aria-label="Search creations" title="Search">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="11" cy="11" r="7.5"></circle>
+              <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+            </svg>
+          </button>
+
+          <!-- Account Icon Button -->
+          <button class="ph-icon-btn" id="accountBtn" aria-label="My Account" title="My Account">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          <!-- Shopping Bag Pill Button with Badge -->
+          <button class="ph-bag-btn" id="headerBagBtn" aria-label="Open Shopping Bag">
+            <span class="ph-bag-text">Bag</span>
+            <span class="ph-bag-badge" id="headerBagCount">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Editorial Secondary Navigation: Product Categories -->
+    <nav class="ph-subnav-bar" aria-label="Main Patisserie Categories">
+      <div class="ph-subnav-container">
+        <ul class="ph-cat-list">
+          <li><a href="bestsellers.html" class="ph-cat-link" data-cat="bestsellers">BEST SELLERS</a></li>
+          <li><a href="birthday-cakes.html" class="ph-cat-link active" data-cat="celebration">CELEBRATION CAKES</a></li>
+          <li><a href="gluten-free.html" class="ph-cat-link" data-cat="gluten-free">GLUTEN-FREE</a></li>
+          <li><a href="tarts-pastries.html" class="ph-cat-link" data-cat="pastries">TARTS & PASTRIES</a></li>
+          <li><a href="catering.html" class="ph-cat-link" data-cat="catering">CATERING</a></li>
+          <li><a href="sales-department.html" class="ph-cat-link">SALES DEPARTMENT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Slide-Down Minimalist Search Drawer -->
+    <div class="ph-search-drawer" id="phSearchDrawer" aria-hidden="true">
+      <div class="ph-search-inner">
+        <div class="ph-search-field-wrap">
+          <svg class="ph-search-lens-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="globalSearchInput" class="ph-search-input"
+            placeholder="Search celebration cakes, viennoiseries, flavours, catering..." aria-label="Search creations">
+          <button class="search-submit-circle" id="searchSubmitBtn" aria-label="Execute search">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+        <button class="ph-search-close-btn" id="phSearchCloseBtn" aria-label="Close search">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Backdrop for Luxury Slide-Out Navigation Drawer -->
+  <div class="ph-drawer-backdrop" id="phNavBackdrop" aria-hidden="true"></div>
+
+  <!-- Luxury Slide-Out Navigation Drawer (Mobile & Tablet) -->
+  <aside class="ph-nav-drawer" id="phNavDrawer" aria-label="Boutique Navigation Drawer" aria-hidden="true">
+    <div class="ph-nav-drawer-header">
+      <div class="ph-drawer-brand">
+        <span class="ph-brand-title" style="font-size: 1.25rem;">FRANK & HARRI<span class="ph-dot">.</span></span>
+        <span class="ph-brand-sub" style="font-size: 0.58rem;">KEW · MELBOURNE</span>
+      </div>
+      <button class="drawer-close-btn" id="phNavCloseBtn" aria-label="Close navigation menu">✕</button>
+    </div>
+
+    <div class="ph-nav-drawer-body">
+      <nav class="ph-drawer-nav-list" aria-label="Mobile Navigation">
+        <a href="bestsellers.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">01</span>
+          <span class="ph-nav-text">Best Sellers Collection</span>
+        </a>
+        <a href="birthday-cakes.html" class="ph-drawer-nav-item active" data-drawer-link>
+          <span class="ph-nav-num">02</span>
+          <span class="ph-nav-text">Celebration & Birthday Cakes</span>
+        </a>
+        <a href="gluten-free.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">03</span>
+          <span class="ph-nav-text">Gluten-Free Masterworks</span>
+        </a>
+        <a href="tarts-pastries.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">04</span>
+          <span class="ph-nav-text">Tarts, Pastries & Viennoiserie</span>
+        </a>
+        <a href="catering.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">05</span>
+          <span class="ph-nav-text">Event Catering & Grazing</span>
+        </a>
+        <a href="sales-department.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">06</span>
+          <span class="ph-nav-text">Corporate & Bulk Gifting</span>
+        </a>
+        <a href="index.html#signatureSection" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">07</span>
+          <span class="ph-nav-text">The Iconic Bruce Cake</span>
+        </a>
+        <a href="index.html#boutiqueSection" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">08</span>
+          <span class="ph-nav-text">Kew Junction Boutique & Hours</span>
+        </a>
+      </nav>
+
+      <div class="ph-drawer-actions">
+        <button class="btn-primary open-catering-trigger" style="width: 100%; justify-content: center;"
+          data-drawer-link>
+          <span>Enquire For Catering →</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Breadcrumbs & Layout Switcher Bar
+       ======================================================================== -->
+  <div class="pdp-breadcrumb-bar">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+      <nav class="pdp-breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="pdp-bc-sep">/</span>
+        <a href="birthday-cakes.html">Birthday Cakes</a>
+        <span class="pdp-bc-sep">/</span>
+        <span class="pdp-bc-current">Bruce Chocolate Cake</span>
+      </nav>
+
+      <!-- Layout Switcher (Allows comparing layouts) -->
+      <div class="pdp-layout-switcher">
+        <span class="switcher-label">Reference Layout:</span>
+        <a href="product.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 1 (Split)</a>
+        <a href="product-2.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 2 (Triptych)</a>
+        <a href="product-3.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 3 (Minimal Direct)</a>
+        <a href="product-4.html?id=bruce-chocolate-cake" class="layout-toggle-btn active">Layout 4 (Studio Card)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       PRODUCT-4 MAIN: STUDIO CARD REFERENCE LAYOUT (Frank & Harri Authentic)
+       Matches user's reference mockup with current theme fonts
+       ======================================================================== -->
+  <main class="pdp4-main" id="pdp4Main">
+    <div class="pdp4-container">
+
+      <!-- 2-Column Studio Card Layout -->
+      <div class="pdp4-grid">
+
+        <!-- Left Column: Gallery, Live Plaque Disc & Perks (Below Cake Mockups) -->
+        <div class="pdp4-gallery">
+          <div class="pdp4-hero-frame" id="pdp4HeroFrame">
+            <!-- Top Badges -->
+            <div class="pdp4-overlay-top-left" id="pdp4PhotoBadge">PHOTO: WHOLE CAKE, FRONT VIEW</div>
+            <div class="pdp4-overlay-top-right">Signature</div>
+
+            <!-- Hero Image -->
+            <img src="assets/images/bruce-cake-1.png" alt="Bruce Chocolate Cake" id="pdp4HeroImg" class="pdp4-hero-img">
+
+            <!-- Hand-Piped Gold Chocolate Plaque Overlay -->
+            <div class="pdp4-plaque-overlay visible" id="pdp4PlaqueOverlay">
+              <div class="pdp4-plaque-disc">
+                <span class="pdp4-plaque-text" id="pdp4PlaqueLiveText">Happy 30th, Leo</span>
+              </div>
+            </div>
+
+            <!-- Bottom Left Gallery Navigation Arrows -->
+            <div class="pdp4-nav-controls">
+              <button type="button" class="pdp4-nav-btn" id="pdp4PrevBtn" aria-label="Previous photo">&lsaquo;</button>
+              <button type="button" class="pdp4-nav-btn" id="pdp4NextBtn" aria-label="Next photo">&rsaquo;</button>
+            </div>
+
+            <!-- Bottom Right Counter Pill -->
+            <div class="pdp4-counter-pill" id="pdp4Counter">1 / 3</div>
+          </div>
+
+          <!-- 3 Square Thumbnails Row (Cake Mockups) -->
+          <div class="pdp4-thumbs-row">
+            <button type="button" class="pdp4-thumb-btn active" data-src="assets/images/bruce-cake-1.png" data-index="1" data-badge="PHOTO: WHOLE CAKE, FRONT VIEW" aria-label="Photo 1 of 3: Front view">
+              <img src="assets/images/bruce-cake-1.png" alt="Bruce Cake front view">
+            </button>
+            <button type="button" class="pdp4-thumb-btn" data-src="assets/images/bruce-cake-2.png" data-index="2" data-badge="PHOTO: 5-LAYER SLICE DETAIL" aria-label="Photo 2 of 3: Slice detail">
+              <img src="assets/images/bruce-cake-2.png" alt="Bruce Cake slice detail">
+            </button>
+            <button type="button" class="pdp4-thumb-btn" data-src="assets/images/bruce-cake-3.png" data-index="3" data-badge="PHOTO: GIFT BOX &amp; PLAQUE" aria-label="Photo 3 of 3: Plaque and gift box">
+              <img src="assets/images/bruce-cake-3.png" alt="Bruce Cake gift box &amp; plaque">
+            </button>
+          </div>
+
+          <!-- 3 Perks Row (Desktop: placed directly below cake mockups) -->
+          <div class="pdp4-perks-row pdp4-perks-desktop">
+            <div class="pdp4-perk-item">
+              <div class="pdp4-perk-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <span class="pdp4-perk-label">Reinforced flat-carry box</span>
+            </div>
+            <div class="pdp4-perk-item">
+              <div class="pdp4-perk-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
+                </svg>
+              </div>
+              <span class="pdp4-perk-label">Chilled overnight, handled cold</span>
+            </div>
+            <div class="pdp4-perk-item">
+              <div class="pdp4-perk-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <span class="pdp4-perk-label">Portion sheet in every box</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Purchasing & Customization Console -->
+        <div class="pdp4-console">
+          <!-- Kicker Tag -->
+          <div class="pdp4-kicker-badge">Signature · 5-layer chocolate</div>
+
+          <!-- Product Title (Cormorant Garamond 500 Theme Font) -->
+          <h1 class="pdp4-title" id="pdp4Title">Bruce Chocolate Cake</h1>
+
+          <!-- Rating & Earliest Pre-Order Pill -->
+          <div class="pdp4-rating-row">
+            <a href="#reviews" class="pdp4-stars-link">
+              <span class="pdp4-stars-gold">★★★★★</span>
+              <strong>4.9</strong> · <span>128 reviews</span>
+            </a>
+            <span class="pdp4-earliest-pill">
+              <span class="pdp4-dot-live"></span>
+              Pre-order · earliest pickup: Tue 3 Nov
+            </span>
+          </div>
+
+          <!-- Description -->
+          <p class="pdp4-description">
+            Five tender layers of cultured buttermilk chocolate sponge, frosted in Belgian dark chocolate fudge frosting. Mount Achernar gold presentation, ribbon-tied gift box.
+          </p>
+
+          <!-- Step 1: Size Cards -->
+          <div class="pdp4-step-header">
+            <h2 class="pdp4-step-title">1 · Size</h2>
+          </div>
+          <div class="pdp4-size-grid" role="radiogroup" aria-label="Select cake size">
+            <button type="button" class="pdp4-size-card" data-size="6" data-name="6&quot; Petite" data-serves="Serves 7-8" data-price="109">
+              <span class="pdp4-size-card-name">6" Petite</span>
+              <span class="pdp4-size-card-serves">Serves 7-8</span>
+              <span class="pdp4-size-card-price">$109</span>
+            </button>
+            <button type="button" class="pdp4-size-card" data-size="9" data-name="9&quot; Classic" data-serves="Serves 12-14" data-price="159">
+              <span class="pdp4-size-card-name">9" Classic</span>
+              <span class="pdp4-size-card-serves">Serves 12-14</span>
+              <span class="pdp4-size-card-price">$159</span>
+            </button>
+            <button type="button" class="pdp4-size-card active" data-size="12" data-name="12&quot; Grand Banquet" data-serves="Serves 20-22" data-price="209">
+              <span class="pdp4-size-card-name">12" Grand</span>
+              <span class="pdp4-size-card-serves">Banquet · Serves 20-22</span>
+              <span class="pdp4-size-card-price">$209</span>
+            </button>
+          </div>
+          <button type="button" class="pdp4-portion-trigger-link" id="pdp4PortionLink">Portion guide</button>
+
+          <!-- Step 2: Chocolate Plaque Switch & Input -->
+          <div class="pdp4-step-header">
+            <h2 class="pdp4-step-title">2 · Chocolate plaque</h2>
+          </div>
+          <div class="pdp4-plaque-toggle-box active" id="pdp4PlaqueToggleBox">
+            <span class="pdp4-toggle-label">Hand-piped inscription · +$7.90</span>
+            <label class="pdp4-switch" for="pdp4PlaqueCheckbox" aria-label="Enable chocolate plaque inscription">
+              <input type="checkbox" id="pdp4PlaqueCheckbox" checked>
+              <span class="pdp4-slider"></span>
+            </label>
+          </div>
+          <div class="pdp4-plaque-input-wrap visible" id="pdp4PlaqueInputWrap">
+            <label class="pdp4-input-label-sm" for="pdp4PlaqueInput">Your inscription, piped direct on the cake:</label>
+            <div class="pdp4-input-with-counter">
+              <input type="text" id="pdp4PlaqueInput" class="pdp4-text-input" maxlength="28" value="Happy 30th, Leo" placeholder="e.g. Happy 30th, Leo">
+              <span class="pdp4-counter-sub" id="pdp4CharCounter">15 / 28</span>
+            </div>
+          </div>
+
+          <!-- Step 3: Pickup or Delivery Date -->
+          <div class="pdp4-step-header">
+            <h2 class="pdp4-step-title">3 · Pickup or delivery date</h2>
+          </div>
+          <div class="pdp4-dates-grid" role="radiogroup" aria-label="Select collection date">
+            <button type="button" class="pdp4-date-btn" data-date="Tue 3 Nov">
+              <span class="pdp4-date-main">Tue 3 Nov</span>
+              <span class="pdp4-date-sub">earliest</span>
+            </button>
+            <button type="button" class="pdp4-date-btn" data-date="Wed 4 Nov">
+              <span class="pdp4-date-main">Wed 4 Nov</span>
+              <span class="pdp4-date-sub">available</span>
+            </button>
+            <button type="button" class="pdp4-date-btn active" data-date="Thu 5 Nov">
+              <span class="pdp4-date-main">Thu 5 Nov</span>
+              <span class="pdp4-date-sub">available</span>
+            </button>
+          </div>
+          <div class="pdp4-times-row" role="radiogroup" aria-label="Select pickup time">
+            <button type="button" class="pdp4-time-btn active" data-time="11:00am - 1:00pm">11:00am - 1:00pm</button>
+            <button type="button" class="pdp4-time-btn" data-time="1:00pm - 3:00pm">1:00pm - 3:00pm</button>
+          </div>
+
+          <!-- Step 4: Party Add-ons (2x2 Grid) -->
+          <div class="pdp4-step-header">
+            <h2 class="pdp4-step-title">4 · Party add-ons, packed in the cake box:</h2>
+          </div>
+          <div class="pdp4-addons-grid">
+            <button type="button" class="pdp4-addon-card active" data-addon="candles" data-name="Gold dipped beeswax candles · 12" data-price="12.00">
+              <div class="pdp4-addon-left">
+                <span class="pdp4-addon-check-dot">✓</span>
+                <span>Gold dipped beeswax candles · 12</span>
+              </div>
+              <span class="pdp4-addon-price">+$12.00</span>
+            </button>
+            <button type="button" class="pdp4-addon-card" data-addon="card" data-name="Letterpress card, handwritten" data-price="6.00">
+              <div class="pdp4-addon-left">
+                <span class="pdp4-addon-check-dot"></span>
+                <span>Letterpress card, handwritten</span>
+              </div>
+              <span class="pdp4-addon-price">+$6.00</span>
+            </button>
+            <button type="button" class="pdp4-addon-card active" data-addon="sparklers" data-name="Giant cake gold sparklers · 2" data-price="8.50">
+              <div class="pdp4-addon-left">
+                <span class="pdp4-addon-check-dot">✓</span>
+                <span>Giant cake gold sparklers · 2</span>
+              </div>
+              <span class="pdp4-addon-price">+$8.50</span>
+            </button>
+            <button type="button" class="pdp4-addon-card" data-addon="topper" data-name="Acrylic 'Happy Birthday' topper" data-price="14.00">
+              <div class="pdp4-addon-left">
+                <span class="pdp4-addon-check-dot"></span>
+                <span>Acrylic "Happy Birthday" topper</span>
+              </div>
+              <span class="pdp4-addon-price">+$14.00</span>
+            </button>
+          </div>
+
+          <!-- Step 5: Purchase Bar -->
+          <div class="pdp4-buy-row">
+            <div class="pdp4-stepper" aria-label="Cake quantity">
+              <button type="button" class="pdp4-step-btn" id="pdp4QtyMinus" aria-label="Decrease quantity">−</button>
+              <span class="pdp4-step-qty" id="pdp4QtyValue">1</span>
+              <button type="button" class="pdp4-step-btn" id="pdp4QtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+            <button type="button" class="pdp4-add-btn" id="pdp4AddToCartBtn">
+              Add to bag · <span id="pdp4TotalBtnPrice">$237.40 AUD</span>
+            </button>
+          </div>
+
+          <!-- Express Checkout Pills -->
+          <div class="pdp4-express-row">
+            <button type="button" class="pdp4-express-btn" id="pdp4ApplePayBtn">
+              <svg width="14" height="14" viewBox="0 0 170 170" fill="currentColor"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.67-7.85-11.93-14.42-6-9.24-10.74-19.8-14.23-31.68-3.48-11.88-5.22-23.01-5.22-33.4 0-14.13 3.6-25.79 10.8-34.98 7.2-9.19 16.2-13.88 27-14.07 4.13 0 9.03 1.13 14.7 3.39 5.68 2.26 9.4 3.45 11.16 3.57 2.18-.23 6.07-1.46 11.66-3.7 5.6-2.23 10.32-3.23 14.16-2.99 15.86 1.05 27.79 7.42 35.79 19.12-13.9 8.42-20.7 20-20.4 34.74.29 11.53 4.67 21.05 13.14 28.56 8.47 7.51 18.57 11.82 30.3 12.92-2.39 7.4-5.25 14.53-8.58 21.39zM119.22 33.72c0-7.86 2.82-15.34 8.46-22.44 5.64-7.1 12.78-11.18 21.42-12.28.32 1.3.49 2.57.49 3.82 0 7.86-2.92 15.42-8.77 22.68-5.85 7.26-13.1 11.45-21.75 12.57-.22-1.41-.35-2.86-.35-4.35z"/></svg> Apple Pay
+            </button>
+            <button type="button" class="pdp4-express-btn" id="pdp4GooglePayBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg> Google Pay
+            </button>
+            <button type="button" class="pdp4-express-btn" id="pdp4ShopPayBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.9 8.2l-2.4-1.4c-.6-.4-1.4-.2-1.7.4l-3.3 5.7-1.8-3.1c-.4-.6-1.1-.8-1.7-.4l-2.4 1.4c-.6.4-.8 1.1-.4 1.7l3.6 6.3c.4.6 1.1.8 1.7.4l5.1-8.9c.4-.6.2-1.4-.4-1.7z"/></svg> Shop Pay
+            </button>
+          </div>
+
+          <!-- Real-Time Selection Summary -->
+          <div class="pdp4-order-summary-sub" id="pdp4OrderSummaryText">12" Grand Banquet · Thu 5 Nov, 11:00am - 1:00pm</div>
+
+          <!-- Concierge Link Note -->
+          <p class="pdp4-concierge-note">Custom styling, corporate invoicing or a different time? <a href="#" id="pdp4ConciergeTrigger">Ask our concierge</a></p>
+
+          <!-- 3 Perks Row (Mobile: displayed last in the product console) -->
+          <div class="pdp4-perks-row pdp4-perks-mobile">
+            <div class="pdp4-perk-item">
+              <div class="pdp4-perk-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <span class="pdp4-perk-label">Reinforced flat-carry box</span>
+            </div>
+            <div class="pdp4-perk-item">
+              <div class="pdp4-perk-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
+                </svg>
+              </div>
+              <span class="pdp4-perk-label">Chilled overnight, handled cold</span>
+            </div>
+            <div class="pdp4-perk-item">
+              <div class="pdp4-perk-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <span class="pdp4-perk-label">Portion sheet in every box</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PDP4 Bottom Section: Sage Green Tabbed Container Card -->
+      <section class="pdp4-bottom-card" id="pdp4BottomCard" aria-label="Product Information Details">
+        <!-- 3 Tab Pills -->
+        <div class="pdp4-tabs-bar" role="tablist">
+          <button type="button" class="pdp4-tab-pill active" id="tabBtnCollection" data-tab="collection" role="tab" aria-selected="true" aria-controls="paneCollection">Collection &amp; storage</button>
+          <button type="button" class="pdp4-tab-pill" id="tabBtnAllergens" data-tab="allergens" role="tab" aria-selected="false" aria-controls="paneAllergens">Allergens &amp; ingredients</button>
+          <button type="button" class="pdp4-tab-pill" id="tabBtnPortion" data-tab="portion" role="tab" aria-selected="false" aria-controls="panePortion">Portion guide</button>
+        </div>
+
+        <!-- Tab Pane 1: Collection & Storage (Active by default) -->
+        <div class="pdp4-tab-pane active" id="paneCollection" role="tabpanel" aria-labelledby="tabBtnCollection">
+          <div class="pdp4-info-white-card">
+            <h3 class="pdp4-info-card-title">Boutique pickup</h3>
+            <p class="pdp4-info-card-text">Collect 11:00am – 3:00pm from the express bay at 256 High St, Kew. Need another time? Email info@frankandharri.com.au</p>
+          </div>
+          <div class="pdp4-info-white-card">
+            <h3 class="pdp4-info-card-title">Metro delivery</h3>
+            <p class="pdp4-info-card-text">Refrigerated courier to eligible Melbourne postcodes, shown at checkout. $15, free over $150.</p>
+          </div>
+          <div class="pdp4-info-white-card">
+            <h3 class="pdp4-info-card-title">Getting it home</h3>
+            <p class="pdp4-info-card-text">Carry flat on the car floor with the air conditioning on. Refrigerate, then bring out 1-2 hours before cutting.</p>
+          </div>
+        </div>
+
+        <!-- Tab Pane 2: Allergens & Ingredients -->
+        <div class="pdp4-tab-pane" id="paneAllergens" role="tabpanel" aria-labelledby="tabBtnAllergens">
+          <div class="pdp4-info-white-card">
+            <h3 class="pdp4-info-card-title">Pure Belgian Chocolate</h3>
+            <p class="pdp4-info-card-text">Crafted exclusively with Callebaut 70% dark chocolate callets, cultured Dutch cocoa powder, and European unsalted butter.</p>
+          </div>
+          <div class="pdp4-info-white-card">
+            <h3 class="pdp4-info-card-title">Contains Dairy, Gluten &amp; Eggs</h3>
+            <p class="pdp4-info-card-text">Contains wheat flour, free-range Gippsland eggs, and cultured buttermilk. Made in an atelier that processes tree nuts and sesame.</p>
+          </div>
+          <div class="pdp4-info-white-card">
+            <h3 class="pdp4-info-card-title">Gluten-Free Atelier Option</h3>
+            <p class="pdp4-info-card-text">Looking for 100% gluten-free? Our Flourless Orange &amp; Almond Cake and Gluten-Free Chocolate Gateau are prepared in a dedicated allergen protocol.</p>
+          </div>
+        </div>
+
+        <!-- Tab Pane 3: Portion Guide -->
+        <div class="pdp4-tab-pane" id="panePortion" role="tabpanel" aria-labelledby="tabBtnPortion">
+          <div class="pdp4-info-white-card">
+            <h3 class="pdp4-info-card-title">6" Petite (7–8 Serves)</h3>
+            <p class="pdp4-info-card-text">Ideal for intimate family dinners and dinner parties. Generous dessert slices (1" × 2" × 4") or up to 14 cocktail finger serves.</p>
+          </div>
+          <div class="pdp4-info-white-card">
+            <h3 class="pdp4-info-card-title">9" Classic (12–14 Serves)</h3>
+            <p class="pdp4-info-card-text">Our most popular size for birthday celebrations and milestones. 14 hearty dessert portions or 24 canapé portions.</p>
+          </div>
+          <div class="pdp4-info-white-card">
+            <h3 class="pdp4-info-card-title">12" Grand Banquet (20–22 Serves)</h3>
+            <p class="pdp4-info-card-text">Showstopping grand centerpiece for milestone birthdays and weddings. Yields 22 dessert portions or up to 40 canapé finger portions.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           PDP4 CELEBRATION TESTIMONIALS: ROTATING STACKED CARD DECK
+           Inspired directly by user reference with organic scallop clover photo cutouts
+           ======================================================================== -->
+      <!-- Inline SVG Clip Definition for 4-Lobe Clover / Scallop Cutout -->
+      <svg width="0" height="0" style="position: absolute; pointer-events: none;" aria-hidden="true">
+        <defs>
+          <clipPath id="pdp4CloverClip" clipPathUnits="objectBoundingBox">
+            <path d="M 0.50 0.04
+                     C 0.64 0.04 0.74 0.16 0.70 0.30
+                     C 0.68 0.35 0.65 0.35 0.70 0.35
+                     C 0.84 0.31 0.96 0.41 0.96 0.50
+                     C 0.96 0.64 0.84 0.74 0.70 0.70
+                     C 0.65 0.68 0.65 0.65 0.65 0.70
+                     C 0.69 0.84 0.59 0.96 0.50 0.96
+                     C 0.36 0.96 0.26 0.84 0.30 0.70
+                     C 0.32 0.65 0.35 0.65 0.30 0.65
+                     C 0.16 0.69 0.04 0.59 0.04 0.50
+                     C 0.04 0.36 0.16 0.26 0.30 0.30
+                     C 0.35 0.32 0.35 0.35 0.35 0.30
+                     C 0.31 0.16 0.41 0.04 0.50 0.04 Z" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <section class="pdp4-testimonials-section" id="pdp4TestimonialsSection" aria-label="Google Reviews and Celebration Testimonials">
+        <div class="pdp4-deck-header">
+          <div class="pdp4-deck-eyebrow-wrap">
+            <span class="pdp4-google-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span>Google Reviews</span>
+            </span>
+            <span class="pdp4-deck-rating-score">4.4 ★★★★☆</span>
+            <span class="pdp4-deck-count">(240+ Verified Reviews)</span>
+          </div>
+          <h2 class="pdp4-deck-title">Loved Across Melbourne</h2>
+          <p class="pdp4-deck-subtitle">
+            Authentic customer reviews and photographs shared by our guests on Google Maps from celebrations across Melbourne.
+          </p>
+        </div>
+
+        <!-- The Rotating Card Deck Stage -->
+        <div class="pdp4-deck-stage" id="pdp4DeckStage" aria-roledescription="carousel" aria-label="Celebration Reviews Carousel">
+          <!-- Card 0: Atelier Sage -->
+          <article class="pdp4-deck-card pdp4-card-sage" data-index="0" data-pos="0" aria-label="Review 1 of 4: Sophie Montgomery">
+            <div class="pdp4-card-left">
+              <div class="pdp4-card-top-row">
+                <div class="pdp4-card-badges">
+                  <span class="pdp4-card-google-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                    <span>Google</span>
+                  </span>
+                  <span class="pdp4-card-stars">★★★★★</span>
+                  <span class="pdp4-card-pill-tag">30th Birthday</span>
+                </div>
+                <span class="pdp4-card-num">01</span>
+              </div>
+              <div>
+                <h3 class="pdp4-card-headline">"A showstopper 30th birthday centerpiece from Kew."</h3>
+                <p class="pdp4-card-body-text">
+                  We ordered the 12" Grand Banquet Bruce Chocolate Cake for Leo’s 30th birthday in South Yarra. Guests could not stop raving about the five buttermilk layers and the rich fudge frosting. The bespoke reinforced box made transit completely stress-free.
+                </p>
+              </div>
+              <div class="pdp4-card-bottom-row">
+                <div class="pdp4-card-author-info">
+                  <span class="pdp4-card-author-name">Sophie Montgomery <span class="pdp4-verified-tick" title="Verified Google Reviewer">✓</span></span>
+                  <span class="pdp4-card-author-sub">Local Guide · 42 reviews · 3 weeks ago</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101" target="_blank" rel="noopener noreferrer" class="pdp4-card-btn pdp4-card-google-link">Read on Google Maps ↗</a>
+              </div>
+            </div>
+            <div class="pdp4-card-media">
+              <div class="pdp4-clover-frame">
+                <img src="assets/images/bruce-cake-1.png" alt="Bruce Chocolate Cake celebration presentation">
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 1: Warm Alabaster Cream -->
+          <article class="pdp4-deck-card pdp4-card-cream" data-index="1" data-pos="1" aria-label="Review 2 of 4: Sophia Theodorou">
+            <div class="pdp4-card-left">
+              <div class="pdp4-card-top-row">
+                <div class="pdp4-card-badges">
+                  <span class="pdp4-card-google-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                    <span>Google</span>
+                  </span>
+                  <span class="pdp4-card-stars">★★★★★</span>
+                  <span class="pdp4-card-pill-tag">Plaque Inscription</span>
+                </div>
+                <span class="pdp4-card-num">02</span>
+              </div>
+              <div>
+                <h3 class="pdp4-card-headline">"The gold-piped chocolate plaque was sheer perfection."</h3>
+                <p class="pdp4-card-body-text">
+                  The custom Belgian dark chocolate plaque with gold script elevated our milestone anniversary dinner into something truly couture. Having our inscription piped direct on the cake made the reveal unforgettable.
+                </p>
+              </div>
+              <div class="pdp4-card-bottom-row">
+                <div class="pdp4-card-author-info">
+                  <span class="pdp4-card-author-name">Sophia Theodorou <span class="pdp4-verified-tick" title="Verified Google Reviewer">✓</span></span>
+                  <span class="pdp4-card-author-sub">18 reviews · 1 month ago</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101" target="_blank" rel="noopener noreferrer" class="pdp4-card-btn pdp4-card-google-link">Read on Google Maps ↗</a>
+              </div>
+            </div>
+            <div class="pdp4-card-media">
+              <div class="pdp4-clover-frame">
+                <img src="assets/images/bruce-cake-3.png" alt="Hand-piped gold chocolate plaque detail">
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Belgian Chocolate Noir -->
+          <article class="pdp4-deck-card pdp4-card-choco" data-index="2" data-pos="2" aria-label="Review 3 of 4: Julian Rossi">
+            <div class="pdp4-card-left">
+              <div class="pdp4-card-top-row">
+                <div class="pdp4-card-badges">
+                  <span class="pdp4-card-google-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                    <span>Google</span>
+                  </span>
+                  <span class="pdp4-card-stars">★★★★★</span>
+                  <span class="pdp4-card-pill-tag">Private Banquet</span>
+                </div>
+                <span class="pdp4-card-num">03</span>
+              </div>
+              <div>
+                <h3 class="pdp4-card-headline">"Fed 16 dessert serves with plenty to spare."</h3>
+                <p class="pdp4-card-body-text">
+                  We hosted a private dinner party in Toorak and needed an indulgent finale. Following their instructions to bring it to room temp for 90 minutes made the Belgian fudge frosting completely melt-in-mouth. The Lescure butter richness is unmatched.
+                </p>
+              </div>
+              <div class="pdp4-card-bottom-row">
+                <div class="pdp4-card-author-info">
+                  <span class="pdp4-card-author-name">Julian Rossi <span class="pdp4-verified-tick" title="Verified Google Reviewer">✓</span></span>
+                  <span class="pdp4-card-author-sub">Local Guide · 89 reviews · 2 months ago</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101" target="_blank" rel="noopener noreferrer" class="pdp4-card-btn pdp4-card-google-link">Read on Google Maps ↗</a>
+              </div>
+            </div>
+            <div class="pdp4-card-media">
+              <div class="pdp4-clover-frame">
+                <img src="assets/images/bruce-cake-2.png" alt="Five-layer chocolate fudge slice detail">
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Deep Forest Olive -->
+          <article class="pdp4-deck-card pdp4-card-olive" data-index="3" data-pos="3" aria-label="Review 4 of 4: Marcus & Claire Hughes">
+            <div class="pdp4-card-left">
+              <div class="pdp4-card-top-row">
+                <div class="pdp4-card-badges">
+                  <span class="pdp4-card-google-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                    <span>Google</span>
+                  </span>
+                  <span class="pdp4-card-stars">★★★★★</span>
+                  <span class="pdp4-card-pill-tag">Metro Delivery</span>
+                </div>
+                <span class="pdp4-card-num">04</span>
+              </div>
+              <div>
+                <h3 class="pdp4-card-headline">"Flawless refrigerated morning delivery in Hawthorn."</h3>
+                <p class="pdp4-card-body-text">
+                  Delivered chilled in Hawthorn during our exact morning transit window. The cake arrived in pristine condition, chilled overnight and packed with a bespoke portion cutting guide. Pure atelier craftsmanship right to our door.
+                </p>
+              </div>
+              <div class="pdp4-card-bottom-row">
+                <div class="pdp4-card-author-info">
+                  <span class="pdp4-card-author-name">Marcus &amp; Claire Hughes <span class="pdp4-verified-tick" title="Verified Google Reviewer">✓</span></span>
+                  <span class="pdp4-card-author-sub">24 reviews · recently</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101" target="_blank" rel="noopener noreferrer" class="pdp4-card-btn pdp4-card-google-link">Read on Google Maps ↗</a>
+              </div>
+            </div>
+            <div class="pdp4-card-media">
+              <div class="pdp4-clover-frame">
+                <img src="assets/images/real/bruce-layer-cake.png" alt="Delivered celebration cake presentation">
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Controls: Next/Prev, Dots, Counter & Auto-Play Toggle -->
+        <div class="pdp4-deck-controls">
+          <button type="button" class="pdp4-deck-nav-btn" id="pdp4DeckPrevBtn" aria-label="Previous review">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="pdp4-deck-dots" id="pdp4DeckDots" role="tablist" aria-label="Review slide indicators">
+            <button type="button" class="pdp4-deck-dot active" data-index="0" role="tab" aria-selected="true" aria-label="Go to review 1"></button>
+            <button type="button" class="pdp4-deck-dot" data-index="1" role="tab" aria-selected="false" aria-label="Go to review 2"></button>
+            <button type="button" class="pdp4-deck-dot" data-index="2" role="tab" aria-selected="false" aria-label="Go to review 3"></button>
+            <button type="button" class="pdp4-deck-dot" data-index="3" role="tab" aria-selected="false" aria-label="Go to review 4"></button>
+          </div>
+
+          <span class="pdp4-deck-counter" id="pdp4DeckCounter">01 / 04</span>
+
+          <button type="button" class="pdp4-deck-nav-btn" id="pdp4DeckNextBtn" aria-label="Next review">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <button type="button" class="pdp4-deck-autoplay-toggle" id="pdp4DeckAutoplayBtn" aria-label="Pause automatic rotation">
+            <span id="pdp4DeckAutoplayIcon">⏸</span>
+            <span id="pdp4DeckAutoplayLabel">Auto</span>
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       Luxury Slide-Out Shopping Bag Drawer (Frank & Harri Global)
+       ======================================================================== -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag Drawer" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrap">
+        <span class="cart-kicker">VOTRE PANIER</span>
+        <h3 class="cart-drawer-title">Shopping Bag</h3>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close bag">✕</button>
+    </div>
+
+    <!-- Free Delivery Progress Meter -->
+    <div class="cart-progress-box">
+      <div class="cart-progress-text" id="cartDeliveryMsg">
+        Add $41.00 more for Complimentary Melbourne Metro Delivery
+      </div>
+      <div class="cart-progress-bar">
+        <div class="cart-progress-fill" id="cartProgressFill" style="width: 72%;"></div>
+      </div>
+    </div>
+
+    <div class="cart-items-container" id="cartItemsList">
+      <!-- Items dynamically populated via app.js -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal (AUD)</span>
+        <span class="cart-subtotal" id="cartSubtotalDisplay">$0.00</span>
+      </div>
+      <p class="cart-footnote">Taxes included. Delivery or boutique collection selected at next step.</p>
+      <div class="cart-action-group">
+        <button class="btn-primary" id="checkoutBtn" style="width: 100%; justify-content: center;">
+          <span>Proceed to Secure Checkout · 256-Bit</span>
+        </button>
+        <button class="cart-clear-btn" id="clearCartBtn">Clear Bag</button>
+      </div>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop" aria-hidden="true"></div>
+
+  <!-- Kew Atelier Concierge Modal (Event & Catering Inquiry) -->
+  <div class="catering-modal" id="cateringInquiryModal" role="dialog" aria-modal="true"
+    aria-label="Kew Atelier Concierge Catering Inquiry">
+    <div class="catering-modal-inner">
+      <button class="catering-modal-close" id="cateringModalCloseBtn" aria-label="Close dialog">✕</button>
+
+      <div class="catering-modal-header">
+        <span class="catering-kicker">KEW ATELIER CONCIERGE</span>
+        <h3 class="catering-modal-title">Event Catering & Grazing Enquiry</h3>
+        <p class="catering-modal-desc">
+          Artisanal viennoiserie morning boxes, savory quiches, and bespoke celebration packages handcrafted in Kew, Melbourne.
+        </p>
+      </div>
+
+      <div class="catering-modal-notice">
+        <div>✓ Whole celebration cakes require <strong>72 hours advance notice</strong>.</div>
+        <div>✓ Melbourne Metro delivery or boutique collection (11am – 3pm) at 256 High St, Kew.</div>
+      </div>
+
+      <form class="catering-form" id="cateringInquiryForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="catName">Your Name *</label>
+            <input type="text" id="catName" class="custom-input" required placeholder="Claire Delacour">
+          </div>
+          <div class="form-group">
+            <label for="catEmail">Email Address *</label>
+            <input type="email" id="catEmail" class="custom-input" required placeholder="claire@event.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="catDate">Event Date *</label>
+            <input type="date" id="catDate" class="custom-input" required>
+          </div>
+          <div class="form-group">
+            <label for="catGuests">Estimated Guests *</label>
+            <input type="number" id="catGuests" class="custom-input" min="5" max="500" placeholder="e.g. 40" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="catStyle">Event Style & Collection</label>
+          <select id="catStyle" class="custom-input">
+            <option value="Event Catering & Grazing">Event Catering & Grazing Banquets</option>
+            <option value="Morning Viennoiserie Boxes">Morning Viennoiserie Breakfast Boxes</option>
+            <option value="Celebration Cakes & Dessert Table">Celebration Cakes & Dessert Table</option>
+            <option value="100% Gluten-Free Atelier Catering">100% Gluten-Free Atelier Catering</option>
+            <option value="Corporate / Custom Order">Corporate Function / Bespoke Order</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="catNotes">Event Details & Dietary Notes</label>
+          <textarea id="catNotes" class="custom-input" rows="3"
+            placeholder="Tell us about your event, preferred items, dietary requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+          <span>Submit Concierge Enquiry →</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Ultra-Minimal Footer (Rivet Reference Cleanliness)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="brand-wordmark" style="font-size: 1.85rem;">
+            Frank & Harri<span class="dot">.</span>
+          </div>
+          <p>
+            An artisanal boutique pâtisserie nestled on High Street in Kew Junction, Melbourne. Scratch baking, French
+            viennoiserie, celebration cakes, and specialty coffee.
+          </p>
+          <div style="margin-top: 1rem; font-size: 0.82rem; color: var(--fh-charcoal-light);">
+            📍 256 High St, Kew VIC 3101 · Tram 48 & 109 Outside
+          </div>
+        </div>
+
+        <div class="footer-links-row">
+          <div class="footer-col">
+            <h4>Creations</h4>
+            <ul>
+              <li><a href="index.html#signatureSection">The Bruce Cake</a></li>
+              <li><a href="birthday-cakes.html">Celebration Cakes</a></li>
+              <li><a href="tarts-pastries.html">French Viennoiserie</a></li>
+              <li><a href="gluten-free.html">Gluten-Free Cakes</a></li>
+              <li><a href="#" class="open-pdf-menu-trigger">Spring/Summer Menu PDF</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Boutique & Catering</h4>
+            <ul>
+              <li><a href="index.html#boutiqueSection">Kew Junction Boutique</a></li>
+              <li><a href="catering.html">Atelier Catering</a></li>
+              <li><a href="sales-department.html">Sales Department</a></li>
+              <li><a href="mailto:info@frankandharri.com.au">info@frankandharri.com.au</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Social Hub</h4>
+            <ul>
+              <li><a href="https://www.instagram.com/frankandharripatisserie/" target="_blank" rel="noopener">Instagram (@frankandharripatisserie)</a></li>
+              <li><a href="https://www.facebook.com/frankandharri" target="_blank" rel="noopener">Facebook (5.0 ★)</a></li>
+              <li><a href="https://www.tiktok.com/@frankandharripatisserie" target="_blank" rel="noopener">TikTok</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Frank & Harri Patisserie Pty Ltd. Handcrafted in Kew, Victoria 3101.
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <span style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Apple Pay</span>
+          <span style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Google Pay</span>
+          <span style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Visa / Mastercard</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application JS -->
+  <script src="app.js?v=3.5"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+{
+  "place_info": {
+    "name": "Frank & Harri",
+    "address": "259 High St, Kew VIC 3101, Australia",
+    "place_id": "ChIJb_fH7eND1moR3nE3Y3L-lqE",
+    "rating": 4.4,
+    "user_ratings_total": 242,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101",
+    "last_synced": "2026-10-29T22:45:00Z"
+  },
+  "reviews": [
+    {
+      "id": "review-01",
+      "author_name": "Sophie Montgomery",
+      "author_badge": "Local Guide · 42 reviews",
+      "rating": 5,
+      "relative_time": "3 weeks ago",
+      "verified": true,
+      "headline": "A showstopper 30th birthday centerpiece from Kew.",
+      "text": "We ordered the 12\" Grand Banquet Bruce Chocolate Cake for Leo’s 30th celebration in South Yarra. Guests could not stop raving about the five buttermilk layers and the rich fudge frosting. The bespoke reinforced box made transit completely stress-free.",
+      "tag": "30th Birthday Celebration",
+      "theme": "sage",
+      "photo_url": "assets/images/bruce-cake-1.png",
+      "photo_alt": "Bruce Chocolate Cake 5-layer centerpiece celebration presentation",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101"
+    },
+    {
+      "id": "review-02",
+      "author_name": "Sophia Theodorou",
+      "author_badge": "18 reviews",
+      "rating": 5,
+      "relative_time": "1 month ago",
+      "verified": true,
+      "headline": "The gold-piped chocolate plaque was sheer perfection.",
+      "text": "The custom Belgian dark chocolate plaque with gold script elevated our milestone anniversary dinner into something truly couture. Having our inscription piped directly on the cake made the reveal unforgettable.",
+      "tag": "Custom Plaque Inscription",
+      "theme": "cream",
+      "photo_url": "assets/images/bruce-cake-3.png",
+      "photo_alt": "Hand-piped gold chocolate plaque detail on Bruce Cake",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101"
+    },
+    {
+      "id": "review-03",
+      "author_name": "Julian Rossi",
+      "author_badge": "Local Guide · 89 reviews",
+      "rating": 5,
+      "relative_time": "2 months ago",
+      "verified": true,
+      "headline": "Fed 16 dessert serves with plenty to spare.",
+      "text": "We hosted a private dinner party in Toorak and needed an indulgent finale. Following their instructions to bring it to room temp for 90 minutes made the Belgian fudge frosting completely melt-in-mouth. The Lescure butter richness is unmatched.",
+      "tag": "Private Dinner Banquet",
+      "theme": "choco",
+      "photo_url": "assets/images/bruce-cake-2.png",
+      "photo_alt": "Five-layer chocolate fudge slice portion presentation",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101"
+    },
+    {
+      "id": "review-04",
+      "author_name": "Marcus & Claire Hughes",
+      "author_badge": "24 reviews",
+      "rating": 5,
+      "relative_time": "recently",
+      "verified": true,
+      "headline": "Flawless refrigerated morning delivery in Hawthorn.",
+      "text": "Delivered chilled during our morning transit window. The cake arrived in pristine condition, chilled overnight and packed with a bespoke portion cutting guide. Pure atelier craftsmanship right to our door.",
+      "tag": "Metro Melbourne Delivery",
+      "theme": "olive",
+      "photo_url": "assets/images/real/bruce-layer-cake.png",
+      "photo_alt": "Delivered celebration cake presentation and unboxing",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101"
+    }
+  ]
+}
+

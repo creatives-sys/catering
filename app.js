@@ -1,5 +1,5 @@
 /**
- * FRANK & HARRI — ULTRA-MINIMAL LUXURY ATELIER
+ * FRANK & HARRI â€” ULTRA-MINIMAL LUXURY ATELIER
  * Application Logic & Interactive State
  * Inspired directly by the user's reference layout
  */
@@ -19,19 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Best Sellers',
       eyebrow: 'Atelier Icons',
       crumb: 'Best Sellers',
-      desc: 'Melbourne’s most coveted cakes and morning pastries — from the legendary 5-layer Bruce Chocolate Cake to cultured Lescure croissants and burnt Basque cheesecake.'
+      desc: 'Melbourneâ€™s most coveted cakes and morning pastries â€” from the legendary 5-layer Bruce Chocolate Cake to cultured Lescure croissants and burnt Basque cheesecake.'
     },
     'birthday-cakes': {
       title: 'Birthday Cakes',
       eyebrow: 'Celebrations & Milestones',
       crumb: 'Birthday Cakes',
-      desc: 'Tall celebratory masterpieces, nostalgic funfetti sponges, bespoke sablé numbers, floral buttercream, and complimentary chocolate message plaques.'
+      desc: 'Tall celebratory masterpieces, nostalgic funfetti sponges, bespoke sablÃ© numbers, floral buttercream, and complimentary chocolate message plaques.'
     },
     'gluten-free': {
       title: 'Gluten-Free Atelier',
       eyebrow: 'Naturally Gluten-Free',
       crumb: 'Gluten-Free',
-      desc: 'Exquisite flourless citrus tortes, Italian almond ricotta cakes, San Sebastián burnt cheesecake, and airy chantilly pavlovas crafted with dedicated gluten-free procedures.'
+      desc: 'Exquisite flourless citrus tortes, Italian almond ricotta cakes, San SebastiÃ¡n burnt cheesecake, and airy chantilly pavlovas crafted with dedicated gluten-free procedures.'
     },
     'pastries': {
       title: 'Tarts & Pastries',
@@ -43,14 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Catering & Banquets',
       eyebrow: 'Events & Grazing',
       crumb: 'Catering',
-      desc: 'Generous charcuterie grazing platters, handmade warm quiches, flaky pork & fennel sausage rolls, poached chicken ribbon sandwiches, and kid’s party packages.'
+      desc: 'Generous charcuterie grazing platters, handmade warm quiches, flaky pork & fennel sausage rolls, poached chicken ribbon sandwiches, and kidâ€™s party packages.'
     }
   };
 
   const products = [
     {
       id: 'audrey-vintage-cake',
-      name: 'Audrey — Vintage Lambeth Cake',
+      name: 'Audrey â€” Vintage Lambeth Cake',
       category: 'signature',
       categoryGroup: 'celebration',
       categoryLabel: 'Vintage Lambeth Masterpiece',
@@ -64,14 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, egg. Facility handles nuts.',
       leadTime: '72h Pre-order',
       sizes: [
-        { name: '6" Petite', serves: 'Serves 8–10', price: 149.00 },
-        { name: '8" Grand', serves: 'Serves 16–20', price: 219.00 },
-        { name: '10" Banquet', serves: 'Serves 28–32', price: 310.00 }
+        { name: '6" Petite', serves: 'Serves 8â€“10', price: 149.00 },
+        { name: '8" Grand', serves: 'Serves 16â€“20', price: 219.00 },
+        { name: '10" Banquet', serves: 'Serves 28â€“32', price: 310.00 }
       ]
     },
     {
       id: 'jane-layer-cake',
-      name: 'Jane — Pastel Buttercream Rosette Cake',
+      name: 'Jane â€” Pastel Buttercream Rosette Cake',
       category: 'cakes',
       categoryGroup: 'celebration',
       categoryLabel: 'Celebration Layer Cake',
@@ -85,14 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, egg.',
       leadTime: '72h Pre-order',
       sizes: [
-        { name: '6" Petite', serves: 'Serves 8–10', price: 145.00 },
-        { name: '8" Grand', serves: 'Serves 18–20', price: 225.00 },
-        { name: '10" Banquet', serves: 'Serves 28–30', price: 329.00 }
+        { name: '6" Petite', serves: 'Serves 8â€“10', price: 145.00 },
+        { name: '8" Grand', serves: 'Serves 18â€“20', price: 225.00 },
+        { name: '10" Banquet', serves: 'Serves 28â€“30', price: 329.00 }
       ]
     },
     {
       id: 'hazel-layer-cake',
-      name: 'Hazel — Ferrero Rocher & Praline Cake',
+      name: 'Hazel â€” Ferrero Rocher & Praline Cake',
       category: 'cakes',
       categoryGroup: 'celebration',
       categoryLabel: 'Celebration Layer Cake',
@@ -106,14 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, egg, tree nuts (hazelnuts).',
       leadTime: '72h Pre-order',
       sizes: [
-        { name: '6" Petite', serves: 'Serves 8–10', price: 159.00 },
-        { name: '8" Grand', serves: 'Serves 18–20', price: 249.00 },
-        { name: '10" Banquet', serves: 'Serves 28–30', price: 339.00 }
+        { name: '6" Petite', serves: 'Serves 8â€“10', price: 159.00 },
+        { name: '8" Grand', serves: 'Serves 18â€“20', price: 249.00 },
+        { name: '10" Banquet', serves: 'Serves 28â€“30', price: 339.00 }
       ]
     },
     {
       id: 'focaccia-pesto',
-      name: 'House Focaccia — Pesto, Mozzarella & Stracciatella',
+      name: 'House Focaccia â€” Pesto, Mozzarella & Stracciatella',
       category: 'catering',
       categoryGroup: 'focaccias',
       categoryLabel: 'House Artisanal Focaccia',
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'focaccia-harissa',
-      name: 'House Focaccia — Harissa, Salami & Roast Peppers',
+      name: 'House Focaccia â€” Harissa, Salami & Roast Peppers',
       category: 'catering',
       categoryGroup: 'focaccias',
       categoryLabel: 'House Artisanal Focaccia',
@@ -160,14 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
       leadTimeKey: '72h',
       price: 109.00,
       image: 'assets/images/real/bruce-layer-cake.png',
-      description: 'Our most iconic chocolate cake. Five whisper-thin layers of rich buttermilk chocolate cake bound by luscious Belgian chocolate fudge frosting. Decadent, balanced, and Melbourne’s most beloved celebration layer cake.',
+      description: 'Our most iconic chocolate cake. Five whisper-thin layers of rich buttermilk chocolate cake bound by luscious Belgian chocolate fudge frosting. Decadent, balanced, and Melbourneâ€™s most beloved celebration layer cake.',
       flavours: 'Chocolate buttermilk sponge, Belgian dark chocolate fudge, single origin cocoa',
       allergens: 'Contains gluten, dairy, egg. Facility handles nuts.',
       leadTime: '72h Pre-order',
       sizes: [
-        { name: '6" Petite', serves: 'Serves 7–8', price: 109.00 },
-        { name: '9" Grand', serves: 'Serves 12–14', price: 159.00 },
-        { name: '12" Banquet', serves: 'Serves 20–22', price: 209.00 }
+        { name: '6" Petite', serves: 'Serves 7â€“8', price: 109.00 },
+        { name: '9" Grand', serves: 'Serves 12â€“14', price: 159.00 },
+        { name: '12" Banquet', serves: 'Serves 20â€“22', price: 209.00 }
       ]
     },
     {
@@ -185,9 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, egg. Gluten-free option available.',
       leadTime: '72h Pre-order',
       sizes: [
-        { name: '6" Petite', serves: 'Serves 7–8', price: 109.00 },
-        { name: '9" Grand', serves: 'Serves 12–14', price: 159.00 },
-        { name: '12" Banquet', serves: 'Serves 20–22', price: 259.00 }
+        { name: '6" Petite', serves: 'Serves 7â€“8', price: 109.00 },
+        { name: '9" Grand', serves: 'Serves 12â€“14', price: 159.00 },
+        { name: '12" Banquet', serves: 'Serves 20â€“22', price: 259.00 }
       ]
     },
     {
@@ -223,8 +223,8 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, egg.',
       leadTime: '72h Pre-order',
       sizes: [
-        { name: '6" Petite', serves: 'Serves 7–8', price: 100.00 },
-        { name: '8" Classic', serves: 'Serves 10–12', price: 145.00 }
+        { name: '6" Petite', serves: 'Serves 7â€“8', price: 100.00 },
+        { name: '8" Classic', serves: 'Serves 10â€“12', price: 145.00 }
       ]
     },
     {
@@ -237,13 +237,13 @@ document.addEventListener('DOMContentLoaded', () => {
       leadTimeKey: '72h',
       price: 159.00,
       image: 'assets/images/real/number-cake.jpg',
-      description: 'Custom number or monogram cake constructed with crisp almond sablé layers, piped vanilla bean Swiss meringue buttercream, macarons, fresh raspberries, meringue kisses, and fresh florals.',
-      flavours: 'Vanilla bean sablé biscuit, Swiss buttercream, raspberries, macarons',
+      description: 'Custom number or monogram cake constructed with crisp almond sablÃ© layers, piped vanilla bean Swiss meringue buttercream, macarons, fresh raspberries, meringue kisses, and fresh florals.',
+      flavours: 'Vanilla bean sablÃ© biscuit, Swiss buttercream, raspberries, macarons',
       allergens: 'Contains gluten, dairy, egg, almonds.',
       leadTime: '72h Pre-order',
       sizes: [
-        { name: 'Single Digit', serves: 'Serves 12–15', price: 159.00 },
-        { name: 'Double Digit', serves: 'Serves 24–30', price: 289.00 }
+        { name: 'Single Digit', serves: 'Serves 12â€“15', price: 159.00 },
+        { name: 'Double Digit', serves: 'Serves 24â€“30', price: 289.00 }
       ]
     },
     {
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, egg.',
       leadTime: '72h Pre-order',
       sizes: [
-        { name: '5" Three-Layer', serves: 'Serves 6–8', price: 109.00 }
+        { name: '5" Three-Layer', serves: 'Serves 6â€“8', price: 109.00 }
       ]
     },
     {
@@ -274,12 +274,12 @@ document.addEventListener('DOMContentLoaded', () => {
       leadTimeKey: '24h',
       price: 78.00,
       image: 'assets/images/collection-traditional.jpg',
-      description: 'Caramelised, deeply browned exterior with a molten, ultra-creamy vanilla centre. Baked fresh daily following traditional San Sebastián techniques. Naturally gluten-free.',
+      description: 'Caramelised, deeply browned exterior with a molten, ultra-creamy vanilla centre. Baked fresh daily following traditional San SebastiÃ¡n techniques. Naturally gluten-free.',
       flavours: 'Cream cheese, Madagascar vanilla, organic eggs',
       allergens: 'Contains dairy, egg. Naturally gluten-free.',
       leadTime: '24h Pre-order',
       sizes: [
-        { name: '8" Whole', serves: 'Serves 8–10', price: 78.00 }
+        { name: '8" Whole', serves: 'Serves 8â€“10', price: 78.00 }
       ]
     },
     {
@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains dairy, egg. Naturally gluten-free.',
       leadTime: '48h Notice',
       sizes: [
-        { name: '8" Whole', serves: 'Serves 8–10', price: 72.90 }
+        { name: '8" Whole', serves: 'Serves 8â€“10', price: 72.90 }
       ]
     },
     {
@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains dairy, egg, tree nuts (almonds, pistachios). Gluten-free.',
       leadTime: '48h Notice',
       sizes: [
-        { name: '8" Whole', serves: 'Serves 8–10', price: 72.90 }
+        { name: '8" Whole', serves: 'Serves 8â€“10', price: 72.90 }
       ]
     },
     {
@@ -333,12 +333,12 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains egg, tree nuts (almonds). Gluten-free.',
       leadTime: '48h Notice',
       sizes: [
-        { name: '8" Whole', serves: 'Serves 8–10', price: 72.90 }
+        { name: '8" Whole', serves: 'Serves 8â€“10', price: 72.90 }
       ]
     },
     {
       id: 'pavlova-dessert',
-      name: 'Pavlova with Mascarpone Crème & Berries',
+      name: 'Pavlova with Mascarpone CrÃ¨me & Berries',
       category: 'cakes',
       categoryLabel: 'Traditional Australian Desserts (GF)',
       collections: ['birthday-cakes', 'gluten-free'],
@@ -346,12 +346,12 @@ document.addEventListener('DOMContentLoaded', () => {
       leadTimeKey: '48h',
       price: 39.00,
       image: 'assets/images/real/pavlova-dessert.jpg',
-      description: 'Crisp marshmallow meringue shell piled high with whipped vanilla mascarpone crème, tangy passionfruit curd, and fresh seasonal Australian berries.',
-      flavours: 'Meringue, mascarpone crème, passionfruit, fresh berries',
+      description: 'Crisp marshmallow meringue shell piled high with whipped vanilla mascarpone crÃ¨me, tangy passionfruit curd, and fresh seasonal Australian berries.',
+      flavours: 'Meringue, mascarpone crÃ¨me, passionfruit, fresh berries',
       allergens: 'Contains dairy, egg. Naturally gluten-free.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Whole Pavlova', serves: 'Serves 6–8', price: 39.00 }
+        { name: 'Whole Pavlova', serves: 'Serves 6â€“8', price: 39.00 }
       ]
     },
     {
@@ -401,12 +401,12 @@ document.addEventListener('DOMContentLoaded', () => {
       leadTimeKey: '24h',
       price: 38.00,
       image: 'assets/images/collection-patisserie.png',
-      description: 'Crisp sweet shortcrust sablé pastry filled with sharp Meyer lemon curd and crowned with torched Swiss meringue peaks.',
-      flavours: 'Meyer lemon curd, all-butter sablé, Swiss meringue',
+      description: 'Crisp sweet shortcrust sablÃ© pastry filled with sharp Meyer lemon curd and crowned with torched Swiss meringue peaks.',
+      flavours: 'Meyer lemon curd, all-butter sablÃ©, Swiss meringue',
       allergens: 'Contains gluten, dairy, egg.',
       leadTime: '24h Pre-order',
       sizes: [
-        { name: '7" Tart', serves: 'Serves 6–8', price: 38.00 }
+        { name: '7" Tart', serves: 'Serves 6â€“8', price: 38.00 }
       ]
     },
     {
@@ -424,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Box of 12', serves: 'Serves 10–12', price: 60.00 }
+        { name: 'Box of 12', serves: 'Serves 10â€“12', price: 60.00 }
       ]
     },
     {
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, egg, nuts.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Box of 12', serves: 'Serves 10–12', price: 74.40 }
+        { name: 'Box of 12', serves: 'Serves 10â€“12', price: 74.40 }
       ]
     },
     {
@@ -460,13 +460,13 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten. Vegan friendly.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Half Slab', serves: 'Serves 4–6', price: 25.00 },
-        { name: 'Whole Slab', serves: 'Serves 8–12', price: 45.00 }
+        { name: 'Half Slab', serves: 'Serves 4â€“6', price: 25.00 },
+        { name: 'Whole Slab', serves: 'Serves 8â€“12', price: 45.00 }
       ]
     },
     {
       id: 'focaccia-pesto',
-      name: 'Focaccia — Pesto, Mozzarella & Stracciatella',
+      name: 'Focaccia â€” Pesto, Mozzarella & Stracciatella',
       category: 'savoury',
       categoryLabel: 'Gourmet Focaccia',
       collections: ['catering'],
@@ -479,12 +479,12 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, pine nuts.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Whole Slab', serves: 'Serves 8–12', price: 65.00 }
+        { name: 'Whole Slab', serves: 'Serves 8â€“12', price: 65.00 }
       ]
     },
     {
       id: 'focaccia-harissa',
-      name: 'Focaccia — Harissa, Salami & Roast Peppers',
+      name: 'Focaccia â€” Harissa, Salami & Roast Peppers',
       category: 'savoury',
       categoryLabel: 'Gourmet Focaccia',
       collections: ['catering'],
@@ -497,12 +497,12 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, pork.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Whole Slab', serves: 'Serves 8–12', price: 65.00 }
+        { name: 'Whole Slab', serves: 'Serves 8â€“12', price: 65.00 }
       ]
     },
     {
       id: 'ham-cheese-croissant',
-      name: 'Leg Ham & Gruyère Croissant',
+      name: 'Leg Ham & GruyÃ¨re Croissant',
       category: 'savoury',
       categoryLabel: 'All-Day Brunch',
       collections: ['pastries'],
@@ -510,8 +510,8 @@ document.addEventListener('DOMContentLoaded', () => {
       leadTimeKey: 'today',
       price: 14.50,
       image: 'assets/images/hero-catering.png',
-      description: 'Stuffed with artisan free-range shaved leg ham, aged Gruyère and Swiss cheese, finished with our house honey-mustard mayonnaise.',
-      flavours: 'Free-range leg ham, Gruyère, honey mustard mayo',
+      description: 'Stuffed with artisan free-range shaved leg ham, aged GruyÃ¨re and Swiss cheese, finished with our house honey-mustard mayonnaise.',
+      flavours: 'Free-range leg ham, GruyÃ¨re, honey mustard mayo',
       allergens: 'Contains gluten, dairy, egg, mustard.',
       leadTime: 'All-Day Cafe',
       sizes: [
@@ -533,7 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, seeds. Vegetarian.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Platter Bowl', serves: 'Serves 6–8', price: 55.00 }
+        { name: 'Platter Bowl', serves: 'Serves 6â€“8', price: 55.00 }
       ]
     },
     {
@@ -551,7 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains mustard. Gluten-free, dairy-free.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Platter Bowl', serves: 'Serves 6–8', price: 55.00 }
+        { name: 'Platter Bowl', serves: 'Serves 6â€“8', price: 55.00 }
       ]
     },
     {
@@ -569,9 +569,9 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Naturally vegan, gluten-free, dairy-free.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Small (Serves 6–8)', serves: 'Serves 6–8', price: 65.00 },
-        { name: 'Medium (Serves 10–15)', serves: 'Serves 10–15', price: 115.00 },
-        { name: 'Large (Serves 20–25)', serves: 'Serves 20–25', price: 170.00 }
+        { name: 'Small (Serves 6â€“8)', serves: 'Serves 6â€“8', price: 65.00 },
+        { name: 'Medium (Serves 10â€“15)', serves: 'Serves 10â€“15', price: 115.00 },
+        { name: 'Large (Serves 20â€“25)', serves: 'Serves 20â€“25', price: 170.00 }
       ]
     },
     {
@@ -584,12 +584,12 @@ document.addEventListener('DOMContentLoaded', () => {
       leadTimeKey: '48h',
       price: 180.00,
       image: 'assets/images/collection-salads.png',
-      description: 'Slow-baked honey-glazed Tasmanian Atlantic salmon served with dill crème fraîche, pomegranate seeds, toasted almonds, and fresh garden herb salsa.',
-      flavours: 'Atlantic salmon, dill crème fraîche, pomegranate, herb salsa',
+      description: 'Slow-baked honey-glazed Tasmanian Atlantic salmon served with dill crÃ¨me fraÃ®che, pomegranate seeds, toasted almonds, and fresh garden herb salsa.',
+      flavours: 'Atlantic salmon, dill crÃ¨me fraÃ®che, pomegranate, herb salsa',
       allergens: 'Contains fish (salmon), dairy, tree nuts (almonds). Gluten-free.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Platter (Serves 8–10)', serves: 'Serves 8–10', price: 180.00 }
+        { name: 'Platter (Serves 8â€“10)', serves: 'Serves 8â€“10', price: 180.00 }
       ]
     },
     {
@@ -607,8 +607,8 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains dairy, gluten, sulfites.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Medium Box', serves: 'Serves 8–10', price: 175.00 },
-        { name: 'Grand Box', serves: 'Serves 15–20', price: 265.00 }
+        { name: 'Medium Box', serves: 'Serves 8â€“10', price: 175.00 },
+        { name: 'Grand Box', serves: 'Serves 15â€“20', price: 265.00 }
       ]
     },
     {
@@ -621,12 +621,12 @@ document.addEventListener('DOMContentLoaded', () => {
       leadTimeKey: '48h',
       price: 120.00,
       image: 'assets/images/real/mini-quiche.jpg',
-      description: 'Twenty bite-sized quiches in buttery shortcrust pastry: Lorraine with smoky bacon & Gruyère, and Forest mushroom with thyme & goats curd.',
+      description: 'Twenty bite-sized quiches in buttery shortcrust pastry: Lorraine with smoky bacon & GruyÃ¨re, and Forest mushroom with thyme & goats curd.',
       flavours: 'Free-range eggs, cream, bacon, mushrooms, herbs',
       allergens: 'Contains gluten, dairy, egg.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Platter of 20', serves: 'Serves 10–15', price: 120.00 }
+        { name: 'Platter of 20', serves: 'Serves 10â€“15', price: 120.00 }
       ]
     },
     {
@@ -644,7 +644,7 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, egg, sesame.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Platter of 20', serves: 'Serves 10–15', price: 80.00 }
+        { name: 'Platter of 20', serves: 'Serves 10â€“15', price: 80.00 }
       ]
     },
     {
@@ -662,14 +662,14 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, egg, nuts (walnuts).',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Platter of 20', serves: 'Serves 10–12', price: 99.00 }
+        { name: 'Platter of 20', serves: 'Serves 10â€“12', price: 99.00 }
       ]
     },
     {
       id: 'fairy-bread-platter',
       name: 'Classic Artisan Fairy Bread (50 pc)',
       category: 'kids',
-      categoryLabel: 'Kid’s Party Fun',
+      categoryLabel: 'Kidâ€™s Party Fun',
       collections: ['birthday-cakes', 'catering'],
       dietary: ['vegetarian', 'nut-free'],
       leadTimeKey: '48h',
@@ -680,14 +680,14 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Platter of 50', serves: 'Serves 15–20', price: 49.00 }
+        { name: 'Platter of 50', serves: 'Serves 15â€“20', price: 49.00 }
       ]
     },
     {
       id: 'mini-sprinkles-cupcakes',
       name: 'Mini Celebration Cupcakes (12 pk)',
       category: 'kids',
-      categoryLabel: 'Kid’s Party Sweets',
+      categoryLabel: 'Kidâ€™s Party Sweets',
       collections: ['birthday-cakes', 'catering'],
       dietary: ['vegetarian', 'nut-free'],
       leadTimeKey: '48h',
@@ -735,12 +735,12 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, egg, soy.',
       leadTime: '48h Notice',
       sizes: [
-        { name: 'Platter of 20', serves: 'Serves 15–20', price: 75.00 }
+        { name: 'Platter of 20', serves: 'Serves 15â€“20', price: 75.00 }
       ]
     },
     {
       id: 'kids-party-grande-package',
-      name: 'Kid’s Party Catering Package — Grande',
+      name: 'Kidâ€™s Party Catering Package â€” Grande',
       category: 'kids',
       categoryLabel: 'Party Packages',
       collections: ['birthday-cakes', 'catering'],
@@ -753,8 +753,8 @@ document.addEventListener('DOMContentLoaded', () => {
       allergens: 'Contains gluten, dairy, egg, sesame.',
       leadTime: '72h Notice',
       sizes: [
-        { name: 'Grande Package (15-20 Kids)', serves: '15–20 Kids', price: 670.00 },
-        { name: 'Petite Package (8-10 Kids)', serves: '8–10 Kids', price: 350.00 }
+        { name: 'Grande Package (15-20 Kids)', serves: '15â€“20 Kids', price: 670.00 },
+        { name: 'Petite Package (8-10 Kids)', serves: '8â€“10 Kids', price: 350.00 }
       ]
     }
   ];
@@ -845,7 +845,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const pct = Math.min(100, Math.round((subtotal / 150) * 100));
       meterFill.style.width = `${pct}%`;
       if (subtotal >= 150) {
-        meterDiff.innerHTML = '<span class="cart-meter-unlocked">✓ Free Melbourne Metro Delivery Unlocked!</span>';
+        meterDiff.innerHTML = '<span class="cart-meter-unlocked">âœ“ Free Melbourne Metro Delivery Unlocked!</span>';
       } else {
         meterDiff.innerHTML = `Add <strong>$${(150 - subtotal).toFixed(2)}</strong> more to unlock FREE delivery`;
       }
@@ -868,7 +868,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="cart-item-details" style="flex: 1;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
               <h4 class="cart-item-title" style="margin: 0; font-size: 0.88rem; font-weight: 600;">${item.name}</h4>
-              <button type="button" class="cart-item-remove-btn" onclick="window.fhApp.removeFromCart(${index})" style="background: none; border: none; font-size: 0.85rem; color: #888; cursor: pointer; padding: 2px 6px; border-radius: 4px;" title="Remove creation" aria-label="Remove item">✕</button>
+              <button type="button" class="cart-item-remove-btn" onclick="window.fhApp.removeFromCart(${index})" style="background: none; border: none; font-size: 0.85rem; color: #888; cursor: pointer; padding: 2px 6px; border-radius: 4px;" title="Remove creation" aria-label="Remove item">âœ•</button>
             </div>
 
             <div class="cart-item-custom-tags">
@@ -882,7 +882,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div class="cart-item-footer" style="margin-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
               <div class="qty-control">
-                <button class="qty-btn" onclick="window.fhApp.changeQty(${index}, -1)" aria-label="Decrease quantity">−</button>
+                <button class="qty-btn" onclick="window.fhApp.changeQty(${index}, -1)" aria-label="Decrease quantity">âˆ’</button>
                 <span class="qty-display">${item.qty}</span>
                 <button class="qty-btn" onclick="window.fhApp.changeQty(${index}, 1)" aria-label="Increase quantity">+</button>
               </div>
@@ -983,8 +983,8 @@ document.addEventListener('DOMContentLoaded', () => {
     price: {
       'all': 'Price: All',
       'under50': 'Price: <$50',
-      '50to100': 'Price: $50–$100',
-      '100to150': 'Price: $100–$150',
+      '50to100': 'Price: $50â€“$100',
+      '100to150': 'Price: $100â€“$150',
       'over150': 'Price: >$150'
     },
     sort: {
@@ -1053,7 +1053,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (items.length === 0) {
       productsGrid.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: center; padding: 4.5rem 1.5rem; color: var(--fh-charcoal-muted); background: var(--fh-surface); border: 1px dashed var(--fh-border); border-radius: var(--radius-card);">
-          <div style="font-size: 2.2rem; margin-bottom: 0.75rem; color: var(--fh-primary-dark);">✦</div>
+          <div style="font-size: 2.2rem; margin-bottom: 0.75rem; color: var(--fh-primary-dark);">âœ¦</div>
           <h3 style="font-family: var(--font-brand); font-size: 1.15rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fh-charcoal); margin-bottom: 0.5rem;">
             No creations match your filter criteria
           </h3>
@@ -1093,7 +1093,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 class="product-card-title"><a href="product.html?id=${encodeURIComponent(p.id)}" style="color: inherit; text-decoration: none;">${p.name}</a></h3>
             <div class="product-card-meta">
               <span class="product-card-price">$${p.price.toFixed(2)}</span>
-              <span class="product-card-dot">·</span>
+              <span class="product-card-dot">Â·</span>
               <span class="product-card-lead">${p.leadTime || 'Handcrafted'}</span>
             </div>
           </div>
@@ -1128,7 +1128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         activeChipsContainer.innerHTML = chips.map(c => `
           <span class="active-filter-chip">
             <span>${c.label}</span>
-            <button class="chip-remove-btn" onclick="window.fhApp.clearFilter('${c.key}')" aria-label="Remove filter ${c.label}">✕</button>
+            <button class="chip-remove-btn" onclick="window.fhApp.clearFilter('${c.key}')" aria-label="Remove filter ${c.label}">âœ•</button>
           </span>
         `).join('');
       }
@@ -1414,7 +1414,7 @@ document.addEventListener('DOMContentLoaded', () => {
   refreshCatalog();
 
   // --------------------------------------------------------------------------
-  // 5. Pierre Hermé Paris Style Category Navigation & Search Handlers
+  // 5. Pierre HermÃ© Paris Style Category Navigation & Search Handlers
   // --------------------------------------------------------------------------
   const headerCatLinks = document.querySelectorAll('.ph-cat-link');
   const globalSearchInput = document.getElementById('globalSearchInput');
@@ -1423,7 +1423,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const phSearchDrawer = document.getElementById('phSearchDrawer');
   const phSearchCloseBtn = document.getElementById('phSearchCloseBtn');
 
-  // Pierre Hermé Category Navigation Bar Click Events
+  // Pierre HermÃ© Category Navigation Bar Click Events
   headerCatLinks.forEach(btn => {
     btn.addEventListener('click', (e) => {
       const href = btn.getAttribute('href');
@@ -1589,9 +1589,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. The Bruce Chocolate Cake Configurator
   // --------------------------------------------------------------------------
   const bruceSizes = [
-    { name: '6"', serves: 'Serves 7–8', price: 109.00 },
-    { name: '9"', serves: 'Serves 12–14', price: 159.00 },
-    { name: '12"', serves: 'Serves 20–22', price: 209.00 }
+    { name: '6"', serves: 'Serves 7â€“8', price: 109.00 },
+    { name: '9"', serves: 'Serves 12â€“14', price: 159.00 },
+    { name: '12"', serves: 'Serves 20â€“22', price: 209.00 }
   ];
 
   let selectedBruceSize = bruceSizes[0];
@@ -1688,13 +1688,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (guests <= 8) {
       if (recSize) recSize.textContent = '6" Signature Cake';
-      if (recDetail) recDetail.textContent = 'Comfortably serves 7–8 generous dessert portions (1" × 2" × 6"). Perfect for intimate dinners and family gatherings.';
+      if (recDetail) recDetail.textContent = 'Comfortably serves 7â€“8 generous dessert portions (1" Ã— 2" Ã— 6"). Perfect for intimate dinners and family gatherings.';
     } else if (guests <= 14) {
       if (recSize) recSize.textContent = '9" Signature Cake';
-      if (recDetail) recDetail.textContent = 'Our most popular celebration size! Yields 12–14 dessert portions or up to 25 coffee/canape serves. Ideal for milestone celebrations.';
+      if (recDetail) recDetail.textContent = 'Our most popular celebration size! Yields 12â€“14 dessert portions or up to 25 coffee/canape serves. Ideal for milestone celebrations.';
     } else if (guests <= 22) {
       if (recSize) recSize.textContent = '12" Celebration Cake';
-      if (recDetail) recDetail.textContent = 'A centerpiece cake delivering 20–22 full dessert slices or 40+ cocktail event portions. Handcrafted in five exquisite tall layers.';
+      if (recDetail) recDetail.textContent = 'A centerpiece cake delivering 20â€“22 full dessert slices or 40+ cocktail event portions. Handcrafted in five exquisite tall layers.';
     } else {
       if (recSize) recSize.textContent = 'Two Cakes or Multi-Tier';
       if (recDetail) recDetail.textContent = 'For parties of 25+, we suggest pairing a 9" and a 6" cake to offer guests flavour variety, or contacting our concierge for a bespoke multi-tier.';
@@ -1838,10 +1838,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (journeyBtnNext) {
-      if (journeyStep === 1) journeyBtnNext.innerHTML = '<span>Continue to Fulfillment</span><span>→</span>';
-      else if (journeyStep === 2) journeyBtnNext.innerHTML = '<span>Continue to Gift Note</span><span>→</span>';
-      else if (journeyStep === 3) journeyBtnNext.innerHTML = '<span>Review & Confirm</span><span>→</span>';
-      else if (journeyStep === 4) journeyBtnNext.innerHTML = '<span>Confirm & Complete Reservation 🔒</span>';
+      if (journeyStep === 1) journeyBtnNext.innerHTML = '<span>Continue to Fulfillment</span><span>â†’</span>';
+      else if (journeyStep === 2) journeyBtnNext.innerHTML = '<span>Continue to Gift Note</span><span>â†’</span>';
+      else if (journeyStep === 3) journeyBtnNext.innerHTML = '<span>Review & Confirm</span><span>â†’</span>';
+      else if (journeyStep === 4) journeyBtnNext.innerHTML = '<span>Confirm & Complete Reservation ðŸ”’</span>';
     }
   }
 
@@ -1860,9 +1860,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmedDateTime = document.getElementById('journeyConfirmedDateTime');
     if (confirmedDateTime) {
       const dateStr = firstItem.date || 'Earliest Atelier Date (72h Notice)';
-      const slotStr = firstItem.timeSlot || 'Morning · 8:00am – 10:30am';
+      const slotStr = firstItem.timeSlot || 'Morning Â· 8:00am â€“ 10:30am';
       const methodStr = journeyFulfillment === 'pickup' ? 'Boutique Pickup at 259 High St Kew' : 'Refrigerated Metro Courier';
-      confirmedDateTime.textContent = `${dateStr} · ${slotStr} (${methodStr})`;
+      confirmedDateTime.textContent = `${dateStr} Â· ${slotStr} (${methodStr})`;
     }
 
     const reviewList = document.getElementById('journeyReviewItemsList');
@@ -1870,12 +1870,12 @@ document.addEventListener('DOMContentLoaded', () => {
       reviewList.innerHTML = cart.map(item => `
         <div class="journey-review-row">
           <div>
-            <div class="journey-review-item-name">${item.qty}× ${item.name}</div>
+            <div class="journey-review-item-name">${item.qty}Ã— ${item.name}</div>
             <div class="journey-review-item-meta">
               ${item.size ? `<span>Format: ${item.size}</span>` : ''}
-              ${item.flavour ? ` · <span>Flavour: ${item.flavour}</span>` : ''}
+              ${item.flavour ? ` Â· <span>Flavour: ${item.flavour}</span>` : ''}
               ${item.hasPlaque ? `<br><span style="color: var(--fh-primary-dark); font-style: italic;">Plaque: "${item.plaqueText || 'Included'}"</span>` : ''}
-              ${item.date ? `<br><small style="color: var(--fh-charcoal-muted);">${item.date} · ${item.timeSlot || ''}</small>` : ''}
+              ${item.date ? `<br><small style="color: var(--fh-charcoal-muted);">${item.date} Â· ${item.timeSlot || ''}</small>` : ''}
             </div>
           </div>
           <div class="journey-review-item-price">$${(item.price * item.qty).toFixed(2)}</div>
@@ -2023,7 +2023,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const calBtn = document.getElementById('addToCalendarBtn');
       if (calBtn) {
         const firstItem = cart[0] || {};
-        const eventTitle = encodeURIComponent(`Frank & Harri Kew — ${journeyOccasion} Celebration Order`);
+        const eventTitle = encodeURIComponent(`Frank & Harri Kew â€” ${journeyOccasion} Celebration Order`);
         const eventDesc = encodeURIComponent(`Frank & Harri Order #${orderNum}\nItems: ${cart.map(i => `${i.qty}x ${i.name}`).join(', ')}\nFulfillment: ${journeyFulfillment === 'pickup' ? 'Boutique Pickup at Kew' : 'Melbourne Metro Courier'}`);
         const eventLoc = encodeURIComponent(journeyFulfillment === 'pickup' ? '259 High Street, Kew VIC 3101' : (document.getElementById('journeyStreetAddress')?.value || 'Melbourne'));
         calBtn.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&details=${eventDesc}&location=${eventLoc}`;
@@ -2062,7 +2062,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toast = document.createElement('div');
     toast.className = 'toast';
     toast.innerHTML = `
-      <span class="toast-icon">✓</span>
+      <span class="toast-icon">âœ“</span>
       <span>${message}</span>
     `;
 
@@ -2092,17 +2092,17 @@ document.addEventListener('DOMContentLoaded', () => {
     cinemaPlayBtn?.addEventListener('click', () => {
       if (atelierVideo.paused) {
         atelierVideo.play();
-        if (cinemaPlayIcon) cinemaPlayIcon.textContent = '⏸ Pause';
+        if (cinemaPlayIcon) cinemaPlayIcon.textContent = 'â¸ Pause';
       } else {
         atelierVideo.pause();
-        if (cinemaPlayIcon) cinemaPlayIcon.textContent = '▶ Play';
+        if (cinemaPlayIcon) cinemaPlayIcon.textContent = 'â–¶ Play';
       }
     });
 
     cinemaMuteBtn?.addEventListener('click', () => {
       atelierVideo.muted = !atelierVideo.muted;
       if (cinemaMuteIcon) {
-        cinemaMuteIcon.textContent = atelierVideo.muted ? '🔇 Unmute' : '🔊 Mute';
+        cinemaMuteIcon.textContent = atelierVideo.muted ? 'ðŸ”‡ Unmute' : 'ðŸ”Š Mute';
       }
     });
 
@@ -2229,7 +2229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const product = products.find(p => p.id === productId) || products[0];
 
     // Page title and breadcrumbs
-    document.title = `${product.name} — Frank & Harri Patisserie Kew · Melbourne`;
+    document.title = `${product.name} â€” Frank & Harri Patisserie Kew Â· Melbourne`;
     const breadcrumbTitle = document.getElementById('pdpBreadcrumbTitle');
     if (breadcrumbTitle) breadcrumbTitle.textContent = product.name;
     const breadcrumbCat = document.getElementById('pdpBreadcrumbCategory');
@@ -2354,7 +2354,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let quantity = 1;
     let fulfillmentMethod = 'pickup';
     let selectedDate = '';
-    let selectedSlot = 'Morning · 8:00am – 10:30am';
+    let selectedSlot = 'Morning Â· 8:00am â€“ 10:30am';
     let checkedAddons = [];
 
     // Product Type Classification
@@ -2376,7 +2376,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const sumAddonsRow = document.getElementById('pdpSumAddonsRow');
 
       if (sumSize && selectedSize) {
-        sumSize.textContent = `${selectedSize.name} · ${selectedSize.serves}`;
+        sumSize.textContent = `${selectedSize.name} Â· ${selectedSize.serves}`;
       }
 
       if (sumFlavourRow && sumFlavour) {
@@ -2430,7 +2430,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const total = calculateTotal();
 
       if (priceEl) priceEl.textContent = `$${(total).toFixed(2)}`;
-      if (addBtnPrice) addBtnPrice.textContent = `— $${total.toFixed(2)}`;
+      if (addBtnPrice) addBtnPrice.textContent = `â€” $${total.toFixed(2)}`;
       if (stickyPrice) stickyPrice.textContent = `$${total.toFixed(2)}`;
       if (stickyTitle) stickyTitle.textContent = `${product.name} (${selectedSize.name})`;
       if (topQty) topQty.textContent = `3 Mockups`;
@@ -2460,9 +2460,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (stepBoxSize) stepBoxSize.classList.add('has-check');
         if (tabSummarySize) tabSummarySize.textContent = selectedSize.name;
         if (chipSize) chipSize.classList.add('has-val');
-        if (pdpSumSize) pdpSumSize.textContent = `${selectedSize.name} · ${selectedSize.serves}`;
+        if (pdpSumSize) pdpSumSize.textContent = `${selectedSize.name} Â· ${selectedSize.serves}`;
         if (modalNavSize) modalNavSize.classList.add('done');
-        if (modalDotSize) modalDotSize.textContent = '✓';
+        if (modalDotSize) modalDotSize.textContent = 'âœ“';
       } else {
         if (stepBoxSize) stepBoxSize.classList.remove('has-check');
         if (tabSummarySize) tabSummarySize.textContent = 'Select';
@@ -2487,7 +2487,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (chipFlavour) chipFlavour.classList.add('has-val');
         if (pdpSumFlavour) pdpSumFlavour.textContent = selectedFlavour;
         if (modalNavFlavour) modalNavFlavour.classList.add('done');
-        if (modalDotFlavour) modalDotFlavour.textContent = '✓';
+        if (modalDotFlavour) modalDotFlavour.textContent = 'âœ“';
       } else {
         if (stepBoxFlavour) stepBoxFlavour.classList.remove('has-check');
         if (tabSummaryFlavour) tabSummaryFlavour.textContent = 'Select';
@@ -2512,7 +2512,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (chipPlaque) chipPlaque.classList.add('has-val');
         if (pdpSumPlaque) pdpSumPlaque.textContent = hasPlaque ? (plaqueInput?.value.trim() || 'Happy Birthday!') : 'Classic Atelier';
         if (modalNavPlaque) modalNavPlaque.classList.add('done');
-        if (modalDotPlaque) modalDotPlaque.textContent = '✓';
+        if (modalDotPlaque) modalDotPlaque.textContent = 'âœ“';
       } else {
         if (stepBoxPlaque) stepBoxPlaque.classList.remove('has-check');
         if (tabSummaryPlaque) tabSummaryPlaque.textContent = 'Choose';
@@ -2536,7 +2536,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (chipAddons) chipAddons.style.display = 'inline-flex';
         if (pdpSumAddons) pdpSumAddons.textContent = checkedAddons.map(a => a.name.replace(/^[^\w\s]+\s*/, '').split('(')[0].trim()).join(', ');
         if (modalNavTouch) modalNavTouch.classList.add('done');
-        if (modalDotTouch) modalDotTouch.textContent = '✓';
+        if (modalDotTouch) modalDotTouch.textContent = 'âœ“';
       } else {
         if (stepBoxTouch) stepBoxTouch.classList.remove('has-check');
         if (tabSummaryTouch) tabSummaryTouch.textContent = 'Extras';
@@ -2554,7 +2554,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (notesInput && notesInput.value.trim().length > 0) {
         if (stepBoxNotes) stepBoxNotes.classList.add('has-check');
         if (modalNavNotes) modalNavNotes.classList.add('done');
-        if (modalDotNotes) modalDotNotes.textContent = '✓';
+        if (modalDotNotes) modalDotNotes.textContent = 'âœ“';
       } else {
         if (stepBoxNotes) stepBoxNotes.classList.remove('has-check');
         if (modalNavNotes) modalNavNotes.classList.remove('done');
@@ -2737,7 +2737,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.closeShelfAndCheckReady = function() {
       if (mockupSelections.size && mockupSelections.flavour && mockupSelections.plaque) {
         studioShelf?.classList.remove('open');
-        showStudioToast('✓ All 3 Mockups Selected! Ready to Add to Bag');
+        showStudioToast('âœ“ All 3 Mockups Selected! Ready to Add to Bag');
       } else {
         if (!mockupSelections.size) window.selectMockup(1);
         else if (!mockupSelections.flavour) window.selectMockup(2);
@@ -2884,7 +2884,7 @@ document.addEventListener('DOMContentLoaded', () => {
         name: `${product.name} (${selectedSize.name})`,
         price: totalAmount / quantity,
         image: product.image,
-        size: `${selectedSize.name} · ${selectedSize.serves}`,
+        size: `${selectedSize.name} Â· ${selectedSize.serves}`,
         flavour: isCakeCreation ? selectedFlavour : '',
         hasPlaque: hasPlaque,
         plaqueText: plaqueText,
@@ -2896,7 +2896,7 @@ document.addEventListener('DOMContentLoaded', () => {
         qty: quantity
       });
 
-      showStudioToast(`✓ ${product.name} added to Shopping Bag!`);
+      showStudioToast(`âœ“ ${product.name} added to Shopping Bag!`);
 
       // Visual micro-interaction feedback on Add to Bag button
       const addBtn = document.getElementById('pdpAddToCartBtn');
@@ -2904,7 +2904,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (addBtn && addBtnText) {
         const origText = addBtnText.textContent;
         addBtn.classList.add('added');
-        addBtnText.textContent = '✓ Added to Shopping Bag!';
+        addBtnText.textContent = 'âœ“ Added to Shopping Bag!';
         setTimeout(() => {
           addBtn.classList.remove('added');
           addBtnText.textContent = origText;
@@ -2955,7 +2955,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 class="product-card-title"><a href="product.html?id=${p.id}" style="color: inherit; text-decoration: none;">${p.name}</a></h3>
             <div class="product-card-meta">
               <span class="product-card-price">$${p.price.toFixed(2)}</span>
-              <span class="product-card-dot">·</span>
+              <span class="product-card-dot">Â·</span>
               <span class="product-card-lead">${p.leadTime}</span>
             </div>
           </div>
@@ -2984,1114 +2984,1748 @@ document.addEventListener('DOMContentLoaded', () => {
   // 17. 1-Minute Single-Page Catering & Guest Allocator Studio
   // (Adapted directly from the restaurant design workflow reference)
   // --------------------------------------------------------------------------
+    // ==========================================================================
+  // 17. COMPLETE FRANK & HARRI CATERING WORKFLOW & 3D OPTION ORDER BUILDER
+  // ==========================================================================
   function initCateringWorkflow() {
     const studioSection = document.getElementById('cateringStudioSection');
     if (!studioSection) return;
 
-    // Comprehensive Frank & Harri Catering Menu Dataset (Exact match to 13-Page PDF)
+    const DIET_FULL_NAMES = {
+      'V': 'Vegetarian',
+      'VG': 'Vegan',
+      'DF': 'Dairy free',
+      'GF': 'Gluten free',
+      'GFO': 'Gluten free option available',
+      'VO': 'Vegetarian option available',
+      'VGO': 'Vegan option available'
+    };
+
+    // Full 13-Page Catering Menu Dataset
     const cateringDishes = [
-      // ======================================================================
-      // 1. BOXES — Ready-to-Serve Boxes of 20 & Grazing (Page 9)
-      // ======================================================================
+      // 1. PATISSERIE
+      {
+        id: 'pat-pastries',
+        name: 'Mini assorted pastries (pain au chocolat, almond croissant, traditional croissant, seasonal danish)',
+        category: 'patisserie',
+        categoryLabel: 'Housemade Pâtisserie',
+        dietary: 'V',
+        price: 6.20,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/mini-pastries-box.png',
+        description: 'Warm flaky all-butter French viennoiseries with chocolate batons, almond frangipane, and seasonal fruit danish.',
+        options: []
+      },
+      {
+        id: 'pat-scones',
+        name: 'Housemade scones, raspberry jam, cream',
+        category: 'patisserie',
+        categoryLabel: 'Afternoon Tea',
+        dietary: 'V',
+        price: 8.20,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/mini-pastries-box.png',
+        description: 'Traditional fluffy English scones served with Frank & Harri house-cooked raspberry jam and double cream.',
+        options: []
+      },
+      {
+        id: 'pat-melting-moment',
+        name: 'Passionfruit melting moment',
+        category: 'patisserie',
+        categoryLabel: 'Artisan Biscuit',
+        dietary: 'V',
+        price: 4.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/choc-chip-cookies.jpg',
+        description: 'Tender buttery shortbread biscuits sandwiched with tangy fresh passionfruit buttercream.',
+        options: []
+      },
+      {
+        id: 'pat-house-cakes',
+        name: 'Assorted house made cakes (flourless orange, carrot, coconut & berry)',
+        category: 'patisserie',
+        categoryLabel: 'Cake Slices',
+        dietary: 'V/GFO',
+        price: 7.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per slice',
+        image: 'assets/images/real/flourless-orange-cake.png',
+        description: 'Indulgent cake slices including flourless whole Valencia orange, spiced carrot cake, and coconut berry slice.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 0, min: 6 }
+        ]
+      },
+      {
+        id: 'pat-cupcakes',
+        name: 'Assorted cupcakes',
+        category: 'patisserie',
+        categoryLabel: 'Boutique Cupcakes',
+        dietary: 'V/VO/GFO',
+        price: 7.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/vanilla-raspberry-cupcakes.png',
+        description: 'Delicate vanilla bean and Belgian chocolate sponge topped with swirled buttercream rosettes and edible petals.',
+        options: [
+          { key: 'vo', label: 'Vegetarian option', priceAdd: 0, min: 6 },
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 1.00, min: 6 }
+        ]
+      },
+      {
+        id: 'pat-cinnamon-scrolls',
+        name: 'Cinnamon scrolls',
+        category: 'patisserie',
+        categoryLabel: 'Warm Brioche',
+        dietary: 'V',
+        price: 8.70,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/mini-pastries-box.png',
+        description: 'Soft layered brioche rolled with Korintje cinnamon, brown sugar glaze, and vanilla cream cheese icing.',
+        options: []
+      },
+      {
+        id: 'pat-choc-cookie',
+        name: 'Salted choc chip cookie',
+        category: 'patisserie',
+        categoryLabel: 'Handmade Cookie',
+        dietary: 'V',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/choc-chip-cookies.jpg',
+        description: 'Chewy brown-butter cookie dough studded with 70% dark Belgian chocolate chunks and Maldon sea salt flakes.',
+        options: []
+      },
+      {
+        id: 'pat-pecan-cookie',
+        name: 'Chocolate pecan cookie',
+        category: 'patisserie',
+        categoryLabel: 'Vegan & Gluten-Free Cookie',
+        dietary: 'VG/GF',
+        price: 7.20,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/choc-chip-cookies.jpg',
+        description: '100% plant-based and gluten-free cookie rich in cocoa, roasted Australian pecans, and dark chocolate drops.',
+        options: []
+      },
+      {
+        id: 'pat-doughnut-jam',
+        name: 'Brioche doughnut, crÃ¨me pÃ¢tissiere, raspberry jam',
+        category: 'patisserie',
+        categoryLabel: 'Handcrafted Doughnut',
+        dietary: 'V',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/mini-pastries-box.png',
+        description: 'Slow-proved sugar-dusted brioche filled with silky vanilla bean custard and tart raspberry preserves.',
+        options: []
+      },
+      {
+        id: 'pat-doughnut-stuffed',
+        name: 'Brioche stuffed doughnuts (Lemon curd / Nutella / Passionfruit or Raspberry)',
+        category: 'patisserie',
+        categoryLabel: 'Flavour Doughnuts',
+        dietary: 'V',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/mini-pastries-box.png',
+        description: 'Selection of our signature filled brioche doughnuts with citrus curd, rich Nutella hazelnut, and fruit purÃ©es.',
+        options: []
+      },
+      {
+        id: 'pat-muffins',
+        name: 'Assorted house made muffins (sweet or savoury)',
+        category: 'patisserie',
+        categoryLabel: 'Morning Muffins',
+        dietary: 'V',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/mini-pastries-box.png',
+        description: 'Freshly baked blueberry buttermilk or pumpkin, feta and rosemary savoury muffins.',
+        options: []
+      },
+      {
+        id: 'pat-banana-bread',
+        name: 'Banana bread, cream cheese icing, berries, banana chips',
+        category: 'patisserie',
+        categoryLabel: 'Artisan Loaf Slice',
+        dietary: 'V',
+        price: 9.80,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per slice',
+        image: 'assets/images/real/cake-tasting-box.png',
+        description: 'Toasted spiced Cavendish banana bread crowned with whipped cream cheese, dried fruit, and crunchy banana chips.',
+        options: []
+      },
+      {
+        id: 'pat-cheesymite',
+        name: 'Cheesymite scroll',
+        category: 'patisserie',
+        categoryLabel: 'Savoury Brioche',
+        dietary: 'V',
+        price: 11.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/mini-pastries-box.png',
+        description: 'Fluffy golden spiraled dough packed with vintage Victorian cheddar and savory Vegemite butter.',
+        options: []
+      },
+
+      // 2. BRUNCH
+      {
+        id: 'brunch-avo-toast',
+        name: 'Avo on toast, salsa verde, roasted tomatoes & feta',
+        category: 'brunch',
+        categoryLabel: 'Signature Brunch',
+        dietary: 'V/GFO/VGO',
+        price: 10.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per portion',
+        image: 'assets/images/real/focaccia-pesto.png',
+        description: 'Crushed ripe Hass avocado on house sourdough with herbed salsa verde, slow roasted truss tomatoes, and Danish feta.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 1.00, min: 6 },
+          { key: 'vgo', label: 'Vegan option', priceAdd: 1.00, min: 6 }
+        ]
+      },
+      {
+        id: 'brunch-salmon-tartine',
+        name: 'Smoked salmon tartine, dill creme fraiche, capers, lemon, rocket',
+        category: 'brunch',
+        categoryLabel: 'Artisan Tartine',
+        dietary: 'GFO',
+        price: 12.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per portion',
+        image: 'assets/images/real/ribbon-sandwiches.jpg',
+        description: 'Tasmanian cold-smoked salmon ribbons on seeded rye sourdough with dill creme fraiche and crispy fried capers.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 1.00, min: 6 }
+        ]
+      },
+      {
+        id: 'brunch-pea-fritter',
+        name: 'Pea & halloumi fritter, whipped ricotta, slow roasted tomatoes, micro herbs',
+        category: 'brunch',
+        categoryLabel: 'Warm Fritters',
+        dietary: 'V/GFO',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/mini-quiche.jpg',
+        description: 'Crispy green pea and Cypriot halloumi patties topped with whipped lemon ricotta and baby herbs.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 1.00, min: 6 }
+        ]
+      },
+      {
+        id: 'brunch-slider-bacon',
+        name: 'Brioche slider, fried egg, bacon, cheddar, relish',
+        category: 'brunch',
+        categoryLabel: 'Warm Sliders',
+        dietary: '',
+        price: 9.20,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per slider',
+        image: 'assets/images/real/mini-pastries-box.png',
+        description: 'Warm glazed brioche bun filled with free-range egg, crispy bacon rasher, aged cheddar, and house relish.',
+        options: []
+      },
+      {
+        id: 'brunch-slider-halloumi',
+        name: 'Brioche slider, halloumi, relish, avocado, tomato, cos',
+        category: 'brunch',
+        categoryLabel: 'Warm Sliders',
+        dietary: 'V',
+        price: 9.20,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per slider',
+        image: 'assets/images/real/mini-pastries-box.png',
+        description: 'Seared halloumi cheese with crushed avocado, vine tomato, baby cos lettuce, and spiced tomato relish.',
+        options: []
+      },
+      {
+        id: 'brunch-granola',
+        name: 'Granola, coconut yoghurt, seasonal fruit',
+        category: 'brunch',
+        categoryLabel: 'Breakfast Pots',
+        dietary: 'VGO/GFO',
+        price: 8.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per cup',
+        image: 'assets/images/real/cypriot-grain-salad.png',
+        description: 'Oven-toasted seed and nut granola layered with creamy probiotic coconut yoghurt and poached seasonal fruits.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 1.00, min: 6 },
+          { key: 'vgo', label: 'Vegan option', priceAdd: 1.00, min: 6 }
+        ]
+      },
+      {
+        id: 'brunch-quiche-bacon',
+        name: 'Mini quiche, streaky bacon, cheddar, parmesan, chives',
+        category: 'brunch',
+        categoryLabel: 'Individual Tartlets',
+        dietary: 'GFO',
+        price: 6.20,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per quiche',
+        image: 'assets/images/real/mini-quiche.jpg',
+        description: 'Flaky shortcrust pastry cups filled with savoury egg custard, crisp smoked bacon, and fresh chives.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 0.60, min: 6 }
+        ]
+      },
+      {
+        id: 'brunch-quiche-feta',
+        name: 'Mini quiche, cherry tomatoes, feta, caramelised onion',
+        category: 'brunch',
+        categoryLabel: 'Individual Tartlets',
+        dietary: 'V/GFO',
+        price: 6.20,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per quiche',
+        image: 'assets/images/real/mini-quiche.jpg',
+        description: 'Butter shortcrust filled with sweet slow-cooked balsamic onions, semi-dried cherry tomatoes, and crumbly feta.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 0.60, min: 6 }
+        ]
+      },
+      {
+        id: 'brunch-croissants-box',
+        name: 'Mini Housemade Croissants (Ham / Tomato / Mushroom)',
+        category: 'brunch',
+        categoryLabel: 'Filled Croissants',
+        dietary: 'V',
+        price: 9.50,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per croissant',
+        image: 'assets/images/real/mini-croissants-box.png',
+        description: 'Warm French butter mini croissants filled with ham & mustard; tomato & cheddar (V); or wild mushroom & goat cheese (V).',
+        options: []
+      },
+      {
+        id: 'brunch-bagels-box',
+        name: 'Mini Bagels (Smoked Salmon / Egg Salad / Halloumi / Bacon)',
+        category: 'brunch',
+        categoryLabel: 'Petite Bagels',
+        dietary: 'V',
+        price: 10.50,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per bagel',
+        image: 'assets/images/real/ribbon-sandwiches.jpg',
+        description: 'Toasted seeded mini bagels filled with gourmet choices: Smoked salmon ($11.90), Egg salad, Halloumi, or BLT.',
+        options: []
+      },
+      {
+        id: 'brunch-fruit-platter',
+        name: 'Seasonal Fruit Platter',
+        category: 'brunch',
+        categoryLabel: 'Gourmet Fruit Platter',
+        dietary: 'GF/VG',
+        price: 65.00,
+        min: 1,
+        serves: 8,
+        unitName: 'Small Platter',
+        image: 'assets/images/hero-catering.png',
+        description: 'Sliced seasonal melon, dragonfruit, berries, Australian grapes, and passionfruit halves beautifully arranged.',
+        options: [
+          { key: 'med', label: 'Medium (Serves 10â€“15)', priceAdd: 50.00, min: 1 },
+          { key: 'large', label: 'Large (Serves 20â€“25)', priceAdd: 100.00, min: 1 }
+        ]
+      },
+      {
+        id: 'brunch-fruit-cups',
+        name: 'Individual Fresh Fruit Cups',
+        category: 'brunch',
+        categoryLabel: 'Fresh Fruit',
+        dietary: 'GF/VG',
+        price: 8.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per cup',
+        image: 'assets/images/hero-catering.png',
+        description: 'Individual cups filled with fresh diced seasonal melon, berries, kiwi, and grapes with wooden forks.',
+        options: []
+      },
+
+      // 3. SANDWICHES
+      {
+        id: 'sand-chicken',
+        name: 'Poached chicken, honey mustard mayo, toasted almonds, greens',
+        category: 'sandwiches',
+        categoryLabel: 'Sandwiches & Ribbons',
+        dietary: 'DF',
+        price: 13.90,
+        min: 3,
+        serves: 2,
+        unitName: 'per round',
+        image: 'assets/images/real/ribbon-sandwiches.jpg',
+        description: 'Tender poached free-range chicken breast with honey-dijon aioli, toasted sliced almonds, and baby spinach.',
+        options: [
+          { key: 'ciabatta', label: 'Mini ciabatta or baguette ($6.60)', priceAdd: -7.30, min: 5 },
+          { key: 'wrap', label: 'Rolled wrap halved ($13.90)', priceAdd: 0, min: 4 },
+          { key: 'gf', label: 'Gluten-free ribbons ($14.90)', priceAdd: 1.00, min: 4 }
+        ]
+      },
+      {
+        id: 'sand-ham',
+        name: 'Free range leg ham, swiss, tomato, honey mustard mayo',
+        category: 'sandwiches',
+        categoryLabel: 'Sandwiches & Ribbons',
+        dietary: '',
+        price: 13.90,
+        min: 3,
+        serves: 2,
+        unitName: 'per round',
+        image: 'assets/images/real/ribbon-sandwiches.jpg',
+        description: 'Shaved Victorian leg ham, Swiss cheese, vine-ripened tomatoes, and house mustard dressing.',
+        options: [
+          { key: 'ciabatta', label: 'Mini ciabatta or baguette ($6.60)', priceAdd: -7.30, min: 5 },
+          { key: 'wrap', label: 'Rolled wrap halved ($13.90)', priceAdd: 0, min: 4 },
+          { key: 'gf', label: 'Gluten-free ribbons ($14.90)', priceAdd: 1.00, min: 4 }
+        ]
+      },
+      {
+        id: 'sand-salad',
+        name: 'Salad: tomato, cucumber, carrot, alfalfa, beetroot, swiss, mayo',
+        category: 'sandwiches',
+        categoryLabel: 'Sandwiches & Ribbons',
+        dietary: 'V',
+        price: 13.90,
+        min: 3,
+        serves: 2,
+        unitName: 'per round',
+        image: 'assets/images/real/ribbon-sandwiches.jpg',
+        description: 'Crisp market vegetables, pickled baby beets, sliced cucumber, alfalfa sprouts, and swiss cheese.',
+        options: [
+          { key: 'ciabatta', label: 'Mini ciabatta or baguette ($6.60)', priceAdd: -7.30, min: 5 },
+          { key: 'wrap', label: 'Rolled wrap halved ($13.90)', priceAdd: 0, min: 4 },
+          { key: 'gf', label: 'Gluten-free ribbons ($14.90)', priceAdd: 1.00, min: 4 }
+        ]
+      },
+      {
+        id: 'sand-salmon',
+        name: 'Smoked salmon, crÃ¨me fraÃ®che, tomato, rocket, pickled onion',
+        category: 'sandwiches',
+        categoryLabel: 'Sandwiches & Ribbons',
+        dietary: '',
+        price: 13.90,
+        min: 3,
+        serves: 2,
+        unitName: 'per round',
+        image: 'assets/images/real/ribbon-sandwiches.jpg',
+        description: 'Tasmanian smoked salmon with lemon dill spread, baby rocket, vine tomatoes, and quick-pickled eschalots.',
+        options: [
+          { key: 'ciabatta', label: 'Mini ciabatta or baguette ($6.60)', priceAdd: -7.30, min: 5 },
+          { key: 'wrap', label: 'Rolled wrap halved ($13.90)', priceAdd: 0, min: 4 },
+          { key: 'gf', label: 'Gluten-free ribbons ($14.90)', priceAdd: 1.00, min: 4 }
+        ]
+      },
+      {
+        id: 'sand-pumpkin',
+        name: 'Roast pumpkin, hummus, halloumi, spinach, roasted peppers',
+        category: 'sandwiches',
+        categoryLabel: 'Sandwiches & Ribbons',
+        dietary: 'V',
+        price: 13.90,
+        min: 3,
+        serves: 2,
+        unitName: 'per round',
+        image: 'assets/images/real/ribbon-sandwiches.jpg',
+        description: 'Caramelized roast pumpkin, spiced chickpea hummus, seared halloumi cheese, and wood-roasted red bell peppers.',
+        options: [
+          { key: 'ciabatta', label: 'Mini ciabatta or baguette ($6.60)', priceAdd: -7.30, min: 5 },
+          { key: 'wrap', label: 'Rolled wrap halved ($13.90)', priceAdd: 0, min: 4 },
+          { key: 'gf', label: 'Gluten-free ribbons ($14.90)', priceAdd: 1.00, min: 4 }
+        ]
+      },
+      {
+        id: 'sand-egg',
+        name: 'Egg salad, mayo, chives, avocado, lettuce',
+        category: 'sandwiches',
+        categoryLabel: 'Sandwiches & Ribbons',
+        dietary: 'V',
+        price: 13.90,
+        min: 3,
+        serves: 2,
+        unitName: 'per round',
+        image: 'assets/images/real/ribbon-sandwiches.jpg',
+        description: 'Crushed free-range eggs with whole egg mayonnaise, fresh garden chives, sliced avocado, and tender butter lettuce.',
+        options: [
+          { key: 'ciabatta', label: 'Mini ciabatta or baguette ($6.60)', priceAdd: -7.30, min: 5 },
+          { key: 'wrap', label: 'Rolled wrap halved ($13.90)', priceAdd: 0, min: 4 },
+          { key: 'gf', label: 'Gluten-free ribbons ($14.90)', priceAdd: 1.00, min: 4 }
+        ]
+      },
+
+      // 4. HOUSEMADE FOCACCIA
+      {
+        id: 'foc-rosemary',
+        name: 'Rosemary, olive oil & sea salt focaccia',
+        category: 'focaccia',
+        categoryLabel: 'Artisan Focaccia',
+        dietary: 'VG',
+        price: 45.00,
+        min: 1,
+        serves: 14,
+        unitName: 'Whole Slab (12â€“16 serves)',
+        image: 'assets/images/real/focaccia-classic.png',
+        description: 'Naturally leavened sourdough focaccia with cold-pressed olive oil, rosemary needles, and Maldon flake sea salt.',
+        options: [
+          { key: 'mini', label: 'Mini focaccia individual ($7.90 ea)', priceAdd: -37.10, min: 10 }
+        ]
+      },
+      {
+        id: 'foc-pesto',
+        name: 'Pesto, mozzarella, stracciatella focaccia',
+        category: 'focaccia',
+        categoryLabel: 'Artisan Focaccia',
+        dietary: 'V',
+        price: 65.00,
+        min: 1,
+        serves: 14,
+        unitName: 'Whole Slab (12â€“16 serves)',
+        image: 'assets/images/real/focaccia-pesto.png',
+        description: 'House pine nut pesto, melted fior di latte mozzarella, and creamy cold Victorian stracciatella curd on warm focaccia.',
+        options: [
+          { key: 'mini', label: 'Mini focaccia individual ($8.90 ea)', priceAdd: -56.10, min: 10 }
+        ]
+      },
+      {
+        id: 'foc-harissa',
+        name: 'Harissa, salami, roast peppers, mozzarella focaccia',
+        category: 'focaccia',
+        categoryLabel: 'Artisan Focaccia',
+        dietary: '',
+        price: 65.00,
+        min: 1,
+        serves: 14,
+        unitName: 'Whole Slab (12â€“16 serves)',
+        image: 'assets/images/real/focaccia-harissa.png',
+        description: 'Smoky mild harissa paste, aged cured salami, wood-roasted red bell peppers, and melted mozzarella.',
+        options: [
+          { key: 'mini', label: 'Mini focaccia individual ($8.90 ea)', priceAdd: -56.10, min: 10 }
+        ]
+      },
+      {
+        id: 'foc-potato',
+        name: 'Potato, goat cheese, rosemary focaccia',
+        category: 'focaccia',
+        categoryLabel: 'Artisan Focaccia',
+        dietary: 'V',
+        price: 65.00,
+        min: 1,
+        serves: 14,
+        unitName: 'Whole Slab (12â€“16 serves)',
+        image: 'assets/images/real/focaccia-classic.png',
+        description: 'Wafer-thin mandoline-sliced golden potatoes, whipped goat curd, and fresh rosemary sprigs on golden crust.',
+        options: [
+          { key: 'mini', label: 'Mini focaccia individual ($8.90 ea)', priceAdd: -56.10, min: 10 }
+        ]
+      },
+
+      // 5. SALADS
+      {
+        id: 'salad-cypriot',
+        name: 'Cypriot grain salad: Farro, lentils, almonds, pine nuts, pumpkin seeds, herbs, pomegranate, labneh',
+        category: 'salads',
+        categoryLabel: 'Gourmet Salad Bowls',
+        dietary: 'V',
+        price: 55.00,
+        min: 1,
+        serves: 6,
+        unitName: 'Small Bowl (4â€“6 serves)',
+        image: 'assets/images/real/cypriot-grain-salad.png',
+        description: 'Ancient farro and French lentils tossed with toasted almonds, pine nuts, fresh coriander, parsley, and lemon dressing.',
+        options: [
+          { key: 'med', label: 'Medium Bowl (Serves 10â€“15)', priceAdd: 57.00, min: 1 },
+          { key: 'large', label: 'Large Bowl (Serves 15â€“22)', priceAdd: 110.00, min: 1 }
+        ]
+      },
+      {
+        id: 'salad-potato',
+        name: 'Twice cooked potato salad with salsa verde mayo & crispy pancetta',
+        category: 'salads',
+        categoryLabel: 'Gourmet Salad Bowls',
+        dietary: 'DF/GF',
+        price: 55.00,
+        min: 1,
+        serves: 6,
+        unitName: 'Small Bowl (4â€“6 serves)',
+        image: 'assets/images/real/potato-salad.png',
+        description: 'Twice-cooked chat potatoes in herbaceous green salsa verde aioli with crisp golden pancetta strips.',
+        options: [
+          { key: 'med', label: 'Medium Bowl (Serves 10â€“15)', priceAdd: 57.00, min: 1 },
+          { key: 'large', label: 'Large Bowl (Serves 15â€“22)', priceAdd: 110.00, min: 1 }
+        ]
+      },
+      {
+        id: 'salad-supergreen',
+        name: 'Green salad: kale, edamame, quinoa, cranberries, almonds, goat\'s feta, green goddess dressing',
+        category: 'salads',
+        categoryLabel: 'Gourmet Salad Bowls',
+        dietary: 'GF/V/VGO',
+        price: 55.00,
+        min: 1,
+        serves: 6,
+        unitName: 'Small Bowl (4â€“6 serves)',
+        image: 'assets/images/collection-salads.png',
+        description: 'Tuscan kale and tricolour quinoa with creamy goat cheese, pepitas, edamame beans, and green goddess dressing.',
+        options: [
+          { key: 'med', label: 'Medium Bowl (Serves 10â€“15)', priceAdd: 57.00, min: 1 },
+          { key: 'large', label: 'Large Bowl (Serves 15â€“22)', priceAdd: 110.00, min: 1 },
+          { key: 'vgo', label: 'Vegan option (dairy-free)', priceAdd: 0, min: 1 }
+        ]
+      },
+
+      // 6. PROTEINS & MAINS
+      {
+        id: 'prot-salmon',
+        name: 'Atlantic baked salmon: honey glaze, dill crÃ¨me fraÃ®che, almonds, pomegranate, herb salsa',
+        category: 'proteins',
+        categoryLabel: 'Main Protein',
+        dietary: 'GF',
+        price: 25.90,
+        min: 6,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per serve (110g)',
+        image: 'assets/images/hero-catering.png',
+        description: 'Oven-roasted Tasmanian salmon fillets glazed with raw clover honey, dill crÃ¨me fraÃ®che, and toasted almonds.',
+        options: []
+      },
+      {
+        id: 'prot-lamb',
+        name: 'Slow cooked lamb: cranberry, onion & thyme w. pickled onion, herb salad',
+        category: 'proteins',
+        categoryLabel: 'Main Protein',
+        dietary: 'GF',
+        price: 27.90,
+        min: 6,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per serve (150g)',
+        image: 'assets/images/hero-catering.png',
+        description: '12-hour braised Victorian lamb shoulder with tart cranberries, fresh thyme jus, and sumac pickled eschalots.',
+        options: []
+      },
+      {
+        id: 'prot-chicken-goujon',
+        name: 'Parmesan crumbed chicken goujon, honey mustard aioli',
+        category: 'proteins',
+        categoryLabel: 'Warm Protein',
+        dietary: 'GF',
+        price: 7.90,
+        min: 6,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per serve',
+        image: 'assets/images/collection-kids.jpg',
+        description: 'Free-range chicken breast strips coated in aged reggiano cheese crumb and fried until golden. 100% Gluten-free.',
+        options: []
+      },
+      {
+        id: 'prot-eggplant',
+        name: 'Eggplant schnitzel, aioli, lemon',
+        category: 'proteins',
+        categoryLabel: 'Warm Protein',
+        dietary: 'V/GF',
+        price: 9.90,
+        min: 6,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per serve',
+        image: 'assets/images/collection-salads.png',
+        description: 'Thick-cut roasted eggplant steaks crumbed in gluten-free panko with whole egg garlic aioli and lemon wedges.',
+        options: []
+      },
+      {
+        id: 'prot-tofu',
+        name: 'Sticky tofu w. sweet\'n\'sour sauce, sesame & lime',
+        category: 'proteins',
+        categoryLabel: 'Warm Protein',
+        dietary: 'VG/GF',
+        price: 9.90,
+        min: 6,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per serve (100g)',
+        image: 'assets/images/collection-salads.png',
+        description: 'Crispy pressed organic tofu cubes glazed in ginger sweet and sour reduction with toasted sesame seeds.',
+        options: []
+      },
+
+      // 7. CANAPÃ‰S SAVOURY
+      {
+        id: 'can-rice-paper',
+        name: 'Supergreen rice paper roll (avocado, mint, vermicelli, cucumber)',
+        category: 'canapes',
+        categoryLabel: 'Cold CanapÃ©',
+        dietary: 'GF/VG',
+        price: 6.50,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per roll',
+        image: 'assets/images/collection-salads.png',
+        description: 'Vietnamese rice paper wrap packed with crisp herbs, avocado, cucumber, and lime hoisin dipping sauce.',
+        options: []
+      },
+      {
+        id: 'can-arancini',
+        name: 'Roast pumpkin, sage & mozzarella arancini, roasted garlic aioli',
+        category: 'canapes',
+        categoryLabel: 'Warm Canapé',
+        dietary: 'V',
+        price: 7.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/mini-quiche.jpg',
+        description: 'Golden Italian risotto croquettes stuffed with sweet butternut pumpkin, sage butter, and melted mozzarella.',
+        options: []
+      },
+      {
+        id: 'can-truffle-croquette',
+        name: 'Potato & truffle croquette, parmesan, aioli',
+        category: 'canapes',
+        categoryLabel: 'Warm Canapé',
+        dietary: 'V',
+        price: 7.50,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per piece',
+        image: 'assets/images/real/mini-quiche.jpg',
+        description: 'Smooth truffled mashed potato croquettes rolled in crisp panko and dusted with grated aged parmesan.',
+        options: []
+      },
+      {
+        id: 'can-sausage-roll',
+        name: 'Continental sausage roll, tomato relish',
+        category: 'canapes',
+        categoryLabel: 'Warm Canapé',
+        dietary: '',
+        price: 5.50,
+        min: 10,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per roll',
+        image: 'assets/images/real/mini-sausage-rolls.jpg',
+        description: 'Signature all-butter puff pastry rolls stuffed with pork and fennel sausage meat and roasted onion.',
+        options: []
+      },
+      {
+        id: 'can-mini-tart-mushroom',
+        name: 'Mini tart w. mushrooms, onion jam, goat\'s curd',
+        category: 'canapes',
+        categoryLabel: 'Savoury Tartlets',
+        dietary: 'V/GFO',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per tart',
+        image: 'assets/images/real/mini-quiche.jpg',
+        description: 'Petite shortcrust cases filled with sautÃ©ed wild forest mushrooms, caramelized onion, and soft goat cheese.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 0.50, min: 6 }
+        ]
+      },
+      {
+        id: 'can-mini-tart-ricotta',
+        name: 'Mini tart w. whipped ricotta, roasted tomato, rosemary',
+        category: 'canapes',
+        categoryLabel: 'Savoury Tartlets',
+        dietary: 'V/GFO',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per tart',
+        image: 'assets/images/real/mini-quiche.jpg',
+        description: 'Whipped lemon ricotta tartlet topped with slow-roasted cherry tomatoes, garlic oil, and rosemary needles.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 0.50, min: 6 }
+        ]
+      },
+      {
+        id: 'can-pikelet-salmon',
+        name: 'Dill pikelet, smoked salmon, pickled onion, crÃ¨me fraÃ®che, dill',
+        category: 'canapes',
+        categoryLabel: 'Boutique CanapÃ©s',
+        dietary: 'GFO',
+        price: 8.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per pikelet',
+        image: 'assets/images/real/ribbon-sandwiches.jpg',
+        description: 'Fluffy house-made dill blini crowned with Tasmanian smoked salmon, crÃ¨me fraÃ®che, and pickled baby onions.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 1.00, min: 6 }
+        ]
+      },
+      {
+        id: 'can-bao-chicken',
+        name: 'Fried chicken karaage bao, white slaw, pickled onion, coriander',
+        category: 'canapes',
+        categoryLabel: 'Steamed Bao Buns',
+        dietary: 'GFO',
+        price: 7.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per bao',
+        image: 'assets/images/real/mini-pastries-box.png',
+        description: 'Steamed lotus bao bun stuffed with crispy karaage chicken, creamy cabbage slaw, and sriracha kewpie mayo.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 1.00, min: 6 }
+        ]
+      },
+      {
+        id: 'can-tart-caprese',
+        name: 'Caprese tart; blistered cherry tomatoes, burrata, house pesto',
+        category: 'canapes',
+        categoryLabel: 'Boutique CanapÃ©s',
+        dietary: 'V/GFO',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per tart',
+        image: 'assets/images/real/mini-quiche.jpg',
+        description: 'Crisp pastry shell filled with creamy torn burrata, sweet oven-blistered tomatoes, and basil pine nut pesto.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 1.00, min: 6 }
+        ]
+      },
+
+      // 8. SWEETS & DESSERT CUPS
+      {
+        id: 'sweet-raspberry-tart',
+        name: 'Raspberry tart: short pastry, crÃ¨me pÃ¢tissiÃ¨re, fresh raspberries, white chocolate',
+        category: 'desserts',
+        categoryLabel: 'Pastry Tartlets',
+        dietary: 'V/GFO',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per tart',
+        image: 'assets/images/real/pavlova-dessert.jpg',
+        description: 'Butter shortbread shell filled with vanilla bean pastry cream and piled with fresh local raspberries.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 1.00, min: 6 }
+        ]
+      },
+      {
+        id: 'sweet-mini-pavlova',
+        name: 'Mini pavlova, summer berries, mascarpone, raspberry dust',
+        category: 'desserts',
+        categoryLabel: 'Australian Classic',
+        dietary: 'V/GF',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per pavlova',
+        image: 'assets/images/real/pavlova-dessert.jpg',
+        description: 'Crisp marshmallow meringue base with whipped vanilla mascarpone, berries, and freeze-dried raspberry powder.',
+        options: []
+      },
+      {
+        id: 'sweet-lemon-meringue',
+        name: 'Lemon meringue tart',
+        category: 'desserts',
+        categoryLabel: 'Pastry Tartlets',
+        dietary: 'V/GFO',
+        price: 7.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per tart',
+        image: 'assets/images/real/lemon-ricotta-cake.png',
+        description: 'Tangy citrus lemon curd in sweet crust crowned with torched French meringue peaks.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option', priceAdd: 1.00, min: 6 }
+        ]
+      },
+      {
+        id: 'sweet-brownie-square',
+        name: 'Callebaut & rye brownie square, milk chocolate ganache, raspberries',
+        category: 'desserts',
+        categoryLabel: 'Chocolate Treats',
+        dietary: 'V',
+        price: 6.90,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per square',
+        image: 'assets/images/real/choc-chip-cookies.jpg',
+        description: 'Ultra-fudgy Belgian dark chocolate brownie topped with milk chocolate ganache and fresh berries.',
+        options: []
+      },
+      {
+        id: 'cup-tiramisu',
+        name: 'Tiramisu dessert cup: espresso soaked sponge, mascarpone, chocolate dusting',
+        category: 'desserts',
+        categoryLabel: 'Dessert Cup',
+        dietary: 'V',
+        price: 9.50,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per cup',
+        image: 'assets/images/real/pavlova-dessert.jpg',
+        description: 'Individual dessert glass layered with espresso savoiardi biscuits, whipped mascarpone zabaione, and cocoa.',
+        options: []
+      },
+      {
+        id: 'cup-biscoff',
+        name: 'Layered Biscoff dessert cup: raspberries, berry compote, coconut yoghurt & Biscoff spread',
+        category: 'desserts',
+        categoryLabel: 'Vegan Dessert Cup',
+        dietary: 'VG',
+        price: 9.50,
+        min: 12,
+        optMin: 6,
+        serves: 1,
+        unitName: 'per cup',
+        image: 'assets/images/real/pavlova-dessert.jpg',
+        description: '100% plant-based dessert cup layered with Lotus speculoos spread, creamy coconut yoghurt, and berry compote.',
+        options: []
+      },
+
+      // 9. CATERING BOXES
       {
         id: 'box-mini-sausage-rolls-20',
         name: 'Mini Sausage Rolls Box (20 pk)',
         category: 'boxes',
         categoryLabel: 'Ready-to-Serve Box (20 pk)',
-        dietary: [],
+        dietary: '',
         serves: 15,
         price: 70.00,
+        min: 1,
         unitName: 'Box of 20',
         image: 'assets/images/real/mini-sausage-rolls.jpg',
-        description: 'Warm flaky all-butter puff pastry rolls with seasoned pork & fennel mince and toasted sesame. Served with house tomato relish.'
+        description: 'Warm flaky all-butter puff pastry rolls with seasoned pork & fennel mince and toasted sesame. Served with house relish.',
+        options: []
       },
       {
         id: 'box-mini-pies-20',
         name: 'Mini Beef Pie Box (20 pk)',
         category: 'boxes',
         categoryLabel: 'Ready-to-Serve Box (20 pk)',
-        dietary: [],
+        dietary: '',
         serves: 15,
         price: 80.00,
+        min: 1,
         unitName: 'Box of 20',
         image: 'assets/images/real/mini-quiche.jpg',
-        description: 'Slow-braised Victorian beef mince in rich savory gravy enveloped in golden shortcrust and puff pastry lid. Served with tomato relish.'
+        description: 'Slow-braised Victorian beef mince in rich savory gravy enveloped in golden shortcrust and puff pastry lid.',
+        options: []
       },
       {
         id: 'box-chicken-nuggets-20',
-        name: 'Housemade Chicken Nuggets Box (20 pk · GF)',
+        name: 'Housemade Chicken Nuggets Box (20 pk Â· GF)',
         category: 'boxes',
         categoryLabel: 'Handcrafted Nuggets (20 pk)',
-        dietary: ['gluten-free'],
+        dietary: 'GF',
         serves: 12,
         price: 80.00,
+        min: 1,
         unitName: 'Box of 20',
         image: 'assets/images/collection-kids.jpg',
-        description: 'Tender free-range chicken breast bites coated in crunchy gluten-free seasoned crumb. Served with artisan tomato sauce.'
+        description: 'Tender free-range chicken breast bites coated in crunchy gluten-free seasoned crumb. Served with artisan tomato sauce.',
+        options: []
       },
       {
         id: 'box-ribbon-sandwiches-20',
-        name: 'Poached Chicken Ribbon Sandwiches (20 pk · DF)',
+        name: 'Ribbon Sandwiches Box: Poached Chicken, Almonds & Greens (20 pk Â· DF)',
         category: 'boxes',
         categoryLabel: 'Gourmet Ribbons (20 pk)',
-        dietary: ['dairy-free'],
+        dietary: 'DF/GFO',
         serves: 12,
         price: 99.00,
+        min: 1,
         unitName: 'Box of 20',
         image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Crustless soft white ribbon sandwiches layered with poached chicken breast, honey mustard mayo, toasted almonds, and mixed greens.'
+        description: 'Crustless soft white ribbon sandwiches layered with poached chicken breast, honey mustard mayo, toasted almonds, and greens.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option (+$10.00)', priceAdd: 10.00, min: 1 }
+        ]
       },
       {
         id: 'box-mini-quiches-20',
-        name: 'Mini Quiche Box — Bacon, Cheddar & Chives (20 pk)',
+        name: 'Mini Quiche Box: Bacon, Cheddar & Chives (20 pk)',
         category: 'boxes',
         categoryLabel: 'Warm Savoury Box (20 pk)',
-        dietary: [],
+        dietary: 'GFO',
         serves: 15,
         price: 120.00,
+        min: 1,
         unitName: 'Box of 20',
         image: 'assets/images/real/mini-quiche.jpg',
-        description: 'Bite-sized butter shortcrust tartlets with crispy streaky bacon, vintage cheddar, aged parmesan, and snipped garden chives.'
+        description: 'Bite-sized butter shortcrust tartlets with crispy streaky bacon, vintage cheddar, aged parmesan, and garden chives.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option (+$10.00)', priceAdd: 10.00, min: 1 }
+        ]
       },
       {
-        id: 'box-brownie-squares-20',
-        name: 'Callebaut Chocolate Brownie Squares (20 pk · V)',
-        category: 'boxes',
-        categoryLabel: 'Fudge Brownie Box (20 pk)',
-        dietary: ['vegetarian'],
-        serves: 18,
-        price: 85.00,
-        unitName: 'Box of 20',
-        image: 'assets/images/real/choc-chip-cookies.jpg',
-        description: 'Rich 6cm fudge brownie squares made with Callebaut Belgian chocolate, milk chocolate ganache drizzle, and sea salt flakes.'
-      },
-      {
-        id: 'charcuterie-grazing-small',
-        name: 'Charcuterie Grazing Box (Small · Serves 10)',
+        id: 'box-charcuterie-grazing',
+        name: 'Charcuterie Grazing Box',
         category: 'boxes',
         categoryLabel: 'Artisan Grazing Box',
-        dietary: [],
+        dietary: '',
         serves: 10,
         price: 175.00,
+        min: 1,
         unitName: 'Small Box (Serves 10)',
         image: 'assets/images/hero-catering.png',
-        description: 'Prosciutto di San Daniele, mild salami, vintage cheddar, double brie, house focaccia crisps, honeycomb, muscatels, and fresh berries.'
-      },
-      {
-        id: 'charcuterie-grazing-large',
-        name: 'Charcuterie Grazing Box (Large · Serves 15–20)',
-        category: 'boxes',
-        categoryLabel: 'Grand Banquet Grazing',
-        dietary: [],
-        serves: 18,
-        price: 350.00,
-        unitName: 'Large Box (Serves 15–20)',
-        image: 'assets/images/hero-catering.png',
-        description: 'Grand corporate banquet display: premium charcuterie, farmhouse cheeses, house dips, olives, artisan crisps, and seasonal Victorian fruit.'
+        description: 'Prosciutto di San Daniele, mild salami, vintage cheddar, double brie, house focaccia crisps, honeycomb, muscatels, and berries.',
+        options: [
+          { key: 'large', label: 'Large Grazing Box (Serves 15â€“20)', priceAdd: 175.00, min: 1 }
+        ]
       },
 
-      // ======================================================================
-      // 2. PATISSERIE — Housemade (min order 12 per item · Page 1)
-      // ======================================================================
-      {
-        id: 'pat-mini-pastries-12',
-        name: 'Mini Assorted French Pastries (12 pk · V)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 74.40,
-        unitName: 'Dozen (12 pk · $6.20 ea)',
-        image: 'assets/images/real/mini-pastries-box.png',
-        description: 'Lescure butter viennoiserie: pain au chocolat, almond croissant, traditional butter croissant, and seasonal fruit danish.'
-      },
-      {
-        id: 'pat-scones-jam-cream-12',
-        name: 'Housemade Scones, Jam & Cream (12 pk · V)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 98.40,
-        unitName: 'Dozen (12 pk · $8.20 ea)',
-        image: 'assets/images/real/mini-croissants-box.png',
-        description: 'Golden fluffy buttermilk scones served with house-simmered raspberry jam and thick Victorian double cream.'
-      },
-      {
-        id: 'pat-passionfruit-melting-moment-12',
-        name: 'Passionfruit Melting Moments (12 pk · V)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 58.80,
-        unitName: 'Dozen (12 pk · $4.90 ea)',
-        image: 'assets/images/real/choc-chip-cookies.jpg',
-        description: 'Traditional melt-in-the-mouth butter shortbread sandwiches filled with tangy house-whipped passionfruit curd buttercream.'
-      },
-      {
-        id: 'pat-assorted-cakes-12',
-        name: 'Assorted Housemade Cake Slices (12 pk · V/GFO)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegetarian', 'gluten-free'],
-        serves: 12,
-        price: 94.80,
-        unitName: 'Dozen (12 pk · $7.90 ea)',
-        image: 'assets/images/real/flourless-orange-cake.png',
-        description: 'Generous slices of flourless orange almond cake, spiced carrot cake with cream cheese frosting, and coconut berry cake.'
-      },
-      {
-        id: 'pat-cupcakes-12',
-        name: 'Assorted Handcrafted Cupcakes (12 pk · V)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 94.80,
-        unitName: 'Dozen (12 pk · $7.90 ea)',
-        image: 'assets/images/real/mini-cupcakes.jpg',
-        description: 'Fluffy sponge cupcakes piped with pastel Swiss meringue buttercream and artisan cake garnishes.'
-      },
-      {
-        id: 'pat-cinnamon-scrolls-12',
-        name: 'Glazed Cinnamon Scrolls (12 pk · V)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 104.40,
-        unitName: 'Dozen (12 pk · $8.70 ea)',
-        image: 'assets/images/real/focaccia-classic.png',
-        description: 'Buttery brioche swirled with fragrant Ceylon cinnamon sugar and drizzled with vanilla cream cheese glaze.'
-      },
-      {
-        id: 'pat-cookies-choc-chip-12',
-        name: 'Salted Chocolate Chip Cookies (12 pk · V)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 82.80,
-        unitName: 'Dozen (12 pk · $6.90 ea)',
-        image: 'assets/images/real/choc-chip-cookies.jpg',
-        description: 'Crispy edges and chewy centres packed with Callebaut 54% dark chocolate chunks, finished with Maldon sea salt.'
-      },
-      {
-        id: 'pat-cookies-choc-pecan-gf-12',
-        name: 'Chocolate Pecan Cookies (12 pk · VG/GF)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegan', 'gluten-free', 'dairy-free'],
-        serves: 12,
-        price: 86.40,
-        unitName: 'Dozen (12 pk · $7.20 ea)',
-        image: 'assets/images/real/choc-chip-cookies.jpg',
-        description: 'Rich dark cocoa and roasted pecan cookies. 100% naturally gluten-free and vegan friendly.'
-      },
-      {
-        id: 'pat-doughnuts-creme-pat-12',
-        name: 'Brioche Doughnuts — Crème Pâtissière (12 pk · V)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 82.80,
-        unitName: 'Dozen (12 pk · $6.90 ea)',
-        image: 'assets/images/real/mini-pastries-box.png',
-        description: 'Sugar-rolled brioche spheres generously filled with vanilla bean crème pâtissière and house raspberry jam.'
-      },
-      {
-        id: 'pat-banana-bread-12',
-        name: 'Banana Bread w. Cream Cheese Icing (12 pk · V)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 117.60,
-        unitName: 'Dozen (12 pk · $9.80 ea)',
-        image: 'assets/images/real/flourless-orange-cake.png',
-        description: 'Spiced roasted banana loaf slices topped with cream cheese icing, fresh berries, and crispy banana chips.'
-      },
-      {
-        id: 'pat-cheesymite-scroll-12',
-        name: 'Cheesymite Brioche Scrolls (12 pk · V)',
-        category: 'patisserie',
-        categoryLabel: 'Housemade Patisserie (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 142.80,
-        unitName: 'Dozen (12 pk · $11.90 ea)',
-        image: 'assets/images/real/focaccia-classic.png',
-        description: 'Warm buttery brioche scrolls layered with savoury Vegemite and melted sharp Victorian vintage cheddar.'
-      },
-
-      // ======================================================================
-      // 3. BRUNCH & SLIDERS — (min order 12 per item · Page 2)
-      // ======================================================================
-      {
-        id: 'brunch-avo-toast-12',
-        name: 'Avo on Sourdough Toast (12 pk · V/GFO)',
-        category: 'brunch',
-        categoryLabel: 'Brunch Canapé (12 pk)',
-        dietary: ['vegetarian', 'gluten-free'],
-        serves: 12,
-        price: 130.80,
-        unitName: 'Dozen (12 pk · $10.90 ea)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Smashed Hass avocado, herbaceous salsa verde, slow-roasted cherry tomatoes, and crumbled feta on sourdough.'
-      },
-      {
-        id: 'brunch-salmon-tartine-12',
-        name: 'Smoked Salmon Tartine (12 pk · GFO)',
-        category: 'brunch',
-        categoryLabel: 'Brunch Canapé (12 pk)',
-        dietary: ['gluten-free'],
-        serves: 12,
-        price: 154.80,
-        unitName: 'Dozen (12 pk · $12.90 ea)',
-        image: 'assets/images/hero-catering.png',
-        description: 'Tasmanian smoked salmon ribbons, crème fraîche, baby capers, fresh lemon zest, and wild rocket on sourdough.'
-      },
-      {
-        id: 'brunch-pea-halloumi-fritter-12',
-        name: 'Pea & Halloumi Fritters (12 pk · V/GFO)',
-        category: 'brunch',
-        categoryLabel: 'Brunch Canapé (12 pk)',
-        dietary: ['vegetarian', 'gluten-free'],
-        serves: 12,
-        price: 82.80,
-        unitName: 'Dozen (12 pk · $6.90 ea)',
-        image: 'assets/images/real/mini-quiche.jpg',
-        description: 'Golden pan-crisped sweet pea & salty halloumi fritters served with whipped ricotta, slow-roasted tomatoes, and micro herbs.'
-      },
-      {
-        id: 'brunch-slider-egg-bacon-12',
-        name: 'Brioche Sliders — Fried Egg, Bacon & Cheddar (12 pk)',
-        category: 'brunch',
-        categoryLabel: 'Brunch Slider (12 pk)',
-        dietary: [],
-        serves: 12,
-        price: 110.40,
-        unitName: 'Dozen (12 pk · $9.20 ea)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Milk brioche slider buns with free-range fried egg, crispy bacon, melted cheddar, and house tomato relish.'
-      },
-      {
-        id: 'brunch-slider-halloumi-12',
-        name: 'Brioche Sliders — Halloumi, Avocado & Cos (12 pk · V)',
-        category: 'brunch',
-        categoryLabel: 'Brunch Slider (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 110.40,
-        unitName: 'Dozen (12 pk · $9.20 ea)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Grilled halloumi, sliced Hass avocado, ripe vine tomato, crisp cos lettuce, and house relish on brioche.'
-      },
-      {
-        id: 'brunch-croissants-ham-cheese-12',
-        name: 'Mini Croissants — Leg Ham & Cheddar (12 pk)',
-        category: 'brunch',
-        categoryLabel: 'House Croissants (12 pk)',
-        dietary: [],
-        serves: 12,
-        price: 114.00,
-        unitName: 'Dozen (12 pk · $9.50 ea)',
-        image: 'assets/images/real/mini-croissants-box.png',
-        description: 'Mini housemade butter croissants toasted with free-range leg ham, cheddar, and honey mustard mayonnaise.'
-      },
-      {
-        id: 'brunch-croissants-mushroom-goat-12',
-        name: 'Mini Croissants — Mushroom & Goat Cheese (12 pk · V)',
-        category: 'brunch',
-        categoryLabel: 'House Croissants (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 114.00,
-        unitName: 'Dozen (12 pk · $9.50 ea)',
-        image: 'assets/images/real/mini-croissants-box.png',
-        description: 'Mini butter croissants with garlic-sautéed forest mushrooms, creamy goat cheese, and fresh salsa verde.'
-      },
-      {
-        id: 'brunch-bagel-salmon-12',
-        name: 'Mini Bagels — Smoked Salmon & Dill (12 pk)',
-        category: 'brunch',
-        categoryLabel: 'Mini Bagels (12 pk)',
-        dietary: [],
-        serves: 12,
-        price: 142.80,
-        unitName: 'Dozen (12 pk · $11.90 ea)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Petite seeded bagels filled with cured smoked salmon, herbed crème fraîche, capers, and fresh baby dill.'
-      },
-      {
-        id: 'brunch-bagel-egg-salad-12',
-        name: 'Mini Bagels — Egg Salad & Avocado (12 pk · V)',
-        category: 'brunch',
-        categoryLabel: 'Mini Bagels (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 126.00,
-        unitName: 'Dozen (12 pk · $10.50 ea)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Mini seeded bagels with free-range boiled egg salad, Dijon chive mayonnaise, and ripe sliced avocado.'
-      },
-      {
-        id: 'brunch-fruit-platter-med',
-        name: 'Seasonal Fresh Fruit Platter (Medium · GF/VG)',
-        category: 'brunch',
-        categoryLabel: 'Fruit Grazing Platter',
-        dietary: ['gluten-free', 'vegan', 'dairy-free'],
-        serves: 12,
-        price: 115.00,
-        unitName: 'Medium Platter (Serves 10–15)',
-        image: 'assets/images/collection-salads.png',
-        description: 'Vibrant freshly cut seasonal Victorian melons, strawberries, blueberries, grapes, kiwi, and citrus.'
-      },
-      {
-        id: 'brunch-fruit-cups-12',
-        name: 'Individual Seasonal Fruit Cups (12 pk · GF/VG)',
-        category: 'brunch',
-        categoryLabel: 'Individual Fruit Cups (12 pk)',
-        dietary: ['gluten-free', 'vegan', 'dairy-free'],
-        serves: 12,
-        price: 106.80,
-        unitName: 'Pack of 12 ($8.90 ea)',
-        image: 'assets/images/collection-salads.png',
-        description: 'Individual eco-cups packed with freshly diced Victorian melons, seasonal berries, grapes, and garden mint.'
-      },
-
-      // ======================================================================
-      // 4. SANDWICHES, WRAPS & BAGUETTES (Page 3)
-      // ======================================================================
-      {
-        id: 'sand-artisan-triangles-rounds',
-        name: 'Artisan Triangle Sandwiches Platter (24 Triangles)',
-        category: 'sandwiches',
-        categoryLabel: 'Finger Sandwiches (6 Rounds)',
-        dietary: ['dairy-free'],
-        serves: 12,
-        price: 83.40,
-        unitName: 'Platter of 24 ($13.90/round)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Baker loaf sandwiches cut into 24 triangles: Poached chicken honey mustard mayo; Leg ham & swiss; and Salami roasted peppers & pesto.'
-      },
-      {
-        id: 'sand-ribbon-gourmet-rounds',
-        name: 'Gourmet Ribbon Sandwiches Platter (18 Ribbons)',
-        category: 'sandwiches',
-        categoryLabel: 'Crustless Ribbons (6 Rounds)',
-        dietary: [],
-        serves: 10,
-        price: 83.40,
-        unitName: 'Platter of 18 ($13.90/round)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Crustless soft ribbons: Smoked salmon & crème fraîche; Egg salad & chives (V); Greens avocado goat cheese & cucumber (V).'
-      },
-      {
-        id: 'sand-baguettes-ciabatta-10',
-        name: 'Mini Baguettes & Crusty Ciabatta (10 pk)',
-        category: 'sandwiches',
-        categoryLabel: 'Artisan Rolls (10 pk)',
-        dietary: [],
-        serves: 10,
-        price: 66.00,
-        unitName: 'Platter of 10 ($6.60 ea)',
-        image: 'assets/images/real/focaccia-classic.png',
-        description: 'Crusty mini French baguettes and ciabatta rolls filled with prosciutto, tomato mozzarella, and poached chicken salad.'
-      },
-      {
-        id: 'sand-wraps-platter-8',
-        name: 'Gourmet Soft Wraps Platter (8 Halves)',
-        category: 'sandwiches',
-        categoryLabel: 'Rolled Wraps (4 Wraps)',
-        dietary: [],
-        serves: 8,
-        price: 55.60,
-        unitName: 'Platter of 8 Halves ($13.90/wrap)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Fresh rolled wraps halved for grazing: Tuna sriracha mayo & pickled onion; Roast pumpkin hummus & haloumi (V); Poached chicken.'
-      },
-      {
-        id: 'sand-gf-ribbons-8',
-        name: 'Gluten-Free Ribbon Sandwiches Platter (8 Ribbons · GF)',
-        category: 'sandwiches',
-        categoryLabel: 'Gluten-Free Sandwiches',
-        dietary: ['gluten-free'],
-        serves: 8,
-        price: 59.60,
-        unitName: 'Platter of 8 GF Ribbons',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: '100% gluten-free bread ribbons with poached chicken & greens, egg salad with chives, and roast pumpkin with hummus.'
-      },
-
-      // ======================================================================
-      // 5. HOUSE MADE FOCACCIA (Slabs & Minis · Page 4)
-      // ======================================================================
-      {
-        id: 'focaccia-sharing-classic',
-        name: 'Focaccia Sharing Slab — Rosemary & Sea Salt (VG)',
-        category: 'focaccia',
-        categoryLabel: 'Sharing Slab (Serves 12–16)',
-        dietary: ['vegan', 'dairy-free'],
-        serves: 14,
-        price: 45.00,
-        unitName: 'Whole Slab (Serves 12–16)',
-        image: 'assets/images/real/focaccia-classic.png',
-        description: 'Slow-fermented artisan sourdough focaccia with cold-pressed Victorian EVOO, fresh rosemary, and Maldon flake sea salt.'
-      },
-      {
-        id: 'focaccia-sharing-pesto',
-        name: 'Focaccia Sharing Slab — Pesto & Straciatella (V)',
-        category: 'focaccia',
-        categoryLabel: 'Sharing Slab (Serves 12–16)',
-        dietary: ['vegetarian'],
-        serves: 14,
-        price: 65.00,
-        unitName: 'Whole Slab (Serves 12–16)',
-        image: 'assets/images/real/focaccia-pesto.png',
-        description: 'House pine nut pesto, melted fior di latte mozzarella, and cold creamy Victorian straciatella curd on warm focaccia.'
-      },
-      {
-        id: 'focaccia-sharing-harissa',
-        name: 'Focaccia Sharing Slab — Harissa, Salami & Peppers',
-        category: 'focaccia',
-        categoryLabel: 'Sharing Slab (Serves 12–16)',
-        dietary: [],
-        serves: 14,
-        price: 65.00,
-        unitName: 'Whole Slab (Serves 12–16)',
-        image: 'assets/images/real/focaccia-harissa.png',
-        description: 'Smoky mild harissa, aged cured salami, wood-roasted red bell peppers, and melted mozzarella on golden sourdough.'
-      },
-      {
-        id: 'focaccia-sharing-pumpkin',
-        name: 'Focaccia Sharing Slab — Pumpkin, Pesto & Mozzarella (V)',
-        category: 'focaccia',
-        categoryLabel: 'Sharing Slab (Serves 12–16)',
-        dietary: ['vegetarian'],
-        serves: 14,
-        price: 65.00,
-        unitName: 'Whole Slab (Serves 12–16)',
-        image: 'assets/images/real/focaccia-pesto.png',
-        description: 'Caramelised roast butternut pumpkin, basil pesto, blistered cherry tomatoes, and mozzarella on artisan focaccia.'
-      },
-      {
-        id: 'focaccia-mini-box-10',
-        name: 'Assorted Mini Focaccias Box (10 pk · V)',
-        category: 'focaccia',
-        categoryLabel: 'Mini Focaccia Box (10 pk)',
-        dietary: ['vegetarian'],
-        serves: 10,
-        price: 89.00,
-        unitName: 'Box of 10 ($8.90 ea)',
-        image: 'assets/images/real/focaccia-classic.png',
-        description: 'Petite focaccias: Pesto & Straciatella; Potato & Goat\'s Cheese; Ham & Cheddar; and Margarita tomato basil.'
-      },
-
-      // ======================================================================
-      // 6. GOURMET SALADS — Bowls (Page 5)
-      // ======================================================================
-      {
-        id: 'salad-cypriot-grain-med',
-        name: 'Cypriot Grain Salad Bowl (Medium · V)',
-        category: 'salads',
-        categoryLabel: 'Salad Bowl (Serves 10–15)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 112.00,
-        unitName: 'Medium Bowl (Serves 10–15)',
-        image: 'assets/images/real/cypriot-grain-salad.png',
-        description: 'Farro, lentils, toasted almonds, pine nuts, pumpkin seeds, fresh herbs, jewel pomegranate seeds, labneh, and lemon dressing.'
-      },
-      {
-        id: 'salad-potato-pancetta-med',
-        name: 'Twice Cooked Potato Salad (Medium · DF/GF)',
-        category: 'salads',
-        categoryLabel: 'Salad Bowl (Serves 10–15)',
-        dietary: ['gluten-free', 'dairy-free'],
-        serves: 12,
-        price: 112.00,
-        unitName: 'Medium Bowl (Serves 10–15)',
-        image: 'assets/images/real/potato-salad.png',
-        description: 'Twice cooked golden potatoes, salsa verde mayonnaise, and crispy pancetta. 100% gluten and dairy free.'
-      },
-      {
-        id: 'salad-green-kale-quinoa-med',
-        name: 'Supergreen Kale & Quinoa Salad (Medium · GF/V)',
-        category: 'salads',
-        categoryLabel: 'Salad Bowl (Serves 10–15)',
-        dietary: ['gluten-free', 'vegetarian'],
-        serves: 12,
-        price: 112.00,
-        unitName: 'Medium Bowl (Serves 10–15)',
-        image: 'assets/images/collection-salads.png',
-        description: 'Tuscan kale, edamame, tri-colour quinoa, cranberries, toasted almonds, goat\'s feta, pepitas, and green goddess dressing.'
-      },
-      {
-        id: 'salad-roasted-cauliflower-med',
-        name: 'Spiced Roasted Cauliflower Salad (Medium · VG)',
-        category: 'salads',
-        categoryLabel: 'Salad Bowl (Serves 10–15)',
-        dietary: ['vegan', 'dairy-free'],
-        serves: 12,
-        price: 112.00,
-        unitName: 'Medium Bowl (Serves 10–15)',
-        image: 'assets/images/collection-salads.png',
-        description: 'Cumin-roasted cauliflower florets, green tahini drizzle, crisp chickpeas, fluffy couscous, pickled onion, and toasted almonds.'
-      },
-      {
-        id: 'salad-shaved-broccoli-med',
-        name: 'Shaved Broccoli & Cashew Cream (Medium · VG/GF)',
-        category: 'salads',
-        categoryLabel: 'Salad Bowl (Serves 10–15)',
-        dietary: ['vegan', 'gluten-free', 'dairy-free'],
-        serves: 12,
-        price: 112.00,
-        unitName: 'Medium Bowl (Serves 10–15)',
-        image: 'assets/images/collection-salads.png',
-        description: 'Raw shaved broccoli, velvety house cashew cream, roasted almonds, dried cranberries, sweet apricot, and fresh lemon.'
-      },
-
-      // ======================================================================
-      // 7. PROTEINS & MAINS — (min 6 serves per type · Page 6)
-      // ======================================================================
-      {
-        id: 'protein-atlantic-baked-salmon-6',
-        name: 'Atlantic Baked Salmon Portions (6 serves · GF)',
-        category: 'proteins',
-        categoryLabel: 'Main Protein Platter (6 serves)',
-        dietary: ['gluten-free'],
-        serves: 6,
-        price: 155.40,
-        unitName: 'Platter of 6 ($25.90 ea)',
-        image: 'assets/images/hero-catering.png',
-        description: 'Slow-baked Tasmanian Atlantic salmon fillets (110g) with honey glaze, dill crème fraîche, toasted almonds, pomegranate, and herb salsa.'
-      },
-      {
-        id: 'protein-slow-lamb-cranberry-6',
-        name: 'Slow Cooked Lamb Cranberry & Thyme (6 serves · GF)',
-        category: 'proteins',
-        categoryLabel: 'Main Protein Platter (6 serves)',
-        dietary: ['gluten-free'],
-        serves: 6,
-        price: 167.40,
-        unitName: 'Platter of 6 ($27.90 ea)',
-        image: 'assets/images/hero-catering.png',
-        description: '12-hour slow-cooked Victorian lamb (150g serves) infused with cranberry, onion, and thyme. Served with pickled onion and herb salad.'
-      },
-      {
-        id: 'protein-parmesan-chicken-goujon-10',
-        name: 'Parmesan Crumbed Chicken Goujons (10 serves · GF)',
-        category: 'proteins',
-        categoryLabel: 'Warm Protein Platter',
-        dietary: ['gluten-free'],
-        serves: 10,
-        price: 79.00,
-        unitName: 'Platter of 10 ($7.90 ea)',
-        image: 'assets/images/real/mini-quiche.jpg',
-        description: 'Tender chicken breast goujons crusted in aged parmesan and gluten-free crumb. Served warm with honey mustard aioli.'
-      },
-      {
-        id: 'protein-eggplant-schnitzel-6',
-        name: 'Eggplant Schnitzel with Aioli (6 serves · V/GF)',
-        category: 'proteins',
-        categoryLabel: 'Vegetarian Protein Platter',
-        dietary: ['vegetarian', 'gluten-free'],
-        serves: 6,
-        price: 59.40,
-        unitName: 'Platter of 6 ($9.90 ea)',
-        image: 'assets/images/real/potato-salad.png',
-        description: 'Crispy golden eggplant cutlets in gluten-free crumb, served with garlic aioli and fresh lemon wedges.'
-      },
-      {
-        id: 'protein-karaage-chicken-10',
-        name: 'Karaage Crispy Chicken (10 serves · GF)',
-        category: 'proteins',
-        categoryLabel: 'Warm Protein Platter',
-        dietary: ['gluten-free'],
-        serves: 10,
-        price: 72.00,
-        unitName: 'Platter of 10 ($7.20 ea)',
-        image: 'assets/images/real/mini-sausage-rolls.jpg',
-        description: 'Japanese-style crispy fried chicken bites with tamari, ginger, and garlic marinade. Served with sriracha lime mayo.'
-      },
-      {
-        id: 'protein-sticky-tofu-6',
-        name: 'Sticky Sweet\'n\'Sour Tofu (6 serves · VG/GF)',
-        category: 'proteins',
-        categoryLabel: 'Vegan Protein Platter',
-        dietary: ['vegan', 'gluten-free', 'dairy-free'],
-        serves: 6,
-        price: 59.40,
-        unitName: 'Platter of 6 ($9.90 ea)',
-        image: 'assets/images/collection-salads.png',
-        description: 'Crispy organic tofu cubes (100g) tossed in sticky sweet and sour reduction with toasted sesame seeds and fresh lime.'
-      },
-
-      // ======================================================================
-      // 8. CANAPÉS SAVOURY — (min order 12 per item · Page 7)
-      // ======================================================================
-      {
-        id: 'canape-arancini-pumpkin-12',
-        name: 'Roast Pumpkin & Mozzarella Arancini (12 pk · V)',
-        category: 'canapes',
-        categoryLabel: 'Warm Canapé (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 94.80,
-        unitName: 'Dozen (12 pk · $7.90 ea)',
-        image: 'assets/images/real/mini-quiche.jpg',
-        description: 'Crispy arborio risotto spheres with roasted pumpkin, fresh sage, and melted mozzarella. Served with roasted garlic aioli.'
-      },
-      {
-        id: 'canape-potato-truffle-croquette-12',
-        name: 'Potato & Truffle Croquettes (12 pk · V)',
-        category: 'canapes',
-        categoryLabel: 'Warm Canapé (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 90.00,
-        unitName: 'Dozen (12 pk · $7.50 ea)',
-        image: 'assets/images/real/mini-quiche.jpg',
-        description: 'Crispy panko croquettes filled with velvety truffle-infused mashed potato and parmesan. Served with truffle aioli.'
-      },
-      {
-        id: 'canape-rice-paper-rolls-12',
-        name: 'Assorted Rice Paper Rolls (12 pk · GF)',
-        category: 'canapes',
-        categoryLabel: 'Fresh Canapé (12 pk)',
-        dietary: ['gluten-free'],
-        serves: 12,
-        price: 78.00,
-        unitName: 'Dozen (12 pk · $6.50 ea)',
-        image: 'assets/images/collection-salads.png',
-        description: 'Fresh Vietnamese rice paper rolls: Supergreen avocado (VG), BBQ pork with hoisin, and coconut chicken with nuoc cham.'
-      },
-      {
-        id: 'canape-mini-cheeseburgers-12',
-        name: 'Mini Angus Cheeseburgers (12 pk)',
-        category: 'canapes',
-        categoryLabel: 'Warm Canapé (12 pk)',
-        dietary: [],
-        serves: 12,
-        price: 94.80,
-        unitName: 'Dozen (12 pk · $7.90 ea)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Milk brioche slider buns with grass-fed Angus beef patties, melted cheddar, house pickles, ketchup, and mayo.'
-      },
-      {
-        id: 'canape-peking-duck-pancake-12',
-        name: 'Peking Duck Pancakes (12 pk)',
-        category: 'canapes',
-        categoryLabel: 'Handmade Canapé (12 pk)',
-        dietary: [],
-        serves: 12,
-        price: 82.80,
-        unitName: 'Dozen (12 pk · $6.90 ea)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Tender shredded Peking duck rolled in mandarin pancakes with spiced hoisin glaze and crisp fresh cucumber.'
-      },
-      {
-        id: 'canape-satay-beef-skewers-12',
-        name: 'Satay Beef & Onion Skewers (12 pk)',
-        category: 'canapes',
-        categoryLabel: 'Warm Skewers (12 pk)',
-        dietary: [],
-        serves: 12,
-        price: 102.00,
-        unitName: 'Dozen (12 pk · $8.50 ea)',
-        image: 'assets/images/real/mini-sausage-rolls.jpg',
-        description: 'Char-grilled marinated beef rump and charred onion skewers served with salsa verde mayo and fresh lime.'
-      },
-      {
-        id: 'canape-fried-chicken-bao-12',
-        name: 'Karaage Chicken Bao Buns (12 pk · GFO)',
-        category: 'canapes',
-        categoryLabel: 'Steamed Bao (12 pk)',
-        dietary: ['gluten-free'],
-        serves: 12,
-        price: 94.80,
-        unitName: 'Dozen (12 pk · $7.90 ea)',
-        image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Steamed fluffy lotus bao buns with crispy fried chicken karaage, crunchy white slaw, pickled red onion, and coriander.'
-      },
-
-      // ======================================================================
-      // 9. SWEETS & DESSERT CUPS — (min order 12 per item · Page 8)
-      // ======================================================================
-      {
-        id: 'dessert-raspberry-tart-12',
-        name: 'Raspberry Shortcrust Tarts (12 pk · V/GFO)',
-        category: 'desserts',
-        categoryLabel: 'Sweet Tartlets (12 pk)',
-        dietary: ['vegetarian', 'gluten-free'],
-        serves: 12,
-        price: 82.80,
-        unitName: 'Dozen (12 pk · $6.90 ea)',
-        image: 'assets/images/real/vanilla-raspberry-cupcakes.png',
-        description: 'Crisp short pastry tarts filled with vanilla crème pâtissière, fresh raspberries, and white chocolate shavings.'
-      },
-      {
-        id: 'dessert-mini-pavlova-12',
-        name: 'Mini Pavlovas with Summer Berries (12 pk · V/GF)',
-        category: 'desserts',
-        categoryLabel: 'Sweet Canapé (12 pk)',
-        dietary: ['gluten-free', 'vegetarian'],
-        serves: 12,
-        price: 82.80,
-        unitName: 'Dozen (12 pk · $6.90 ea)',
-        image: 'assets/images/real/pavlova-dessert.jpg',
-        description: 'Crisp marshmallow meringue nests crowned with whipped mascarpone cream, fresh summer berries, and raspberry dust.'
-      },
-      {
-        id: 'dessert-lemon-meringue-tart-12',
-        name: 'Torched Lemon Meringue Tarts (12 pk · V/GFO)',
-        category: 'desserts',
-        categoryLabel: 'Sweet Tartlets (12 pk)',
-        dietary: ['vegetarian', 'gluten-free'],
-        serves: 12,
-        price: 94.80,
-        unitName: 'Dozen (12 pk · $7.90 ea)',
-        image: 'assets/images/real/lemon-ricotta-cake.png',
-        description: 'Shortcrust pastry with sharp Meyer lemon curd crowned with golden-torched Italian meringue swirls.'
-      },
-      {
-        id: 'dessert-cup-eton-mess-12',
-        name: 'Dessert Cups — Eton Mess (12 pk · V/GF)',
-        category: 'desserts',
-        categoryLabel: 'Individual Dessert Cups (12 pk)',
-        dietary: ['gluten-free', 'vegetarian'],
-        serves: 12,
-        price: 114.00,
-        unitName: 'Pack of 12 ($9.50 ea)',
-        image: 'assets/images/real/eton-mess-cake.png',
-        description: 'Layers of crushed vanilla meringue, macerated Victorian strawberries and raspberries, and vanilla Chantilly cream.'
-      },
-      {
-        id: 'dessert-cup-tiramisu-12',
-        name: 'Dessert Cups — Tiramisu (12 pk · V)',
-        category: 'desserts',
-        categoryLabel: 'Individual Dessert Cups (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
-        price: 114.00,
-        unitName: 'Pack of 12 ($9.50 ea)',
-        image: 'assets/images/collection-traditional.jpg',
-        description: 'Espresso-soaked Savoiardi sponge fingers layered with creamy mascarpone sabayon and dusted with Dutch cocoa.'
-      },
-      {
-        id: 'dessert-cup-biscoff-12',
-        name: 'Dessert Cups — Layered Biscoff (12 pk · VG)',
-        category: 'desserts',
-        categoryLabel: 'Individual Dessert Cups (12 pk)',
-        dietary: ['vegan', 'dairy-free'],
-        serves: 12,
-        price: 114.00,
-        unitName: 'Pack of 12 ($9.50 ea)',
-        image: 'assets/images/real/cake-tasting-box.png',
-        description: 'Speculoos Biscoff biscuit crunch, coconut yoghurt, raspberry compote, and melted creamy Biscoff spread.'
-      },
-
-      // ======================================================================
-      // 10. KID\'S PARTIES & PACKAGES — (Pages 9 & 10)
-      // ======================================================================
-      {
-        id: 'kids-package-petite-10',
-        name: 'Kid\'s Party Package — PETITE (Serves 10)',
-        category: 'kids',
-        categoryLabel: 'All-Inclusive Package (10 Kids)',
-        dietary: [],
-        serves: 10,
-        price: 350.00,
-        unitName: 'Package for 10 ($35/child)',
-        image: 'assets/images/collection-kids.jpg',
-        description: 'Includes per child: Honey joy, lolly bag, fruit cup, ham/cheese ribbon, chicken nugget, mini sprinkles cupcake, 2x fairy bread, and mini water/juice.'
-      },
-      {
-        id: 'kids-package-grande-20',
-        name: 'Kid\'s Party Package — GRANDE (Serves 20)',
-        category: 'kids',
-        categoryLabel: 'All-Inclusive Package (20 Kids)',
-        dietary: [],
-        serves: 20,
-        price: 680.00,
-        unitName: 'Package for 20 ($34/child)',
-        image: 'assets/images/collection-kids.jpg',
-        description: 'Complete 20-child banquet feast with honey joys, lolly bags, fruit cups, ribbon sandwiches, nuggets, cupcakes, fairy bread, and drinks.'
-      },
+      // 10. KID'S PARTIES
       {
         id: 'kids-fairy-bread-50',
-        name: 'Fairy Bread Triangles Platter (50 pc · V)',
+        name: 'Fairy bread triangles (50 pc Â· V)',
         category: 'kids',
         categoryLabel: 'Party Tradition (50 pc)',
-        dietary: ['vegetarian'],
+        dietary: 'V',
         serves: 18,
         price: 49.00,
-        unitName: 'Platter of 50 Triangles',
+        min: 1,
+        unitName: 'Platter of 50',
         image: 'assets/images/real/fairy-bread.jpg',
-        description: 'Classic soft white bread crusts trimmed, spread with whipped butter and coated in vibrant 100s & 1000s sprinkles.'
+        description: 'Classic soft white bread crusts trimmed, spread with whipped butter and coated in vibrant 100s & 1000s sprinkles.',
+        options: []
       },
       {
-        id: 'kids-ribbon-ham-cheese-20',
-        name: 'Kid\'s Ham & Cheese Ribbon Sandwiches (20 pk · GFO)',
+        id: 'kids-ribbon-ham-cheese',
+        name: 'Ribbon sandwiches: leg ham, cheese, butter (20 pk)',
         category: 'kids',
         categoryLabel: 'Kid\'s Ribbons (20 pk)',
-        dietary: [],
+        dietary: 'GFO',
         serves: 12,
         price: 85.00,
-        unitName: 'Platter of 20',
+        min: 1,
+        unitName: 'Box of 20',
         image: 'assets/images/real/ribbon-sandwiches.jpg',
-        description: 'Crustless soft sandwich ribbons filled with shaved leg ham, mild cheddar cheese, and cultured butter.'
+        description: 'Crustless soft sandwich ribbons filled with shaved leg ham, mild cheddar cheese, and cultured butter.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option (+$5.50)', priceAdd: 5.50, min: 1 }
+        ]
+      },
+      {
+        id: 'kids-cookies-20',
+        name: 'Mini choc chip cookies (20 pk Â· V)',
+        category: 'kids',
+        categoryLabel: 'Party Treats (20 pk)',
+        dietary: 'V',
+        serves: 15,
+        price: 75.00,
+        min: 1,
+        unitName: 'Box of 20',
+        image: 'assets/images/real/choc-chip-cookies.jpg',
+        description: 'Bite-sized vanilla cookies packed with milk chocolate chips and baked to golden chewy perfection.',
+        options: []
       },
       {
         id: 'kids-honey-joys-12',
-        name: 'Honey Joys (12 pk · V)',
+        name: 'Honey Joys (12 pk Â· V)',
         category: 'kids',
         categoryLabel: 'Party Treats (12 pk)',
-        dietary: ['vegetarian'],
-        serves: 12,
+        dietary: 'V',
         price: 60.00,
-        unitName: 'Platter of 12 ($5.00 ea)',
+        min: 1,
+        serves: 12,
+        unitName: 'Platter of 12',
         image: 'assets/images/collection-kids.jpg',
-        description: 'Crunchy golden cornflakes baked with pure Australian honey, melted butter, and sugar in pastel paper cups.'
+        description: 'Crunchy golden cornflakes baked with pure Australian honey, melted butter, and sugar in pastel paper cups.',
+        options: []
       },
       {
-        id: 'kids-giant-number-cake',
-        name: 'Giant Number Celebration Cake (Serves 15–20)',
+        id: 'kids-sprinkles-cupcakes-12',
+        name: 'Mini sprinkles cupcakes (12 pk)',
         category: 'kids',
-        categoryLabel: 'Bespoke Milestone Cake',
-        dietary: ['vegetarian'],
+        categoryLabel: 'Party Cupcakes (12 pk)',
+        dietary: 'GFO',
+        serves: 12,
+        price: 50.00,
+        min: 1,
+        unitName: 'Box of 12',
+        image: 'assets/images/real/mini-cupcakes.jpg',
+        description: 'Vanilla sponge cupcakes with rainbow buttercream swirls and festive confetti sprinkles.',
+        options: [
+          { key: 'gfo', label: 'Gluten free option (+$5.00)', priceAdd: 5.00, min: 1 }
+        ]
+      },
+      {
+        id: 'kids-pkg-petite',
+        name: 'Kid\'s Party Package â€” PETITE (Serves 10)',
+        category: 'kids',
+        categoryLabel: 'All-Inclusive Package',
+        dietary: '',
+        serves: 10,
+        price: 350.00,
+        min: 1,
+        unitName: 'Package for 10',
+        image: 'assets/images/collection-kids.jpg',
+        description: 'Includes per child: Honey joy, lolly bag, fruit cup, ham/cheese ribbon, chicken nugget, mini cupcake, 2x fairy bread, and juice.',
+        options: []
+      },
+      {
+        id: 'kids-pkg-grande',
+        name: 'Kid\'s Party Package â€” GRANDE (Serves 20)',
+        category: 'kids',
+        categoryLabel: 'All-Inclusive Package',
+        dietary: '',
         serves: 20,
-        price: 165.00,
-        unitName: 'Serves 15–20',
-        image: 'assets/images/real/number-cake.jpg',
-        description: 'Custom dual-layer sponge carved into any number (0–9), piped with vanilla buttercream, macarons, fresh strawberries, and treats.'
+        price: 680.00,
+        min: 1,
+        unitName: 'Package for 20',
+        image: 'assets/images/collection-kids.jpg',
+        description: 'Complete 20-child feast: honey joys, lolly bags, fruit cups, ribbon sandwiches, nuggets, cupcakes, fairy bread, and bottled drinks.',
+        options: []
       }
     ];
 
-    // State Variables
+    // State
     let totalGuests = 25;
     let fulfillment = 'delivery'; // 'delivery' or 'pickup'
-    let timeSlot = 'Standard Midday Delivery (11:00am – 1:30pm)';
-    let paymentMethod = 'card';
-    let activeCategory = 'boxes';
-    const allocations = {}; // { dishId: quantity }
+    let timeSlot = 'Standard Midday Delivery (11:00am â€“ 1:30pm)';
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let activeDietFilter = '';
+    const orderAllocations = {}; // { dishId: { std: X, [optKey]: Y, totalQty: Z, totalCost: W } }
+    const cardTempQty = {}; // { dishId: { std: X, [optKey]: Y } }
 
     // DOM Elements
-    const guestsInput = document.getElementById('catTotalGuestsInput');
-    const guestsIncBtn = document.getElementById('catGuestsInc');
-    const guestsDecBtn = document.getElementById('catGuestsDec');
-    const dateInput = document.getElementById('catEventDateInput');
-    const fulfillDeliveryBtn = document.getElementById('catFulfillDeliveryBtn');
-    const fulfillPickupBtn = document.getElementById('catFulfillPickupBtn');
-    const deliveryFieldsWrap = document.getElementById('catDeliveryFieldsWrap');
-    const timeSlotSelect = document.getElementById('catTimeSlotSelect');
-    const tabModeBuilder = document.getElementById('tabModeBuilder');
-    const tabModeCatalog = document.getElementById('tabModeCatalog');
-    const studioContainer = document.getElementById('cateringStudioContainer');
     const dishesGrid = document.getElementById('catDishesGrid');
-    const receiptItemsList = document.getElementById('catReceiptItemsList');
-    const bookingForm = document.getElementById('catInstantBookingForm');
-    const resetAllocBtn = document.getElementById('catResetAllocationsBtn');
-    const addonLunchboxesCheck = document.getElementById('catAddonLunchboxes');
-    const addonCutleryCheck = document.getElementById('catAddonCutlery');
+    const quickGuestsVal = document.getElementById('catQuickGuestsVal');
+    const quickGuestsInc = document.getElementById('catQuickGuestsInc');
+    const quickGuestsDec = document.getElementById('catQuickGuestsDec');
+    const quickEventDate = document.getElementById('catQuickEventDate');
+    const quickPickupPill = document.getElementById('catQuickPickupPill');
+    const quickDeliveryPill = document.getElementById('catQuickDeliveryPill');
+    const quickTimeWindow = document.getElementById('catQuickTimeWindow');
+    const searchInput = document.getElementById('catDishSearchInput');
 
-    // Strictly enforce minimum 4 business days notice as per F&H Policy (Page 11)
-    if (dateInput) {
+    // Date setup: minimum 4 business days notice
+    if (quickEventDate) {
       const minDate = new Date();
       minDate.setDate(minDate.getDate() + 4);
       const defaultDate = new Date();
       defaultDate.setDate(defaultDate.getDate() + 5);
 
-      const formatDateStr = (d) => {
+      const toDateInputStr = (d) => {
         const y = d.getFullYear();
         const m = String(d.getMonth() + 1).padStart(2, '0');
         const day = String(d.getDate()).padStart(2, '0');
         return `${y}-${m}-${day}`;
       };
 
-      dateInput.min = formatDateStr(minDate);
-      dateInput.value = formatDateStr(defaultDate);
+      quickEventDate.min = toDateInputStr(minDate);
+      quickEventDate.value = toDateInputStr(defaultDate);
     }
 
-    // Mode Switcher (1-Minute Builder vs Catalog Grid)
-    tabModeBuilder?.addEventListener('click', () => {
-      tabModeBuilder.classList.add('active');
-      tabModeCatalog?.classList.remove('active');
-      if (studioContainer) studioContainer.style.display = 'block';
-    });
+    // Guests adjustment
+    function setGuests(val) {
+      totalGuests = Math.max(5, Math.min(500, parseInt(val, 10) || 25));
+      if (quickGuestsVal) quickGuestsVal.textContent = totalGuests;
 
-    tabModeCatalog?.addEventListener('click', () => {
-      tabModeCatalog.classList.add('active');
-      tabModeBuilder?.classList.remove('active');
-      const catalogEl = document.getElementById('productsGrid');
-      if (catalogEl) {
-        catalogEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-
-    // Guests Stepper Controls
-    function setGuests(newVal) {
-      totalGuests = Math.max(5, Math.min(500, parseInt(newVal, 10) || 5));
-      if (guestsInput) guestsInput.value = totalGuests;
-
-      document.querySelectorAll('.cat-guest-chip').forEach(chip => {
-        const cVal = parseInt(chip.getAttribute('data-guests'), 10);
-        if (cVal === totalGuests) chip.classList.add('active');
-        else chip.classList.remove('active');
+      document.querySelectorAll('.cat-quick-chip').forEach(chip => {
+        const cVal = parseInt(chip.getAttribute('data-val'), 10);
+        chip.classList.toggle('active', cVal === totalGuests);
       });
 
-      renderCateringStudio();
+      renderLiveOrderSummary();
     }
 
-    guestsIncBtn?.addEventListener('click', () => setGuests(totalGuests + 5));
-    guestsDecBtn?.addEventListener('click', () => setGuests(totalGuests - 5));
-    guestsInput?.addEventListener('change', (e) => setGuests(e.target.value));
+    quickGuestsInc?.addEventListener('click', () => setGuests(totalGuests + 5));
+    quickGuestsDec?.addEventListener('click', () => setGuests(totalGuests - 5));
 
-    document.querySelectorAll('.cat-guest-chip').forEach(chip => {
+    document.querySelectorAll('.cat-quick-chip').forEach(chip => {
       chip.addEventListener('click', () => {
-        const val = parseInt(chip.getAttribute('data-guests'), 10);
-        setGuests(val);
+        const val = parseInt(chip.getAttribute('data-val'), 10);
+        if (val) setGuests(val);
       });
     });
 
-    // Fulfillment Switcher
-    fulfillDeliveryBtn?.addEventListener('click', () => {
-      fulfillment = 'delivery';
-      fulfillDeliveryBtn.classList.add('active');
-      fulfillPickupBtn?.classList.remove('active');
-      if (deliveryFieldsWrap) deliveryFieldsWrap.style.display = 'block';
-      renderCateringStudio();
-    });
-
-    fulfillPickupBtn?.addEventListener('click', () => {
+    // Fulfillment toggles
+    quickPickupPill?.addEventListener('click', () => {
       fulfillment = 'pickup';
-      fulfillPickupBtn.classList.add('active');
-      fulfillDeliveryBtn?.classList.remove('active');
-      if (deliveryFieldsWrap) deliveryFieldsWrap.style.display = 'none';
-      renderCateringStudio();
+      quickPickupPill.classList.add('active');
+      quickDeliveryPill?.classList.remove('active');
+      renderLiveOrderSummary();
     });
 
-    timeSlotSelect?.addEventListener('change', (e) => {
+    quickDeliveryPill?.addEventListener('click', () => {
+      fulfillment = 'delivery';
+      quickDeliveryPill.classList.add('active');
+      quickPickupPill?.classList.remove('active');
+      renderLiveOrderSummary();
+    });
+
+    quickTimeWindow?.addEventListener('change', (e) => {
       timeSlot = e.target.value;
+      renderLiveOrderSummary();
     });
 
-    // Add-on checkboxes
-    addonLunchboxesCheck?.addEventListener('change', () => renderCateringStudio());
-    addonCutleryCheck?.addEventListener('change', () => renderCateringStudio());
-
-    // Category Filter Pills & Dynamic Descriptions (Linen & Ladle Reference)
-    const categoryInfoMap = {
-      'all': {
-        title: 'All Catering Items',
-        desc: 'Guests build their own spread. Handcrafted in our Kew bakery daily for boardroom lunches and celebration banquets.'
-      },
-      'boxes': {
-        title: 'Catering Boxes',
-        desc: 'Signature warm pastries, handcrafted sausage rolls, quiches, and gourmet sandwich ribbons packed ready-to-serve.'
-      },
-      'patisserie': {
-        title: 'Patisserie & Baked',
-        desc: 'Lescure butter viennoiseries, artisan scones with house raspberry jam, pain au chocolat, and breakfast treats.'
-      },
-      'brunch': {
-        title: 'Brunch & Sliders',
-        desc: 'Warm breakfast sliders, baked egg bowls, seasonal Victorian fruit platters, and wholesome morning spreads.'
-      },
-      'sandwiches': {
-        title: 'Sandwiches & Wraps',
-        desc: 'Crustless soft white ribbon sandwiches, artisan baguettes, poached chicken, and seasonal vegetarian fillings.'
-      },
-      'focaccia': {
-        title: 'Housemade Focaccia',
-        desc: 'Slow-fermented artisan focaccia slabs topped with rosemary, sea salt, stracciatella, mortadella, and pestos.'
-      },
-      'salads': {
-        title: 'Gourmet Salads',
-        desc: 'Fresh seasonal banquet bowls including Cypriot grain, heirloom tomato burrata, roasted cauliflower & spiced chickpeas.'
-      },
-      'proteins': {
-        title: 'Proteins & Mains',
-        desc: 'Slow-roasted Victorian meats, herb-crusted salmon, tender free-range chicken fillets, and substantial event platters.'
-      },
-      'canapes': {
-        title: 'Savoury Canapés',
-        desc: 'Bite-sized cocktail party delights: golden arancini, caramelised onion tartlets, and skewers.'
-      },
-      'desserts': {
-        title: 'Sweets & Desserts',
-        desc: 'Atelier petite tarts, mini pavlovas, espresso tiramisu dessert cups, and French macarons.'
-      },
-      'kids': {
-        title: "Kid's Packages",
-        desc: 'Complete feast packages with nostalgic fairy bread, handcrafted nuggets, sausage rolls, and sprinkle cupcakes.'
-      }
-    };
-
+    // Category Tabs
     document.querySelectorAll('.cat-menu-pill').forEach(pill => {
       pill.addEventListener('click', () => {
         document.querySelectorAll('.cat-menu-pill').forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
-        activeCategory = pill.getAttribute('data-cat') || 'boxes';
+        activeCategory = pill.getAttribute('data-cat') || 'all';
 
-        const info = categoryInfoMap[activeCategory] || categoryInfoMap['boxes'];
-        const catTitleEl = document.getElementById('catCategoryTitle');
-        const catDescEl = document.getElementById('catCategoryDesc');
-        if (catTitleEl) catTitleEl.textContent = info.title;
-        if (catDescEl) catDescEl.textContent = info.desc;
+        const titleEl = document.getElementById('catCategoryTitle');
+        const descEl = document.getElementById('catCategoryDesc');
+        if (titleEl) {
+          titleEl.textContent = activeCategory === 'all' ? 'All Catering Dishes' : pill.textContent;
+        }
+        if (descEl) {
+          descEl.textContent = 'Handcrafted from scratch daily in our Kew patisserie atelier. Select your quantities and dietary options below.';
+        }
 
         renderDishesDeck();
       });
     });
 
-    // Event Parameters Modal Wiring
-    const paramsModal = document.getElementById('catParamsModal');
-    const paramsBackdrop = document.getElementById('catParamsModalBackdrop');
-    const openParamsBtn = document.getElementById('catOpenParamsModalBtn');
-    const changeParamsBtn = document.getElementById('catChangeOrderParamsBtn');
-    const closeParamsBtn = document.getElementById('catParamsModalCloseBtn');
-    const saveParamsBtn = document.getElementById('catSaveParamsBtn');
-
-    function openParamsModal() {
-      paramsModal?.classList.add('open');
-      paramsBackdrop?.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeParamsModal() {
-      paramsModal?.classList.remove('open');
-      paramsBackdrop?.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    openParamsBtn?.addEventListener('click', openParamsModal);
-    changeParamsBtn?.addEventListener('click', openParamsModal);
-    closeParamsBtn?.addEventListener('click', closeParamsModal);
-    paramsBackdrop?.addEventListener('click', closeParamsModal);
-
-    saveParamsBtn?.addEventListener('click', () => {
-      if (guestsInput) totalGuests = Math.max(5, parseInt(guestsInput.value, 10) || 25);
-      closeParamsModal();
-      renderCateringStudio();
-      showToast(`✓ Updated: ${totalGuests} Guests · ${fulfillment === 'pickup' ? 'Kew Pickup' : 'Delivery'}`);
+    // Dietary Filter Chips
+    document.querySelectorAll('.cat-diet-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.cat-diet-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeDietFilter = chip.getAttribute('data-diet') || '';
+        renderDishesDeck();
+      });
     });
 
-    // Checkout Modal Wiring
+    // Search input
+    searchInput?.addEventListener('input', (e) => {
+      searchQuery = (e.target.value || '').trim().toLowerCase();
+      renderDishesDeck();
+    });
+
+    // Helper: render dietary circular badges with full tooltip
+    function renderDietaryBadges(dietaryStr) {
+      if (!dietaryStr) return '';
+      // parse tags like "V/GFO/VGO" or "V/VO/GFO +$1"
+      const cleaned = dietaryStr.replace(/\s*\+\$[0-9.]+/g, '');
+      const rawTags = cleaned.split('/');
+
+      return rawTags.map(tag => {
+        const trimmed = tag.trim();
+        if (!trimmed) return '';
+        const isOpt = trimmed.endsWith('O') || trimmed.includes('OPT');
+        const fullName = DIET_FULL_NAMES[trimmed] || trimmed;
+        const cls = isOpt ? 'cat-diet-circle diet-opt' : 'cat-diet-circle diet-solid';
+        const displayLabel = isOpt ? trimmed : trimmed;
+
+        return `
+          <div class="cat-diet-badge-wrap">
+            <span class="${cls}" tabindex="0" aria-label="${fullName}">${displayLabel}</span>
+            <div class="cat-diet-tip">${fullName}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Helper: compute dish back validation & totals
+    function evaluateDishQuantities(dish, qtyState) {
+      const stdQty = parseInt(qtyState.std, 10) || 0;
+      let totalQty = stdQty;
+      let totalCost = stdQty * dish.price;
+      const optionErrors = [];
+
+      (dish.options || []).forEach(opt => {
+        const optQty = parseInt(qtyState[opt.key], 10) || 0;
+        totalQty += optQty;
+        totalCost += optQty * (dish.price + opt.priceAdd);
+
+        if (optQty > 0 && opt.min && optQty < opt.min) {
+          optionErrors.push(`Minimum ${opt.min} required for ${opt.label}.`);
+        }
+      });
+
+      let minOrderError = '';
+      if (dish.min && totalQty > 0 && totalQty < dish.min) {
+        minOrderError = `Minimum order quantity is ${dish.min} ${dish.unitName}. (You have ${totalQty}, please add ${dish.min - totalQty} more)`;
+      } else if (totalQty === 0) {
+        minOrderError = `Please select at least ${dish.min || 1} ${dish.unitName} to add.`;
+      }
+
+      const isValid = (totalQty >= (dish.min || 1)) && (optionErrors.length === 0);
+
+      return {
+        totalQty,
+        totalCost: Math.round(totalCost * 100) / 100,
+        optionErrors,
+        minOrderError,
+        isValid
+      };
+    }
+
+    // Render Dishes Grid
+    function renderDishesDeck() {
+      if (!dishesGrid) return;
+
+      const filtered = cateringDishes.filter(dish => {
+        // Category check
+        if (activeCategory !== 'all' && dish.category !== activeCategory) {
+          return false;
+        }
+        // Dietary filter check
+        if (activeDietFilter) {
+          if (!dish.dietary || !dish.dietary.includes(activeDietFilter)) {
+            return false;
+          }
+        }
+        // Search query check
+        if (searchQuery) {
+          const matchName = dish.name.toLowerCase().includes(searchQuery);
+          const matchDesc = dish.description.toLowerCase().includes(searchQuery);
+          const matchDiet = (dish.dietary || '').toLowerCase().includes(searchQuery);
+          if (!matchName && !matchDesc && !matchDiet) return false;
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        dishesGrid.innerHTML = `
+          <div style="grid-column: 1 / -1; padding: 3rem 1rem; text-align: center; color: #717171; font-family: var(--font-brand);">
+            <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">No dishes match your filter criteria.</p>
+            <button type="button" class="btn-outline-pill" onclick="window.fhApp.resetCatFilters()">Reset Filters</button>
+          </div>
+        `;
+        return;
+      }
+
+      dishesGrid.innerHTML = filtered.map(dish => {
+        const orderData = orderAllocations[dish.id];
+        const isAllocated = !!orderData && orderData.totalQty > 0;
+        const dietHtml = renderDietaryBadges(dish.dietary);
+
+        // Current temporary state for back inputs
+        const currentQ = cardTempQty[dish.id] || {
+          std: orderData ? orderData.std : (dish.min || 1),
+          ...(dish.options || []).reduce((acc, opt) => {
+            acc[opt.key] = orderData ? (orderData[opt.key] || 0) : 0;
+            return acc;
+          }, {})
+        };
+
+        const evalState = evaluateDishQuantities(dish, currentQ);
+
+        // Options rows HTML for back of card
+        const optionsHtml = (dish.options || []).map(opt => {
+          const optQty = currentQ[opt.key] || 0;
+          const priceLine = opt.priceAdd > 0 ? `+$${opt.priceAdd.toFixed(2)} ea` : 'No surcharge';
+
+          return `
+            <div class="cat-back-option-row">
+              <div class="cat-back-option-left">
+                <span class="cat-back-option-label">
+                  ${opt.label}
+                  ${opt.min ? `<span class="cat-back-min-badge">Min ${opt.min}</span>` : ''}
+                </span>
+                <span class="cat-back-option-price">${priceLine}</span>
+              </div>
+              <div class="cat-back-stepper">
+                <button type="button" onclick="window.fhApp.adjustBackQty('${dish.id}', '${opt.key}', -1)">-</button>
+                <input type="number" min="0" value="${optQty}" onchange="window.fhApp.setBackQty('${dish.id}', '${opt.key}', this.value)" aria-label="${opt.label} count">
+                <button type="button" onclick="window.fhApp.adjustBackQty('${dish.id}', '${opt.key}', 1)">+</button>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        const alertHtml = evalState.minOrderError || evalState.optionErrors.length > 0 ? `
+          <div class="cat-back-alert">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <div>${evalState.minOrderError || evalState.optionErrors.join('<br>')}</div>
+          </div>
+        ` : '';
+
+        return `
+          <div class="cat-dish-card ${isAllocated ? 'is-allocated' : ''}" id="catCard_${dish.id}">
+            <div class="cat-card-flip-inner">
+              
+              <!-- FRONT FACE -->
+              <div class="cat-card-face cat-face-front">
+                <div class="cat-dish-media">
+                  <img src="${dish.image}" alt="${dish.name}" class="cat-dish-img" loading="lazy">
+                  <div class="cat-diet-pills-row">
+                    ${dietHtml}
+                  </div>
+                </div>
+                <div class="cat-dish-body">
+                  <span class="cat-dish-kicker">${dish.categoryLabel}</span>
+                  <h3 class="cat-dish-name">${dish.name}</h3>
+                  <p class="cat-dish-desc">${dish.description}</p>
+                  
+                  <div class="cat-dish-footer">
+                    <div class="cat-dish-pricing">
+                      <span class="cat-dish-price-main">$${dish.price.toFixed(2)}</span>
+                      <span class="cat-dish-min-note">${dish.unitName}${dish.min > 1 ? ` &middot; Min ${dish.min}` : ''}</span>
+                    </div>
+                    <button type="button" class="cat-open-flip-btn" onclick="window.fhApp.flipCard('${dish.id}')">
+                      ${isAllocated ? `Edit (${orderData.totalQty})` : 'Add to order'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BACK FACE: CONFIGURATION & QUANTITIES -->
+              <div class="cat-card-face cat-face-back">
+                <div class="cat-back-header">
+                  <h4 class="cat-back-title">${dish.name}</h4>
+                  <p class="cat-back-rule">
+                    ${dish.min > 1 ? `Minimum ${dish.min} ${dish.unitName}` : 'Select your portions'}
+                  </p>
+                </div>
+
+                <div class="cat-back-options-list">
+                  <!-- Standard Option Row -->
+                  <div class="cat-back-option-row">
+                    <div class="cat-back-option-left">
+                      <span class="cat-back-option-label">Standard Option</span>
+                      <span class="cat-back-option-price">$${dish.price.toFixed(2)} each</span>
+                    </div>
+                    <div class="cat-back-stepper">
+                      <button type="button" onclick="window.fhApp.adjustBackQty('${dish.id}', 'std', -1)">-</button>
+                      <input type="number" min="0" value="${currentQ.std}" onchange="window.fhApp.setBackQty('${dish.id}', 'std', this.value)" aria-label="Standard option quantity">
+                      <button type="button" onclick="window.fhApp.adjustBackQty('${dish.id}', 'std', 1)">+</button>
+                    </div>
+                  </div>
+
+                  <!-- Modification Options Rows (GFO, VO, VGO) -->
+                  ${optionsHtml}
+                </div>
+
+                <!-- Validation Alerts -->
+                <div id="catAlert_${dish.id}">
+                  ${alertHtml}
+                </div>
+
+                <div class="cat-back-footer">
+                  <div class="cat-back-total-line">
+                    <span class="cat-back-total-label" id="catTotalLabel_${dish.id}">${evalState.totalQty} items</span>
+                    <span class="cat-back-total-price" id="catTotalPrice_${dish.id}">$${evalState.totalCost.toFixed(2)}</span>
+                  </div>
+                  <div class="cat-back-actions">
+                    <button type="button" class="cat-back-cancel-btn" onclick="window.fhApp.unflipCard('${dish.id}')">Cancel</button>
+                    <button type="button" class="cat-back-submit-btn" id="catConfirmBtn_${dish.id}" ${!evalState.isValid ? 'disabled' : ''} onclick="window.fhApp.confirmDishOrder('${dish.id}')">
+                      Confirm &amp; Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Interactive Card Flip Functions
+    window.fhApp.flipCard = (dishId) => {
+      const card = document.getElementById(`catCard_${dishId}`);
+      if (!card) return;
+
+      const dish = cateringDishes.find(d => d.id === dishId);
+      if (!dish) return;
+
+      // Initialize temp state if not exists
+      if (!cardTempQty[dishId]) {
+        const existing = orderAllocations[dishId];
+        cardTempQty[dishId] = {
+          std: existing ? existing.std : (dish.min || 1),
+          ...(dish.options || []).reduce((acc, opt) => {
+            acc[opt.key] = existing ? (existing[opt.key] || 0) : 0;
+            return acc;
+          }, {})
+        };
+      }
+
+      card.classList.add('is-flipped');
+    };
+
+    window.fhApp.unflipCard = (dishId) => {
+      const card = document.getElementById(`catCard_${dishId}`);
+      if (card) card.classList.remove('is-flipped');
+    };
+
+    // Live update for back face steppers
+    function updateBackFaceLive(dishId) {
+      const dish = cateringDishes.find(d => d.id === dishId);
+      if (!dish) return;
+
+      const qState = cardTempQty[dishId] || { std: dish.min || 1 };
+      const evalState = evaluateDishQuantities(dish, qState);
+
+      const alertEl = document.getElementById(`catAlert_${dishId}`);
+      const totalLabelEl = document.getElementById(`catTotalLabel_${dishId}`);
+      const totalPriceEl = document.getElementById(`catTotalPrice_${dishId}`);
+      const confirmBtn = document.getElementById(`catConfirmBtn_${dishId}`);
+
+      if (alertEl) {
+        if (evalState.minOrderError || evalState.optionErrors.length > 0) {
+          alertEl.innerHTML = `
+            <div class="cat-back-alert">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <div>${evalState.minOrderError || evalState.optionErrors.join('<br>')}</div>
+            </div>
+          `;
+        } else {
+          alertEl.innerHTML = '';
+        }
+      }
+
+      if (totalLabelEl) totalLabelEl.textContent = `${evalState.totalQty} items`;
+      if (totalPriceEl) totalPriceEl.textContent = `$${evalState.totalCost.toFixed(2)}`;
+      if (confirmBtn) confirmBtn.disabled = !evalState.isValid;
+    }
+
+    window.fhApp.adjustBackQty = (dishId, key, delta) => {
+      if (!cardTempQty[dishId]) cardTempQty[dishId] = { std: 0 };
+      const curr = parseInt(cardTempQty[dishId][key], 10) || 0;
+      cardTempQty[dishId][key] = Math.max(0, curr + delta);
+
+      // Re-render that card's inputs or update inputs directly
+      renderDishesDeck();
+      // Keep flipped
+      const card = document.getElementById(`catCard_${dishId}`);
+      if (card) card.classList.add('is-flipped');
+    };
+
+    window.fhApp.setBackQty = (dishId, key, val) => {
+      if (!cardTempQty[dishId]) cardTempQty[dishId] = { std: 0 };
+      cardTempQty[dishId][key] = Math.max(0, parseInt(val, 10) || 0);
+      updateBackFaceLive(dishId);
+    };
+
+    window.fhApp.confirmDishOrder = (dishId) => {
+      const dish = cateringDishes.find(d => d.id === dishId);
+      if (!dish) return;
+
+      const qState = cardTempQty[dishId] || { std: dish.min || 1 };
+      const evalState = evaluateDishQuantities(dish, qState);
+
+      if (!evalState.isValid) {
+        showToast('Please ensure minimum order quantities are met before confirming.');
+        return;
+      }
+
+      orderAllocations[dishId] = {
+        ...qState,
+        totalQty: evalState.totalQty,
+        totalCost: evalState.totalCost
+      };
+
+      window.fhApp.unflipCard(dishId);
+      renderDishesDeck();
+      renderLiveOrderSummary();
+      showToast(`Added ${evalState.totalQty}x ${dish.name} to order.`);
+    };
+
+    window.fhApp.removeCatOrderLine = (dishId) => {
+      delete orderAllocations[dishId];
+      delete cardTempQty[dishId];
+      renderDishesDeck();
+      renderLiveOrderSummary();
+      showToast('Item removed from order.');
+    };
+
+    window.fhApp.resetCatFilters = () => {
+      activeCategory = 'all';
+      activeDietFilter = '';
+      searchQuery = '';
+      if (searchInput) searchInput.value = '';
+      document.querySelectorAll('.cat-menu-pill').forEach(p => p.classList.toggle('active', p.getAttribute('data-cat') === 'all'));
+      document.querySelectorAll('.cat-diet-chip').forEach(c => c.classList.toggle('active', c.getAttribute('data-diet') === ''));
+      renderDishesDeck();
+    };
+
+    // Live Order Summary Receipt & Headcount Tracker
+    function renderLiveOrderSummary() {
+      const receiptItemsList = document.getElementById('catReceiptItemsList');
+      const subtotalDisplay = document.getElementById('catSubtotalDisplay');
+      const addonsRow = document.getElementById('catAddonsRow');
+      const addonsDisplay = document.getElementById('catAddonsDisplay');
+      const deliveryFeeDisplay = document.getElementById('catDeliveryFeeDisplay');
+      const grandTotalDisplay = document.getElementById('catGrandTotalDisplay');
+      const btnTotalBadge = document.getElementById('catBtnTotalBadge');
+      const allocatedTally = document.getElementById('catOrderAllocatedTally');
+      const targetTally = document.getElementById('catOrderTargetTally');
+      const progressFill = document.getElementById('catOrderProgressFill');
+      const statusBadge = document.getElementById('catOrderStatusBadge');
+      const paramsSummary = document.getElementById('catOrderParamsSummary');
+
+      let foodSubtotal = 0;
+      let totalPortions = 0;
+      const orderKeys = Object.keys(orderAllocations);
+
+      const itemsHtml = orderKeys.map(dishId => {
+        const dish = cateringDishes.find(d => d.id === dishId);
+        const alloc = orderAllocations[dishId];
+        if (!dish || !alloc || alloc.totalQty <= 0) return '';
+
+        foodSubtotal += alloc.totalCost;
+        totalPortions += (alloc.totalQty * (dish.serves || 1));
+
+        // Sub-breakdown details
+        const details = [];
+        if (alloc.std > 0) details.push(`${alloc.std}x Standard ($${dish.price.toFixed(2)} ea)`);
+        (dish.options || []).forEach(opt => {
+          if (alloc[opt.key] > 0) {
+            const extraStr = opt.priceAdd > 0 ? ` (+$${opt.priceAdd.toFixed(2)} ea)` : '';
+            details.push(`${alloc[opt.key]}x ${opt.label}${extraStr}`);
+          }
+        });
+
+        return `
+          <div class="cat-receipt-item" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; gap: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px;">
+              <strong style="font-family: var(--font-brand); font-size: 0.92rem; color: #ffffff;">${dish.name}</strong>
+              <span style="font-family: var(--font-brand); font-weight: 600; color: #a7b2a3;">$${alloc.totalCost.toFixed(2)}</span>
+            </div>
+            <div style="font-family: var(--font-brand); font-size: 0.74rem; color: #a7b2a3; line-height: 1.4;">
+              ${details.join(' &middot; ')}
+            </div>
+            <div style="display: flex; gap: 12px; margin-top: 4px;">
+              <button type="button" style="background: none; border: 0; padding: 0; color: #ffffff; text-decoration: underline; font-family: var(--font-brand); font-size: 0.72rem; cursor: pointer;" onclick="window.fhApp.flipCard('${dish.id}')">Edit</button>
+              <button type="button" style="background: none; border: 0; padding: 0; color: #e57373; text-decoration: underline; font-family: var(--font-brand); font-size: 0.72rem; cursor: pointer;" onclick="window.fhApp.removeCatOrderLine('${dish.id}')">Remove</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      if (receiptItemsList) {
+        if (orderKeys.length === 0) {
+          receiptItemsList.innerHTML = `
+            <div class="cat-order-empty-state" id="catReceiptEmpty">
+              <div class="cat-order-empty-title">Nothing added yet</div>
+              <div class="cat-order-empty-text">Click <strong>Add to order</strong> on any dish to choose standard and dietary counts.</div>
+            </div>
+          `;
+        } else {
+          receiptItemsList.innerHTML = itemsHtml;
+        }
+      }
+
+      // Addons calculation
+      const hasLunchboxes = document.getElementById('catAddonLunchboxes')?.checked || false;
+      const hasCutlery = document.getElementById('catAddonCutlery')?.checked || false;
+      const lunchboxCost = hasLunchboxes ? (totalGuests * 1.50) : 0;
+      const cutleryCost = hasCutlery ? (totalGuests * 1.00) : 0;
+      const addonsTotal = lunchboxCost + cutleryCost;
+
+      // Delivery fee
+      const deliveryFee = fulfillment === 'delivery' ? 60.00 : 0.00;
+      const grandTotal = foodSubtotal + addonsTotal + deliveryFee;
+
+      // Display sync
+      if (subtotalDisplay) subtotalDisplay.textContent = `$${foodSubtotal.toFixed(2)}`;
+      if (addonsRow) addonsRow.style.display = addonsTotal > 0 ? 'flex' : 'none';
+      if (addonsDisplay) addonsDisplay.textContent = `$${addonsTotal.toFixed(2)}`;
+      if (deliveryFeeDisplay) deliveryFeeDisplay.textContent = fulfillment === 'delivery' ? '$60.00' : 'FREE';
+      if (grandTotalDisplay) grandTotalDisplay.textContent = `$${grandTotal.toFixed(2)}`;
+      if (btnTotalBadge) btnTotalBadge.textContent = `$${grandTotal.toFixed(2)}`;
+
+      // Tally & Progress
+      if (allocatedTally) allocatedTally.textContent = totalPortions;
+      if (targetTally) targetTally.textContent = totalGuests;
+      const pct = Math.min(100, Math.round((totalPortions / totalGuests) * 100));
+      if (progressFill) progressFill.style.width = `${pct}%`;
+      if (statusBadge) statusBadge.textContent = `${pct}%`;
+
+      // Event Parameters Line
+      let evDateFormatted = 'Min 4 days notice';
+      if (quickEventDate && quickEventDate.value) {
+        const parts = quickEventDate.value.split('-');
+        if (parts.length === 3) {
+          const dObj = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+          evDateFormatted = dObj.toLocaleDateString('en-AU', { weekday: 'short', month: 'short', day: 'numeric' });
+        }
+      }
+
+      if (paramsSummary) {
+        paramsSummary.innerHTML = `${totalGuests} guests &middot; ${evDateFormatted} &middot; ${fulfillment === 'delivery' ? 'Delivery ($60)' : 'Kew Pickup (Free)'}`;
+      }
+    }
+
+    // Checkout Modal Setup
     const checkoutModal = document.getElementById('catCheckoutModal');
     const checkoutBackdrop = document.getElementById('catCheckoutModalBackdrop');
-    const checkoutTriggerBtn = document.getElementById('catCheckoutBtn');
+    const checkoutBtn = document.getElementById('catCheckoutBtn');
     const closeCheckoutBtn = document.getElementById('catCheckoutModalCloseBtn');
 
-    function openCheckoutModal() {
-      const allocatedGuests = Object.entries(allocations).reduce((sum, [id, qty]) => {
-        const item = cateringDishes.find(d => d.id === id);
-        return sum + (item ? item.serves * qty : 0);
-      }, 0);
-
-      if (allocatedGuests === 0) {
-        showToast('⚠️ Please tap Add on dishes to add them to your order before checkout!');
+    function openCheckout() {
+      const orderCount = Object.keys(orderAllocations).length;
+      if (orderCount === 0) {
+        showToast('Please add at least one dish to your catering order before checking out.');
         return;
       }
       checkoutModal?.classList.add('open');
@@ -4099,490 +4733,19 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = 'hidden';
     }
 
-    function closeCheckoutModal() {
+    function closeCheckout() {
       checkoutModal?.classList.remove('open');
       checkoutBackdrop?.classList.remove('open');
       document.body.style.overflow = '';
     }
 
-    checkoutTriggerBtn?.addEventListener('click', openCheckoutModal);
-    closeCheckoutBtn?.addEventListener('click', closeCheckoutModal);
-    checkoutBackdrop?.addEventListener('click', closeCheckoutModal);
-
-    // Payment Method Buttons
-    document.querySelectorAll('.cat-pay-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.cat-pay-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        paymentMethod = tab.getAttribute('data-pay') || 'card';
-      });
-    });
-
-    // Allocation Adjusters
-    function changeAllocation(dishId, delta) {
-      const curr = allocations[dishId] || 0;
-      const next = Math.max(0, curr + delta);
-      if (next === 0) {
-        delete allocations[dishId];
-      } else {
-        allocations[dishId] = next;
-      }
-      renderCateringStudio();
-    }
-
-    function feedRemaining(dishId) {
-      const dish = cateringDishes.find(d => d.id === dishId);
-      if (!dish) return;
-
-      const currentAllocated = Object.entries(allocations).reduce((sum, [id, qty]) => {
-        const item = cateringDishes.find(d => d.id === id);
-        return sum + (item ? item.serves * qty : 0);
-      }, 0);
-
-      const remaining = Math.max(0, totalGuests - currentAllocated);
-      if (remaining > 0) {
-        const unitsNeeded = Math.ceil(remaining / dish.serves);
-        allocations[dishId] = (allocations[dishId] || 0) + unitsNeeded;
-        renderCateringStudio();
-        showToast(`✓ Added ${unitsNeeded}x ${dish.name} (Feeds ${unitsNeeded * dish.serves} guests)`);
-      } else {
-        allocations[dishId] = (allocations[dishId] || 0) + 1;
-        renderCateringStudio();
-        showToast(`✓ Added 1x ${dish.name} (+${dish.serves} extra guest portions)`);
-      }
-    }
-
-    // Core Render Engine
-    function renderCateringStudio() {
-      renderDishesDeck();
-      renderLiveReceiptAndTracker();
-    }
-
-    function renderDishesDeck() {
-      if (!dishesGrid) return;
-
-      const filtered = activeCategory === 'all'
-        ? cateringDishes
-        : cateringDishes.filter(d => d.category === activeCategory);
-
-      dishesGrid.innerHTML = filtered.map(dish => {
-        const qty = allocations[dish.id] || 0;
-        const isAllocated = qty > 0;
-        const perGuestCost = (dish.price / dish.serves).toFixed(2);
-
-        const dietBadges = (dish.dietary || []).map(d => {
-          let label = d.toUpperCase();
-          if (d === 'gluten-free') label = 'GF';
-          if (d === 'vegetarian') label = 'VEG';
-          if (d === 'vegan') label = 'VEGAN';
-          if (d === 'dairy-free') label = 'DF';
-          return `<span class="cat-dish-diet-tag">${label}</span>`;
-        }).join('');
-
-        return `
-          <div class="cat-dish-card ${isAllocated ? 'is-allocated' : ''}" id="catCard_${dish.id}">
-            <div class="cat-dish-media">
-              <img src="${dish.image}" alt="${dish.name}" class="cat-dish-img" loading="lazy">
-              <div class="cat-dish-diet-pills">
-                ${dietBadges}
-              </div>
-            </div>
-            <div class="cat-dish-body">
-              <span class="cat-dish-kicker">${dish.categoryLabel}</span>
-              <h4 class="cat-dish-name">${dish.name}</h4>
-              <p class="cat-dish-desc">${dish.description}</p>
-              
-              <div class="cat-dish-footer">
-                <div class="cat-dish-pricing">
-                  <div class="cat-dish-price-per-guest">$${perGuestCost} <span class="per-guest-label">per guest</span></div>
-                  <div class="cat-dish-price-total">$${dish.price.toFixed(2)} total · ${dish.unitName} (feeds ${dish.serves})</div>
-                </div>
-
-                <div class="cat-dish-action">
-                  ${qty === 0 ? `
-                    <button type="button" class="cat-add-btn" onclick="window.fhApp.changeCatDish('${dish.id}', 1)" aria-label="Add ${dish.name}">
-                      <span>Add</span>
-                    </button>
-                  ` : `
-                    <div class="cat-card-stepper">
-                      <button type="button" class="cat-stepper-mini-btn" onclick="window.fhApp.changeCatDish('${dish.id}', -1)" aria-label="Decrease quantity">−</button>
-                      <span class="cat-stepper-mini-val">${qty}</span>
-                      <button type="button" class="cat-stepper-mini-btn" onclick="window.fhApp.changeCatDish('${dish.id}', 1)" aria-label="Increase quantity">+</button>
-                    </div>
-                  `}
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    function renderLiveReceiptAndTracker() {
-      // 1. Calculate Allocations and Categories
-      let allocatedGuests = 0;
-      let subtotal = 0;
-      let gfGuests = 0;
-      let vegGuests = 0;
-      let savouryGuests = 0;
-      let sweetGuests = 0;
-
-      let morningGuests = 0;
-      let savouriesGuests = 0;
-      let plattersGuests = 0;
-      let dietaryGuests = 0;
-      let sweetsGuests = 0;
-
-      const itemsSelected = [];
-
-      Object.entries(allocations).forEach(([dishId, qty]) => {
-        if (qty <= 0) return;
-        const dish = cateringDishes.find(d => d.id === dishId);
-        if (!dish) return;
-
-        const count = qty * dish.serves;
-        const cost = qty * dish.price;
-        allocatedGuests += count;
-        subtotal += cost;
-
-        // Dietary tags
-        if (dish.dietary?.includes('gluten-free')) gfGuests += count;
-        if (dish.dietary?.includes('vegetarian') || dish.dietary?.includes('vegan')) vegGuests += count;
-        
-        // Savoury vs Sweet classification
-        if (['boxes', 'brunch', 'sandwiches', 'focaccia', 'salads', 'proteins', 'canapes'].includes(dish.category)) {
-          savouryGuests += count;
-        }
-        if (['patisserie', 'desserts', 'kids'].includes(dish.category)) {
-          sweetGuests += count;
-        }
-
-        // Multi-segment progress bar classification
-        if (dish.category === 'patisserie' || dish.category === 'brunch') morningGuests += count;
-        if (dish.category === 'canapes' || dish.category === 'proteins') savouriesGuests += count;
-        if (dish.category === 'boxes' || dish.category === 'focaccia' || dish.category === 'sandwiches') plattersGuests += count;
-        if (dish.category === 'salads' || dish.dietary?.includes('gluten-free')) dietaryGuests += count;
-        if (dish.category === 'desserts' || dish.category === 'kids') sweetsGuests += count;
-
-        itemsSelected.push({ dish, qty, count, cost });
-      });
-
-      // Add-ons calculations (Page 13 FAQ: Lunchboxes $1.50 ea, Cutlery $1.00 ea)
-      const hasLunchboxes = document.getElementById('catAddonLunchboxes')?.checked || false;
-      const hasCutlery = document.getElementById('catAddonCutlery')?.checked || false;
-      const lunchboxCost = hasLunchboxes ? (totalGuests * 1.50) : 0;
-      const cutleryCost = hasCutlery ? (totalGuests * 1.00) : 0;
-      const addonsTotal = lunchboxCost + cutleryCost;
-
-      // Delivery Fee calculation (Page 12: Delivery starts from $60.00 inc GST; Pickup is free)
-      const deliveryFee = fulfillment === 'delivery' ? 60.00 : 0.00;
-      const grandTotal = subtotal + addonsTotal + deliveryFee;
-      const costPerGuest = totalGuests > 0 ? ((subtotal + addonsTotal) / totalGuests) : 0;
-      const remainingGuests = totalGuests - allocatedGuests;
-
-      // 2. Sync Event Summary Ribbon (Top Bar)
-      const ribbonGuests = document.getElementById('catRibbonGuests');
-      const ribbonDate = document.getElementById('catRibbonDate');
-      const ribbonFulfill = document.getElementById('catRibbonFulfillment');
-      if (ribbonGuests) ribbonGuests.textContent = `${totalGuests} Guests`;
-
-      let eventDateFormatted = '4 Business Days Pre-Order';
-      let eventDateShort = 'Scheduled date';
-      if (dateInput && dateInput.value) {
-        const parts = dateInput.value.split('-');
-        if (parts.length === 3) {
-          const dObj = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
-          eventDateFormatted = dObj.toLocaleDateString('en-AU', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
-          eventDateShort = dObj.toLocaleDateString('en-AU', { weekday: 'short', month: 'short', day: 'numeric' });
-        }
-      }
-
-      if (ribbonDate) ribbonDate.textContent = eventDateFormatted;
-      if (ribbonFulfill) ribbonFulfill.textContent = fulfillment === 'pickup' ? 'Kew Boutique Pickup (Free)' : 'Metro Courier Delivery ($60)';
-
-      // 3. Sync "Your order" Header Line
-      const orderParamsSummary = document.getElementById('catOrderParamsSummary');
-      if (orderParamsSummary) {
-        const timeLabel = timeSlot.includes('(') ? timeSlot.split('(')[1].replace(')', '') : timeSlot;
-        orderParamsSummary.textContent = `${totalGuests} guests · ${eventDateShort} · ${timeLabel}`;
-      }
-
-      // 4. Update Guest Allocation Progress Bar & Tally
-      const orderAllocTally = document.getElementById('catOrderAllocatedTally');
-      const orderTargetTally = document.getElementById('catOrderTargetTally');
-      const orderStatusBadge = document.getElementById('catOrderStatusBadge');
-      const orderProgressFill = document.getElementById('catOrderProgressFill');
-
-      if (orderAllocTally) orderAllocTally.textContent = allocatedGuests;
-      if (orderTargetTally) orderTargetTally.textContent = totalGuests;
-
-      const fedPct = Math.round((allocatedGuests / Math.max(1, totalGuests)) * 100);
-      if (orderStatusBadge) {
-        if (allocatedGuests === 0) {
-          orderStatusBadge.textContent = '0%';
-        } else if (allocatedGuests < totalGuests) {
-          orderStatusBadge.textContent = `${fedPct}%`;
-        } else if (allocatedGuests === totalGuests) {
-          orderStatusBadge.textContent = '100% Fed';
-        } else {
-          orderStatusBadge.textContent = `${fedPct}% (+${allocatedGuests - totalGuests})`;
-        }
-      }
-      if (orderProgressFill) {
-        orderProgressFill.style.width = `${Math.min(100, fedPct)}%`;
-      }
-
-      // 5. Update Selected Items List (Empty state vs Selected rows)
-      if (receiptItemsList) {
-        if (itemsSelected.length === 0) {
-          receiptItemsList.innerHTML = `
-            <div class="cat-order-empty-state" id="catReceiptEmpty">
-              <div class="cat-order-empty-title">Nothing added yet</div>
-              <div class="cat-order-empty-text">Tap <strong>Add</strong> on any dish and it will appear here.</div>
-            </div>
-          `;
-        } else {
-          let rowsHtml = itemsSelected.map(item => `
-            <div class="cat-receipt-item-row">
-              <div class="cat-receipt-item-info">
-                <div class="cat-receipt-item-name">${item.dish.name}</div>
-                <div class="cat-receipt-item-sub">${item.qty}x ${item.dish.unitName} · Feeds ${item.count} guests</div>
-              </div>
-              <div class="cat-receipt-item-cost">$${item.cost.toFixed(2)}</div>
-              <button type="button" class="cat-receipt-item-remove" onclick="window.fhApp.removeCatDish('${item.dish.id}')" title="Remove dish" aria-label="Remove ${item.dish.name}">✕</button>
-            </div>
-          `).join('');
-
-          receiptItemsList.innerHTML = rowsHtml;
-        }
-      }
-
-      // 6. Totals & Financial Breakdown
-      const subtotalEl = document.getElementById('catSubtotalDisplay');
-      const addonsRowEl = document.getElementById('catAddonsRow');
-      const addonsDisplayEl = document.getElementById('catAddonsDisplay');
-      const deliveryTitleEl = document.getElementById('catDeliveryTitle');
-      const deliveryEl = document.getElementById('catDeliveryFeeDisplay');
-      const gstEl = document.getElementById('catGstDisplay');
-      const grandTotalEl = document.getElementById('catGrandTotalDisplay');
-      const btnTotalBadge = document.getElementById('catBtnTotalBadge');
-      const checkoutSummaryText = document.getElementById('catCheckoutSummaryText');
-
-      if (subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
-
-      if (addonsRowEl && addonsDisplayEl) {
-        if (addonsTotal > 0) {
-          addonsRowEl.style.display = 'flex';
-          addonsDisplayEl.textContent = `$${addonsTotal.toFixed(2)}`;
-        } else {
-          addonsRowEl.style.display = 'none';
-        }
-      }
-
-      if (deliveryTitleEl) deliveryTitleEl.textContent = fulfillment === 'pickup' ? 'Boutique Pickup' : 'Delivery and setup';
-      if (deliveryEl) deliveryEl.textContent = fulfillment === 'pickup' ? 'Free (Pickup)' : `$${deliveryFee.toFixed(2)}`;
-      if (gstEl) gstEl.textContent = `$${(grandTotal / 11).toFixed(2)}`;
-      if (grandTotalEl) grandTotalEl.textContent = `$${grandTotal.toFixed(2)}`;
-      if (btnTotalBadge) btnTotalBadge.textContent = `$${grandTotal.toFixed(2)}`;
-
-      if (checkoutSummaryText) {
-        checkoutSummaryText.textContent = `${totalGuests} Guests · ${eventDateShort} · ${fulfillment === 'pickup' ? 'Pickup' : 'Delivery'} · Total $${grandTotal.toFixed(2)}`;
-      }
-
-      // Mobile Floating Action Bar & Top Tracker Cart updates
-      const mfbFedTally = document.getElementById('catMfbFedTally');
-      const mfbTotalDisplay = document.getElementById('catMfbTotalDisplay');
-      const trackerCartTotal = document.getElementById('catTrackerCartTotal');
-      if (mfbFedTally) mfbFedTally.textContent = `${allocatedGuests} / ${totalGuests} Fed`;
-      if (mfbTotalDisplay) mfbTotalDisplay.textContent = `$${grandTotal.toFixed(2)}`;
-      if (trackerCartTotal) trackerCartTotal.textContent = `$${grandTotal.toFixed(2)}`;
-    }
-
-    // Fast 1-Minute Booking Submission (Zero Email Back-and-Forth)
-    bookingForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const allocatedGuests = Object.entries(allocations).reduce((sum, [id, qty]) => {
-        const item = cateringDishes.find(d => d.id === id);
-        return sum + (item ? item.serves * qty : 0);
-      }, 0);
-
-      if (allocatedGuests === 0) {
-        showToast('⚠️ Please allocate at least one dish for your guests before reserving!');
-        return;
-      }
-
-      const firstName = document.getElementById('catClientFirstName')?.value.trim() || '';
-      const lastName = document.getElementById('catClientLastName')?.value.trim() || '';
-      const email = document.getElementById('catClientEmail')?.value.trim() || '';
-      const phone = document.getElementById('catClientPhone')?.value.trim() || '';
-      const street = document.getElementById('catDeliveryStreet')?.value.trim() || '';
-      const suburb = document.getElementById('catDeliverySuburb')?.value.trim() || '';
-      const evDate = dateInput?.value || 'Scheduled Date';
-
-      const hasLunchboxes = document.getElementById('catAddonLunchboxes')?.checked || false;
-      const hasCutlery = document.getElementById('catAddonCutlery')?.checked || false;
-      const lunchboxCost = hasLunchboxes ? (totalGuests * 1.50) : 0;
-      const cutleryCost = hasCutlery ? (totalGuests * 1.00) : 0;
-      const addonsTotal = lunchboxCost + cutleryCost;
-
-      const bookingRef = 'FH-CAT-2026-' + Math.floor(10000 + Math.random() * 90000);
-
-      // Populate Manifest Modal Slip
-      const refEl = document.getElementById('manifestRefNum');
-      const clientNameEl = document.getElementById('manifestClientName');
-      const clientContactEl = document.getElementById('manifestClientContact');
-      const dateTimeEl = document.getElementById('manifestDateTime');
-      const fulfillTypeEl = document.getElementById('manifestFulfillType');
-      const itemsListEl = document.getElementById('manifestItemsList');
-      const guestSummaryEl = document.getElementById('manifestGuestSummary');
-      const grandTotalEl = document.getElementById('manifestGrandTotal');
-      const notesTextEl = document.getElementById('manifestNotesText');
-
-      if (refEl) refEl.textContent = `#${bookingRef}`;
-      if (clientNameEl) clientNameEl.textContent = `${firstName} ${lastName}`;
-      if (clientContactEl) clientContactEl.textContent = `${email} · ${phone}`;
-      if (dateTimeEl) dateTimeEl.textContent = `${evDate} · ${timeSlot}`;
-      if (fulfillTypeEl) fulfillTypeEl.textContent = fulfillment === 'delivery' ? `Refrigerated Metro Courier (${street ? `${street}, ${suburb}` : 'Melbourne Metro'})` : 'Boutique Collection (259 High St, Kew · After 11:00am)';
-
-      let subtotal = 0;
-      let itemsHtml = Object.entries(allocations).map(([id, qty]) => {
-        const dish = cateringDishes.find(d => d.id === id);
-        if (!dish || qty <= 0) return '';
-        const cost = qty * dish.price;
-        subtotal += cost;
-        return `
-          <div style="display: flex; justify-content: space-between; padding: 0.35rem 0; border-bottom: 1px dashed #eee;">
-            <span>${qty}x ${dish.name} (Feeds ${qty * dish.serves} guests)</span>
-            <strong>$${cost.toFixed(2)}</strong>
-          </div>
-        `;
-      }).join('');
-
-      if (hasLunchboxes) {
-        itemsHtml += `
-          <div style="display: flex; justify-content: space-between; padding: 0.35rem 0; border-bottom: 1px dashed #eee;">
-            <span>Individual Eco Lunch Boxes (${totalGuests} guests @ $1.50 ea)</span>
-            <strong>$${lunchboxCost.toFixed(2)}</strong>
-          </div>
-        `;
-      }
-      if (hasCutlery) {
-        itemsHtml += `
-          <div style="display: flex; justify-content: space-between; padding: 0.35rem 0; border-bottom: 1px dashed #eee;">
-            <span>Eco Serviettes & Cutlery Sets (${totalGuests} guests @ $1.00 ea)</span>
-            <strong>$${cutleryCost.toFixed(2)}</strong>
-          </div>
-        `;
-      }
-
-      const deliveryFee = fulfillment === 'delivery' ? 60.00 : 0.00;
-      const totalAmount = subtotal + addonsTotal + deliveryFee;
-
-      if (itemsListEl) {
-        itemsListEl.innerHTML = itemsHtml + (fulfillment === 'delivery' ? `
-          <div style="display: flex; justify-content: space-between; padding: 0.35rem 0; color: #555;">
-            <span>Refrigerated Metro Courier Delivery (8:30am – 3:30pm Window)</span>
-            <span>$60.00</span>
-          </div>
-        ` : `
-          <div style="display: flex; justify-content: space-between; padding: 0.35rem 0; color: #2e7d32;">
-            <span>Boutique Collection at 259 High St, Kew</span>
-            <span>FREE</span>
-          </div>
-        `);
-      }
-
-      if (guestSummaryEl) guestSummaryEl.textContent = `${allocatedGuests} Portions Allocated (${totalGuests} Guests Total)`;
-      if (grandTotalEl) grandTotalEl.textContent = `$${totalAmount.toFixed(2)} AUD (GST Incl)`;
-      if (notesTextEl) notesTextEl.innerHTML = `Frank & Harri Kew Atelier Policy confirmed. Min 4 business days notice. Tel: 0476669616 | info@frankandharri.com.au. Payment: ${paymentMethod.toUpperCase()}.`;
-
-      // Google Calendar Link
-      const calBtn = document.getElementById('catAddToCalendarBtn');
-      if (calBtn) {
-        const evTitle = encodeURIComponent(`Frank & Harri Kew — Catering Reservation #${bookingRef} (${totalGuests} Guests)`);
-        const evDetails = encodeURIComponent(`Booking Ref: #${bookingRef}\nOrganizer: ${firstName} ${lastName}\nGuests: ${totalGuests}\nTime: ${timeSlot}\nPayment: ${paymentMethod.toUpperCase()}\nTotal: $${totalAmount.toFixed(2)} AUD`);
-        const evLoc = encodeURIComponent(fulfillment === 'delivery' ? `${street}, ${suburb}` : '259 High Street, Kew VIC 3101');
-        calBtn.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${evTitle}&details=${evDetails}&location=${evLoc}`;
-      }
-
-      // Close Checkout Modal & Catering Cart Drawer
-      closeCheckoutModal();
-      closeCateringDrawer();
-
-      // Open Manifest Modal
-      const manifestModal = document.getElementById('catManifestModal');
-      if (manifestModal) {
-        manifestModal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      }
-
-      showToast(`✓ Banquet #${bookingRef} Confirmed in 60s! Zero email back-and-forth required.`, 7000);
-    });
-
-    // Close Manifest Modal
-    const manifestCloseBtn = document.getElementById('catManifestCloseBtn');
-    const manifestDoneBtn = document.getElementById('catManifestDoneBtn');
-    const manifestBackdrop = document.getElementById('catManifestBackdrop');
-    const manifestModal = document.getElementById('catManifestModal');
-
-    function closeManifest() {
-      manifestModal?.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    manifestCloseBtn?.addEventListener('click', closeManifest);
-    manifestDoneBtn?.addEventListener('click', closeManifest);
-    manifestBackdrop?.addEventListener('click', closeManifest);
-
-    // Global Expositions for onclick handlers
-    window.fhApp.changeCatDish = (dishId, delta) => changeAllocation(dishId, delta);
-    window.fhApp.feedCatRemaining = (dishId) => feedRemaining(dishId);
-    window.fhApp.removeCatDish = (dishId) => {
-      delete allocations[dishId];
-      renderCateringStudio();
-    };
-
-    // Cart Drawer Toggle Logic (Mobile & Tablet)
-    const receiptDock = document.getElementById('catReceiptDock');
-    const receiptBackdrop = document.getElementById('catReceiptBackdrop');
-    const receiptCloseBtn = document.getElementById('catReceiptCloseBtn');
-
-    function openCateringDrawer() {
-      if (window.innerWidth <= 1040) {
-        receiptDock?.classList.add('open');
-        receiptBackdrop?.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      } else {
-        receiptDock?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-
-    function closeCateringDrawer() {
-      receiptDock?.classList.remove('open');
-      receiptBackdrop?.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    document.getElementById('catMfbScrollBtn')?.addEventListener('click', openCateringDrawer);
-    document.getElementById('catTrackerCartBtn')?.addEventListener('click', openCateringDrawer);
-    receiptCloseBtn?.addEventListener('click', closeCateringDrawer);
-    receiptBackdrop?.addEventListener('click', closeCateringDrawer);
-
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 1040) {
-        closeCateringDrawer();
-      }
-    });
-
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && receiptDock?.classList.contains('open')) {
-        closeCateringDrawer();
-      }
-    });
+    checkoutBtn?.addEventListener('click', openCheckout);
+    closeCheckoutBtn?.addEventListener('click', closeCheckout);
+    checkoutBackdrop?.addEventListener('click', closeCheckout);
 
     // Initial Render
-    renderCateringStudio();
+    renderDishesDeck();
+    renderLiveOrderSummary();
   }
 
   // --------------------------------------------------------------------------
@@ -4617,7 +4780,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const product = products.find(p => p.id === productId) || products[0];
 
     // Page Title & Headings
-    document.title = `${product.name} — Frank & Harri Patisserie Kew · Melbourne`;
+    document.title = `${product.name} â€” Frank & Harri Patisserie Kew Â· Melbourne`;
     const bcTitle = document.getElementById('pdp3BreadcrumbTitle');
     if (bcTitle) bcTitle.textContent = product.name;
     const bcCat = document.getElementById('pdp3BreadcrumbCategory');
@@ -4662,7 +4825,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sizing Options
     const bruceSizes = [
-      { name: '6"', label: '6" - (serves 7–8)', serves: 'serves 7–8', price: 109.00 },
+      { name: '6"', label: '6" - (serves 7â€“8)', serves: 'serves 7â€“8', price: 109.00 },
       { name: '9"', label: '9" - (serves 12-14)', serves: 'serves 12-14', price: 159.00 },
       { name: '12"', label: '12" - (serves 20-22)', serves: 'serves 20-22', price: 209.00 }
     ];
@@ -4680,7 +4843,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let plaqueText = '';
     let quantity = 1;
     let selectedDate = 'Fri, 31 Oct';
-    let selectedTime = '11:00am – 1:00pm';
+    let selectedTime = '11:00am â€“ 1:00pm';
     let selectedAddons = [];
 
     // DOM Elements
@@ -4716,10 +4879,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const total = unitPrice * quantity;
 
       if (priceDisplay) priceDisplay.textContent = `$${unitPrice.toFixed(2)}`;
-      if (addBtnText) addBtnText.textContent = `Add to Bag — $${total.toFixed(2)} AUD`;
+      if (addBtnText) addBtnText.textContent = `Add to Bag â€” $${total.toFixed(2)} AUD`;
       if (selectedSizeLabel) selectedSizeLabel.textContent = `${selectedSize.name} - (${selectedSize.serves})`;
       if (selectedPlaqueLabel) selectedPlaqueLabel.textContent = hasPlaque ? 'Plaque (+$7.90)' : 'No plaque';
-      if (selectedDateLabel) selectedDateLabel.textContent = `${selectedDate} · ${selectedTime}`;
+      if (selectedDateLabel) selectedDateLabel.textContent = `${selectedDate} Â· ${selectedTime}`;
       if (dockPrice) dockPrice.textContent = `$${unitPrice.toFixed(2)}`;
       if (dockVariant) dockVariant.textContent = `${selectedSize.name} (${selectedSize.serves})`;
     }
@@ -4739,7 +4902,7 @@ document.addEventListener('DOMContentLoaded', () => {
           selectedSize = {
             name: btn.getAttribute('data-size') || '6"',
             label: `${btn.getAttribute('data-size')} - (${btn.getAttribute('data-serves')})`,
-            serves: btn.getAttribute('data-serves') || 'serves 7–8',
+            serves: btn.getAttribute('data-serves') || 'serves 7â€“8',
             price: parsedPrice
           };
         }
@@ -4831,7 +4994,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => {
         slotBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        selectedTime = btn.getAttribute('data-slot') || '11:00am – 1:00pm';
+        selectedTime = btn.getAttribute('data-slot') || '11:00am â€“ 1:00pm';
         updateView();
       });
     });
@@ -5089,7 +5252,7 @@ document.addEventListener('DOMContentLoaded', () => {
           showToast('Reviews auto-glide enabled');
         } else {
           autoScrollToggle.classList.remove('active');
-          autoScrollToggle.innerHTML = '<span class="pdp3-auto-text">▶ Resume Glide</span>';
+          autoScrollToggle.innerHTML = '<span class="pdp3-auto-text">â–¶ Resume Glide</span>';
           showToast('Reviews auto-glide paused');
         }
       });
@@ -5245,11 +5408,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let reviewRating = 5;
 
     const starDescriptions = {
-      1: '1 Star · Poor Experience',
-      2: '2 Stars · Fair Experience',
-      3: '3 Stars · Good & Enjoyable',
-      4: '4 Stars · Wonderful Experience',
-      5: '5 Stars · Exceptional Celebration'
+      1: '1 Star Â· Poor Experience',
+      2: '2 Stars Â· Fair Experience',
+      3: '3 Stars Â· Good & Enjoyable',
+      4: '4 Stars Â· Wonderful Experience',
+      5: '5 Stars Â· Exceptional Celebration'
     };
 
     function openReviewModal() {
@@ -5338,7 +5501,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const nameParts = author.split(' ');
         const initials = (nameParts[0] ? nameParts[0][0] : 'G') + (nameParts[1] ? nameParts[1][0] : '');
 
-        const starGoldIcons = '★'.repeat(reviewRating) + '☆'.repeat(5 - reviewRating);
+        const starGoldIcons = 'â˜…'.repeat(reviewRating) + 'â˜†'.repeat(5 - reviewRating);
         const newRevId = `rev_user_${Date.now()}`;
 
         // Create new article card
@@ -5364,7 +5527,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     Verified Order
                   </span>
                 </div>
-                <span class="pdp3-reviewer-loc">${loc} · Ordered ${sizeChosen}</span>
+                <span class="pdp3-reviewer-loc">${loc} Â· Ordered ${sizeChosen}</span>
               </div>
             </div>
             <span class="pdp3-review-date">Just now</span>
@@ -5380,7 +5543,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           <div class="pdp3-review-foot">
             <button type="button" class="pdp3-helpful-btn voted" data-review-id="${newRevId}" aria-label="Mark review as helpful">
-              <span class="pdp3-thumb-icon">👍</span>
+              <span class="pdp3-thumb-icon">ðŸ‘</span>
               <span>Helpful (<span class="pdp3-helpful-count">1</span>)</span>
             </button>
             <span class="pdp3-purchased-variant">Format: ${sizeChosen}</span>
@@ -5434,22 +5597,22 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="pdp3-reviewer-meta">
                 <div class="pdp3-reviewer-name-row">
                   <strong class="pdp3-reviewer-name">Amelia K.</strong>
-                  <span class="pdp3-verified-badge">✓ Verified Order</span>
+                  <span class="pdp3-verified-badge">âœ“ Verified Order</span>
                 </div>
-                <span class="pdp3-reviewer-loc">Armadale VIC · Ordered 9" Classic</span>
+                <span class="pdp3-reviewer-loc">Armadale VIC Â· Ordered 9" Classic</span>
               </div>
             </div>
             <span class="pdp3-review-date">4 weeks ago</span>
           </div>
           <div class="pdp3-review-stars-row">
-            <span class="pdp3-stars-gold">★★★★★</span>
+            <span class="pdp3-stars-gold">â˜…â˜…â˜…â˜…â˜…</span>
             <span class="pdp3-badge-pill">Milestone 21st Birthday</span>
           </div>
           <h3 class="pdp3-review-headline">"The texture of the buttermilk layers is sublime."</h3>
           <p class="pdp3-review-body">We have ordered celebration cakes from several top Melbourne patisseries, but Frank & Harri's chocolate fudge frosting remains unmatched. Elegant, not overly sugary, and looked gorgeous in photos.</p>
           <div class="pdp3-review-foot">
             <button type="button" class="pdp3-helpful-btn" data-review-id="rev_extra_1">
-              <span class="pdp3-thumb-icon">👍</span>
+              <span class="pdp3-thumb-icon">ðŸ‘</span>
               <span>Helpful (<span class="pdp3-helpful-count">14</span>)</span>
             </button>
             <span class="pdp3-purchased-variant">Format: 9" - (serves 12-14)</span>
@@ -5469,25 +5632,25 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="pdp3-reviewer-meta">
                 <div class="pdp3-reviewer-name-row">
                   <strong class="pdp3-reviewer-name">Tom & Sarah H.</strong>
-                  <span class="pdp3-verified-badge">✓ Verified Order</span>
+                  <span class="pdp3-verified-badge">âœ“ Verified Order</span>
                 </div>
-                <span class="pdp3-reviewer-loc">Malvern VIC · Ordered 6" Petite</span>
+                <span class="pdp3-reviewer-loc">Malvern VIC Â· Ordered 6" Petite</span>
               </div>
             </div>
             <span class="pdp3-review-date">1 month ago</span>
           </div>
           <div class="pdp3-review-stars-row">
-            <span class="pdp3-stars-gold">★★★★★</span>
+            <span class="pdp3-stars-gold">â˜…â˜…â˜…â˜…â˜…</span>
             <span class="pdp3-badge-pill">Family Gathering</span>
           </div>
           <h3 class="pdp3-review-headline">"Devoured within 10 minutes at the dinner table."</h3>
           <p class="pdp3-review-body">The chocolate plaque was so meticulously piped. Picked up smoothly on Saturday morning in Kew. Will definitely order again for Christmas!</p>
           <div class="pdp3-review-foot">
             <button type="button" class="pdp3-helpful-btn" data-review-id="rev_extra_2">
-              <span class="pdp3-thumb-icon">👍</span>
+              <span class="pdp3-thumb-icon">ðŸ‘</span>
               <span>Helpful (<span class="pdp3-helpful-count">11</span>)</span>
             </button>
-            <span class="pdp3-purchased-variant">Format: 6" - (serves 7–8)</span>
+            <span class="pdp3-purchased-variant">Format: 6" - (serves 7â€“8)</span>
           </div>
         `;
 
@@ -5496,7 +5659,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setupHelpfulButtons(extraCard1);
         setupHelpfulButtons(extraCard2);
 
-        loadMoreBtn.innerHTML = '<span>All 128 Verified Reviews Loaded ✓</span>';
+        loadMoreBtn.innerHTML = '<span>All 128 Verified Reviews Loaded âœ“</span>';
         loadMoreBtn.disabled = true;
         loadMoreBtn.style.opacity = '0.6';
         loadMoreBtn.style.cursor = 'default';
@@ -5571,10 +5734,629 @@ document.addEventListener('DOMContentLoaded', () => {
     updateView();
   }
 
+  // --------------------------------------------------------------------------
+  // 20. Product-4: Studio Card Reference PDP Layout (Frank & Harri Authentic)
+  // --------------------------------------------------------------------------
+  function initProduct4Page() {
+    const pdp4Main = document.getElementById('pdp4Main');
+    if (!pdp4Main && document.body.getAttribute('data-page') !== 'product-4') return;
+
+    // Gallery Elements
+    const heroImg = document.getElementById('pdp4HeroImg');
+    const photoBadge = document.getElementById('pdp4PhotoBadge');
+    const prevBtn = document.getElementById('pdp4PrevBtn');
+    const nextBtn = document.getElementById('pdp4NextBtn');
+    const counterPill = document.getElementById('pdp4Counter');
+    const thumbBtns = Array.from(document.querySelectorAll('.pdp4-thumb-btn'));
+
+    // Plaque Elements
+    const plaqueOverlay = document.getElementById('pdp4PlaqueOverlay');
+    const plaqueLiveText = document.getElementById('pdp4PlaqueLiveText');
+    const plaqueToggleBox = document.getElementById('pdp4PlaqueToggleBox');
+    const plaqueCheckbox = document.getElementById('pdp4PlaqueCheckbox');
+    const plaqueInputWrap = document.getElementById('pdp4PlaqueInputWrap');
+    const plaqueInput = document.getElementById('pdp4PlaqueInput');
+    const charCounter = document.getElementById('pdp4CharCounter');
+
+    // Controls
+    const sizeCards = Array.from(document.querySelectorAll('.pdp4-size-card'));
+    const portionLink = document.getElementById('pdp4PortionLink');
+    const dateBtns = Array.from(document.querySelectorAll('.pdp4-date-btn'));
+    const timeBtns = Array.from(document.querySelectorAll('.pdp4-time-btn'));
+    const addonCards = Array.from(document.querySelectorAll('.pdp4-addon-card'));
+
+    // Stepper & Add to Bag
+    const qtyMinus = document.getElementById('pdp4QtyMinus');
+    const qtyPlus = document.getElementById('pdp4QtyPlus');
+    const qtyValue = document.getElementById('pdp4QtyValue');
+    const addToCartBtn = document.getElementById('pdp4AddToCartBtn');
+    const totalBtnPrice = document.getElementById('pdp4TotalBtnPrice');
+    const orderSummaryText = document.getElementById('pdp4OrderSummaryText');
+
+    // Express Checkout
+    const applePayBtn = document.getElementById('pdp4ApplePayBtn');
+    const googlePayBtn = document.getElementById('pdp4GooglePayBtn');
+    const shopPayBtn = document.getElementById('pdp4ShopPayBtn');
+    const conciergeTrigger = document.getElementById('pdp4ConciergeTrigger');
+
+    // Tab buttons & panes
+    const tabBtns = Array.from(document.querySelectorAll('.pdp4-tab-pill'));
+    const tabPanes = Array.from(document.querySelectorAll('.pdp4-tab-pane'));
+
+    // Photos data
+    const photos = [
+      { src: 'assets/images/bruce-cake-1.png', badge: 'PHOTO: WHOLE CAKE, FRONT VIEW' },
+      { src: 'assets/images/bruce-cake-2.png', badge: 'PHOTO: 5-LAYER SLICE DETAIL' },
+      { src: 'assets/images/bruce-cake-3.png', badge: 'PHOTO: GIFT BOX & PLAQUE' }
+    ];
+    let currentPhotoIdx = 0;
+
+    function setPhoto(idx) {
+      if (idx < 0) idx = photos.length - 1;
+      if (idx >= photos.length) idx = 0;
+      currentPhotoIdx = idx;
+
+      if (heroImg) {
+        heroImg.src = photos[idx].src;
+      }
+      if (photoBadge) {
+        photoBadge.textContent = photos[idx].badge;
+      }
+      if (counterPill) {
+        counterPill.textContent = `${idx + 1} / ${photos.length}`;
+      }
+      thumbBtns.forEach((tb, i) => {
+        tb.classList.toggle('active', i === idx);
+      });
+    }
+
+    thumbBtns.forEach((tb, i) => {
+      tb.addEventListener('click', () => setPhoto(i));
+    });
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => setPhoto(currentPhotoIdx - 1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => setPhoto(currentPhotoIdx + 1));
+    }
+
+    // State
+    let selectedSize = 12;
+    let selectedSizeName = '12" Grand Banquet';
+    let selectedSizePrice = 209;
+    let plaqueEnabled = true;
+    const plaqueFee = 7.90;
+    let plaqueText = plaqueInput ? plaqueInput.value.trim() : 'Happy 30th, Leo';
+    let selectedDate = 'Thu 5 Nov';
+    let selectedTime = '11:00am - 1:00pm';
+    let quantity = 1;
+
+    // Size card click
+    sizeCards.forEach(card => {
+      card.addEventListener('click', () => {
+        sizeCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        selectedSize = parseInt(card.getAttribute('data-size'), 10);
+        selectedSizeName = card.getAttribute('data-name');
+        selectedSizePrice = parseFloat(card.getAttribute('data-price'));
+        updatePricing();
+      });
+    });
+
+    // Plaque toggle
+    function updatePlaqueState(enabled) {
+      plaqueEnabled = enabled;
+      if (plaqueCheckbox) plaqueCheckbox.checked = enabled;
+      if (plaqueToggleBox) plaqueToggleBox.classList.toggle('active', enabled);
+      if (plaqueInputWrap) plaqueInputWrap.classList.toggle('visible', enabled);
+      if (plaqueOverlay) plaqueOverlay.classList.toggle('visible', enabled);
+      updatePricing();
+    }
+
+    if (plaqueCheckbox) {
+      plaqueCheckbox.addEventListener('change', (e) => {
+        updatePlaqueState(e.target.checked);
+      });
+    }
+    if (plaqueToggleBox) {
+      plaqueToggleBox.addEventListener('click', (e) => {
+        if (e.target === plaqueCheckbox || e.target.closest('.pdp4-switch') || e.target.closest('.pdp4-slider')) return;
+        updatePlaqueState(!plaqueEnabled);
+      });
+    }
+
+    // Plaque text input
+    if (plaqueInput) {
+      plaqueInput.addEventListener('input', () => {
+        plaqueText = plaqueInput.value;
+        const count = plaqueText.length;
+        if (charCounter) charCounter.textContent = `${count} / 28`;
+        if (plaqueLiveText) {
+          plaqueLiveText.textContent = plaqueText.trim() ? plaqueText : 'Your words here';
+        }
+      });
+    }
+
+    // Date buttons
+    dateBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        dateBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedDate = btn.getAttribute('data-date');
+        updatePricing();
+      });
+    });
+
+    // Time buttons
+    timeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        timeBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedTime = btn.getAttribute('data-time');
+        updatePricing();
+      });
+    });
+
+    // Addon cards
+    addonCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('active');
+        const checkDot = card.querySelector('.pdp4-addon-check-dot');
+        if (checkDot) {
+          checkDot.textContent = card.classList.contains('active') ? 'âœ“' : '';
+        }
+        updatePricing();
+      });
+    });
+
+    // Stepper
+    if (qtyMinus) {
+      qtyMinus.addEventListener('click', () => {
+        if (quantity > 1) {
+          quantity--;
+          if (qtyValue) qtyValue.textContent = quantity;
+          updatePricing();
+        }
+      });
+    }
+    if (qtyPlus) {
+      qtyPlus.addEventListener('click', () => {
+        if (quantity < 10) {
+          quantity++;
+          if (qtyValue) qtyValue.textContent = quantity;
+          updatePricing();
+        }
+      });
+    }
+
+    // Pricing calculation
+    function getSelectedAddons() {
+      const selected = [];
+      addonCards.forEach(c => {
+        if (c.classList.contains('active')) {
+          selected.push({
+            id: c.getAttribute('data-addon'),
+            name: c.getAttribute('data-name'),
+            price: parseFloat(c.getAttribute('data-price'))
+          });
+        }
+      });
+      return selected;
+    }
+
+    function updatePricing() {
+      const addons = getSelectedAddons();
+      const addonsTotal = addons.reduce((sum, item) => sum + item.price, 0);
+      const plaqueCost = plaqueEnabled ? plaqueFee : 0;
+      const unitTotal = selectedSizePrice + plaqueCost + addonsTotal;
+      const overallTotal = unitTotal * quantity;
+
+      if (totalBtnPrice) {
+        totalBtnPrice.textContent = `$${overallTotal.toFixed(2)} AUD`;
+      }
+      if (orderSummaryText) {
+        orderSummaryText.textContent = `${selectedSizeName} Â· ${selectedDate}, ${selectedTime}`;
+      }
+    }
+
+    // Add to Cart
+    if (addToCartBtn) {
+      addToCartBtn.addEventListener('click', () => {
+        const addons = getSelectedAddons();
+        const addonsTotal = addons.reduce((sum, item) => sum + item.price, 0);
+        const plaqueCost = plaqueEnabled ? plaqueFee : 0;
+        const unitPrice = selectedSizePrice + plaqueCost + addonsTotal;
+
+        addToCart({
+          id: 'bruce-chocolate-cake',
+          name: 'Bruce Chocolate Cake',
+          price: unitPrice,
+          image: photos[0].src,
+          size: selectedSizeName,
+          flavour: 'Signature Belgian Fudge',
+          hasPlaque: plaqueEnabled,
+          plaqueText: plaqueEnabled ? plaqueText : '',
+          fulfillment: 'Boutique Pickup',
+          date: selectedDate,
+          timeSlot: selectedTime,
+          addons: addons.map(a => a.name),
+          qty: quantity
+        });
+      });
+    }
+
+    // Express pay
+    function handleExpressPay(method) {
+      if (addToCartBtn) {
+        addToCartBtn.click();
+      }
+      showToast(`Initiating ${method} Checkout...`);
+    }
+    if (applePayBtn) applePayBtn.addEventListener('click', () => handleExpressPay('Apple Pay'));
+    if (googlePayBtn) googlePayBtn.addEventListener('click', () => handleExpressPay('Google Pay'));
+    if (shopPayBtn) shopPayBtn.addEventListener('click', () => handleExpressPay('Shop Pay'));
+
+    // Concierge
+    if (conciergeTrigger) {
+      conciergeTrigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const cateringModal = document.getElementById('cateringInquiryModal');
+        if (cateringModal) {
+          cateringModal.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    }
+
+    // Portion guide link to tab
+    if (portionLink) {
+      portionLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        tabBtns.forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-tab') === 'portion');
+        });
+        tabPanes.forEach(pane => {
+          pane.classList.toggle('active', pane.id === 'panePortion');
+        });
+        const bottomCard = document.getElementById('pdp4BottomCard');
+        if (bottomCard) {
+          bottomCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    // Bottom tab switching
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabTarget = btn.getAttribute('data-tab');
+        tabBtns.forEach(b => b.classList.toggle('active', b === btn));
+        tabPanes.forEach(p => {
+          if (tabTarget === 'collection' && p.id === 'paneCollection') p.classList.add('active');
+          else if (tabTarget === 'allergens' && p.id === 'paneAllergens') p.classList.add('active');
+          else if (tabTarget === 'portion' && p.id === 'panePortion') p.classList.add('active');
+          else p.classList.remove('active');
+        });
+      });
+    });
+
+    // Initial calculation
+    updatePricing();
+  }
+
+  // --------------------------------------------------------------------------
+  // 21. Homepage Boutique Catering & Events Feature Showcase
+  // --------------------------------------------------------------------------
+  function initCateringFeatureSection() {
+    const catSection = document.getElementById('cateringFeatureSection');
+    if (!catSection) return;
+
+    const catItems = Array.from(catSection.querySelectorAll('.fh-cat-item'));
+    const cardImg = document.getElementById('fhCatCardImg');
+    const photoBadge = document.getElementById('fhCatPhotoBadge');
+    const countNum = document.getElementById('fhCatCountNum');
+    const floatTitle = document.getElementById('fhCatFloatTitle');
+    const floatDesc = document.getElementById('fhCatFloatDesc');
+    const visualCard = document.getElementById('fhCatVisualCard');
+
+    function setActiveCategory(item) {
+      if (!item) return;
+      catItems.forEach(it => it.classList.remove('active'));
+      item.classList.add('active');
+
+      const photo = item.getAttribute('data-photo');
+      const badge = item.getAttribute('data-badge');
+      const count = item.getAttribute('data-count');
+      const title = item.getAttribute('data-title');
+      const desc = item.getAttribute('data-desc');
+      const href = item.getAttribute('data-href');
+
+      if (cardImg && photo && cardImg.getAttribute('src') !== photo) {
+        cardImg.style.opacity = '0.4';
+        setTimeout(() => {
+          cardImg.src = photo;
+          cardImg.style.opacity = '1';
+        }, 100);
+      }
+      if (photoBadge && badge) photoBadge.textContent = badge;
+      if (countNum && count) countNum.textContent = count;
+      if (floatTitle && title) floatTitle.textContent = title;
+      if (floatDesc && desc) floatDesc.textContent = desc;
+      if (visualCard && href) visualCard.setAttribute('href', href);
+    }
+
+    catItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        setActiveCategory(item);
+      });
+      item.addEventListener('focus', () => {
+        setActiveCategory(item);
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 22. Boutique Opening Hours & Good To Know FAQ Accordion
+  // --------------------------------------------------------------------------
+  function initBoutiqueSection() {
+    const hoursCard = document.getElementById('fhHoursCard');
+    if (hoursCard) {
+      const todayDay = new Date().getDay(); // 0 = Sun, 1 = Mon, ..., 6 = Sat
+      const rows = hoursCard.querySelectorAll('.fh-hours-row');
+      rows.forEach(row => {
+        const dayVal = row.getAttribute('data-day');
+        const daySpan = row.querySelector('.fh-hours-day');
+        if (daySpan) {
+          // Remove any existing " Â· today"
+          daySpan.textContent = daySpan.textContent.replace(/\s*Â·\s*today/gi, '');
+          if (dayVal !== null && parseInt(dayVal, 10) === todayDay) {
+            row.classList.add('is-today');
+            daySpan.textContent = daySpan.textContent.trim() + ' Â· today';
+          } else {
+            row.classList.remove('is-today');
+          }
+        }
+      });
+    }
+
+    const faqAccordion = document.getElementById('fhFaqAccordion');
+    if (faqAccordion) {
+      const items = faqAccordion.querySelectorAll('.fh-faq-item');
+      items.forEach(item => {
+        const trigger = item.querySelector('.fh-faq-trigger');
+        if (trigger) {
+          trigger.addEventListener('click', () => {
+            const isCurrentlyActive = item.classList.contains('active');
+            items.forEach(it => {
+              it.classList.remove('active');
+              const tr = it.querySelector('.fh-faq-trigger');
+              if (tr) tr.setAttribute('aria-expanded', 'false');
+            });
+            if (!isCurrentlyActive) {
+              item.classList.add('active');
+              trigger.setAttribute('aria-expanded', 'true');
+            }
+          });
+        }
+      });
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // 23. PDP4 Rotating Celebration Testimonials Card Deck
+  // --------------------------------------------------------------------------
+  async function initPdp4TestimonialsDeck() {
+    const deckStage = document.getElementById('pdp4DeckStage');
+    if (!deckStage) return;
+
+    // Optional: dynamically hydrate latest synced reviews from data/google-reviews.json
+    try {
+      const resp = await fetch('data/google-reviews.json');
+      if (resp.ok) {
+        const data = await resp.json();
+        if (data && data.place_info) {
+          const scoreEl = document.querySelector('.pdp4-deck-rating-score');
+          const countEl = document.querySelector('.pdp4-deck-count');
+          if (scoreEl && data.place_info.rating) {
+            scoreEl.textContent = `${data.place_info.rating} â˜…â˜…â˜…â˜…â˜†`;
+          }
+          if (countEl && data.place_info.user_ratings_total) {
+            countEl.textContent = `(${data.place_info.user_ratings_total}+ Verified Reviews)`;
+          }
+        }
+        if (data && Array.isArray(data.reviews) && data.reviews.length > 0) {
+          const existingCards = deckStage.querySelectorAll('.pdp4-deck-card');
+          data.reviews.slice(0, existingCards.length).forEach((rev, i) => {
+            const card = existingCards[i];
+            if (!card) return;
+            const headlineEl = card.querySelector('.pdp4-card-headline');
+            const bodyEl = card.querySelector('.pdp4-card-body-text');
+            const authorEl = card.querySelector('.pdp4-card-author-name');
+            const subEl = card.querySelector('.pdp4-card-author-sub');
+            const imgEl = card.querySelector('.pdp4-clover-frame img');
+            const linkEl = card.querySelector('.pdp4-card-google-link');
+
+            if (headlineEl && rev.headline) headlineEl.textContent = `"${rev.headline.replace(/^"|"$/g, '')}"`;
+            if (bodyEl && rev.text) bodyEl.textContent = rev.text;
+            if (authorEl && rev.author_name) {
+              authorEl.innerHTML = `${rev.author_name} <span class="pdp4-verified-tick" title="Verified Google Reviewer">âœ“</span>`;
+            }
+            if (subEl && rev.relative_time) {
+              const badge = rev.author_badge ? `${rev.author_badge} Â· ` : '';
+              subEl.textContent = `${badge}${rev.relative_time}`;
+            }
+            if (imgEl && rev.photo_url) {
+              imgEl.src = rev.photo_url;
+              if (rev.photo_alt) imgEl.alt = rev.photo_alt;
+            }
+            if (linkEl && rev.google_maps_url) {
+              linkEl.href = rev.google_maps_url;
+            }
+          });
+        }
+      }
+    } catch (e) {
+      // Quietly fall back to server-rendered cards
+    }
+
+    const cards = Array.from(deckStage.querySelectorAll('.pdp4-deck-card'));
+    const dots = Array.from(document.querySelectorAll('.pdp4-deck-dot'));
+    const nextBtn = document.getElementById('pdp4DeckNextBtn');
+    const prevBtn = document.getElementById('pdp4DeckPrevBtn');
+    const counter = document.getElementById('pdp4DeckCounter');
+    const autoplayBtn = document.getElementById('pdp4DeckAutoplayBtn');
+    const autoplayIcon = document.getElementById('pdp4DeckAutoplayIcon');
+    const autoplayLabel = document.getElementById('pdp4DeckAutoplayLabel');
+
+    if (!cards.length) return;
+
+    const total = cards.length;
+    let activeIndex = 0;
+    let isAutoplaying = true;
+    let autoplayTimer = null;
+    const intervalMs = 5500;
+
+    function updateDeck() {
+      cards.forEach((card, idx) => {
+        const pos = (idx - activeIndex + total) % total;
+        card.setAttribute('data-pos', pos);
+        card.setAttribute('aria-hidden', pos === 0 ? 'false' : 'true');
+      });
+
+      dots.forEach((dot, idx) => {
+        const isActive = idx === activeIndex;
+        dot.classList.toggle('active', isActive);
+        dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      if (counter) {
+        counter.textContent = String(activeIndex + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+      }
+    }
+
+    function nextCard() {
+      activeIndex = (activeIndex + 1) % total;
+      updateDeck();
+    }
+
+    function prevCard() {
+      activeIndex = (activeIndex - 1 + total) % total;
+      updateDeck();
+    }
+
+    function goToCard(idx) {
+      if (idx >= 0 && idx < total) {
+        activeIndex = idx;
+        updateDeck();
+      }
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      if (isAutoplaying) {
+        autoplayTimer = setInterval(nextCard, intervalMs);
+      }
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    // Direct card click: bringing peeking background card to the front
+    cards.forEach((card, idx) => {
+      card.addEventListener('click', (e) => {
+        // If clicking a link/button inside card, don't trigger rotation
+        if (e.target.closest('a') || e.target.closest('button')) return;
+        if (idx !== activeIndex) {
+          goToCard(idx);
+          if (isAutoplaying) startAutoplay();
+        }
+      });
+    });
+
+    // Arrow navigation
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextCard();
+        if (isAutoplaying) startAutoplay();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevCard();
+        if (isAutoplaying) startAutoplay();
+      });
+    }
+
+    // Pagination dots
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.getAttribute('data-index'), 10);
+        if (!isNaN(idx)) {
+          goToCard(idx);
+          if (isAutoplaying) startAutoplay();
+        }
+      });
+    });
+
+    // Pause on hover
+    deckStage.addEventListener('mouseenter', stopAutoplay);
+    deckStage.addEventListener('mouseleave', () => {
+      if (isAutoplaying) startAutoplay();
+    });
+
+    // Autoplay toggle button
+    if (autoplayBtn) {
+      autoplayBtn.addEventListener('click', () => {
+        isAutoplaying = !isAutoplaying;
+        if (isAutoplaying) {
+          startAutoplay();
+          if (autoplayIcon) autoplayIcon.textContent = 'â¸';
+          if (autoplayLabel) autoplayLabel.textContent = 'Auto';
+          autoplayBtn.setAttribute('aria-label', 'Pause automatic rotation');
+        } else {
+          stopAutoplay();
+          if (autoplayIcon) autoplayIcon.textContent = 'â–¶';
+          if (autoplayLabel) autoplayLabel.textContent = 'Paused';
+          autoplayBtn.setAttribute('aria-label', 'Resume automatic rotation');
+        }
+      });
+    }
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    deckStage.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoplay();
+    }, { passive: true });
+
+    deckStage.addEventListener('touchend', (e) => {
+      const diffX = e.changedTouches[0].screenX - touchStartX;
+      if (diffX < -40) {
+        nextCard();
+      } else if (diffX > 40) {
+        prevCard();
+      }
+      if (isAutoplaying) startAutoplay();
+    }, { passive: true });
+
+    // Initial setup
+    updateDeck();
+    startAutoplay();
+  }
+
   initProductDetailPage();
   initProduct3Page();
+  initProduct4Page();
+  initPdp4TestimonialsDeck();
+  initCateringFeatureSection();
+  initBoutiqueSection();
   initSalesDepartmentPage();
   initCateringWorkflow();
   updateCartUI();
 });
+
 

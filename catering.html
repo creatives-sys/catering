@@ -271,14 +271,60 @@
       </div>
 
       <!-- ========================================================================
-           FRANK & HARRI CATERING STUDIO (Linen & Ladle Luxury 2-Column Workflow)
+           FRANK & HARRI CATERING STUDIO & ORDER BUILDER
            ======================================================================== -->
       <section class="cat-studio-wrapper" id="cateringStudioSection">
         
-        <!-- Minimal Linen & Ladle Category Filter Pills (Clean typography, no icons) -->
+        <!-- Top Notice Banner -->
+        <div class="cat-workflow-banner">
+          Catering orders need 4 business days' notice · Kew boutique pickup free · Melbourne delivery from $60
+        </div>
+
+        <!-- Event Details interactive control panel -->
+        <div class="cat-event-params-grid" id="catEventParamsGrid">
+          <!-- Guests Card -->
+          <div class="cat-param-card">
+            <span class="cat-param-title">Event Guests</span>
+            <div class="cat-guests-stepper">
+              <button type="button" class="cat-param-btn" id="catQuickGuestsDec" aria-label="Fewer guests">-</button>
+              <span class="cat-guests-count-val" id="catQuickGuestsVal">25</span>
+              <button type="button" class="cat-param-btn" id="catQuickGuestsInc" aria-label="More guests">+</button>
+            </div>
+            <div class="cat-quick-chips">
+              <button type="button" class="cat-quick-chip" data-val="12">12</button>
+              <button type="button" class="cat-quick-chip active" data-val="25">25</button>
+              <button type="button" class="cat-quick-chip" data-val="40">40</button>
+              <button type="button" class="cat-quick-chip" data-val="60">60</button>
+              <button type="button" class="cat-quick-chip" data-val="100">100+</button>
+            </div>
+          </div>
+
+          <!-- Date Card -->
+          <div class="cat-param-card">
+            <span class="cat-param-title">Date · Earliest 4 Business Days</span>
+            <input type="date" id="catQuickEventDate" class="cat-date-input" style="padding: 10px 14px; border-radius: 12px; border: 1px solid #d5d9d2; font-family: var(--font-brand); font-size: 0.9rem;">
+            <span style="font-family: var(--font-brand); font-size: 0.72rem; color: #717171;">Kitchen preparation begins 4 business days prior.</span>
+          </div>
+
+          <!-- Fulfillment Card -->
+          <div class="cat-param-card">
+            <span class="cat-param-title">Fulfillment Method</span>
+            <div class="cat-fulfill-toggle">
+              <button type="button" class="cat-fulfill-pill" id="catQuickPickupPill">Kew Pickup · Free</button>
+              <button type="button" class="cat-fulfill-pill active" id="catQuickDeliveryPill">Delivery · From $60</button>
+            </div>
+            <select id="catQuickTimeWindow" style="padding: 8px 12px; border-radius: 12px; border: 1px solid #d5d9d2; font-family: var(--font-brand); font-size: 0.78rem; background: #ffffff;">
+              <option value="Standard Midday Delivery (11:00am – 1:30pm)">Midday Delivery (11:00am – 1:30pm)</option>
+              <option value="Morning Delivery (8:30am – 11:00am)">Morning Delivery (8:30am – 11:00am)</option>
+              <option value="Afternoon Delivery (1:30pm – 3:30pm)">Afternoon Delivery (1:30pm – 3:30pm)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills Bar -->
         <div class="cat-filter-pills-bar">
           <div class="cat-filter-pills-scroll" id="catMenuFilterPills">
-            <button type="button" class="cat-menu-pill active" data-cat="boxes">Catering Boxes</button>
+            <button type="button" class="cat-menu-pill active" data-cat="all">All Dishes</button>
             <button type="button" class="cat-menu-pill" data-cat="patisserie">Patisserie &amp; Baked</button>
             <button type="button" class="cat-menu-pill" data-cat="brunch">Brunch &amp; Sliders</button>
             <button type="button" class="cat-menu-pill" data-cat="sandwiches">Sandwiches &amp; Wraps</button>
@@ -287,8 +333,43 @@
             <button type="button" class="cat-menu-pill" data-cat="proteins">Proteins &amp; Mains</button>
             <button type="button" class="cat-menu-pill" data-cat="canapes">Savoury Canapés</button>
             <button type="button" class="cat-menu-pill" data-cat="desserts">Sweets &amp; Desserts</button>
-            <button type="button" class="cat-menu-pill" data-cat="kids">Kid's Packages</button>
+            <button type="button" class="cat-menu-pill" data-cat="boxes">Catering Boxes</button>
+            <button type="button" class="cat-menu-pill" data-cat="kids">Kid's Parties</button>
           </div>
+        </div>
+
+        <!-- Search & Dietary Filters Row -->
+        <div class="cat-controls-row">
+          <div class="cat-search-field">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="M20 20l-3.5-3.5"></path>
+            </svg>
+            <input type="search" id="catDishSearchInput" placeholder="Search dishes, dietary, ingredients..." aria-label="Search dishes">
+          </div>
+
+          <div class="cat-diet-filter-chips" id="catDietFilterChips">
+            <button type="button" class="cat-diet-chip active" data-diet="">All Diets</button>
+            <button type="button" class="cat-diet-chip" data-diet="V" title="Vegetarian">V (Vegetarian)</button>
+            <button type="button" class="cat-diet-chip" data-diet="VG" title="Vegan">VG (Vegan)</button>
+            <button type="button" class="cat-diet-chip" data-diet="DF" title="Dairy free">DF (Dairy free)</button>
+            <button type="button" class="cat-diet-chip" data-diet="GF" title="Gluten free">GF (Gluten free)</button>
+            <button type="button" class="cat-diet-chip" data-diet="GFO" title="Gluten free option">GFO Available</button>
+            <button type="button" class="cat-diet-chip" data-diet="VO" title="Vegetarian option">VO / VGO Available</button>
+          </div>
+        </div>
+
+        <!-- Dietary Legend Box -->
+        <div class="cat-diet-legend">
+          <span class="cat-diet-legend-item">
+            <span class="cat-diet-circle diet-solid" style="width: 18px; height: 18px; font-size: 9px;">V</span>
+            <strong>Solid Circle</strong> = Dish is inherently this diet (V, VG, DF, GF)
+          </span>
+          <span class="cat-diet-legend-item">
+            <span class="cat-diet-circle diet-opt" style="width: 18px; height: 18px; font-size: 9px;">+</span>
+            <strong>Dashed Circle</strong> = Dietary option available on request (GFO, VO, VGO)
+          </span>
+          <span style="opacity: 0.85;">Hover any circle for full diet details and minimum order rules.</span>
         </div>
 
         <!-- Hidden DOM hooks for event ribbon script -->
@@ -305,15 +386,15 @@
           <!-- Left Column: Active Category Header + 2-Column Dishes Grid -->
           <div class="cat-dishes-deck">
             <div class="cat-category-header">
-              <h1 class="cat-category-title" id="catCategoryTitle">Catering Boxes</h1>
+              <h1 class="cat-category-title" id="catCategoryTitle">All Catering Dishes</h1>
               <p class="cat-category-desc" id="catCategoryDesc">
-                Signature warm pastries, handcrafted sausage rolls, quiches, and gourmet sandwich ribbons packed ready-to-serve.
+                Handcrafted from scratch daily in our Kew patisserie atelier. Select your quantities and dietary options below.
               </p>
             </div>
 
             <!-- Dish Cards Grid: Strictly 2 columns on desktop, 1 on mobile -->
             <div class="cat-dishes-grid" id="catDishesGrid">
-              <!-- Rendered dynamically by app.js with Linen & Ladle styling -->
+              <!-- Rendered dynamically by app.js with 3D Flip Card & Dietary Circles -->
             </div>
           </div>
 
@@ -429,7 +510,7 @@
           <div class="cat-modal-field">
             <label class="cat-modal-label">1. Number of Guests *</label>
             <div class="cat-guests-stepper-wrap">
-              <button type="button" class="cat-stepper-btn" id="catGuestsDec" aria-label="Decrease guests">−</button>
+              <button type="button" class="cat-stepper-btn" id="catGuestsDec" aria-label="Decrease guests">-</button>
               <div class="cat-guests-input-box">
                 <input type="number" id="catTotalGuestsInput" class="cat-guests-input" value="25" min="5" max="300">
               </div>
