@@ -1,4 +1,4 @@
-﻿/**
+/**
  * FRANK & HARRI â€” ULTRA-MINIMAL LUXURY ATELIER
  * Application Logic & Interactive State
  * Inspired directly by the user's reference layout
@@ -4232,17 +4232,22 @@ document.addEventListener('DOMContentLoaded', () => {
       renderLiveOrderSummary();
     });
 
-    // Category Tabs
+        // Category Tabs
     document.querySelectorAll('.cat-menu-pill').forEach(pill => {
       pill.addEventListener('click', () => {
-        document.querySelectorAll('.cat-menu-pill').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.cat-menu-pill').forEach(p => {
+          p.classList.remove('active');
+          p.setAttribute('aria-selected', 'false');
+        });
         pill.classList.add('active');
+        pill.setAttribute('aria-selected', 'true');
         activeCategory = pill.getAttribute('data-cat') || 'all';
 
         const titleEl = document.getElementById('catCategoryTitle');
         const descEl = document.getElementById('catCategoryDesc');
+        const displayTitle = pill.getAttribute('data-full-title') || pill.querySelector('.cat-card-name')?.textContent || pill.textContent.trim();
         if (titleEl) {
-          titleEl.textContent = activeCategory === 'all' ? 'All Catering Dishes' : pill.textContent;
+          titleEl.textContent = activeCategory === 'all' ? 'All Catering Dishes' : displayTitle;
         }
         if (descEl) {
           descEl.textContent = 'Handcrafted from scratch daily in our Kew patisserie atelier. Select your quantities and dietary options below.';
@@ -4251,6 +4256,59 @@ document.addEventListener('DOMContentLoaded', () => {
         renderDishesDeck();
       });
     });
+
+    // Category Carousel Scroll Navigation & Dynamic Dish Counts
+    const pillsScroll = document.getElementById('catMenuFilterPills');
+    const prevBtn = document.getElementById('catFilterPrev');
+    const nextBtn = document.getElementById('catFilterNext');
+    const carouselWrap = document.getElementById('catFilterCarouselWrap');
+
+    function updateCarouselNav() {
+      if (!pillsScroll) return;
+      const scrollLeft = pillsScroll.scrollLeft;
+      const maxScroll = pillsScroll.scrollWidth - pillsScroll.clientWidth;
+
+      if (prevBtn) {
+        prevBtn.classList.toggle('is-visible', scrollLeft > 8);
+      }
+      if (nextBtn) {
+        nextBtn.classList.toggle('is-visible', scrollLeft < maxScroll - 8);
+      }
+      if (carouselWrap) {
+        carouselWrap.classList.toggle('has-overflow-left', scrollLeft > 8);
+        carouselWrap.classList.toggle('has-overflow-right', scrollLeft < maxScroll - 8);
+      }
+    }
+
+    if (pillsScroll) {
+      pillsScroll.addEventListener('scroll', updateCarouselNav, { passive: true });
+      window.addEventListener('resize', updateCarouselNav);
+      setTimeout(updateCarouselNav, 120);
+    }
+
+    prevBtn?.addEventListener('click', () => {
+      pillsScroll?.scrollBy({ left: -260, behavior: 'smooth' });
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      pillsScroll?.scrollBy({ left: 260, behavior: 'smooth' });
+    });
+
+    // Dynamically calculate and sync category dish counts from cateringDishes dataset
+    if (typeof cateringDishes !== 'undefined' && Array.isArray(cateringDishes)) {
+      const catCounts = { all: cateringDishes.length };
+      cateringDishes.forEach(d => {
+        if (d && d.category) {
+          catCounts[d.category] = (catCounts[d.category] || 0) + 1;
+        }
+      });
+      document.querySelectorAll('.cat-card-count').forEach(badge => {
+        const cat = badge.getAttribute('data-count-for');
+        if (cat && catCounts[cat] !== undefined) {
+          badge.textContent = catCounts[cat];
+        }
+      });
+    }
 
     // Dietary Filter Chips
     document.querySelectorAll('.cat-diet-chip').forEach(chip => {
@@ -4613,7 +4671,13 @@ document.addEventListener('DOMContentLoaded', () => {
       activeDietFilter = '';
       searchQuery = '';
       if (searchInput) searchInput.value = '';
-      document.querySelectorAll('.cat-menu-pill').forEach(p => p.classList.toggle('active', p.getAttribute('data-cat') === 'all'));
+      document.querySelectorAll('.cat-menu-pill').forEach(p => {
+        const isAll = p.getAttribute('data-cat') === 'all';
+        p.classList.toggle('active', isAll);
+        p.setAttribute('aria-selected', isAll ? 'true' : 'false');
+      });
+      const titleEl = document.getElementById('catCategoryTitle');
+      if (titleEl) titleEl.textContent = 'All Catering Dishes';
       document.querySelectorAll('.cat-diet-chip').forEach(c => c.classList.toggle('active', c.getAttribute('data-diet') === ''));
       renderDishesDeck();
     };
