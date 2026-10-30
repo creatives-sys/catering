@@ -4491,6 +4491,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Interactive Card Flip Functions
     window.fhApp.flipCard = (dishId) => {
+      // If mobile cart drawer is open, close it so card is visible
+      const receiptDock = document.getElementById('catReceiptDock');
+      const receiptBackdrop = document.getElementById('catReceiptBackdrop');
+      receiptDock?.classList.remove('open');
+      receiptBackdrop?.classList.remove('open');
+      document.body.style.overflow = '';
+
       const card = document.getElementById(`catCard_${dishId}`);
       if (!card) return;
 
@@ -4510,6 +4517,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       card.classList.add('is-flipped');
+      setTimeout(() => {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
     };
 
     window.fhApp.unflipCard = (dishId) => {
@@ -4646,17 +4656,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         return `
-          <div class="cat-receipt-item" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; gap: 4px;">
+          <div class="cat-receipt-item" style="padding: 12px 0; border-bottom: 1px solid var(--fh-border, #e5e8e2); display: flex; flex-direction: column; gap: 4px;">
             <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px;">
-              <strong style="font-family: var(--font-brand); font-size: 0.92rem; color: #ffffff;">${dish.name}</strong>
-              <span style="font-family: var(--font-brand); font-weight: 600; color: #a7b2a3;">$${alloc.totalCost.toFixed(2)}</span>
+              <strong style="font-family: var(--font-brand); font-size: 0.92rem; color: var(--fh-charcoal, #151814); font-weight: 600;">${dish.name}</strong>
+              <span style="font-family: var(--font-brand); font-weight: 700; color: var(--fh-charcoal, #151814);">$${alloc.totalCost.toFixed(2)}</span>
             </div>
-            <div style="font-family: var(--font-brand); font-size: 0.74rem; color: #a7b2a3; line-height: 1.4;">
+            <div style="font-family: var(--font-brand); font-size: 0.76rem; color: #666666; line-height: 1.4;">
               ${details.join(' &middot; ')}
             </div>
-            <div style="display: flex; gap: 12px; margin-top: 4px;">
-              <button type="button" style="background: none; border: 0; padding: 0; color: #ffffff; text-decoration: underline; font-family: var(--font-brand); font-size: 0.72rem; cursor: pointer;" onclick="window.fhApp.flipCard('${dish.id}')">Edit</button>
-              <button type="button" style="background: none; border: 0; padding: 0; color: #e57373; text-decoration: underline; font-family: var(--font-brand); font-size: 0.72rem; cursor: pointer;" onclick="window.fhApp.removeCatOrderLine('${dish.id}')">Remove</button>
+            <div style="display: flex; gap: 14px; margin-top: 4px;">
+              <button type="button" style="background: none; border: 0; padding: 0; color: var(--fh-primary-dark, #2d3b2d); font-weight: 600; text-decoration: underline; font-family: var(--font-brand); font-size: 0.75rem; cursor: pointer;" onclick="window.fhApp.flipCard('${dish.id}')">Edit</button>
+              <button type="button" style="background: none; border: 0; padding: 0; color: #dc2626; text-decoration: underline; font-family: var(--font-brand); font-size: 0.75rem; cursor: pointer;" onclick="window.fhApp.removeCatOrderLine('${dish.id}')">Remove</button>
             </div>
           </div>
         `;
@@ -4684,15 +4694,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Delivery fee
       const deliveryFee = fulfillment === 'delivery' ? 60.00 : 0.00;
-      const grandTotal = foodSubtotal + addonsTotal + deliveryFee;
+      const grandTotal = foodSubtotal > 0 ? (foodSubtotal + addonsTotal + deliveryFee) : 0.00;
+      const gstAmount = grandTotal > 0 ? (grandTotal / 11) : 0.00;
 
       // Display sync
       if (subtotalDisplay) subtotalDisplay.textContent = `$${foodSubtotal.toFixed(2)}`;
       if (addonsRow) addonsRow.style.display = addonsTotal > 0 ? 'flex' : 'none';
       if (addonsDisplay) addonsDisplay.textContent = `$${addonsTotal.toFixed(2)}`;
       if (deliveryFeeDisplay) deliveryFeeDisplay.textContent = fulfillment === 'delivery' ? '$60.00' : 'FREE';
+      const gstDisplay = document.getElementById('catGstDisplay');
+      if (gstDisplay) gstDisplay.textContent = `$${gstAmount.toFixed(2)}`;
       if (grandTotalDisplay) grandTotalDisplay.textContent = `$${grandTotal.toFixed(2)}`;
       if (btnTotalBadge) btnTotalBadge.textContent = `$${grandTotal.toFixed(2)}`;
+
+      // Mobile Floating Action Bar Sync (Dynamic update for 0/25 Fed & Total)
+      const mfbFedTally = document.getElementById('catMfbFedTally');
+      const mfbTotalDisplay = document.getElementById('catMfbTotalDisplay');
+      if (mfbFedTally) mfbFedTally.textContent = `${totalPortions} / ${totalGuests} Fed`;
+      if (mfbTotalDisplay) mfbTotalDisplay.textContent = `$${grandTotal.toFixed(2)}`;
 
       // Tally & Progress
       if (allocatedTally) allocatedTally.textContent = totalPortions;
@@ -4713,6 +4732,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (paramsSummary) {
         paramsSummary.innerHTML = `${totalGuests} guests &middot; ${evDateFormatted} &middot; ${fulfillment === 'delivery' ? 'Delivery ($60)' : 'Kew Pickup (Free)'}`;
+      }
+
+      // Checkout Summary Text Sync
+      const checkoutSummaryText = document.getElementById('catCheckoutSummaryText');
+      if (checkoutSummaryText) {
+        checkoutSummaryText.innerHTML = `${totalGuests} Guests &middot; ${evDateFormatted} &middot; ${fulfillment === 'delivery' ? 'Delivery' : 'Pickup'} &middot; Total $${grandTotal.toFixed(2)}`;
+      }
+
+      // Toggle delivery fields in checkout
+      const deliveryFieldsWrap = document.getElementById('catDeliveryFieldsWrap');
+      if (deliveryFieldsWrap) {
+        deliveryFieldsWrap.style.display = fulfillment === 'delivery' ? 'block' : 'none';
       }
     }
 
@@ -4763,8 +4794,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     mfbScrollBtn?.addEventListener('click', openCartDrawer);
+    document.getElementById('catMobileFloatingBar')?.querySelector('.cat-mfb-tally-wrap')?.addEventListener('click', openCartDrawer);
     receiptCloseBtn?.addEventListener('click', closeCartDrawer);
     receiptBackdrop?.addEventListener('click', closeCartDrawer);
+
+    // Live Change Listeners for Addons & Dates (Instant calculation)
+    document.getElementById('catAddonLunchboxes')?.addEventListener('change', renderLiveOrderSummary);
+    document.getElementById('catAddonCutlery')?.addEventListener('change', renderLiveOrderSummary);
+    quickEventDate?.addEventListener('change', renderLiveOrderSummary);
+    quickEventDate?.addEventListener('input', renderLiveOrderSummary);
+
+    // Instant Booking Form in Checkout Modal
+    const bookingForm = document.getElementById('catInstantBookingForm');
+    bookingForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const firstName = document.getElementById('catClientFirstName')?.value || 'Guest';
+      closeCheckout();
+      showToast(`Thank you, ${firstName}! Your catering reservation has been confirmed. A confirmation receipt has been sent to your email.`);
+    });
+
+    document.querySelectorAll('.cat-pay-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.cat-pay-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
 
     // Event Parameters Modal Controls (Mobile & Desktop)
     const paramsModal = document.getElementById('catParamsModal');

@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    FRANK & HARRI — ULTRA-MINIMAL LUXURY ATELIER
    Primary Brand Color: #a7b2a3 (Frank & Harri Signature Sage)
    
@@ -13569,6 +13569,8 @@ img, video, iframe {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    cursor: pointer;
+    user-select: none;
   }
 
   .cat-mfb-badge {
