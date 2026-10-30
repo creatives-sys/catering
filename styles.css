@@ -13420,7 +13420,7 @@ img, video, iframe {
     top: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
-    width: min(480px, 92vw) !important;
+    width: min(440px, 92vw) !important;
     height: 100vh !important;
     max-height: 100vh !important;
     margin: 0 !important;
@@ -13430,7 +13430,7 @@ img, video, iframe {
     border: none !important;
     border-left: 1px solid var(--fh-border) !important;
     box-shadow: -12px 0 40px rgba(21, 24, 20, 0.28) !important;
-    transform: translateX(105%) !important;
+    visibility: hidden !important; pointer-events: none !important; transform: translateX(105%) !important;
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
@@ -13440,7 +13440,7 @@ img, video, iframe {
   }
 
   .cat-receipt-dock.open {
-    transform: translateX(0) !important;
+    visibility: visible !important; pointer-events: auto !important; transform: translateX(0) !important;
   }
 
   /* Sticky Drawer Header with Close Button */

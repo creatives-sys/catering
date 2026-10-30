@@ -1,4 +1,4 @@
-/**
+﻿/**
  * FRANK & HARRI â€” ULTRA-MINIMAL LUXURY ATELIER
  * Application Logic & Interactive State
  * Inspired directly by the user's reference layout
@@ -2062,7 +2062,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toast = document.createElement('div');
     toast.className = 'toast';
     toast.innerHTML = `
-      <span class="toast-icon">âœ“</span>
+      <span class="toast-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:middle;"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
       <span>${message}</span>
     `;
 
@@ -4728,6 +4728,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showToast('Please add at least one dish to your catering order before checking out.');
         return;
       }
+      closeCartDrawer();
       checkoutModal?.classList.add('open');
       checkoutBackdrop?.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -4742,6 +4743,128 @@ document.addEventListener('DOMContentLoaded', () => {
     checkoutBtn?.addEventListener('click', openCheckout);
     closeCheckoutBtn?.addEventListener('click', closeCheckout);
     checkoutBackdrop?.addEventListener('click', closeCheckout);
+
+    // Cart Drawer Controls (Mobile & Tablet)
+    const receiptDock = document.getElementById('catReceiptDock');
+    const receiptBackdrop = document.getElementById('catReceiptBackdrop');
+    const mfbScrollBtn = document.getElementById('catMfbScrollBtn');
+    const receiptCloseBtn = document.getElementById('catReceiptCloseBtn');
+
+    function openCartDrawer() {
+      receiptDock?.classList.add('open');
+      receiptBackdrop?.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCartDrawer() {
+      receiptDock?.classList.remove('open');
+      receiptBackdrop?.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    mfbScrollBtn?.addEventListener('click', openCartDrawer);
+    receiptCloseBtn?.addEventListener('click', closeCartDrawer);
+    receiptBackdrop?.addEventListener('click', closeCartDrawer);
+
+    // Event Parameters Modal Controls (Mobile & Desktop)
+    const paramsModal = document.getElementById('catParamsModal');
+    const paramsBackdrop = document.getElementById('catParamsModalBackdrop');
+    const changeParamsBtn = document.getElementById('catChangeOrderParamsBtn');
+    const closeParamsBtn = document.getElementById('catParamsModalCloseBtn');
+    const saveParamsBtn = document.getElementById('catSaveParamsBtn');
+    const modalGuestsInput = document.getElementById('catTotalGuestsInput');
+    const modalGuestsDec = document.getElementById('catGuestsDec');
+    const modalGuestsInc = document.getElementById('catGuestsInc');
+    const modalDateInput = document.getElementById('catEventDateInput');
+    const modalFulfillDeliv = document.getElementById('catFulfillDeliveryBtn');
+    const modalFulfillPickup = document.getElementById('catFulfillPickupBtn');
+    const modalSlotSelect = document.getElementById('catTimeSlotSelect');
+
+    let modalFulfillmentChoice = fulfillment;
+
+    function openParamsModal() {
+      closeCartDrawer();
+      if (modalGuestsInput) modalGuestsInput.value = totalGuests;
+      if (modalDateInput && quickEventDate) modalDateInput.value = quickEventDate.value;
+      if (modalSlotSelect && quickTimeWindow) modalSlotSelect.value = quickTimeWindow.value;
+      modalFulfillmentChoice = fulfillment;
+
+      modalFulfillDeliv?.classList.toggle('active', fulfillment === 'delivery');
+      modalFulfillPickup?.classList.toggle('active', fulfillment === 'pickup');
+
+      document.querySelectorAll('.cat-guest-chip').forEach(c => {
+        const v = parseInt(c.getAttribute('data-guests'), 10);
+        c.classList.toggle('active', v === totalGuests);
+      });
+
+      paramsModal?.classList.add('open');
+      paramsBackdrop?.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeParamsModal() {
+      paramsModal?.classList.remove('open');
+      paramsBackdrop?.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    changeParamsBtn?.addEventListener('click', openParamsModal);
+    closeParamsBtn?.addEventListener('click', closeParamsModal);
+    paramsBackdrop?.addEventListener('click', closeParamsModal);
+
+    modalGuestsInc?.addEventListener('click', () => {
+      if (modalGuestsInput) {
+        modalGuestsInput.value = Math.min(500, (parseInt(modalGuestsInput.value, 10) || 25) + 5);
+      }
+    });
+
+    modalGuestsDec?.addEventListener('click', () => {
+      if (modalGuestsInput) {
+        modalGuestsInput.value = Math.max(5, (parseInt(modalGuestsInput.value, 10) || 25) - 5);
+      }
+    });
+
+    document.querySelectorAll('.cat-guest-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const v = parseInt(chip.getAttribute('data-guests'), 10);
+        if (v && modalGuestsInput) modalGuestsInput.value = v;
+        document.querySelectorAll('.cat-guest-chip').forEach(c => c.classList.toggle('active', c === chip));
+      });
+    });
+
+    modalFulfillDeliv?.addEventListener('click', () => {
+      modalFulfillmentChoice = 'delivery';
+      modalFulfillDeliv.classList.add('active');
+      modalFulfillPickup?.classList.remove('active');
+    });
+
+    modalFulfillPickup?.addEventListener('click', () => {
+      modalFulfillmentChoice = 'pickup';
+      modalFulfillPickup.classList.add('active');
+      modalFulfillDeliv?.classList.remove('active');
+    });
+
+    saveParamsBtn?.addEventListener('click', () => {
+      if (modalGuestsInput) {
+        setGuests(parseInt(modalGuestsInput.value, 10) || totalGuests);
+      }
+      if (modalDateInput && quickEventDate) {
+        quickEventDate.value = modalDateInput.value;
+      }
+      if (modalFulfillmentChoice) {
+        fulfillment = modalFulfillmentChoice;
+        quickDeliveryPill?.classList.toggle('active', fulfillment === 'delivery');
+        quickPickupPill?.classList.toggle('active', fulfillment === 'pickup');
+      }
+      if (modalSlotSelect && quickTimeWindow) {
+        quickTimeWindow.value = modalSlotSelect.value;
+        timeSlot = modalSlotSelect.value;
+      }
+
+      closeParamsModal();
+      renderLiveOrderSummary();
+      showToast('Event details updated.');
+    });
 
     // Initial Render
     renderDishesDeck();
