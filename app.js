@@ -6080,6 +6080,12 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedSize = parseInt(card.getAttribute('data-size'), 10);
         selectedSizeName = card.getAttribute('data-name');
         selectedSizePrice = parseFloat(card.getAttribute('data-price'));
+
+        // Sync visual portion yield matrix item
+        document.querySelectorAll('.pdp4-yield-item').forEach(item => {
+          item.classList.toggle('active', item.getAttribute('data-matrix-size') === String(selectedSize));
+        });
+
         updatePricing();
       });
     });
@@ -6249,19 +6255,106 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Portion guide link to tab
+    // Portion guide link to dedicated section
     if (portionLink) {
       portionLink.addEventListener('click', (e) => {
         e.preventDefault();
-        tabBtns.forEach(btn => {
-          btn.classList.toggle('active', btn.getAttribute('data-tab') === 'portion');
-        });
-        tabPanes.forEach(pane => {
-          pane.classList.toggle('active', pane.id === 'panePortion');
-        });
-        const bottomCard = document.getElementById('pdp4BottomCard');
-        if (bottomCard) {
-          bottomCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const portionSection = document.getElementById('pdp4PortionSection');
+        if (portionSection) {
+          portionSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          const bottomCard = document.getElementById('pdp4BottomCard');
+          if (bottomCard) {
+            bottomCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    }
+
+    // Interactive Portion Matrix items (two-way sync with size selector)
+    document.querySelectorAll('.pdp4-yield-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const sizeVal = item.getAttribute('data-matrix-size');
+        const targetCard = sizeCards.find(c => c.getAttribute('data-size') === sizeVal);
+        if (targetCard) {
+          targetCard.click();
+        } else {
+          document.querySelectorAll('.pdp4-yield-item').forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+        }
+      });
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+
+    // Portion Sizing Mode Switcher (Dessert vs Coffee)
+    const btnDessert = document.getElementById('pdp4BtnDessert');
+    const btnCoffee = document.getElementById('pdp4BtnCoffee');
+    const cardDessert = document.getElementById('pdp4CardDessert');
+    const cardCoffee = document.getElementById('pdp4CardCoffee');
+    const scaleText = document.getElementById('pdp4ScaleText');
+    const sliceTagLabel = document.getElementById('pdp4SliceTagLabel');
+    const slicePhotoFrame = document.getElementById('pdp4SlicePhotoFrame');
+    const yield6 = document.getElementById('pdp4Yield6');
+    const yield9 = document.getElementById('pdp4Yield9');
+    const yield12 = document.getElementById('pdp4Yield12');
+
+    function setPortionMode(mode) {
+      const isDessert = mode === 'dessert';
+      if (btnDessert) {
+        btnDessert.classList.toggle('active', isDessert);
+        btnDessert.setAttribute('aria-selected', isDessert ? 'true' : 'false');
+      }
+      if (btnCoffee) {
+        btnCoffee.classList.toggle('active', !isDessert);
+        btnCoffee.setAttribute('aria-selected', !isDessert ? 'true' : 'false');
+      }
+      if (cardDessert) cardDessert.classList.toggle('active', isDessert);
+      if (cardCoffee) cardCoffee.classList.toggle('active', !isDessert);
+
+      if (slicePhotoFrame) {
+        slicePhotoFrame.classList.toggle('mode-dessert', isDessert);
+        slicePhotoFrame.classList.toggle('mode-coffee', !isDessert);
+      }
+
+      if (sliceTagLabel) {
+        sliceTagLabel.textContent = isDessert
+          ? 'Dessert size: 2" wide slices'
+          : 'Coffee size: 1" wide slices';
+      }
+
+      if (scaleText) {
+        scaleText.innerHTML = isDessert
+          ? 'Dessert &middot; 2 in wide &times; 4 in tall'
+          : 'Coffee &middot; 1 in wide &times; 4 in tall';
+      }
+
+      if (yield6) yield6.textContent = isDessert ? 'Serves 7–8' : 'Serves 12–14';
+      if (yield9) yield9.textContent = isDessert ? 'Serves 12–14' : 'Serves 22–24';
+      if (yield12) yield12.textContent = isDessert ? 'Serves 20–22' : 'Serves 38–40';
+    }
+
+    if (btnDessert) btnDessert.addEventListener('click', () => setPortionMode('dessert'));
+    if (btnCoffee) btnCoffee.addEventListener('click', () => setPortionMode('coffee'));
+    if (cardDessert) {
+      cardDessert.addEventListener('click', () => setPortionMode('dessert'));
+      cardDessert.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setPortionMode('dessert');
+        }
+      });
+    }
+    if (cardCoffee) {
+      cardCoffee.addEventListener('click', () => setPortionMode('coffee'));
+      cardCoffee.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setPortionMode('coffee');
         }
       });
     }

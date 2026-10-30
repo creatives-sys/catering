@@ -356,7 +356,7 @@
               <span class="pdp4-size-card-price">$209</span>
             </button>
           </div>
-          <button type="button" class="pdp4-portion-trigger-link" id="pdp4PortionLink">Portion guide</button>
+          <button type="button" class="pdp4-portion-trigger-link" id="pdp4PortionLink" aria-label="Jump to cake portion sizing guide"><span>Cake portion sizing guide</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 3px;"><path d="M7 13l5 5 5-5M12 4v14"/></svg></button>
 
           <!-- Step 2: Chocolate Plaque Switch & Input -->
           <div class="pdp4-step-header">
@@ -502,11 +502,11 @@
 
       <!-- PDP4 Bottom Section: Sage Green Tabbed Container Card -->
       <section class="pdp4-bottom-card" id="pdp4BottomCard" aria-label="Product Information Details">
-        <!-- 3 Tab Pills -->
+        <!-- 2 Tab Pills -->
         <div class="pdp4-tabs-bar" role="tablist">
           <button type="button" class="pdp4-tab-pill active" id="tabBtnCollection" data-tab="collection" role="tab" aria-selected="true" aria-controls="paneCollection">Collection &amp; storage</button>
           <button type="button" class="pdp4-tab-pill" id="tabBtnAllergens" data-tab="allergens" role="tab" aria-selected="false" aria-controls="paneAllergens">Allergens &amp; ingredients</button>
-          <button type="button" class="pdp4-tab-pill" id="tabBtnPortion" data-tab="portion" role="tab" aria-selected="false" aria-controls="panePortion">Portion guide</button>
+
         </div>
 
         <!-- Tab Pane 1: Collection & Storage (Active by default) -->
@@ -540,21 +540,118 @@
             <p class="pdp4-info-card-text">Looking for 100% gluten-free? Our Flourless Orange &amp; Almond Cake and Gluten-Free Chocolate Gateau are prepared in a dedicated allergen protocol.</p>
           </div>
         </div>
+      </section>
 
-        <!-- Tab Pane 3: Portion Guide -->
-        <div class="pdp4-tab-pane" id="panePortion" role="tabpanel" aria-labelledby="tabBtnPortion">
-          <div class="pdp4-info-white-card">
-            <h3 class="pdp4-info-card-title">6" Petite (7–8 Serves)</h3>
-            <p class="pdp4-info-card-text">Ideal for intimate family dinners and dinner parties. Generous dessert slices (1" × 2" × 4") or up to 14 cocktail finger serves.</p>
+      <!-- ========================================================================
+           PDP4 CAKE PORTION SIZING SECTION (#pdp4PortionSection)
+           Interactive portion calculator matching Frank & Harri signature sage & typography
+           ======================================================================== -->
+      <section class="pdp4-portion-card" id="pdp4PortionSection" aria-label="Cake Portion Sizing Guide">
+        <div class="pdp4-portion-grid">
+          
+          <!-- Left Column: Guide Information & Slicing Mode -->
+          <div class="pdp4-portion-left">
+            <span class="pdp4-portion-pill-kicker">Portion guide</span>
+            <h2 class="pdp4-portion-headline">Cake portion <em>sizing</em></h2>
+            <p class="pdp4-portion-lead">
+              Dessert or coffee size? Choose how you'll cut it and see how many each Bruce serves.
+            </p>
+
+            <!-- Mode Toggle Switch: Dessert vs Coffee -->
+            <div class="pdp4-portion-toggle-wrap" role="tablist" aria-label="Portion size mode">
+              <button type="button" class="pdp4-portion-mode-btn active" id="pdp4BtnDessert" data-mode="dessert" role="tab" aria-selected="true">
+                Dessert size
+              </button>
+              <button type="button" class="pdp4-portion-mode-btn" id="pdp4BtnCoffee" data-mode="coffee" role="tab" aria-selected="false">
+                Coffee size
+              </button>
+            </div>
+
+            <!-- Two Dimension Metric Cards (Side by side) -->
+            <div class="pdp4-portion-spec-row">
+              <div class="pdp4-portion-spec-card active" id="pdp4CardDessert" data-mode="dessert" tabindex="0" role="button" aria-label="Select dessert portion size">
+                <span class="pdp4-spec-label">Dessert</span>
+                <div class="pdp4-spec-measure">1 &times; 2 &times; 4<span class="pdp4-spec-in">in</span></div>
+                <span class="pdp4-spec-sub">A generous after-dinner slice</span>
+              </div>
+              <div class="pdp4-portion-spec-card" id="pdp4CardCoffee" data-mode="coffee" tabindex="0" role="button" aria-label="Select coffee portion size">
+                <span class="pdp4-spec-label">Coffee</span>
+                <div class="pdp4-spec-measure">1 &times; 1 &times; 4<span class="pdp4-spec-in">in</span></div>
+                <span class="pdp4-spec-sub">A slim slice with tea or coffee</span>
+              </div>
+            </div>
+
+            <p class="pdp4-portion-disclaimer">
+              Actual quantities may vary, depending on the person cutting your cake.
+            </p>
           </div>
-          <div class="pdp4-info-white-card">
-            <h3 class="pdp4-info-card-title">9" Classic (12–14 Serves)</h3>
-            <p class="pdp4-info-card-text">Our most popular size for birthday celebrations and milestones. 14 hearty dessert portions or 24 canapé portions.</p>
+
+          <!-- Right Column: Visual Diagram/Photo & Size Matrix -->
+          <div class="pdp4-portion-right">
+            
+            <!-- Top White Card: Visual Cake Slices Presentation (Real Photo) -->
+            <div class="pdp4-slice-preview-card">
+              <div class="pdp4-slice-top-bar">
+                <span class="pdp4-slice-caption">Slices on marble</span>
+                <span class="pdp4-slice-guide-hint">Dessert (left) &middot; Coffee (right)</span>
+              </div>
+
+              <!-- Slices Real Photo on Italian Marble -->
+              <div class="pdp4-slice-photo-frame" id="pdp4SlicePhotoFrame">
+                <img src="assets/images/cake-portion-slices.png" alt="The Bruce Cake - Hand-cut dessert and coffee slices on marble" class="pdp4-slice-img" id="pdp4SliceRealImg" loading="lazy">
+                
+                <!-- Sizing Indicator Overlay Pill -->
+                <div class="pdp4-slice-overlay-tag" id="pdp4SliceOverlayTag">
+                  <span class="pdp4-slice-tag-dot"></span>
+                  <span class="pdp4-slice-tag-label" id="pdp4SliceTagLabel">Dessert size: 2" wide slices</span>
+                </div>
+              </div>
+
+              <!-- Measurement scale line below photo -->
+              <div class="pdp4-scale-line-wrap">
+                <span class="pdp4-scale-bar-left"></span>
+                <span class="pdp4-scale-text" id="pdp4ScaleText">Dessert · 2 in wide &times; 4 in tall</span>
+                <span class="pdp4-scale-bar-right"></span>
+              </div>
+            </div>
+
+            <!-- Bottom White Card: Interactive Portion Yield Matrix -->
+            <div class="pdp4-yield-box">
+              <div class="pdp4-yield-list" role="radiogroup" aria-label="Select cake size from yield table">
+                <!-- 6" Petite -->
+                <div class="pdp4-yield-item" data-matrix-size="6" role="radio" aria-checked="false" tabindex="0">
+                  <div class="pdp4-yield-tier">
+                    <span class="pdp4-yield-num">6"</span> Petite
+                  </div>
+                  <div class="pdp4-yield-serves" id="pdp4Yield6">Serves 7–8</div>
+                  <div class="pdp4-yield-price">$109</div>
+                </div>
+
+                <!-- 9" Classic -->
+                <div class="pdp4-yield-item" data-matrix-size="9" role="radio" aria-checked="false" tabindex="0">
+                  <div class="pdp4-yield-tier">
+                    <span class="pdp4-yield-num">9"</span> Classic
+                  </div>
+                  <div class="pdp4-yield-serves" id="pdp4Yield9">Serves 12–14</div>
+                  <div class="pdp4-yield-price">$159</div>
+                </div>
+
+                <!-- 12" Grand Banquet (Active by default to match page state) -->
+                <div class="pdp4-yield-item active" data-matrix-size="12" role="radio" aria-checked="true" tabindex="0">
+                  <div class="pdp4-yield-tier">
+                    <span class="pdp4-yield-num">12"</span> Grand Banquet
+                  </div>
+                  <div class="pdp4-yield-serves" id="pdp4Yield12">Serves 20–22</div>
+                  <div class="pdp4-yield-price">$209</div>
+                </div>
+              </div>
+              <div class="pdp4-yield-note">
+                Tap a size to select it for your order.
+              </div>
+            </div>
+
           </div>
-          <div class="pdp4-info-white-card">
-            <h3 class="pdp4-info-card-title">12" Grand Banquet (20–22 Serves)</h3>
-            <p class="pdp4-info-card-text">Showstopping grand centerpiece for milestone birthdays and weddings. Yields 22 dessert portions or up to 40 canapé finger portions.</p>
-          </div>
+
         </div>
       </section>
 

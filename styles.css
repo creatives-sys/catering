@@ -17269,7 +17269,7 @@ img, video, iframe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.35rem;
 }
 
 .pdp4-size-card {
@@ -17852,6 +17852,390 @@ img, video, iframe {
   color: var(--fh-charcoal-muted);
   line-height: 1.55;
   margin: 0;
+}
+
+/* ==========================================================================
+   PDP4 CAKE PORTION SIZING CARD & INTERACTIVE MATRIX (#pdp4PortionSection)
+   Exact match to user reference design with Frank & Harri signature sage & fonts
+   ========================================================================== */
+.pdp4-portion-card {
+  background: var(--fh-primary, #a7b2a3);
+  border-radius: var(--radius-hero, 24px);
+  padding: clamp(2rem, 3.8vw, 3rem) clamp(1.5rem, 3.2vw, 2.75rem);
+  color: #151814;
+  margin-top: 1.75rem;
+  box-shadow: 0 16px 40px rgba(78, 94, 75, 0.16);
+}
+
+.pdp4-portion-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr;
+  gap: clamp(1.75rem, 3.2vw, 2.75rem);
+  align-items: start;
+}
+
+/* Left Column */
+.pdp4-portion-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdp4-portion-pill-kicker {
+  align-self: flex-start;
+  background: #151814;
+  color: #ffffff;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-brand);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+}
+
+.pdp4-portion-headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.3rem, 4.2vw, 3.15rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: #151814;
+  margin: 0 0 0.85rem;
+  letter-spacing: -0.015em;
+  text-transform: none;
+}
+
+.pdp4-portion-headline em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.pdp4-portion-lead {
+  font-family: var(--font-brand);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #222620;
+  line-height: 1.55;
+  margin: 0 0 1.35rem;
+  max-width: 440px;
+}
+
+/* Toggle Switch Bar */
+.pdp4-portion-toggle-wrap {
+  display: inline-flex;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.45);
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  gap: 4px;
+  margin-bottom: 1.35rem;
+}
+
+.pdp4-portion-mode-btn {
+  background: transparent;
+  color: #151814;
+  font-family: var(--font-brand);
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding: 7px 20px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.pdp4-portion-mode-btn.active {
+  background: #151814;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* Spec Dimension Cards */
+.pdp4-portion-spec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.pdp4-portion-spec-card {
+  background: rgba(255, 255, 255, 0.38);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 18px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  user-select: none;
+  outline: none;
+}
+
+.pdp4-portion-spec-card:hover {
+  background: rgba(255, 255, 255, 0.58);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.pdp4-portion-spec-card.active {
+  background: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(21, 24, 20, 0.08);
+  transform: translateY(-2px);
+}
+
+.pdp4-spec-label {
+  font-family: var(--font-brand);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #575d53;
+}
+
+.pdp4-spec-measure {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 500;
+  color: #151814;
+  margin: 4px 0 2px;
+  line-height: 1.1;
+}
+
+.pdp4-spec-in {
+  font-family: var(--font-brand);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #575d53;
+  margin-left: 3px;
+  vertical-align: baseline;
+}
+
+.pdp4-spec-sub {
+  font-family: var(--font-brand);
+  font-size: 0.76rem;
+  color: #495045;
+  line-height: 1.35;
+}
+
+.pdp4-portion-disclaimer {
+  font-family: var(--font-brand);
+  font-size: 0.74rem;
+  color: rgba(21, 24, 20, 0.78);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Right Column */
+.pdp4-portion-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Top White Card: Slices Presentation (Real Image) */
+.pdp4-slice-preview-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 20px 14px;
+  box-shadow: 0 8px 24px rgba(21, 24, 20, 0.06);
+  text-align: center;
+}
+
+.pdp4-slice-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.pdp4-slice-caption {
+  font-family: var(--font-brand);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7c8378;
+}
+
+.pdp4-slice-guide-hint {
+  font-family: var(--font-brand);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #575d53;
+}
+
+.pdp4-slice-photo-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f4f6f3;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.pdp4-slice-img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pdp4-slice-photo-frame:hover .pdp4-slice-img {
+  transform: scale(1.02);
+}
+
+.pdp4-slice-overlay-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(21, 24, 20, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-brand);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  transition: all 0.25s ease;
+}
+
+.pdp4-slice-tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c3d4c0;
+}
+
+/* Measurement scale line */
+.pdp4-scale-line-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.pdp4-scale-bar-left,
+.pdp4-scale-bar-right {
+  flex: 1;
+  height: 1px;
+  background: #cbd2c9;
+  max-width: 55px;
+}
+
+.pdp4-scale-text {
+  font-family: var(--font-brand);
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: #575d53;
+  white-space: nowrap;
+}
+
+/* Bottom Yield Matrix Box */
+.pdp4-yield-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 6px 8px 10px;
+  box-shadow: 0 8px 24px rgba(21, 24, 20, 0.06);
+}
+
+.pdp4-yield-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pdp4-yield-item {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr auto;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  outline: none;
+}
+
+.pdp4-yield-item:hover {
+  background: #f4f6f3;
+}
+
+.pdp4-yield-item.active {
+  background: #a7b2a3;
+  color: #151814;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.pdp4-yield-item.active .pdp4-yield-serves {
+  color: #151814;
+  font-weight: 600;
+}
+
+.pdp4-yield-item.active .pdp4-yield-price {
+  color: #151814;
+  font-weight: 700;
+}
+
+.pdp4-yield-tier {
+  font-family: var(--font-brand);
+  font-size: 0.88rem;
+}
+
+.pdp4-yield-num {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.pdp4-yield-serves {
+  font-family: var(--font-brand);
+  font-size: 0.84rem;
+  color: #575d53;
+  text-align: center;
+}
+
+.pdp4-yield-price {
+  font-family: var(--font-brand);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #151814;
+  text-align: right;
+  min-width: 45px;
+}
+
+.pdp4-yield-note {
+  text-align: center;
+  font-family: var(--font-brand);
+  font-size: 0.72rem;
+  color: #7c8378;
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  .pdp4-portion-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
 }
 
 /* Responsive adjustments */
