@@ -18409,237 +18409,48 @@ iframe {
 }
 
 /* ==========================================================================
-   PDP4 CAKE PORTION SIZING CARD & INTERACTIVE MATRIX (#pdp4PortionSection)
-   Exact match to user reference design with Frank & Harri signature sage & fonts
+   PDP4 CAKE PORTION GUIDE (#pdp4PortionSection)
+   Minimal Image & Guide: Signature Primary Sage Background (Full-Width Bleed)
    ========================================================================== */
 .pdp4-portion-card {
+  width: 100%;
   background: var(--fh-primary, #a7b2a3);
-  border-radius: var(--radius-hero, 24px);
-  padding: clamp(2rem, 3.8vw, 3rem) clamp(1.5rem, 3.2vw, 2.75rem);
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  margin: clamp(3.5rem, 5.5vw, 5rem) 0 0;
+  padding: clamp(3.5rem, 5.5vw, 4.75rem) 0;
   color: #151814;
-  margin-top: 1.75rem;
-  box-shadow: 0 16px 40px rgba(78, 94, 75, 0.16);
 }
 
 .pdp4-portion-grid {
   display: grid;
-  grid-template-columns: 1.08fr 1fr;
-  gap: clamp(1.75rem, 3.2vw, 2.75rem);
-  align-items: start;
-}
-
-/* Left Column */
-.pdp4-portion-left {
-  display: flex;
-  flex-direction: column;
-}
-
-.pdp4-portion-pill-kicker {
-  align-self: flex-start;
-  background: #151814;
-  color: #ffffff;
-  padding: 5px 14px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-brand);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 0.95rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
-}
-
-.pdp4-portion-headline {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(2.3rem, 4.2vw, 3.15rem);
-  font-weight: 400;
-  line-height: 1.05;
-  color: #151814;
-  margin: 0 0 0.85rem;
-  letter-spacing: -0.015em;
-  text-transform: none;
-}
-
-.pdp4-portion-headline em {
-  font-style: italic;
-  font-weight: 400;
-}
-
-.pdp4-portion-lead {
-  font-family: var(--font-brand);
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: #222620;
-  line-height: 1.55;
-  margin: 0 0 1.35rem;
-  max-width: 440px;
-}
-
-/* Toggle Switch Bar */
-.pdp4-portion-toggle-wrap {
-  display: inline-flex;
-  align-self: flex-start;
-  background: rgba(255, 255, 255, 0.45);
-  padding: 4px;
-  border-radius: var(--radius-pill);
-  border: 1.5px solid rgba(255, 255, 255, 0.6);
-  gap: 4px;
-  margin-bottom: 1.35rem;
-}
-
-.pdp4-portion-mode-btn {
-  background: transparent;
-  color: #151814;
-  font-family: var(--font-brand);
-  font-size: 0.84rem;
-  font-weight: 500;
-  padding: 7px 20px;
-  border-radius: var(--radius-pill);
-  border: none;
-  cursor: pointer;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  outline: none;
-}
-
-.pdp4-portion-mode-btn.active {
-  background: #151814;
-  color: #ffffff;
-  font-weight: 600;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
-}
-
-/* Spec Dimension Cards */
-.pdp4-portion-spec-row {
-  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 1rem;
-}
-
-.pdp4-portion-spec-card {
-  background: rgba(255, 255, 255, 0.38);
-  border: 1.5px solid rgba(255, 255, 255, 0.55);
-  border-radius: 18px;
-  padding: 14px 16px;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  user-select: none;
-  outline: none;
-}
-
-.pdp4-portion-spec-card:hover {
-  background: rgba(255, 255, 255, 0.58);
-  border-color: #ffffff;
-  transform: translateY(-2px);
-}
-
-.pdp4-portion-spec-card.active {
-  background: #ffffff;
-  border-color: #ffffff;
-  box-shadow: 0 8px 24px rgba(21, 24, 20, 0.08);
-  transform: translateY(-2px);
-}
-
-.pdp4-spec-label {
-  font-family: var(--font-brand);
-  font-size: 0.74rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #575d53;
-}
-
-.pdp4-spec-measure {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.85rem;
-  font-weight: 500;
-  color: #151814;
-  margin: 4px 0 2px;
-  line-height: 1.1;
-}
-
-.pdp4-spec-in {
-  font-family: var(--font-brand);
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #575d53;
-  margin-left: 3px;
-  vertical-align: baseline;
-}
-
-.pdp4-spec-sub {
-  font-family: var(--font-brand);
-  font-size: 0.76rem;
-  color: #495045;
-  line-height: 1.35;
-}
-
-.pdp4-portion-disclaimer {
-  font-family: var(--font-brand);
-  font-size: 0.74rem;
-  color: rgba(21, 24, 20, 0.78);
-  line-height: 1.45;
-  margin: 0;
-}
-
-/* Right Column */
-.pdp4-portion-right {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* Top White Card: Slices Presentation (Real Image) */
-.pdp4-slice-preview-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 16px 20px 14px;
-  box-shadow: 0 8px 24px rgba(21, 24, 20, 0.06);
-  text-align: center;
-}
-
-.pdp4-slice-top-bar {
-  display: flex;
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  gap: 8px;
 }
 
-.pdp4-slice-caption {
-  font-family: var(--font-brand);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #7c8378;
-}
-
-.pdp4-slice-guide-hint {
-  font-family: var(--font-brand);
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: #575d53;
+/* Left: Slices Image */
+.pdp4-portion-media {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
 }
 
 .pdp4-slice-photo-frame {
   position: relative;
   width: 100%;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
-  background: #f4f6f3;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 18px rgba(21, 24, 20, 0.08);
 }
 
 .pdp4-slice-img {
   width: 100%;
   height: auto;
-  max-height: 220px;
+  max-height: 240px;
   object-fit: cover;
   object-position: center 35%;
   display: block;
@@ -18650,145 +18461,138 @@ iframe {
   transform: scale(1.02);
 }
 
-.pdp4-slice-overlay-tag {
-  position: absolute;
-  bottom: 10px;
-  left: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(21, 24, 20, 0.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #ffffff;
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-brand);
-  font-size: 0.72rem;
+.pdp4-portion-caption {
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.8rem;
+  color: #1c241b;
+  text-align: center;
+  margin: 0;
   font-weight: 500;
   letter-spacing: 0.02em;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  transition: all 0.25s ease;
 }
 
-.pdp4-slice-tag-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #c3d4c0;
+/* Right: Portion Guide */
+.pdp4-portion-guide-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-/* Measurement scale line */
-.pdp4-scale-line-wrap {
+.pdp4-portion-top-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 12px;
+  justify-content: space-between;
+  padding-bottom: 0.85rem;
+  border-bottom: 1.5px solid rgba(21, 24, 20, 0.15);
+  gap: 1rem;
 }
 
-.pdp4-scale-bar-left,
-.pdp4-scale-bar-right {
-  flex: 1;
-  height: 1px;
-  background: #cbd2c9;
-  max-width: 55px;
-}
-
-.pdp4-scale-text {
-  font-family: var(--font-brand);
-  font-size: 0.76rem;
+.pdp4-portion-headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.75rem, 2.6vw, 2.3rem);
   font-weight: 500;
-  color: #575d53;
-  white-space: nowrap;
+  color: #151814;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
 }
 
-/* Bottom Yield Matrix Box */
-.pdp4-yield-box {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 6px 8px 10px;
-  box-shadow: 0 8px 24px rgba(21, 24, 20, 0.06);
+/* Toggle Switch Bar on Primary Background */
+.pdp4-portion-toggle-wrap {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 3px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  gap: 3px;
 }
 
+.pdp4-portion-mode-btn {
+  background: transparent;
+  color: #151814;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.pdp4-portion-mode-btn.active {
+  background: #151814;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+/* Yield Table List on Primary Background */
 .pdp4-yield-list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .pdp4-yield-item {
-  display: grid;
-  grid-template-columns: 1.35fr 1fr auto;
+  display: flex;
   align-items: center;
-  padding: 10px 14px;
-  border-radius: 12px;
+  justify-content: space-between;
+  padding: 13px 12px;
+  border-bottom: 1px solid rgba(21, 24, 20, 0.12);
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
   user-select: none;
   outline: none;
+  background: transparent;
 }
 
 .pdp4-yield-item:hover {
-  background: #f4f6f3;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .pdp4-yield-item.active {
-  background: #a7b2a3;
-  color: #151814;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.35);
+  border-left: 3.5px solid #151814;
+  padding-left: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
+.pdp4-yield-item.active .pdp4-yield-tier,
 .pdp4-yield-item.active .pdp4-yield-serves {
   color: #151814;
   font-weight: 600;
 }
 
-.pdp4-yield-item.active .pdp4-yield-price {
-  color: #151814;
-  font-weight: 700;
-}
-
 .pdp4-yield-tier {
-  font-family: var(--font-brand);
-  font-size: 0.88rem;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #151814;
 }
 
 .pdp4-yield-num {
-  font-size: 1rem;
-  font-weight: 700;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
   margin-right: 4px;
 }
 
 .pdp4-yield-serves {
-  font-family: var(--font-brand);
-  font-size: 0.84rem;
-  color: #575d53;
-  text-align: center;
-}
-
-.pdp4-yield-price {
-  font-family: var(--font-brand);
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.92rem;
   color: #151814;
+  font-weight: 500;
   text-align: right;
-  min-width: 45px;
 }
 
-.pdp4-yield-note {
-  text-align: center;
-  font-family: var(--font-brand);
-  font-size: 0.72rem;
-  color: #7c8378;
-  margin-top: 6px;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 820px) {
   .pdp4-portion-grid {
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    gap: 2rem;
   }
 }
 
