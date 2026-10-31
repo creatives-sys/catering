@@ -19672,80 +19672,31 @@ iframe {
   border: 1px solid rgba(79, 70, 229, 0.22);
 }
 
-/* Mini Browser Chrome Frame */
-.pdp4-mini-browser {
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.pdp4-browser-topbar {
-  height: 24px;
-  background: rgba(248, 249, 250, 0.95);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 8px;
-  flex-shrink: 0;
-}
-
-.pdp4-browser-dots {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-
-.pdp4-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.pdp4-dot-red { background: #ff5f56; }
-.pdp4-dot-amber { background: #ffbd2e; }
-.pdp4-dot-green { background: #27c93f; }
-
-.pdp4-browser-pill {
-  font-family: var(--font-brand, 'Jost', sans-serif);
-  font-size: 8px;
-  color: #8892a0;
-  background: rgba(0, 0, 0, 0.04);
-  padding: 1.5px 8px;
-  border-radius: 999px;
-  letter-spacing: 0.04em;
-}
-
-.pdp4-browser-screen {
-  flex: 1;
+/* Card Image Frame (Pure image showcase inside ambient glow, without browser chrome) */
+.pdp4-mcard-img-frame {
   width: 100%;
   height: 100%;
-  position: relative;
+  border-radius: 10px;
   overflow: hidden;
-  background: #f8f9fa;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pdp4-screen-img {
+.pdp4-mcard-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center 40%;
   transition: transform 0.4s ease;
   display: block;
 }
 
-.pdp4-mcard:hover .pdp4-screen-img {
+.pdp4-mcard:hover .pdp4-mcard-img {
   transform: scale(1.07);
 }
 
