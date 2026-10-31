@@ -224,6 +224,7 @@
         <a href="product-2.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 2 (Triptych)</a>
         <a href="product-3.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 3 (Minimal Direct)</a>
         <a href="product-4.html?id=bruce-chocolate-cake" class="layout-toggle-btn active">Layout 4 (Studio Card)</a>
+        <a href="product-5.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 5 (Minimal Interactive)</a>
       </div>
     </div>
   </div>
@@ -736,294 +737,1445 @@
         </div>
       </section>
 
-      <!-- ========================================================================
-           PDP4 CELEBRATION TESTIMONIALS: ROTATING STACKED CARD DECK
-           Inspired directly by user reference with organic scallop clover photo cutouts
+            <!-- ========================================================================
+           PDP4 CONTINUOUS MARQUEE TESTIMONIALS (Exact match to reference)
+           Dual-row infinitely auto-scrolling ticker with pause-on-hover & glow cards
            ======================================================================== -->
-      <!-- Inline SVG Clip Definition for 4-Lobe Clover / Scallop Cutout -->
-      <svg width="0" height="0" style="position: absolute; pointer-events: none;" aria-hidden="true">
-        <defs>
-          <clipPath id="pdp4CloverClip" clipPathUnits="objectBoundingBox">
-            <path d="M 0.50 0.04
-                     C 0.64 0.04 0.74 0.16 0.70 0.30
-                     C 0.68 0.35 0.65 0.35 0.70 0.35
-                     C 0.84 0.31 0.96 0.41 0.96 0.50
-                     C 0.96 0.64 0.84 0.74 0.70 0.70
-                     C 0.65 0.68 0.65 0.65 0.65 0.70
-                     C 0.69 0.84 0.59 0.96 0.50 0.96
-                     C 0.36 0.96 0.26 0.84 0.30 0.70
-                     C 0.32 0.65 0.35 0.65 0.30 0.65
-                     C 0.16 0.69 0.04 0.59 0.04 0.50
-                     C 0.04 0.36 0.16 0.26 0.30 0.30
-                     C 0.35 0.32 0.35 0.35 0.35 0.30
-                     C 0.31 0.16 0.41 0.04 0.50 0.04 Z" />
-          </clipPath>
-        </defs>
-      </svg>
-
-      <section class="pdp4-testimonials-section" id="pdp4TestimonialsSection"
-        aria-label="Google Reviews and Celebration Testimonials">
-        <div class="pdp4-deck-header">
-          <div class="pdp4-deck-eyebrow-wrap">
-            <span class="pdp4-google-badge">
-              <svg width="15" height="15" viewBox="0 0 24 24">
-                <path fill="#4285F4"
-                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                <path fill="#34A853"
-                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                <path fill="#FBBC05"
-                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                <path fill="#EA4335"
-                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-              </svg>
-              <span>Google Reviews</span>
-            </span>
-            <span class="pdp4-deck-rating-score">4.4 ★★★★☆</span>
-            <span class="pdp4-deck-count">(240+ Verified Reviews)</span>
+      <section class="pdp4-marquee-testimonials" id="pdp4MarqueeSection" aria-label="Celebration Reviews and Testimonials">
+        <div class="pdp4-marquee-header">
+          <div class="pdp4-marquee-kicker-wrap">
+            <span class="pdp4-marquee-pill">TESTIMONIALS</span>
           </div>
-          <h2 class="pdp4-deck-title">Loved Across Melbourne</h2>
-          <p class="pdp4-deck-subtitle">
-            Authentic customer reviews and photographs shared by our guests on Google Maps from celebrations across
-            Melbourne.
+          <h2 class="pdp4-marquee-heading">Loved by the celebrations we sweeten</h2>
+          <p class="pdp4-marquee-sub">
+            Real words from real celebrations &mdash; milestone birthdays, boutique weddings, and private banquets we&rsquo;ve handcrafted in Melbourne.
           </p>
         </div>
 
-        <!-- The Rotating Card Deck Stage -->
-        <div class="pdp4-deck-stage" id="pdp4DeckStage" aria-roledescription="carousel"
-          aria-label="Celebration Reviews Carousel">
-          <!-- Card 0: Atelier Sage -->
-          <article class="pdp4-deck-card pdp4-card-sage" data-index="0" data-pos="0"
-            aria-label="Review 1 of 4: Sophie Montgomery">
-            <div class="pdp4-card-left">
-              <div class="pdp4-card-top-row">
-                <div class="pdp4-card-badges">
-                  <span class="pdp4-card-google-pill">
-                    <svg width="12" height="12" viewBox="0 0 24 24">
-                      <path fill="#4285F4"
-                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                      <path fill="#34A853"
-                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                      <path fill="#FBBC05"
-                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                      <path fill="#EA4335"
-                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                    </svg>
-                    <span>Google</span>
-                  </span>
-                  <span class="pdp4-card-stars">★★★★★</span>
-                  <span class="pdp4-card-pill-tag">30th Birthday</span>
+        <div class="pdp4-marquee-viewport">
+          <!-- ROW 1: Auto-scrolling LEFT (Forward) -->
+          <div class="pdp4-marquee-row pdp4-marquee-forward" aria-label="Recent celebration reviews row 1">
+          <div class="pdp4-marquee-group">
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-coral">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/bruce-layer-cake.png" alt="Bruce Celebration Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">The Bruce Cake</span>
+                        <span class="pdp4-browser-sub">12" Grand Banquet &middot; 5 Layers</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <span class="pdp4-card-num">01</span>
-              </div>
-              <div>
-                <h3 class="pdp4-card-headline">"A showstopper 30th birthday centerpiece from Kew."</h3>
-                <p class="pdp4-card-body-text">
-                  We ordered the 12" Grand Banquet Bruce Chocolate Cake for Leo’s 30th birthday in South Yarra. Guests
-                  could not stop raving about the five buttermilk layers and the rich fudge frosting. The bespoke
-                  reinforced box made transit completely stress-free.
-                </p>
-              </div>
-              <div class="pdp4-card-bottom-row">
-                <div class="pdp4-card-author-info">
-                  <span class="pdp4-card-author-name">Sophie Montgomery <span class="pdp4-verified-tick"
-                      title="Verified Google Reviewer">✓</span></span>
-                  <span class="pdp4-card-author-sub">Local Guide · 42 reviews · 3 weeks ago</span>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The 12-layer Bruce cake was the undisputed centerpiece of our 30th. Not a single crumb remained, and guests are still messaging us.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-coral">SM</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Sophie Montgomery</span>
+                      <span class="pdp4-author-role">30th Birthday Banquet &middot; South Yarra</span>
+                    </div>
+                  </div>
                 </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101"
-                  target="_blank" rel="noopener noreferrer" class="pdp4-card-btn pdp4-card-google-link">Read on Google
-                  Maps ↗</a>
-              </div>
-            </div>
-            <div class="pdp4-card-media">
-              <div class="pdp4-clover-frame">
-                <img src="assets/images/bruce-cake-1.png" alt="Bruce Chocolate Cake celebration presentation">
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 1: Warm Alabaster Cream -->
-          <article class="pdp4-deck-card pdp4-card-cream" data-index="1" data-pos="1"
-            aria-label="Review 2 of 4: Sophia Theodorou">
-            <div class="pdp4-card-left">
-              <div class="pdp4-card-top-row">
-                <div class="pdp4-card-badges">
-                  <span class="pdp4-card-google-pill">
-                    <svg width="12" height="12" viewBox="0 0 24 24">
-                      <path fill="#4285F4"
-                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                      <path fill="#34A853"
-                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                      <path fill="#FBBC05"
-                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                      <path fill="#EA4335"
-                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                    </svg>
-                    <span>Google</span>
-                  </span>
-                  <span class="pdp4-card-stars">★★★★★</span>
-                  <span class="pdp4-card-pill-tag">Plaque Inscription</span>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-amber">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/cake-tasting-box.png" alt="Atelier Cake Flight" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Atelier Cake Flight</span>
+                        <span class="pdp4-browser-sub">Boutique Wedding &middot; 4 Tastes</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <span class="pdp4-card-num">02</span>
-              </div>
-              <div>
-                <h3 class="pdp4-card-headline">"The gold-piped chocolate plaque was sheer perfection."</h3>
-                <p class="pdp4-card-body-text">
-                  The custom Belgian dark chocolate plaque with gold script elevated our milestone anniversary dinner
-                  into something truly couture. Having our inscription piped direct on the cake made the reveal
-                  unforgettable.
-                </p>
-              </div>
-              <div class="pdp4-card-bottom-row">
-                <div class="pdp4-card-author-info">
-                  <span class="pdp4-card-author-name">Sophia Theodorou <span class="pdp4-verified-tick"
-                      title="Verified Google Reviewer">✓</span></span>
-                  <span class="pdp4-card-author-sub">18 reviews · 1 month ago</span>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Flawless refrigerated delivery right to our venue in Hawthorn. Impeccable atelier craftsmanship, and the handwritten card was exquisite.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-amber">MH</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Marcus &amp; Claire Hughes</span>
+                      <span class="pdp4-author-role">Wedding Reception &middot; Hawthorn</span>
+                    </div>
+                  </div>
                 </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101"
-                  target="_blank" rel="noopener noreferrer" class="pdp4-card-btn pdp4-card-google-link">Read on Google
-                  Maps ↗</a>
-              </div>
-            </div>
-            <div class="pdp4-card-media">
-              <div class="pdp4-clover-frame">
-                <img src="assets/images/bruce-cake-3.png" alt="Hand-piped gold chocolate plaque detail">
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2: Belgian Chocolate Noir -->
-          <article class="pdp4-deck-card pdp4-card-choco" data-index="2" data-pos="2"
-            aria-label="Review 3 of 4: Julian Rossi">
-            <div class="pdp4-card-left">
-              <div class="pdp4-card-top-row">
-                <div class="pdp4-card-badges">
-                  <span class="pdp4-card-google-pill">
-                    <svg width="12" height="12" viewBox="0 0 24 24">
-                      <path fill="#4285F4"
-                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                      <path fill="#34A853"
-                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                      <path fill="#FBBC05"
-                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                      <path fill="#EA4335"
-                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                    </svg>
-                    <span>Google</span>
-                  </span>
-                  <span class="pdp4-card-stars">★★★★★</span>
-                  <span class="pdp4-card-pill-tag">Private Banquet</span>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-sage">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/audrey-vintage-cake.jpg" alt="Audrey Vintage Tier" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Audrey Vintage Tier</span>
+                        <span class="pdp4-browser-sub">9" Classic &middot; Ruffle Piping</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <span class="pdp4-card-num">03</span>
-              </div>
-              <div>
-                <h3 class="pdp4-card-headline">"Fed 16 dessert serves with plenty to spare."</h3>
-                <p class="pdp4-card-body-text">
-                  We hosted a private dinner party in Toorak and needed an indulgent finale. Following their
-                  instructions to bring it to room temp for 90 minutes made the Belgian fudge frosting completely
-                  melt-in-mouth. The Lescure butter richness is unmatched.
-                </p>
-              </div>
-              <div class="pdp4-card-bottom-row">
-                <div class="pdp4-card-author-info">
-                  <span class="pdp4-card-author-name">Julian Rossi <span class="pdp4-verified-tick"
-                      title="Verified Google Reviewer">✓</span></span>
-                  <span class="pdp4-card-author-sub">Local Guide · 89 reviews · 2 months ago</span>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Following their instructions to bring it to room temp for 90 minutes made the Belgian fudge frosting completely melt-in-mouth. Unmatched.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-sage">JR</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Julian Rossi</span>
+                      <span class="pdp4-author-role">Private Dinner Banquet &middot; Toorak</span>
+                    </div>
+                  </div>
                 </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101"
-                  target="_blank" rel="noopener noreferrer" class="pdp4-card-btn pdp4-card-google-link">Read on Google
-                  Maps ↗</a>
-              </div>
-            </div>
-            <div class="pdp4-card-media">
-              <div class="pdp4-clover-frame">
-                <img src="assets/images/bruce-cake-2.png" alt="Five-layer chocolate fudge slice detail">
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3: Deep Forest Olive -->
-          <article class="pdp4-deck-card pdp4-card-olive" data-index="3" data-pos="3"
-            aria-label="Review 4 of 4: Marcus & Claire Hughes">
-            <div class="pdp4-card-left">
-              <div class="pdp4-card-top-row">
-                <div class="pdp4-card-badges">
-                  <span class="pdp4-card-google-pill">
-                    <svg width="12" height="12" viewBox="0 0 24 24">
-                      <path fill="#4285F4"
-                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                      <path fill="#34A853"
-                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                      <path fill="#FBBC05"
-                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                      <path fill="#EA4335"
-                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                    </svg>
-                    <span>Google</span>
-                  </span>
-                  <span class="pdp4-card-stars">★★★★★</span>
-                  <span class="pdp4-card-pill-tag">Metro Delivery</span>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-plum">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/bruce-cake-3.png" alt="Gold-Piped Plaque" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Gold-Piped Plaque</span>
+                        <span class="pdp4-browser-sub">Belgian Chocolate Inscription</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <span class="pdp4-card-num">04</span>
-              </div>
-              <div>
-                <h3 class="pdp4-card-headline">"Flawless refrigerated morning delivery in Hawthorn."</h3>
-                <p class="pdp4-card-body-text">
-                  Delivered chilled in Hawthorn during our exact morning transit window. The cake arrived in pristine
-                  condition, chilled overnight and packed with a bespoke portion cutting guide. Pure atelier
-                  craftsmanship right to our door.
-                </p>
-              </div>
-              <div class="pdp4-card-bottom-row">
-                <div class="pdp4-card-author-info">
-                  <span class="pdp4-card-author-name">Marcus &amp; Claire Hughes <span class="pdp4-verified-tick"
-                      title="Verified Google Reviewer">✓</span></span>
-                  <span class="pdp4-card-author-sub">24 reviews · recently</span>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The custom Belgian dark chocolate plaque with gold script elevated our anniversary dinner into something truly couture. Sheer perfection.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-plum">ST</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Sophia Theodorou</span>
+                      <span class="pdp4-author-role">Milestone Anniversary &middot; Kew</span>
+                    </div>
+                  </div>
                 </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Frank+%26+Harri+259+High+St+Kew+VIC+3101"
-                  target="_blank" rel="noopener noreferrer" class="pdp4-card-btn pdp4-card-google-link">Read on Google
-                  Maps ↗</a>
-              </div>
-            </div>
-            <div class="pdp4-card-media">
-              <div class="pdp4-clover-frame">
-                <img src="assets/images/real/bruce-layer-cake.png" alt="Delivered celebration cake presentation">
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Controls: Next/Prev, Dots, Counter & Auto-Play Toggle -->
-        <div class="pdp4-deck-controls">
-          <button type="button" class="pdp4-deck-nav-btn" id="pdp4DeckPrevBtn" aria-label="Previous review">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-
-          <div class="pdp4-deck-dots" id="pdp4DeckDots" role="tablist" aria-label="Review slide indicators">
-            <button type="button" class="pdp4-deck-dot active" data-index="0" role="tab" aria-selected="true"
-              aria-label="Go to review 1"></button>
-            <button type="button" class="pdp4-deck-dot" data-index="1" role="tab" aria-selected="false"
-              aria-label="Go to review 2"></button>
-            <button type="button" class="pdp4-deck-dot" data-index="2" role="tab" aria-selected="false"
-              aria-label="Go to review 3"></button>
-            <button type="button" class="pdp4-deck-dot" data-index="3" role="tab" aria-selected="false"
-              aria-label="Go to review 4"></button>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-gold">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/number-cake.jpg" alt="Artisan Number Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Artisan Number Cake</span>
+                        <span class="pdp4-browser-sub">Macarons &amp; Fresh Berries</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The portion sizing guide was spot-on &mdash; 14 generous slices and the balance of Valrhona chocolate was pure perfection. Everyone asked where it was from.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-gold">CD</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Callum Davies</span>
+                      <span class="pdp4-author-role">21st Birthday Banquet &middot; Camberwell</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-mint">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/sprinkles-cake.png" alt="Festive Confetti Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Festive Confetti Cake</span>
+                        <span class="pdp4-browser-sub">Vanilla Buttercream &middot; Kew</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The beeswax candles and gold sparklers made cutting the cake so memorable. Beautiful packaging, arrived impeccably chilled in Kew.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-mint">EV</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Elena Vance</span>
+                      <span class="pdp4-author-role">Engagement Celebration &middot; Richmond</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+          </div>
+          <div class="pdp4-marquee-group" aria-hidden="true">
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-coral">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/bruce-layer-cake.png" alt="Bruce Celebration Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">The Bruce Cake</span>
+                        <span class="pdp4-browser-sub">12" Grand Banquet &middot; 5 Layers</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The 12-layer Bruce cake was the undisputed centerpiece of our 30th. Not a single crumb remained, and guests are still messaging us.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-coral">SM</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Sophie Montgomery</span>
+                      <span class="pdp4-author-role">30th Birthday Banquet &middot; South Yarra</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-amber">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/cake-tasting-box.png" alt="Atelier Cake Flight" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Atelier Cake Flight</span>
+                        <span class="pdp4-browser-sub">Boutique Wedding &middot; 4 Tastes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Flawless refrigerated delivery right to our venue in Hawthorn. Impeccable atelier craftsmanship, and the handwritten card was exquisite.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-amber">MH</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Marcus &amp; Claire Hughes</span>
+                      <span class="pdp4-author-role">Wedding Reception &middot; Hawthorn</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-sage">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/audrey-vintage-cake.jpg" alt="Audrey Vintage Tier" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Audrey Vintage Tier</span>
+                        <span class="pdp4-browser-sub">9" Classic &middot; Ruffle Piping</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Following their instructions to bring it to room temp for 90 minutes made the Belgian fudge frosting completely melt-in-mouth. Unmatched.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-sage">JR</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Julian Rossi</span>
+                      <span class="pdp4-author-role">Private Dinner Banquet &middot; Toorak</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-plum">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/bruce-cake-3.png" alt="Gold-Piped Plaque" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Gold-Piped Plaque</span>
+                        <span class="pdp4-browser-sub">Belgian Chocolate Inscription</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The custom Belgian dark chocolate plaque with gold script elevated our anniversary dinner into something truly couture. Sheer perfection.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-plum">ST</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Sophia Theodorou</span>
+                      <span class="pdp4-author-role">Milestone Anniversary &middot; Kew</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-gold">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/number-cake.jpg" alt="Artisan Number Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Artisan Number Cake</span>
+                        <span class="pdp4-browser-sub">Macarons &amp; Fresh Berries</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The portion sizing guide was spot-on &mdash; 14 generous slices and the balance of Valrhona chocolate was pure perfection. Everyone asked where it was from.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-gold">CD</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Callum Davies</span>
+                      <span class="pdp4-author-role">21st Birthday Banquet &middot; Camberwell</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-mint">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/sprinkles-cake.png" alt="Festive Confetti Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Festive Confetti Cake</span>
+                        <span class="pdp4-browser-sub">Vanilla Buttercream &middot; Kew</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The beeswax candles and gold sparklers made cutting the cake so memorable. Beautiful packaging, arrived impeccably chilled in Kew.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-mint">EV</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Elena Vance</span>
+                      <span class="pdp4-author-role">Engagement Celebration &middot; Richmond</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+          </div>
+          <div class="pdp4-marquee-group" aria-hidden="true">
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-coral">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/bruce-layer-cake.png" alt="Bruce Celebration Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">The Bruce Cake</span>
+                        <span class="pdp4-browser-sub">12" Grand Banquet &middot; 5 Layers</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The 12-layer Bruce cake was the undisputed centerpiece of our 30th. Not a single crumb remained, and guests are still messaging us.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-coral">SM</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Sophie Montgomery</span>
+                      <span class="pdp4-author-role">30th Birthday Banquet &middot; South Yarra</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-amber">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/cake-tasting-box.png" alt="Atelier Cake Flight" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Atelier Cake Flight</span>
+                        <span class="pdp4-browser-sub">Boutique Wedding &middot; 4 Tastes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Flawless refrigerated delivery right to our venue in Hawthorn. Impeccable atelier craftsmanship, and the handwritten card was exquisite.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-amber">MH</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Marcus &amp; Claire Hughes</span>
+                      <span class="pdp4-author-role">Wedding Reception &middot; Hawthorn</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-sage">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/audrey-vintage-cake.jpg" alt="Audrey Vintage Tier" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Audrey Vintage Tier</span>
+                        <span class="pdp4-browser-sub">9" Classic &middot; Ruffle Piping</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Following their instructions to bring it to room temp for 90 minutes made the Belgian fudge frosting completely melt-in-mouth. Unmatched.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-sage">JR</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Julian Rossi</span>
+                      <span class="pdp4-author-role">Private Dinner Banquet &middot; Toorak</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-plum">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/bruce-cake-3.png" alt="Gold-Piped Plaque" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Gold-Piped Plaque</span>
+                        <span class="pdp4-browser-sub">Belgian Chocolate Inscription</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The custom Belgian dark chocolate plaque with gold script elevated our anniversary dinner into something truly couture. Sheer perfection.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-plum">ST</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Sophia Theodorou</span>
+                      <span class="pdp4-author-role">Milestone Anniversary &middot; Kew</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-gold">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/number-cake.jpg" alt="Artisan Number Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Artisan Number Cake</span>
+                        <span class="pdp4-browser-sub">Macarons &amp; Fresh Berries</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The portion sizing guide was spot-on &mdash; 14 generous slices and the balance of Valrhona chocolate was pure perfection. Everyone asked where it was from.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-gold">CD</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Callum Davies</span>
+                      <span class="pdp4-author-role">21st Birthday Banquet &middot; Camberwell</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-mint">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/sprinkles-cake.png" alt="Festive Confetti Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Festive Confetti Cake</span>
+                        <span class="pdp4-browser-sub">Vanilla Buttercream &middot; Kew</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The beeswax candles and gold sparklers made cutting the cake so memorable. Beautiful packaging, arrived impeccably chilled in Kew.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-mint">EV</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Elena Vance</span>
+                      <span class="pdp4-author-role">Engagement Celebration &middot; Richmond</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+          </div>
           </div>
 
-          <span class="pdp4-deck-counter" id="pdp4DeckCounter">01 / 04</span>
-
-          <button type="button" class="pdp4-deck-nav-btn" id="pdp4DeckNextBtn" aria-label="Next review">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-
-          <button type="button" class="pdp4-deck-autoplay-toggle" id="pdp4DeckAutoplayBtn"
-            aria-label="Pause automatic rotation">
-            <span id="pdp4DeckAutoplayIcon">⏸</span>
-            <span id="pdp4DeckAutoplayLabel">Auto</span>
-          </button>
+          <!-- ROW 2: Auto-scrolling RIGHT (Reverse) -->
+          <div class="pdp4-marquee-row pdp4-marquee-reverse" aria-label="Recent celebration reviews row 2">
+          <div class="pdp4-marquee-group">
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-warm-amber">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/eton-mess-cake.png" alt="Eton Mess Celebration" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Eton Mess Celebration</span>
+                        <span class="pdp4-browser-sub">Crisp Meringue &amp; Berry Coulis</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Hands down the finest celebration bakery in Melbourne. From the 72-hour booking to the cake box presentation, absolute perfection.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-warm-amber">JT</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Julian Thorpe</span>
+                      <span class="pdp4-author-role">50th Birthday Party &middot; Brighton</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-soft-sage">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/rose-cake.jpg" alt="Rosette Celebration Tier" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Rosette Celebration Tier</span>
+                        <span class="pdp4-browser-sub">Organic Rosewater Buttercream</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Saved our anniversary dinner! Seamless online order, on-time refrigerated courier, and the personalised message was handwritten with care.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-soft-sage">KL</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Kirsten Liu</span>
+                      <span class="pdp4-author-role">Silver Anniversary &middot; Fitzroy</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-terracotta">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/flourless-orange-cake.png" alt="Flourless Orange Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Flourless Orange Cake</span>
+                        <span class="pdp4-browser-sub">Almond Flour &amp; Glazed Citrus</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The Grand Banquet size easily fed our 22 guests with generous dessert portions. Frank &amp; Harri is now our family's official celebration tradition.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-terracotta">LO</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Liam O&rsquo;Connor</span>
+                      <span class="pdp4-author-role">Family Banquet &middot; Malvern</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-deep-teal">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/lemon-ricotta-cake.png" alt="Lemon Ricotta Sponge" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Lemon Ricotta Sponge</span>
+                        <span class="pdp4-browser-sub">Sicilian Lemon Curd Layer</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Such a relief to have transparent lead times and exact delivery windows. The cake arrived in pristine condition and tasted sensational.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-deep-teal">AZ</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Amara Zhang</span>
+                      <span class="pdp4-author-role">Graduation Banquet &middot; Carlton</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-ruby">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/vanilla-raspberry-cupcakes.png" alt="Atelier Pastry Platter" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Atelier Pastry Platter</span>
+                        <span class="pdp4-browser-sub">Fresh Raspberries &amp; Gold Leaf</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The gold leaf finish and custom chocolate plaque looked like a Michelin-starred sculpture. Worth every single dollar for a milestone 50th.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-ruby">DB</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">David Bennett</span>
+                      <span class="pdp4-author-role">Milestone 50th &middot; Southbank</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-indigo">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/pavlova-dessert.jpg" alt="Signature Pavlova Crown" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Signature Pavlova Crown</span>
+                        <span class="pdp4-browser-sub">Passionfruit &amp; Chantilly Cream</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Incredible customer care from the Kew team. The hazelnut crunch layer combined with the silky chocolate cr&eacute;meux is Melbourne's best secret.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-indigo">CB</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Chloe Beaumont</span>
+                      <span class="pdp4-author-role">Corporate Banquet &middot; Melbourne CBD</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+          </div>
+          <div class="pdp4-marquee-group" aria-hidden="true">
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-warm-amber">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/eton-mess-cake.png" alt="Eton Mess Celebration" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Eton Mess Celebration</span>
+                        <span class="pdp4-browser-sub">Crisp Meringue &amp; Berry Coulis</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Hands down the finest celebration bakery in Melbourne. From the 72-hour booking to the cake box presentation, absolute perfection.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-warm-amber">JT</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Julian Thorpe</span>
+                      <span class="pdp4-author-role">50th Birthday Party &middot; Brighton</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-soft-sage">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/rose-cake.jpg" alt="Rosette Celebration Tier" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Rosette Celebration Tier</span>
+                        <span class="pdp4-browser-sub">Organic Rosewater Buttercream</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Saved our anniversary dinner! Seamless online order, on-time refrigerated courier, and the personalised message was handwritten with care.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-soft-sage">KL</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Kirsten Liu</span>
+                      <span class="pdp4-author-role">Silver Anniversary &middot; Fitzroy</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-terracotta">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/flourless-orange-cake.png" alt="Flourless Orange Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Flourless Orange Cake</span>
+                        <span class="pdp4-browser-sub">Almond Flour &amp; Glazed Citrus</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The Grand Banquet size easily fed our 22 guests with generous dessert portions. Frank &amp; Harri is now our family's official celebration tradition.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-terracotta">LO</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Liam O&rsquo;Connor</span>
+                      <span class="pdp4-author-role">Family Banquet &middot; Malvern</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-deep-teal">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/lemon-ricotta-cake.png" alt="Lemon Ricotta Sponge" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Lemon Ricotta Sponge</span>
+                        <span class="pdp4-browser-sub">Sicilian Lemon Curd Layer</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Such a relief to have transparent lead times and exact delivery windows. The cake arrived in pristine condition and tasted sensational.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-deep-teal">AZ</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Amara Zhang</span>
+                      <span class="pdp4-author-role">Graduation Banquet &middot; Carlton</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-ruby">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/vanilla-raspberry-cupcakes.png" alt="Atelier Pastry Platter" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Atelier Pastry Platter</span>
+                        <span class="pdp4-browser-sub">Fresh Raspberries &amp; Gold Leaf</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The gold leaf finish and custom chocolate plaque looked like a Michelin-starred sculpture. Worth every single dollar for a milestone 50th.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-ruby">DB</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">David Bennett</span>
+                      <span class="pdp4-author-role">Milestone 50th &middot; Southbank</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-indigo">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/pavlova-dessert.jpg" alt="Signature Pavlova Crown" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Signature Pavlova Crown</span>
+                        <span class="pdp4-browser-sub">Passionfruit &amp; Chantilly Cream</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Incredible customer care from the Kew team. The hazelnut crunch layer combined with the silky chocolate cr&eacute;meux is Melbourne's best secret.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-indigo">CB</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Chloe Beaumont</span>
+                      <span class="pdp4-author-role">Corporate Banquet &middot; Melbourne CBD</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+          </div>
+          <div class="pdp4-marquee-group" aria-hidden="true">
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-warm-amber">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/eton-mess-cake.png" alt="Eton Mess Celebration" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Eton Mess Celebration</span>
+                        <span class="pdp4-browser-sub">Crisp Meringue &amp; Berry Coulis</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Hands down the finest celebration bakery in Melbourne. From the 72-hour booking to the cake box presentation, absolute perfection.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-warm-amber">JT</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Julian Thorpe</span>
+                      <span class="pdp4-author-role">50th Birthday Party &middot; Brighton</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-soft-sage">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/rose-cake.jpg" alt="Rosette Celebration Tier" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Rosette Celebration Tier</span>
+                        <span class="pdp4-browser-sub">Organic Rosewater Buttercream</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Saved our anniversary dinner! Seamless online order, on-time refrigerated courier, and the personalised message was handwritten with care.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-soft-sage">KL</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Kirsten Liu</span>
+                      <span class="pdp4-author-role">Silver Anniversary &middot; Fitzroy</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-terracotta">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/flourless-orange-cake.png" alt="Flourless Orange Cake" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Flourless Orange Cake</span>
+                        <span class="pdp4-browser-sub">Almond Flour &amp; Glazed Citrus</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The Grand Banquet size easily fed our 22 guests with generous dessert portions. Frank &amp; Harri is now our family's official celebration tradition.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-terracotta">LO</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Liam O&rsquo;Connor</span>
+                      <span class="pdp4-author-role">Family Banquet &middot; Malvern</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-deep-teal">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/lemon-ricotta-cake.png" alt="Lemon Ricotta Sponge" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Lemon Ricotta Sponge</span>
+                        <span class="pdp4-browser-sub">Sicilian Lemon Curd Layer</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Such a relief to have transparent lead times and exact delivery windows. The cake arrived in pristine condition and tasted sensational.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-deep-teal">AZ</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Amara Zhang</span>
+                      <span class="pdp4-author-role">Graduation Banquet &middot; Carlton</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-ruby">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/vanilla-raspberry-cupcakes.png" alt="Atelier Pastry Platter" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Atelier Pastry Platter</span>
+                        <span class="pdp4-browser-sub">Fresh Raspberries &amp; Gold Leaf</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;The gold leaf finish and custom chocolate plaque looked like a Michelin-starred sculpture. Worth every single dollar for a milestone 50th.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-ruby">DB</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">David Bennett</span>
+                      <span class="pdp4-author-role">Milestone 50th &middot; Southbank</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="pdp4-mcard">
+                <div class="pdp4-mcard-preview pdp4-glow-indigo">
+                  <div class="pdp4-mini-browser">
+                    <div class="pdp4-browser-topbar">
+                      <div class="pdp4-browser-dots">
+                        <span class="pdp4-dot pdp4-dot-red"></span>
+                        <span class="pdp4-dot pdp4-dot-amber"></span>
+                        <span class="pdp4-dot pdp4-dot-green"></span>
+                      </div>
+                      <span class="pdp4-browser-pill">frankandharri.com.au</span>
+                    </div>
+                    <div class="pdp4-browser-body">
+                      <div class="pdp4-browser-thumb">
+                        <img src="assets/images/real/pavlova-dessert.jpg" alt="Signature Pavlova Crown" loading="lazy">
+                      </div>
+                      <div class="pdp4-browser-info">
+                        <span class="pdp4-browser-tag">&#9733; 5.0 Google Review</span>
+                        <span class="pdp4-browser-title">Signature Pavlova Crown</span>
+                        <span class="pdp4-browser-sub">Passionfruit &amp; Chantilly Cream</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdp4-mcard-content">
+                  <div class="pdp4-mcard-stars" aria-label="5 out of 5 stars">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+                  <p class="pdp4-mcard-quote">
+                    &ldquo;Incredible customer care from the Kew team. The hazelnut crunch layer combined with the silky chocolate cr&eacute;meux is Melbourne's best secret.&rdquo;
+                  </p>
+                  <div class="pdp4-mcard-author">
+                    <div class="pdp4-author-avatar avatar-indigo">CB</div>
+                    <div class="pdp4-author-meta">
+                      <span class="pdp4-author-name">Chloe Beaumont</span>
+                      <span class="pdp4-author-role">Corporate Banquet &middot; Melbourne CBD</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+          </div>
+          </div>
         </div>
       </section>
 

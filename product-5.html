@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruce Chocolate Cake · Layout 5 Interactive Sheet · Frank & Harri Patisserie Kew</title>
+  <meta name="description"
+    content="Our most loved chocolate cake. Five thinner layers of rich buttermilk chocolate cake bound by smooth Belgian chocolate fudge frosting. Handcrafted in Kew, Melbourne.">
+
+  <!-- Frank & Harri Authentic Typography: Cormorant Garamond (Serif), Jost (Clean Sans), Caveat (Hand-Piped Plaque Script) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3.5">
+</head>
+
+<body data-page="product-5">
+
+  <!-- ========================================================================
+       Top Announcement Ribbon (Exact match to reference: Sage Green #a7b2a3)
+       ======================================================================== -->
+  <div class="top-brand-bar">
+    <div class="top-brand-container">
+      <div class="top-brand-left">Kew Boutique Pâtisserie</div>
+      <div class="top-brand-center">
+        <span class="top-brand-bullet">•</span>
+        <span>Complimentary Melbourne Metro Delivery On Orders Over $150 · 72h Pre-Order For Celebration Cakes</span>
+      </div>
+      <div class="top-brand-right">Tue–Sat 7:30am – 3:30pm</div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Pierre Hermé Paris Inspired Luxury Header (Frank & Harri Authentic)
+       ======================================================================== -->
+  <header class="ph-header" id="siteHeader">
+    <div class="ph-main-bar">
+      <div class="ph-main-container">
+
+        <!-- Left: Mobile Hamburger & La Maison / Our locations -->
+        <div class="ph-left-wrap">
+          <button class="ph-mobile-toggle" id="phNavToggle" aria-label="Open mobile menu" title="Open Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <line x1="3" y1="7" x2="21" y2="7"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="17" x2="21" y2="17"></line>
+            </svg>
+          </button>
+          <nav class="ph-left-nav" aria-label="Brand links">
+            <a href="index.html#boutiqueSection" class="ph-nav-link">La Maison</a>
+            <a href="index.html#boutiqueSection" class="ph-nav-link">Our Boutique</a>
+          </nav>
+        </div>
+
+        <!-- Center: Centered Luxury Wordmark with Sage Dot -->
+        <div class="ph-brand-center">
+          <a href="index.html" class="ph-brand-link" aria-label="Frank & Harri Homepage">
+            <span class="ph-brand-title">FRANK & HARRI<span class="ph-dot">.</span></span>
+            <span class="ph-brand-sub">KEW · MELBOURNE</span>
+          </a>
+        </div>
+
+        <!-- Right: Minimal Utility Actions: Currency, Search, Account, Bag -->
+        <div class="ph-right-actions">
+          <!-- Currency / Region Selector -->
+          <div class="ph-currency-wrap">
+            <button class="ph-currency-btn" id="currencyToggleBtn" aria-label="Select currency" aria-expanded="false">
+              <span id="currentCurrencyLabel">AU</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="ph-currency-dropdown" id="currencyDropdown">
+              <button class="ph-curr-opt active" data-curr="AU">AU $ (AUD)</button>
+              <button class="ph-curr-opt" data-curr="US">US $ (USD)</button>
+              <button class="ph-curr-opt" data-curr="EU">€ (EUR)</button>
+              <button class="ph-curr-opt" data-curr="UK">£ (GBP)</button>
+            </div>
+          </div>
+
+          <!-- Search Icon Button -->
+          <button class="ph-icon-btn" id="headerSearchToggleBtn" aria-label="Search creations" title="Search">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="11" cy="11" r="7.5"></circle>
+              <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+            </svg>
+          </button>
+
+          <!-- Account Icon Button -->
+          <button class="ph-icon-btn" id="accountBtn" aria-label="My Account" title="My Account">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          <!-- Shopping Bag Pill Button with Badge -->
+          <button class="ph-bag-btn" id="headerBagBtn" aria-label="Open Shopping Bag">
+            <span class="ph-bag-text">Bag</span>
+            <span class="ph-bag-badge" id="headerBagCount">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Editorial Secondary Navigation: Product Categories -->
+    <nav class="ph-subnav-bar" aria-label="Main Patisserie Categories">
+      <div class="ph-subnav-container">
+        <ul class="ph-cat-list">
+          <li><a href="bestsellers.html" class="ph-cat-link" data-cat="bestsellers">BEST SELLERS</a></li>
+          <li><a href="birthday-cakes.html" class="ph-cat-link active" data-cat="celebration">CELEBRATION CAKES</a></li>
+          <li><a href="gluten-free.html" class="ph-cat-link" data-cat="gluten-free">GLUTEN-FREE</a></li>
+          <li><a href="tarts-pastries.html" class="ph-cat-link" data-cat="pastries">TARTS & PASTRIES</a></li>
+          <li><a href="catering.html" class="ph-cat-link" data-cat="catering">CATERING</a></li>
+          <li><a href="sales-department.html" class="ph-cat-link">SALES DEPARTMENT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Slide-Down Minimalist Search Drawer -->
+    <div class="ph-search-drawer" id="phSearchDrawer" aria-hidden="true">
+      <div class="ph-search-inner">
+        <div class="ph-search-field-wrap">
+          <svg class="ph-search-lens-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="globalSearchInput" class="ph-search-input"
+            placeholder="Search celebration cakes, viennoiseries, flavours, catering..." aria-label="Search creations">
+          <button class="search-submit-circle" id="searchSubmitBtn" aria-label="Execute search">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+        <button class="ph-search-close-btn" id="phSearchCloseBtn" aria-label="Close search">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Backdrop for Luxury Slide-Out Navigation Drawer -->
+  <div class="ph-drawer-backdrop" id="phNavBackdrop" aria-hidden="true"></div>
+
+  <!-- Luxury Slide-Out Navigation Drawer (Mobile & Tablet) -->
+  <aside class="ph-nav-drawer" id="phNavDrawer" aria-label="Boutique Navigation Drawer" aria-hidden="true">
+    <div class="ph-nav-drawer-header">
+      <div class="ph-drawer-brand">
+        <span class="ph-brand-title" style="font-size: 1.25rem;">FRANK & HARRI<span class="ph-dot">.</span></span>
+        <span class="ph-brand-sub" style="font-size: 0.58rem;">KEW · MELBOURNE</span>
+      </div>
+      <button class="drawer-close-btn" id="phNavCloseBtn" aria-label="Close navigation menu">✕</button>
+    </div>
+
+    <div class="ph-nav-drawer-body">
+      <nav class="ph-drawer-nav-list" aria-label="Mobile Navigation">
+        <a href="bestsellers.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">01</span>
+          <span class="ph-nav-text">Best Sellers Collection</span>
+        </a>
+        <a href="birthday-cakes.html" class="ph-drawer-nav-item active" data-drawer-link>
+          <span class="ph-nav-num">02</span>
+          <span class="ph-nav-text">Celebration & Birthday Cakes</span>
+        </a>
+        <a href="gluten-free.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">03</span>
+          <span class="ph-nav-text">Gluten-Free Masterworks</span>
+        </a>
+        <a href="tarts-pastries.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">04</span>
+          <span class="ph-nav-text">Tarts, Pastries & Viennoiserie</span>
+        </a>
+        <a href="catering.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">05</span>
+          <span class="ph-nav-text">Event Catering & Grazing</span>
+        </a>
+        <a href="sales-department.html" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">06</span>
+          <span class="ph-nav-text">Corporate & Bulk Gifting</span>
+        </a>
+        <a href="index.html#signatureSection" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">07</span>
+          <span class="ph-nav-text">The Iconic Bruce Cake</span>
+        </a>
+        <a href="index.html#boutiqueSection" class="ph-drawer-nav-item" data-drawer-link>
+          <span class="ph-nav-num">08</span>
+          <span class="ph-nav-text">Kew Junction Boutique & Hours</span>
+        </a>
+      </nav>
+
+      <div class="ph-drawer-actions">
+        <button class="btn-primary open-catering-trigger" style="width: 100%; justify-content: center;"
+          data-drawer-link>
+          <span>Enquire For Catering →</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Breadcrumbs & Layout Switcher Bar
+       ======================================================================== -->
+  <div class="pdp-breadcrumb-bar">
+    <div class="container"
+      style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+      <nav class="pdp-breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="pdp-bc-sep">/</span>
+        <a href="birthday-cakes.html">Birthday Cakes</a>
+        <span class="pdp-bc-sep">/</span>
+        <span class="pdp-bc-current">Bruce Chocolate Cake</span>
+      </nav>
+
+      <!-- Layout Switcher (Allows comparing layouts) -->
+      <div class="pdp-layout-switcher">
+        <span class="switcher-label">Reference Layout:</span>
+        <a href="product.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 1 (Split)</a>
+        <a href="product-2.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 2 (Triptych)</a>
+        <a href="product-3.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 3 (Minimal Direct)</a>
+        <a href="product-4.html?id=bruce-chocolate-cake" class="layout-toggle-btn">Layout 4 (Studio Card)</a>
+        <a href="product-5.html?id=bruce-chocolate-cake" class="layout-toggle-btn active">Layout 5 (Minimal Interactive)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       PRODUCT-5 MAIN: MINIMAL & HYPER-INTERACTIVE ATELIER STUDIO
+       Pure Frank & Harri authentic content - Elevated, breathable, ultra-interactive
+       ======================================================================== -->
+  <main class="pdp5-min-main" id="pdp5Main">
+    <div class="pdp5-min-container">
+
+      <!-- 2-Column Minimal Asymmetric Layout -->
+      <div class="pdp5-min-grid">
+
+        <!-- ==================================================================
+             LEFT COLUMN: Hero Cake Stage, Multi-Angle View Strip & Care Accordions
+             ================================================================== -->
+        <div class="pdp5-min-gallery-col">
+
+          <!-- Minimal Stage Frame -->
+          <div class="pdp5-min-stage" id="pdp5Stage">
+            <!-- Subtle Floating Badges -->
+            <div class="pdp5-min-badge-row">
+              <span class="pdp5-min-lead-pill">
+                <span class="pdp5-min-pulse-dot"></span>
+                72h Pre-order required
+              </span>
+              <span class="pdp5-min-loc-pill">
+                &#128205; Kew Boutique &amp; Metro Delivery
+              </span>
+            </div>
+
+            <!-- Cake Hero Image with Interactive Physical Scale Transformation -->
+            <div class="pdp5-min-hero-wrap" id="pdp5HeroWrap">
+              <img src="assets/images/real/bruce-layer-cake.png" alt="Bruce Chocolate Cake" id="pdp5HeroImg" class="pdp5-min-cake-img">
+
+              <!-- Live Hand-Piped Chocolate Plaque Overlay -->
+              <div class="pdp5-min-plaque-overlay visible" id="pdp5PlaqueOverlay">
+                <div class="pdp5-min-plaque-disc">
+                  <span class="pdp5-min-plaque-text" id="pdp5PlaqueLiveText">Happy Birthday!</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Size Scale Indicator Tag -->
+            <div class="pdp5-min-scale-tag" id="pdp5ScaleTag">
+              <span>Format: </span><strong id="pdp5ScaleTagName">6" Petite</strong> <span class="pdp5-min-scale-dim" id="pdp5ScaleTagServes">(Serves 7&ndash;8)</span>
+            </div>
+          </div>
+
+          <!-- Multi-Angle Interactive View Capsule Strip -->
+          <div class="pdp5-min-views-strip" role="tablist" aria-label="Cake perspective views">
+            <button type="button" class="pdp5-min-view-btn active" data-src="assets/images/real/bruce-layer-cake.png" data-index="0" role="tab" aria-selected="true">
+              <span class="pdp5-min-view-dot"></span>
+              <span class="pdp5-min-view-label">01 &middot; Whole Cake View</span>
+            </button>
+            <button type="button" class="pdp5-min-view-btn" data-src="assets/images/bruce-cake-2.png" data-index="1" role="tab" aria-selected="false">
+              <span class="pdp5-min-view-dot"></span>
+              <span class="pdp5-min-view-label">02 &middot; 5-Layer Slice Cutaway</span>
+            </button>
+            <button type="button" class="pdp5-min-view-btn" data-src="assets/images/bruce-cake-3.png" data-index="2" role="tab" aria-selected="false">
+              <span class="pdp5-min-view-dot"></span>
+              <span class="pdp5-min-view-label">03 &middot; Plaque &amp; Gift Box</span>
+            </button>
+          </div>
+
+          <!-- Minimalist Interactive Accordion (Transparency & Care Details) -->
+          <div class="pdp5-min-accordion" id="pdp5Accordion">
+            <!-- Row 1: Boutique Pickup & Metro Delivery -->
+            <div class="pdp5-min-acc-item active" id="accItemPickup">
+              <button type="button" class="pdp5-min-acc-trigger" aria-expanded="true">
+                <span class="pdp5-min-acc-title">Boutique Pickup &amp; Melbourne Metro Delivery</span>
+                <span class="pdp5-min-acc-icon">&minus;</span>
+              </button>
+              <div class="pdp5-min-acc-body">
+                <p>
+                  <strong>Boutique Collection:</strong> Collect 11:00am &ndash; 3:00pm from the express bay at 256 High St, Kew. Need another time? Contact our concierge at info@frankandharri.com.au.
+                </p>
+                <p>
+                  <strong>Refrigerated Metro Courier:</strong> Climate-controlled dispatch to eligible Melbourne postcodes, shown at checkout. Flat $15, complimentary for orders over $150.
+                </p>
+              </div>
+            </div>
+
+            <!-- Row 2: Pure Belgian Chocolate & Ingredients -->
+            <div class="pdp5-min-acc-item" id="accItemIngredients">
+              <button type="button" class="pdp5-min-acc-trigger" aria-expanded="false">
+                <span class="pdp5-min-acc-title">Pure Belgian Chocolate &amp; Ingredients</span>
+                <span class="pdp5-min-acc-icon">+</span>
+              </button>
+              <div class="pdp5-min-acc-body">
+                <p>
+                  Crafted exclusively with 70% Callebaut Belgian dark chocolate callets, cultured Dutch cocoa powder, cultured French Lescure butter, free-range Gippsland eggs, and cultured buttermilk.
+                </p>
+                <p>
+                  <em>Allergens:</em> Contains wheat flour, dairy, and eggs. Baked in an artisan atelier that processes tree nuts and sesame seeds.
+                </p>
+              </div>
+            </div>
+
+            <!-- Row 3: Getting It Home & Slicing Protocol -->
+            <div class="pdp5-min-acc-item" id="accItemCare">
+              <button type="button" class="pdp5-min-acc-trigger" aria-expanded="false">
+                <span class="pdp5-min-acc-title">Care &amp; Slicing Protocol</span>
+                <span class="pdp5-min-acc-icon">+</span>
+              </button>
+              <div class="pdp5-min-acc-body">
+                <p>
+                  Transport flat on your car floor with the air conditioning on cold. Keep refrigerated until 1&ndash;2 hours before presentation; allowing the Belgian fudge ganache to soften slightly ensures silky, melt-in-the-mouth slices.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ==================================================================
+             RIGHT COLUMN: Minimal Product Header & Interactive Customizer Console
+             ================================================================== -->
+        <div class="pdp5-min-console-col">
+          <div class="pdp5-min-sticky-console">
+
+            <!-- Product Header -->
+            <div class="pdp5-min-header">
+              <div class="pdp5-min-eyebrow-row">
+                <span class="pdp5-min-eyebrow">SIGNATURE CELEBRATION CREATION</span>
+                <span class="pdp5-min-rating">
+                  <span class="pdp5-min-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  <strong>4.9</strong> (128 reviews)
+                </span>
+              </div>
+
+              <h1 class="pdp5-min-title" id="pdp5Title">Bruce Chocolate Cake</h1>
+
+              <!-- Live Dynamic Price Display -->
+              <div class="pdp5-min-price-box">
+                <span class="pdp5-min-price" id="pdp5DisplayPrice">$109.00</span>
+                <span class="pdp5-min-price-sub">Complimentary Kew Boutique pickup &middot; Metro delivery available</span>
+              </div>
+
+              <p class="pdp5-min-desc">
+                Five whisper-thin layers of buttermilk chocolate cake bound by slow-tempered Belgian chocolate fudge. Handcrafted from scratch daily in our Kew boutique atelier using cultured French Lescure butter and single-origin chocolate.
+              </p>
+            </div>
+
+            <div class="pdp5-min-divider"></div>
+
+            <!-- Interactive Step 1: Format & Sizing (Direct Segmented Cards) -->
+            <div class="pdp5-min-step">
+              <div class="pdp5-min-step-header">
+                <span class="pdp5-min-step-label">1. Select Format &amp; Servings</span>
+                <button type="button" class="pdp5-min-portion-toggle" id="pdp5PortionToggle" aria-expanded="false">
+                  <span>Portion Guide</span>
+                  <span class="pdp5-min-toggle-arrow">&#9662;</span>
+                </button>
+              </div>
+
+              <div class="pdp5-min-sizes-grid" role="radiogroup" aria-label="Cake size selection">
+                <button type="button" class="pdp5-min-size-card active" data-size="6" data-name="6&quot; Petite" data-serves="Serves 7&ndash;8" data-price="109">
+                  <span class="pdp5-min-size-name">6" Petite</span>
+                  <span class="pdp5-min-size-serves">Serves 7&ndash;8</span>
+                  <span class="pdp5-min-size-price">$109.00</span>
+                </button>
+                <button type="button" class="pdp5-min-size-card" data-size="9" data-name="9&quot; Grand" data-serves="Serves 12&ndash;14" data-price="159">
+                  <span class="pdp5-min-size-name">9" Grand</span>
+                  <span class="pdp5-min-size-serves">Serves 12&ndash;14</span>
+                  <span class="pdp5-min-size-price">$159.00</span>
+                </button>
+                <button type="button" class="pdp5-min-size-card" data-size="12" data-name="12&quot; Banquet" data-serves="Serves 20&ndash;22" data-price="209">
+                  <span class="pdp5-min-size-name">12" Banquet</span>
+                  <span class="pdp5-min-size-serves">Serves 20&ndash;22</span>
+                  <span class="pdp5-min-size-price">$209.00</span>
+                </button>
+              </div>
+
+              <!-- Interactive Inline Portion Guide (Expands smoothly on click) -->
+              <div class="pdp5-min-portion-drawer" id="pdp5PortionDrawer" style="display: none;">
+                <div class="pdp5-min-portion-inner">
+                  <div class="pdp5-min-portion-modes">
+                    <button type="button" class="pdp5-min-mode-btn active" id="pdp5ModeDessert" data-mode="dessert">Dessert Cut (1 &times; 2 &times; 4 in)</button>
+                    <button type="button" class="pdp5-min-mode-btn" id="pdp5ModeCoffee" data-mode="coffee">Coffee Cut (1 &times; 1 &times; 4 in)</button>
+                  </div>
+                  <div class="pdp5-min-portion-yield" id="pdp5PortionYieldText">
+                    Generous after-dinner celebration slices: 6" serves 7&ndash;8 &middot; 9" serves 12&ndash;14 &middot; 12" serves 20&ndash;22.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Step 2: Flavour & Ganache Recipe -->
+            <div class="pdp5-min-step">
+              <div class="pdp5-min-step-header">
+                <span class="pdp5-min-step-label">2. Flavour &amp; Ganache Recipe</span>
+                <span class="pdp5-min-curated-tag">Atelier Curated</span>
+              </div>
+
+              <div class="pdp5-min-flavours-grid" role="radiogroup" aria-label="Flavour and ganache recipe">
+                <button type="button" class="pdp5-min-flavour-btn active" data-flavour="Belgian Dark Chocolate Fudge" data-note="Slow-cooked 70% Callebaut dark chocolate fudge ganache (Signature)">
+                  <span class="pdp5-min-swatch swatch-dark"></span>
+                  <span class="pdp5-min-flavour-text">Belgian Dark Chocolate Fudge <em class="pdp5-min-pill-rec">(Signature)</em></span>
+                </button>
+                <button type="button" class="pdp5-min-flavour-btn" data-flavour="Victorian Vanilla Bean &amp; Raspberry Curd" data-note="Madagascar vanilla bean sponge layered with tart house-made raspberry curd">
+                  <span class="pdp5-min-swatch swatch-vanilla"></span>
+                  <span class="pdp5-min-flavour-text">Victorian Vanilla Bean &amp; Raspberry</span>
+                </button>
+                <button type="button" class="pdp5-min-flavour-btn" data-flavour="Roasted Piedmont Hazelnut Gianduja" data-note="Roasted Italian hazelnut praline folded into whipped gianduja ganache">
+                  <span class="pdp5-min-swatch swatch-hazelnut"></span>
+                  <span class="pdp5-min-flavour-text">Roasted Hazelnut Gianduja</span>
+                </button>
+                <button type="button" class="pdp5-min-flavour-btn" data-flavour="Meyer Lemon Curd &amp; Passionfruit" data-note="Zesty Victorian Meyer lemon curd with passionfruit reduction &amp; light sponge">
+                  <span class="pdp5-min-swatch swatch-lemon"></span>
+                  <span class="pdp5-min-flavour-text">Meyer Lemon Curd &amp; Passionfruit</span>
+                </button>
+              </div>
+              <div class="pdp5-min-recipe-note" id="pdp5RecipeNote">
+                Slow-cooked 70% Callebaut dark chocolate fudge ganache (Signature).
+              </div>
+            </div>
+
+            <!-- Interactive Step 3: Complimentary Hand-Piped Chocolate Plaque -->
+            <div class="pdp5-min-step">
+              <div class="pdp5-min-plaque-box" id="pdp5PlaqueBox">
+                <label class="pdp5-min-toggle-label" for="pdp5PlaqueToggle">
+                  <input type="checkbox" id="pdp5PlaqueToggle" checked>
+                  <span class="pdp5-min-toggle-slider"></span>
+                  <span class="pdp5-min-toggle-text">
+                    <strong>Add hand-piped chocolate message plaque</strong>
+                    <span class="pdp5-min-free-pill">+ Complimentary Free</span>
+                  </span>
+                </label>
+
+                <div class="pdp5-min-plaque-input-area" id="pdp5PlaqueInputArea">
+                  <div class="pdp5-min-input-wrap">
+                    <input type="text" id="pdp5PlaqueInput" class="pdp5-min-text-input" maxlength="28" value="Happy Birthday!" placeholder="e.g. Happy 30th Birthday Claire!" aria-label="Custom plaque inscription">
+                    <span class="pdp5-min-counter" id="pdp5PlaqueCounter">15/28</span>
+                  </div>
+
+                  <!-- 1-Click Preset Suggestion Chips -->
+                  <div class="pdp5-min-chips-row">
+                    <span class="pdp5-min-chips-hint">Presets:</span>
+                    <button type="button" class="pdp5-min-chip" data-preset="Happy Birthday!">Happy Birthday!</button>
+                    <button type="button" class="pdp5-min-chip" data-preset="Congratulations!">Congratulations!</button>
+                    <button type="button" class="pdp5-min-chip" data-preset="We Love You!">We Love You!</button>
+                    <button type="button" class="pdp5-min-chip" data-preset="Happy 30th, Leo!">Happy 30th!</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Step 4: Pickup or Delivery Date & Time -->
+            <div class="pdp5-min-step">
+              <div class="pdp5-min-step-header">
+                <span class="pdp5-min-step-label">3. Pickup or Delivery Date</span>
+                <span class="pdp5-min-lead-hint">Min 72h notice</span>
+              </div>
+
+              <div class="pdp5-min-dates-row" role="radiogroup" aria-label="Select celebration date">
+                <button type="button" class="pdp5-min-date-pill active" data-date="Tue 3 Nov">
+                  <span class="pdp5-min-date-main">Tue 3 Nov</span>
+                  <span class="pdp5-min-date-sub">earliest</span>
+                </button>
+                <button type="button" class="pdp5-min-date-pill" data-date="Wed 4 Nov">
+                  <span class="pdp5-min-date-main">Wed 4 Nov</span>
+                  <span class="pdp5-min-date-sub">available</span>
+                </button>
+                <button type="button" class="pdp5-min-date-pill" data-date="Thu 5 Nov">
+                  <span class="pdp5-min-date-main">Thu 5 Nov</span>
+                  <span class="pdp5-min-date-sub">available</span>
+                </button>
+                <button type="button" class="pdp5-min-date-pill pdp5-min-cal-trigger" id="pdp5CalTriggerBtn" aria-expanded="false" aria-controls="pdp5CalPopover">
+                  <span class="pdp5-min-date-main" id="pdp5CalMainText">&#128197; Calendar</span>
+                  <span class="pdp5-min-date-sub" id="pdp5CalSubText">choose date</span>
+                </button>
+              </div>
+
+              <!-- Calendar Popover Widget -->
+              <div class="pdp5-min-cal-popover" id="pdp5CalPopover" style="display: none;" aria-hidden="true">
+                <div class="pdp5-min-cal-header">
+                  <button type="button" class="pdp5-min-cal-nav" id="pdp5CalPrev" aria-label="Previous month">&lsaquo;</button>
+                  <span class="pdp5-min-cal-title" id="pdp5CalMonthTitle">November 2026</span>
+                  <button type="button" class="pdp5-min-cal-nav" id="pdp5CalNext" aria-label="Next month">&rsaquo;</button>
+                </div>
+                <div class="pdp5-min-cal-weekdays">
+                  <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+                </div>
+                <div class="pdp5-min-cal-grid" id="pdp5CalDaysGrid" role="grid"></div>
+                <div class="pdp5-min-cal-footer">
+                  <span class="pdp5-min-cal-notice">72h baking lead notice</span>
+                  <button type="button" class="pdp5-min-cal-close" id="pdp5CalDone">Done</button>
+                </div>
+              </div>
+
+              <!-- Time Windows -->
+              <div class="pdp5-min-times-row" role="radiogroup" aria-label="Select collection time window">
+                <button type="button" class="pdp5-min-time-pill active" data-time="11:00am - 1:00pm">11:00am &ndash; 1:00pm</button>
+                <button type="button" class="pdp5-min-time-pill" data-time="1:00pm - 3:00pm">1:00pm &ndash; 3:00pm</button>
+              </div>
+            </div>
+
+            <!-- Interactive Step 5: Celebration Finishing Touches (Cards & Sparklers) -->
+            <div class="pdp5-min-step">
+              <div class="pdp5-min-step-header">
+                <span class="pdp5-min-step-label">4. Finishing Touches <span class="pdp5-min-optional">(Optional)</span></span>
+                <span class="pdp5-min-optional-hint">1-click additions</span>
+              </div>
+
+              <div class="pdp5-min-addons-grid">
+                <button type="button" class="pdp5-min-addon-pill" data-addon="candles" data-price="12.00">
+                  <span class="pdp5-min-addon-check">&#10003;</span>
+                  <span class="pdp5-min-addon-name">Gold dipped beeswax candles (12)</span>
+                  <span class="pdp5-min-addon-price">+$12.00</span>
+                </button>
+                <button type="button" class="pdp5-min-addon-pill" data-addon="sparklers" data-price="8.50">
+                  <span class="pdp5-min-addon-check">&#10003;</span>
+                  <span class="pdp5-min-addon-name">Giant cake gold sparklers (2)</span>
+                  <span class="pdp5-min-addon-price">+$8.50</span>
+                </button>
+                <button type="button" class="pdp5-min-addon-pill" data-addon="handwritten" data-price="4.00">
+                  <span class="pdp5-min-addon-check">&#10003;</span>
+                  <span class="pdp5-min-addon-name">Handwritten card</span>
+                  <span class="pdp5-min-addon-price">+$4.00</span>
+                </button>
+                <button type="button" class="pdp5-min-addon-pill" data-addon="letterpressed" data-price="6.00">
+                  <span class="pdp5-min-addon-check">&#10003;</span>
+                  <span class="pdp5-min-addon-name">Letter pressed card</span>
+                  <span class="pdp5-min-addon-price">+$6.00</span>
+                </button>
+              </div>
+
+              <!-- Card Message Input Drawer (Smoothly expands when a card is selected) -->
+              <div class="pdp5-min-card-msg-wrap" id="pdp5CardMsgWrap" style="display: none;">
+                <label for="pdp5CardMsgInput" class="pdp5-min-input-sublabel">Your card message (handwritten with care):</label>
+                <div class="pdp5-min-input-wrap">
+                  <input type="text" id="pdp5CardMsgInput" class="pdp5-min-text-input" maxlength="140" placeholder="e.g. Wishing you the happiest birthday, Leo! With all our love..." value="Wishing you the happiest celebration!">
+                  <span class="pdp5-min-counter" id="pdp5CardMsgCounter">36/140</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pdp5-min-divider"></div>
+
+            <!-- Interactive Step 6: Minimal Purchase Bar -->
+            <div class="pdp5-min-buy-row">
+              <div class="pdp5-min-stepper" aria-label="Cake quantity">
+                <button type="button" class="pdp5-min-step-btn" id="pdp5QtyMinus" aria-label="Decrease quantity">&minus;</button>
+                <span class="pdp5-min-qty" id="pdp5Qty">1</span>
+                <button type="button" class="pdp5-min-step-btn" id="pdp5QtyPlus" aria-label="Increase quantity">+</button>
+              </div>
+
+              <button type="button" class="pdp5-min-add-btn" id="pdp5AddBtn">
+                <span id="pdp5AddBtnText">Add to Bag &middot; <span id="pdp5BtnTotal">$109.00 AUD</span></span>
+              </button>
+            </div>
+
+            <!-- Express Checkout Row -->
+            <div class="pdp5-min-express-row">
+              <button type="button" class="pdp5-min-express-btn" id="pdp5ApplePay">
+                <svg width="14" height="14" viewBox="0 0 170 170" fill="currentColor">
+                  <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.67-7.85-11.93-14.42-6-9.24-10.74-19.8-14.23-31.68-3.48-11.88-5.22-23.01-5.22-33.4 0-14.13 3.6-25.79 10.8-34.98 7.2-9.19 16.2-13.88 27-14.07 4.13 0 9.03 1.13 14.7 3.39 5.68 2.26 9.4 3.45 11.16 3.57 2.18-.23 6.07-1.46 11.66-3.7 5.6-2.23 10.32-3.23 14.16-2.99 15.86 1.05 27.79 7.42 35.79 19.12-13.9 8.42-20.7 20-20.4 34.74.29 11.53 4.67 21.05 13.14 28.56 8.47 7.51 18.57 11.82 30.3 12.92-2.39 7.4-5.25 14.53-8.58 21.39zM119.22 33.72c0-7.86 2.82-15.34 8.46-22.44 5.64-7.1 12.78-11.18 21.42-12.28.32 1.3.49 2.57.49 3.82 0 7.86-2.92 15.42-8.77 22.68-5.85 7.26-13.1 11.45-21.75 12.57-.22-1.41-.35-2.86-.35-4.35z"/>
+                </svg> Apple Pay
+              </button>
+              <button type="button" class="pdp5-min-express-btn" id="pdp5GooglePay">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+                </svg> Google Pay
+              </button>
+            </div>
+
+            <!-- Real-Time Selection Pill -->
+            <div class="pdp5-min-summary-pill" id="pdp5SummaryPill">
+              6" Petite &middot; Tue 3 Nov, 11:00am &ndash; 1:00pm
+            </div>
+
+            <!-- Concierge Inquiry Link -->
+            <p class="pdp5-min-concierge-note">
+              Custom multi-tier cake, corporate ordering or a bespoke delivery time? <a href="#" id="pdp5ConciergeLink">Contact our Kew concierge</a>
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ========================================================================
+           FULL-WIDTH SECTION: LOVED ACROSS MELBOURNE TESTIMONIALS
+           Genuine Google Reviews & Photographs from Kew Celebrations
+           ======================================================================== -->
+      <section class="pdp5-min-reviews-section" id="pdp5ReviewsSection" aria-label="Customer Reviews">
+        <div class="pdp5-min-reviews-head">
+          <div class="pdp5-min-reviews-tag">
+            <span>Google Reviews &middot; 4.9 &starf;&starf;&starf;&starf;&starf; (128+ Verified Reviews)</span>
+          </div>
+          <h2 class="pdp5-min-reviews-title">Loved Across Melbourne</h2>
+          <p class="pdp5-min-reviews-lead">
+            Authentic customer reviews and celebration photographs shared by our guests on Google Maps.
+          </p>
+        </div>
+
+        <div class="pdp5-min-reviews-grid">
+          <!-- Review 1: Sophie Montgomery -->
+          <article class="pdp5-min-review-card">
+            <div class="pdp5-min-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <h3 class="pdp5-min-review-quote">"A showstopper 30th birthday centerpiece from Kew."</h3>
+            <p class="pdp5-min-review-text">
+              We ordered the 12" Grand Banquet Bruce Chocolate Cake for Leo's 30th birthday in South Yarra. Guests could not stop raving about the five buttermilk layers and the rich fudge frosting. Transit was completely stress-free.
+            </p>
+            <div class="pdp5-min-review-author">
+              <strong>Sophie Montgomery</strong>
+              <span>Verified Google Reviewer &middot; 3 weeks ago</span>
+            </div>
+          </article>
+
+          <!-- Review 2: Sophia Theodorou -->
+          <article class="pdp5-min-review-card">
+            <div class="pdp5-min-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <h3 class="pdp5-min-review-quote">"The gold-piped chocolate plaque was sheer perfection."</h3>
+            <p class="pdp5-min-review-text">
+              The custom Belgian dark chocolate plaque with gold script elevated our milestone anniversary dinner into something truly couture. Having our inscription piped direct on the cake made the reveal unforgettable.
+            </p>
+            <div class="pdp5-min-review-author">
+              <strong>Sophia Theodorou</strong>
+              <span>Verified Google Reviewer &middot; 1 month ago</span>
+            </div>
+          </article>
+
+          <!-- Review 3: Julian Rossi -->
+          <article class="pdp5-min-review-card">
+            <div class="pdp5-min-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <h3 class="pdp5-min-review-quote">"Fed 16 dessert serves with plenty to spare."</h3>
+            <p class="pdp5-min-review-text">
+              We hosted a private dinner party in Toorak and needed an indulgent finale. Following their instructions to bring it to room temp for 90 minutes made the Belgian fudge frosting completely melt-in-mouth.
+            </p>
+            <div class="pdp5-min-review-author">
+              <strong>Julian Rossi</strong>
+              <span>Local Guide &middot; 2 months ago</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <!-- ========================================================================
+       Luxury Slide-Out Shopping Bag Drawer (Frank & Harri Global)
+       ======================================================================== -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag Drawer" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrap">
+        <span class="cart-kicker">VOTRE PANIER</span>
+        <h3 class="cart-drawer-title">Shopping Bag</h3>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close bag">✕</button>
+    </div>
+
+    <!-- Free Delivery Progress Meter -->
+    <div class="cart-progress-box">
+      <div class="cart-progress-text" id="cartDeliveryMsg">
+        Add $41.00 more for Complimentary Melbourne Metro Delivery
+      </div>
+      <div class="cart-progress-bar">
+        <div class="cart-progress-fill" id="cartProgressFill" style="width: 72%;"></div>
+      </div>
+    </div>
+
+    <div class="cart-items-container" id="cartItemsList">
+      <!-- Items dynamically populated via app.js -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal (AUD)</span>
+        <span class="cart-subtotal" id="cartSubtotalDisplay">$0.00</span>
+      </div>
+      <p class="cart-footnote">Taxes included. Delivery or boutique collection selected at next step.</p>
+      <div class="cart-action-group">
+        <button class="btn-primary" id="checkoutBtn" style="width: 100%; justify-content: center;">
+          <span>Proceed to Secure Checkout · 256-Bit</span>
+        </button>
+        <button class="cart-clear-btn" id="clearCartBtn">Clear Bag</button>
+      </div>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop" aria-hidden="true"></div>
+
+  <!-- Kew Atelier Concierge Modal (Event & Catering Inquiry) -->
+  <div class="catering-modal" id="cateringInquiryModal" role="dialog" aria-modal="true"
+    aria-label="Kew Atelier Concierge Catering Inquiry">
+    <div class="catering-modal-inner">
+      <button class="catering-modal-close" id="cateringModalCloseBtn" aria-label="Close dialog">✕</button>
+
+      <div class="catering-modal-header">
+        <span class="catering-kicker">KEW ATELIER CONCIERGE</span>
+        <h3 class="catering-modal-title">Event Catering & Grazing Enquiry</h3>
+        <p class="catering-modal-desc">
+          Artisanal viennoiserie morning boxes, savory quiches, and bespoke celebration packages handcrafted in Kew,
+          Melbourne.
+        </p>
+      </div>
+
+      <div class="catering-modal-notice">
+        <div>✓ Whole celebration cakes require <strong>72 hours advance notice</strong>.</div>
+        <div>✓ Melbourne Metro delivery or boutique collection (11am – 3pm) at 256 High St, Kew.</div>
+      </div>
+
+      <form class="catering-form" id="cateringInquiryForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="catName">Your Name *</label>
+            <input type="text" id="catName" class="custom-input" required placeholder="Claire Delacour">
+          </div>
+          <div class="form-group">
+            <label for="catEmail">Email Address *</label>
+            <input type="email" id="catEmail" class="custom-input" required placeholder="claire@event.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="catDate">Event Date *</label>
+            <input type="date" id="catDate" class="custom-input" required>
+          </div>
+          <div class="form-group">
+            <label for="catGuests">Estimated Guests *</label>
+            <input type="number" id="catGuests" class="custom-input" min="5" max="500" placeholder="e.g. 40" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="catStyle">Event Style & Collection</label>
+          <select id="catStyle" class="custom-input">
+            <option value="Event Catering & Grazing">Event Catering & Grazing Banquets</option>
+            <option value="Morning Viennoiserie Boxes">Morning Viennoiserie Breakfast Boxes</option>
+            <option value="Celebration Cakes & Dessert Table">Celebration Cakes & Dessert Table</option>
+            <option value="100% Gluten-Free Atelier Catering">100% Gluten-Free Atelier Catering</option>
+            <option value="Corporate / Custom Order">Corporate Function / Bespoke Order</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="catNotes">Event Details & Dietary Notes</label>
+          <textarea id="catNotes" class="custom-input" rows="3"
+            placeholder="Tell us about your event, preferred items, dietary requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+          <span>Submit Concierge Enquiry →</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Ultra-Minimal Footer (Rivet Reference Cleanliness)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="brand-wordmark" style="font-size: 1.85rem;">
+            Frank & Harri<span class="dot">.</span>
+          </div>
+          <p>
+            An artisanal boutique pâtisserie nestled on High Street in Kew Junction, Melbourne. Scratch baking, French
+            viennoiserie, celebration cakes, and specialty coffee.
+          </p>
+          <div style="margin-top: 1rem; font-size: 0.82rem; color: var(--fh-charcoal-light);">
+            📍 256 High St, Kew VIC 3101 · Tram 48 & 109 Outside
+          </div>
+        </div>
+
+        <div class="footer-links-row">
+          <div class="footer-col">
+            <h4>Creations</h4>
+            <ul>
+              <li><a href="index.html#signatureSection">The Bruce Cake</a></li>
+              <li><a href="birthday-cakes.html">Celebration Cakes</a></li>
+              <li><a href="tarts-pastries.html">French Viennoiserie</a></li>
+              <li><a href="gluten-free.html">Gluten-Free Cakes</a></li>
+              <li><a href="#" class="open-pdf-menu-trigger">Spring/Summer Menu PDF</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Boutique & Catering</h4>
+            <ul>
+              <li><a href="index.html#boutiqueSection">Kew Junction Boutique</a></li>
+              <li><a href="catering.html">Atelier Catering</a></li>
+              <li><a href="sales-department.html">Sales Department</a></li>
+              <li><a href="mailto:info@frankandharri.com.au">info@frankandharri.com.au</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Social Hub</h4>
+            <ul>
+              <li><a href="https://www.instagram.com/frankandharripatisserie/" target="_blank" rel="noopener">Instagram
+                  (@frankandharripatisserie)</a></li>
+              <li><a href="https://www.facebook.com/frankandharri" target="_blank" rel="noopener">Facebook (5.0 ★)</a>
+              </li>
+              <li><a href="https://www.tiktok.com/@frankandharripatisserie" target="_blank" rel="noopener">TikTok</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Frank & Harri Patisserie Pty Ltd. Handcrafted in Kew, Victoria 3101.
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <span
+            style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Apple
+            Pay</span>
+          <span
+            style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Google
+            Pay</span>
+          <span
+            style="font-size: 0.72rem; border: 1px solid var(--fh-border); padding: 0.2rem 0.5rem; border-radius: var(--radius-xs);">Visa
+            / Mastercard</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application JS -->
+  <script src="app.js?v=3.5"></script>
+</body>
+
+</html>
