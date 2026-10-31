@@ -6124,15 +6124,237 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Date buttons
-    dateBtns.forEach(btn => {
+    // Date Selection: Quick Date Buttons & Interactive Calendar Popover
+    const quickDateBtns = Array.from(document.querySelectorAll('.pdp4-date-btn:not(.pdp4-calendar-trigger-btn)'));
+    const calendarBtn = document.getElementById('pdp4CalendarBtn');
+    const calendarPopover = document.getElementById('pdp4CalendarPopover');
+    const calendarMainText = document.getElementById('pdp4CalendarMainText');
+    const calendarSubText = document.getElementById('pdp4CalendarSubText');
+    const calMonthTitle = document.getElementById('pdp4CalMonthTitle');
+    const calDaysGrid = document.getElementById('pdp4CalDaysGrid');
+    const calPrevMonth = document.getElementById('pdp4CalPrevMonth');
+    const calNextMonth = document.getElementById('pdp4CalNextMonth');
+    const calCloseBtn = document.getElementById('pdp4CalCloseBtn');
+    const nativeDateInput = document.getElementById('pdp4NativeDateInput');
+
+    // Earliest order date: min 72h lead time (Default Nov 3, 2026)
+    const minLeadDate = new Date(2026, 10, 3); // 3 Nov 2026
+    let calViewYear = 2026;
+    let calViewMonth = 10; // November (0-indexed)
+    let customPickedDate = null;
+
+    function renderCalendar() {
+      if (!calDaysGrid || !calMonthTitle) return;
+
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      calMonthTitle.textContent = `${monthNames[calViewMonth]} ${calViewYear}`;
+
+      // Disable prev month if viewing current or prior to earliest booking month
+      if (calPrevMonth) {
+        const isMinMonth = (calViewYear === minLeadDate.getFullYear() && calViewMonth <= minLeadDate.getMonth()) ||
+          calViewYear < minLeadDate.getFullYear();
+        calPrevMonth.disabled = isMinMonth;
+        calPrevMonth.style.opacity = isMinMonth ? '0.35' : '1';
+        calPrevMonth.style.cursor = isMinMonth ? 'not-allowed' : 'pointer';
+      }
+
+      calDaysGrid.innerHTML = '';
+
+      // Days calculation
+      const firstDayOfMonth = new Date(calViewYear, calViewMonth, 1).getDay();
+      // Monday = 0, Sunday = 6
+      const startCol = (firstDayOfMonth + 6) % 7;
+      const totalDays = new Date(calViewYear, calViewMonth + 1, 0).getDate();
+
+      // Empty lead cells
+      for (let i = 0; i < startCol; i++) {
+        const emptyCell = document.createElement('div');
+        emptyCell.className = 'pdp4-cal-day-cell other-month';
+        calDaysGrid.appendChild(emptyCell);
+      }
+
+      const today = new Date(2026, 9, 31); // Showcase current date: 31 Oct 2026
+
+      for (let day = 1; day <= totalDays; day++) {
+        const cellDate = new Date(calViewYear, calViewMonth, day);
+        const cell = document.createElement('button');
+        cell.type = 'button';
+        cell.className = 'pdp4-cal-day-cell';
+        cell.textContent = day;
+
+        const isPastOrUnder72h = cellDate < minLeadDate;
+        if (isPastOrUnder72h) {
+          cell.disabled = true;
+          cell.setAttribute('title', 'Requires min 72h artisan preparation lead time');
+        } else {
+          cell.setAttribute('title', cellDate.toLocaleDateString('en-AU', { weekday: 'short', day: 'numeric', month: 'short' }));
+
+          // Check if currently selected
+          if (customPickedDate &&
+              customPickedDate.getDate() === day &&
+              customPickedDate.getMonth() === calViewMonth &&
+              customPickedDate.getFullYear() === calViewYear) {
+            cell.classList.add('active');
+          }
+
+          cell.addEventListener('click', (e) => {
+            e.stopPropagation();
+            applyCustomDate(cellDate);
+          });
+        }
+
+        if (cellDate.toDateString() === today.toDateString()) {
+          cell.classList.add('is-today');
+        }
+
+        calDaysGrid.appendChild(cell);
+      }
+    }
+
+    function applyCustomDate(dateObj) {
+      customPickedDate = dateObj;
+      const formatted = dateObj.toLocaleDateString('en-AU', {
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short'
+      });
+
+      selectedDate = formatted;
+
+      // Update Calendar button active state and text
+      quickDateBtns.forEach(b => b.classList.remove('active'));
+      if (calendarBtn) {
+        calendarBtn.classList.add('active');
+        if (calendarMainText) calendarMainText.textContent = formatted;
+        if (calendarSubText) calendarSubText.textContent = 'selected date';
+      }
+
+      // Update Native input value if present
+      if (nativeDateInput) {
+        const y = dateObj.getFullYear();
+        const m = String(dateObj.getMonth() + 1).padStart(2, '0');
+        const d = String(dateObj.getDate()).padStart(2, '0');
+        nativeDateInput.value = `${y}-${m}-${d}`;
+      }
+
+      renderCalendar();
+      updatePricing();
+
+      if (typeof showToast === 'function') {
+        showToast(`Celebration date set: ${formatted}`);
+      }
+
+      // Briefly keep calendar open so user sees selection, then close
+      setTimeout(() => {
+        closeCalendar();
+      }, 280);
+    }
+
+    function openCalendar() {
+      if (!calendarPopover) return;
+      calendarPopover.style.display = 'block';
+      calendarPopover.setAttribute('aria-hidden', 'false');
+      if (calendarBtn) calendarBtn.setAttribute('aria-expanded', 'true');
+      renderCalendar();
+    }
+
+    function closeCalendar() {
+      if (!calendarPopover) return;
+      calendarPopover.style.display = 'none';
+      calendarPopover.setAttribute('aria-hidden', 'true');
+      if (calendarBtn) calendarBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    // Quick Date Buttons Click
+    quickDateBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        dateBtns.forEach(b => b.classList.remove('active'));
+        quickDateBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        if (calendarBtn) {
+          calendarBtn.classList.remove('active');
+          if (calendarMainText) calendarMainText.textContent = 'Calendar';
+          if (calendarSubText) calendarSubText.textContent = 'choose date';
+        }
         selectedDate = btn.getAttribute('data-date');
+        closeCalendar();
         updatePricing();
       });
     });
+
+    // Calendar Toggle Button
+    if (calendarBtn) {
+      calendarBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = !calendarPopover || calendarPopover.style.display === 'none';
+        if (isHidden) {
+          openCalendar();
+        } else {
+          closeCalendar();
+        }
+      });
+    }
+
+    // Month Navigation
+    if (calPrevMonth) {
+      calPrevMonth.addEventListener('click', (e) => {
+        e.stopPropagation();
+        calViewMonth--;
+        if (calViewMonth < 0) {
+          calViewMonth = 11;
+          calViewYear--;
+        }
+        renderCalendar();
+      });
+    }
+
+    if (calNextMonth) {
+      calNextMonth.addEventListener('click', (e) => {
+        e.stopPropagation();
+        calViewMonth++;
+        if (calViewMonth > 11) {
+          calViewMonth = 0;
+          calViewYear++;
+        }
+        renderCalendar();
+      });
+    }
+
+    if (calCloseBtn) {
+      calCloseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeCalendar();
+      });
+    }
+
+    // Native Date Input Integration
+    if (nativeDateInput) {
+      const y = minLeadDate.getFullYear();
+      const m = String(minLeadDate.getMonth() + 1).padStart(2, '0');
+      const d = String(minLeadDate.getDate()).padStart(2, '0');
+      nativeDateInput.min = `${y}-${m}-${d}`;
+
+      nativeDateInput.addEventListener('change', (e) => {
+        if (!e.target.value) return;
+        const picked = new Date(e.target.value + 'T00:00:00');
+        applyCustomDate(picked);
+      });
+    }
+
+    // Close calendar on outside click
+    document.addEventListener('click', (e) => {
+      if (calendarPopover &&
+          calendarPopover.style.display !== 'none' &&
+          !calendarPopover.contains(e.target) &&
+          calendarBtn && !calendarBtn.contains(e.target)) {
+        closeCalendar();
+      }
+    });
+
+    // Initial calendar population
+    renderCalendar();
 
     // Time buttons
     timeBtns.forEach(btn => {
@@ -6144,14 +6366,41 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Addon cards
+    // Card message input & counter
+    const cardMsgWrap = document.getElementById('pdp4CardMessageWrap');
+    const cardMsgInput = document.getElementById('pdp4CardMessageInput');
+    const cardMsgCounter = document.getElementById('pdp4CardMsgCounter');
+
+    if (cardMsgInput && cardMsgCounter) {
+      cardMsgInput.addEventListener('input', () => {
+        cardMsgCounter.textContent = `${cardMsgInput.value.length} / 140`;
+      });
+    }
+
+    // Addon cards (Handwritten and Letter pressed options)
     addonCards.forEach(card => {
       card.addEventListener('click', () => {
-        card.classList.toggle('active');
-        const checkDot = card.querySelector('.pdp4-addon-check-dot');
-        if (checkDot) {
-          checkDot.textContent = card.classList.contains('active') ? 'âœ“' : '';
+        const wasActive = card.classList.contains('active');
+
+        // Mutually exclusive card selection
+        addonCards.forEach(c => {
+          c.classList.remove('active');
+          const checkDot = c.querySelector('.pdp4-addon-check-dot');
+          if (checkDot) checkDot.textContent = '';
+        });
+
+        if (!wasActive) {
+          card.classList.add('active');
+          const checkDot = card.querySelector('.pdp4-addon-check-dot');
+          if (checkDot) checkDot.textContent = '✓';
         }
+
+        const anyActive = addonCards.some(c => c.classList.contains('active'));
+        if (cardMsgWrap) {
+          cardMsgWrap.classList.toggle('visible', anyActive);
+          cardMsgWrap.style.display = anyActive ? 'block' : 'none';
+        }
+
         updatePricing();
       });
     });
@@ -6202,7 +6451,7 @@ document.addEventListener('DOMContentLoaded', () => {
         totalBtnPrice.textContent = `$${overallTotal.toFixed(2)} AUD`;
       }
       if (orderSummaryText) {
-        orderSummaryText.textContent = `${selectedSizeName} Â· ${selectedDate}, ${selectedTime}`;
+        orderSummaryText.textContent = `${selectedSizeName} · ${selectedDate}, ${selectedTime}`;
       }
     }
 
@@ -6227,6 +6476,7 @@ document.addEventListener('DOMContentLoaded', () => {
           date: selectedDate,
           timeSlot: selectedTime,
           addons: addons.map(a => a.name),
+          cardMessage: (addons.length > 0 && cardMsgInput) ? cardMsgInput.value.trim() : '',
           qty: quantity
         });
       });

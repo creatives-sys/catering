@@ -408,49 +408,87 @@
               <span class="pdp4-date-main">Thu 5 Nov</span>
               <span class="pdp4-date-sub">available</span>
             </button>
+            <button type="button" class="pdp4-date-btn pdp4-calendar-trigger-btn" id="pdp4CalendarBtn" aria-label="Choose celebration date from calendar" aria-expanded="false" aria-controls="pdp4CalendarPopover">
+              <span class="pdp4-date-main">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><span id="pdp4CalendarMainText">Calendar</span>
+              </span>
+              <span class="pdp4-date-sub" id="pdp4CalendarSubText">choose date</span>
+            </button>
           </div>
+
+          <!-- Calendar Popover Widget -->
+          <div class="pdp4-calendar-popover" id="pdp4CalendarPopover" style="display: none;" aria-hidden="true">
+            <div class="pdp4-cal-header">
+              <button type="button" class="pdp4-cal-nav-btn" id="pdp4CalPrevMonth" aria-label="Previous month">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <div class="pdp4-cal-month-title" id="pdp4CalMonthTitle">November 2026</div>
+              <button type="button" class="pdp4-cal-nav-btn" id="pdp4CalNextMonth" aria-label="Next month">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+            </div>
+
+            <!-- Days of Week -->
+            <div class="pdp4-cal-weekdays">
+              <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+            </div>
+
+            <!-- Days Grid -->
+            <div class="pdp4-cal-days-grid" id="pdp4CalDaysGrid" role="grid" aria-label="Calendar date grid"></div>
+
+            <!-- Calendar Footer -->
+            <div class="pdp4-cal-footer">
+              <span class="pdp4-cal-lead-tag">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                72h atelier baking notice
+              </span>
+              <div class="pdp4-cal-footer-actions">
+                <label class="pdp4-cal-native-trigger" title="Select with device calendar">
+                  <input type="date" id="pdp4NativeDateInput" class="pdp4-visually-hidden-input" aria-label="System date picker">
+                  <span>System picker</span>
+                </label>
+                <button type="button" class="pdp4-cal-close-btn" id="pdp4CalCloseBtn">Done</button>
+              </div>
+            </div>
+          </div>
+
           <div class="pdp4-times-row" role="radiogroup" aria-label="Select pickup time">
             <button type="button" class="pdp4-time-btn active" data-time="11:00am - 1:00pm">11:00am - 1:00pm</button>
             <button type="button" class="pdp4-time-btn" data-time="1:00pm - 3:00pm">1:00pm - 3:00pm</button>
           </div>
 
-          <!-- Step 4: Party Add-ons (2x2 Grid) -->
+          <!-- Step 4: Celebration Cards (2 Options: Handwritten & Letter pressed) -->
           <div class="pdp4-step-header">
-            <h2 class="pdp4-step-title">4 · Party add-ons, packed in the cake box:</h2>
+            <h2 class="pdp4-step-title">4 · Cards, packed in the cake box:</h2>
           </div>
           <div class="pdp4-addons-grid">
-            <button type="button" class="pdp4-addon-card active" data-addon="candles"
-              data-name="Gold dipped beeswax candles · 12" data-price="12.00">
+            <button type="button" class="pdp4-addon-card active" data-addon="handwritten"
+              data-name="Handwritten card" data-price="4.00">
               <div class="pdp4-addon-left">
                 <span class="pdp4-addon-check-dot">✓</span>
-                <span>Gold dipped beeswax candles · 12</span>
+                <span>Handwritten card</span>
               </div>
-              <span class="pdp4-addon-price">+$12.00</span>
+              <span class="pdp4-addon-price">+$4.00</span>
             </button>
-            <button type="button" class="pdp4-addon-card" data-addon="card" data-name="Letterpress card, handwritten"
-              data-price="6.00">
+            <button type="button" class="pdp4-addon-card" data-addon="letterpressed"
+              data-name="Letter pressed card" data-price="6.00">
               <div class="pdp4-addon-left">
                 <span class="pdp4-addon-check-dot"></span>
-                <span>Letterpress card, handwritten</span>
+                <span>Letter pressed card</span>
               </div>
               <span class="pdp4-addon-price">+$6.00</span>
             </button>
-            <button type="button" class="pdp4-addon-card active" data-addon="sparklers"
-              data-name="Giant cake gold sparklers · 2" data-price="8.50">
-              <div class="pdp4-addon-left">
-                <span class="pdp4-addon-check-dot">✓</span>
-                <span>Giant cake gold sparklers · 2</span>
-              </div>
-              <span class="pdp4-addon-price">+$8.50</span>
-            </button>
-            <button type="button" class="pdp4-addon-card" data-addon="topper"
-              data-name="Acrylic 'Happy Birthday' topper" data-price="14.00">
-              <div class="pdp4-addon-left">
-                <span class="pdp4-addon-check-dot"></span>
-                <span>Acrylic "Happy Birthday" topper</span>
-              </div>
-              <span class="pdp4-addon-price">+$14.00</span>
-            </button>
+          </div>
+
+          <!-- Card Message Inscription Input -->
+          <div class="pdp4-card-message-wrap visible" id="pdp4CardMessageWrap">
+            <label class="pdp4-input-label-sm" for="pdp4CardMessageInput">Your card message:</label>
+            <div class="pdp4-input-with-counter">
+              <input type="text" id="pdp4CardMessageInput" class="pdp4-text-input" maxlength="140"
+                value="Wishing you the happiest 30th birthday, Leo!"
+                placeholder="e.g. Wishing you the happiest birthday, Leo! With all our love...">
+              <span class="pdp4-counter-sub" id="pdp4CardMsgCounter">43 / 140</span>
+            </div>
           </div>
 
           <!-- Step 5: Purchase Bar -->
