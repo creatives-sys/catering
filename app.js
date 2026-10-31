@@ -6609,18 +6609,16 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Bottom tab switching
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const tabTarget = btn.getAttribute('data-tab');
-        tabBtns.forEach(b => b.classList.toggle('active', b === btn));
-        tabPanes.forEach(p => {
-          if (tabTarget === 'collection' && p.id === 'paneCollection') p.classList.add('active');
-          else if (tabTarget === 'allergens' && p.id === 'paneAllergens') p.classList.add('active');
-          else if (tabTarget === 'portion' && p.id === 'panePortion') p.classList.add('active');
-          else p.classList.remove('active');
+    // PDP4 Collapsible Information Accordions (Collection & storage, Allergens & ingredients)
+    const accItems = Array.from(document.querySelectorAll('.pdp4-acc-item'));
+    accItems.forEach(item => {
+      const btn = item.querySelector('.pdp4-acc-btn');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.toggle('active');
+          btn.setAttribute('aria-expanded', String(isOpen));
         });
-      });
+      }
     });
 
     // Initial calculation

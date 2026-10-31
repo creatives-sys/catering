@@ -18198,89 +18198,214 @@ iframe {
 }
 
 /* ==========================================================================
-   PDP4 BOTTOM SECTION: SAGE GREEN TABBED CONTAINER CARD
+   PDP4 FULL-WIDTH MINIMAL COLLAPSIBLE INFO SECTION (Below Product)
+   Zero-box, editorial luxury accordion with hairline dividers & 3-column layout
    ========================================================================== */
-.pdp4-bottom-card {
-  background: var(--fh-primary, #a7b2a3);
-  border-radius: var(--radius-hero, 22px);
-  padding: clamp(1.75rem, 3.5vw, 2.5rem);
-  color: #ffffff;
-  margin-top: 1rem;
-  box-shadow: 0 16px 40px rgba(78, 94, 75, 0.15);
-}
 
-.pdp4-tabs-bar {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 1.75rem;
-}
-
-.pdp4-tab-pill {
-  border: 1.5px solid rgba(255, 255, 255, 0.6);
+.pdp4-minimal-accordion,
+.pdp4-info-accordion {
   background: transparent;
-  color: #ffffff;
-  padding: 8px 18px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-brand);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.pdp4-tab-pill:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: #ffffff;
-}
-
-.pdp4-tab-pill.active {
-  background: #151814;
-  border-color: #151814;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-}
-
-/* White Content Cards Grid inside Sage Container */
-.pdp4-tab-pane {
-  display: none;
-}
-
-.pdp4-tab-pane.active {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.pdp4-info-white-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 22px;
-  color: var(--fh-charcoal);
-  box-shadow: 0 8px 24px rgba(21, 24, 20, 0.06);
+  border-top: 1px solid rgba(21, 24, 20, 0.14);
+  margin: 0 0 3.5rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  box-shadow: none;
+  border-radius: 0;
+  gap: 0;
+  width: 100%;
 }
 
+.pdp4-acc-item {
+  border-bottom: 1px solid rgba(21, 24, 20, 0.14);
+  background: transparent;
+  border-radius: 0;
+  overflow: hidden;
+  transition: border-color 0.25s ease;
+}
+
+.pdp4-acc-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.35rem 0.25rem 1.35rem 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+  color: var(--fh-charcoal, #171c18);
+  box-shadow: none;
+  transition: opacity 0.2s ease;
+}
+
+.pdp4-acc-btn:hover {
+  opacity: 0.72;
+  background: transparent;
+}
+
+.pdp4-acc-btn:focus-visible {
+  outline: 2px solid var(--fh-primary, #6b7e68);
+  outline-offset: 4px;
+}
+
+.pdp4-acc-item.active .pdp4-acc-btn {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.pdp4-acc-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
+  font-weight: 500;
+  color: #171c18;
+  letter-spacing: 0.015em;
+  line-height: 1.25;
+}
+
+/* Minimalist Plus / Minus Indicator (Editorial Luxury) */
+.pdp4-acc-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: 1rem;
+  color: #171c18;
+}
+
+.pdp4-acc-icon::before,
+.pdp4-acc-icon::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+  border-radius: 1px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+/* Horizontal bar */
+.pdp4-acc-icon::before {
+  width: 14px;
+  height: 1.5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Vertical bar (rotates and dissolves when expanded into minus) */
+.pdp4-acc-icon::after {
+  width: 1.5px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pdp4-acc-item.active .pdp4-acc-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+
+/* Legacy chevron fallback if still present */
+.pdp4-acc-chevron {
+  color: #171c18;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: rotate(0deg);
+}
+
+.pdp4-acc-item.active .pdp4-acc-chevron {
+  transform: rotate(180deg);
+}
+
+/* Smooth Accordion Expansion */
+.pdp4-acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.pdp4-acc-item.active .pdp4-acc-panel {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.pdp4-acc-inner {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0.5rem 0.25rem 2rem 0;
+}
+
+/* Clean Editorial 3-Column Content - ZERO BOXING */
+.pdp4-info-minimal-list,
+.pdp4-info-cards-stack {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+}
+
+@media (max-width: 820px) {
+  .pdp4-info-minimal-list,
+  .pdp4-info-cards-stack {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.pdp4-info-minimal-item,
+.pdp4-info-white-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.pdp4-info-minimal-label,
 .pdp4-info-card-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: 500;
-  color: var(--fh-charcoal);
-  margin: 0 0 0.5rem;
-  line-height: 1.2;
-  text-transform: none;
-  letter-spacing: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #171c18;
+  margin: 0 0 0.25rem;
+  line-height: 1.25;
 }
 
+.pdp4-info-minimal-text,
 .pdp4-info-card-text {
-  font-family: var(--font-brand);
-  font-size: 0.85rem;
-  color: var(--fh-charcoal-muted);
-  line-height: 1.55;
+  font-family: var(--font-brand, 'Jost', sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.62;
+  color: #555f52;
+  font-weight: 350;
   margin: 0;
+}
+
+.pdp4-info-minimal-text a,
+.pdp4-info-card-text a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(21, 24, 20, 0.35);
+  transition: text-decoration-color 0.2s ease;
+}
+
+.pdp4-info-minimal-text a:hover,
+.pdp4-info-card-text a:hover {
+  text-decoration-color: #171c18;
 }
 
 /* ==========================================================================

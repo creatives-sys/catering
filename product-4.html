@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -568,54 +568,64 @@
         </div>
       </div>
 
-      <!-- PDP4 Bottom Section: Sage Green Tabbed Container Card -->
-      <section class="pdp4-bottom-card" id="pdp4BottomCard" aria-label="Product Information Details">
-        <!-- 2 Tab Pills -->
-        <div class="pdp4-tabs-bar" role="tablist">
-          <button type="button" class="pdp4-tab-pill active" id="tabBtnCollection" data-tab="collection" role="tab"
-            aria-selected="true" aria-controls="paneCollection">Collection &amp; storage</button>
-          <button type="button" class="pdp4-tab-pill" id="tabBtnAllergens" data-tab="allergens" role="tab"
-            aria-selected="false" aria-controls="paneAllergens">Allergens &amp; ingredients</button>
+      <!-- ========================================================================
+           PDP4 FULL-WIDTH MINIMAL COLLAPSIBLE INFO SECTION (Below Product)
+           Zero-box, editorial luxury accordion with hairline dividers
+           ======================================================================== -->
+      <section class="pdp4-minimal-accordion" id="pdp4InfoAccordion" aria-label="Product Information Details">
 
+        <!-- Item 1: Collection & storage -->
+        <div class="pdp4-acc-item active" id="pdp4AccCollection">
+          <button type="button" class="pdp4-acc-btn" id="pdp4AccBtnCollection" aria-expanded="true" aria-controls="pdp4AccPanelCollection">
+            <span class="pdp4-acc-heading">Collection &amp; storage</span>
+            <span class="pdp4-acc-icon" aria-hidden="true"></span>
+          </button>
+          <div class="pdp4-acc-panel" id="pdp4AccPanelCollection" role="region" aria-labelledby="pdp4AccBtnCollection">
+            <div class="pdp4-acc-inner">
+              <div class="pdp4-info-minimal-list">
+                <div class="pdp4-info-minimal-item">
+                  <h4 class="pdp4-info-minimal-label">Boutique pickup</h4>
+                  <p class="pdp4-info-minimal-text">Collect 11:00am &ndash; 3:00pm from the express bay at 256 High St, Kew. Need another time? Contact <a href="mailto:info@frankandharri.com.au">info@frankandharri.com.au</a></p>
+                </div>
+                <div class="pdp4-info-minimal-item">
+                  <h4 class="pdp4-info-minimal-label">Metro delivery</h4>
+                  <p class="pdp4-info-minimal-text">Refrigerated courier to eligible Melbourne postcodes, confirmed at checkout. $15 flat, complimentary over $150.</p>
+                </div>
+                <div class="pdp4-info-minimal-item">
+                  <h4 class="pdp4-info-minimal-label">Getting it home</h4>
+                  <p class="pdp4-info-minimal-text">Carry flat on car footwell with A/C on. Keep chilled, then rest 1&ndash;2 hours at ambient room temperature before cutting.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Tab Pane 1: Collection & Storage (Active by default) -->
-        <div class="pdp4-tab-pane active" id="paneCollection" role="tabpanel" aria-labelledby="tabBtnCollection">
-          <div class="pdp4-info-white-card">
-            <h3 class="pdp4-info-card-title">Boutique pickup</h3>
-            <p class="pdp4-info-card-text">Collect 11:00am – 3:00pm from the express bay at 256 High St, Kew. Need
-              another time? Email info@frankandharri.com.au</p>
-          </div>
-          <div class="pdp4-info-white-card">
-            <h3 class="pdp4-info-card-title">Metro delivery</h3>
-            <p class="pdp4-info-card-text">Refrigerated courier to eligible Melbourne postcodes, shown at checkout. $15,
-              free over $150.</p>
-          </div>
-          <div class="pdp4-info-white-card">
-            <h3 class="pdp4-info-card-title">Getting it home</h3>
-            <p class="pdp4-info-card-text">Carry flat on the car floor with the air conditioning on. Refrigerate, then
-              bring out 1-2 hours before cutting.</p>
+        <!-- Item 2: Allergens & ingredients -->
+        <div class="pdp4-acc-item" id="pdp4AccAllergens">
+          <button type="button" class="pdp4-acc-btn" id="pdp4AccBtnAllergens" aria-expanded="false" aria-controls="pdp4AccPanelAllergens">
+            <span class="pdp4-acc-heading">Allergens &amp; ingredients</span>
+            <span class="pdp4-acc-icon" aria-hidden="true"></span>
+          </button>
+          <div class="pdp4-acc-panel" id="pdp4AccPanelAllergens" role="region" aria-labelledby="pdp4AccBtnAllergens">
+            <div class="pdp4-acc-inner">
+              <div class="pdp4-info-minimal-list">
+                <div class="pdp4-info-minimal-item">
+                  <h4 class="pdp4-info-minimal-label">Pure Belgian Chocolate</h4>
+                  <p class="pdp4-info-minimal-text">Crafted exclusively with Callebaut 70% dark chocolate callets, cultured Dutch cocoa powder, and European unsalted butter.</p>
+                </div>
+                <div class="pdp4-info-minimal-item">
+                  <h4 class="pdp4-info-minimal-label">Contains Dairy, Gluten &amp; Eggs</h4>
+                  <p class="pdp4-info-minimal-text">Contains wheat flour, free-range Gippsland eggs, and cultured buttermilk. Made in an atelier that processes tree nuts and sesame.</p>
+                </div>
+                <div class="pdp4-info-minimal-item">
+                  <h4 class="pdp4-info-minimal-label">Gluten-Free Atelier Option</h4>
+                  <p class="pdp4-info-minimal-text">Looking for 100% gluten-free? Our Flourless Orange &amp; Almond Cake and Gluten-Free Chocolate Gateau are prepared in a dedicated allergen protocol.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Tab Pane 2: Allergens & Ingredients -->
-        <div class="pdp4-tab-pane" id="paneAllergens" role="tabpanel" aria-labelledby="tabBtnAllergens">
-          <div class="pdp4-info-white-card">
-            <h3 class="pdp4-info-card-title">Pure Belgian Chocolate</h3>
-            <p class="pdp4-info-card-text">Crafted exclusively with Callebaut 70% dark chocolate callets, cultured Dutch
-              cocoa powder, and European unsalted butter.</p>
-          </div>
-          <div class="pdp4-info-white-card">
-            <h3 class="pdp4-info-card-title">Contains Dairy, Gluten &amp; Eggs</h3>
-            <p class="pdp4-info-card-text">Contains wheat flour, free-range Gippsland eggs, and cultured buttermilk.
-              Made in an atelier that processes tree nuts and sesame.</p>
-          </div>
-          <div class="pdp4-info-white-card">
-            <h3 class="pdp4-info-card-title">Gluten-Free Atelier Option</h3>
-            <p class="pdp4-info-card-text">Looking for 100% gluten-free? Our Flourless Orange &amp; Almond Cake and
-              Gluten-Free Chocolate Gateau are prepared in a dedicated allergen protocol.</p>
-          </div>
-        </div>
       </section>
 
       <!-- ========================================================================
