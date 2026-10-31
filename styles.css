@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    FRANK & HARRI — ULTRA-MINIMAL LUXURY ATELIER
    Primary Brand Color: #a7b2a3 (Frank & Harri Signature Sage)
    
@@ -19601,7 +19601,7 @@ iframe {
 
 /* Top Preview Frame with Glow Background */
 .pdp4-mcard-preview {
-  height: 142px;
+  height: 176px;
   border-radius: 14px;
   padding: 10px;
   display: flex;
@@ -19724,79 +19724,29 @@ iframe {
   letter-spacing: 0.04em;
 }
 
-.pdp4-browser-body {
+.pdp4-browser-screen {
   flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
-  min-height: 0;
-}
-
-.pdp4-browser-thumb {
-  width: 76px;
-  height: 76px;
-  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  position: relative;
   overflow: hidden;
-  flex-shrink: 0;
-  background: #fafafa;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: #f8f9fa;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pdp4-browser-thumb img {
+.pdp4-screen-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  transition: transform 0.3s ease;
+  object-position: center 38%;
+  transition: transform 0.4s ease;
+  display: block;
 }
 
-.pdp4-mcard:hover .pdp4-browser-thumb img {
-  transform: scale(1.08);
-}
-
-.pdp4-browser-info {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  min-width: 0;
-  overflow: hidden;
-}
-
-.pdp4-browser-tag {
-  font-family: var(--font-brand, 'Jost', sans-serif);
-  font-size: 9px;
-  font-weight: 600;
-  color: #946800;
-  background: rgba(245, 158, 11, 0.12);
-  border-radius: 4px;
-  padding: 1px 6px;
-  align-self: flex-start;
-  letter-spacing: 0.02em;
-}
-
-.pdp4-browser-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #171c18;
-  line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.pdp4-browser-sub {
-  font-family: var(--font-brand, 'Jost', sans-serif);
-  font-size: 10px;
-  color: #6a7466;
-  line-height: 1.25;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.pdp4-mcard:hover .pdp4-screen-img {
+  transform: scale(1.07);
 }
 
 /* Card Content: Stars, Quote, Author */
@@ -19907,12 +19857,8 @@ iframe {
     padding: 12px;
   }
   .pdp4-mcard-preview {
-    height: 130px;
+    height: 150px;
     padding: 8px;
-  }
-  .pdp4-browser-thumb {
-    width: 66px;
-    height: 66px;
   }
   .pdp4-mcard-quote {
     font-size: 12px;
