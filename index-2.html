@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -259,22 +259,148 @@
       }
     }
 
-    /* Signature Masterpiece (The Bruce Cake Spotlight) in index-2: Blush Rose (#d8959869) */
+    /* Signature Masterpiece (The Bruce Cake Spotlight) in index-2: Warm Champagne Parchment (#f1ead8) */
     #signatureSection.spotlight-section,
     .spotlight-section {
-      background-color: #d8959869 !important;
-      padding: clamp(3.5rem, 5vw, 5rem) 0 !important;
+      background: #f1ead8 !important;
+      background-color: #f1ead8 !important;
+      padding: clamp(4rem, 6vw, 5.5rem) 0 !important;
       position: relative;
+    }
+
+    #signatureSection .spotlight-info h2 {
+      color: #151814 !important;
+      letter-spacing: 0.08em !important;
+    }
+
+    #signatureSection .spotlight-price {
+      color: #242f20 !important;
+      font-weight: 600 !important;
+    }
+
+    #signatureSection .spotlight-desc {
+      color: #2e2c27 !important;
+      font-weight: 400 !important;
+      font-size: 0.98rem !important;
+      line-height: 1.7 !important;
+    }
+
+    #signatureSection .size-select-heading {
+      color: #4a473f !important;
+      font-weight: 600 !important;
     }
 
     #signatureSection .size-pill-btn {
       background: #ffffff !important;
-      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      border: 1px solid rgba(44, 42, 38, 0.14) !important;
+      border-radius: 12px !important;
+      box-shadow: 0 2px 8px rgba(44, 42, 38, 0.04) !important;
+      transition: all 0.25s ease !important;
+    }
+
+    #signatureSection .size-pill-btn:hover {
+      border-color: #3a4736 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 16px rgba(44, 42, 38, 0.08) !important;
+    }
+
+    #signatureSection .size-pill-btn.active {
+      background: #ffffff !important;
+      border: 2px solid #3a4736 !important;
+      box-shadow: 0 4px 16px rgba(58, 71, 54, 0.14) !important;
+    }
+
+    #signatureSection .size-pill-name {
+      color: #151814 !important;
+      font-weight: 600 !important;
+    }
+
+    #signatureSection .size-pill-serves {
+      color: #5f5c54 !important;
+      font-size: 0.72rem !important;
+    }
+
+    #signatureSection .size-pill-price {
+      color: #242f20 !important;
+      font-weight: 700 !important;
+    }
+
+    #signatureSection .size-pill-btn.active .size-pill-price {
+      color: #3a4736 !important;
     }
 
     #signatureSection .plaque-customizer {
-      background: rgba(255, 255, 255, 0.85) !important;
-      border: 1px solid rgba(0, 0, 0, 0.06) !important;
+      background: #ffffff !important;
+      border: 1px solid rgba(44, 42, 38, 0.12) !important;
+      border-radius: 14px !important;
+      padding: 1.15rem 1.25rem !important;
+      box-shadow: 0 4px 16px rgba(44, 42, 38, 0.04) !important;
+    }
+
+    #signatureSection .plaque-toggle-row {
+      color: #151814 !important;
+      font-weight: 500 !important;
+      font-size: 0.9rem !important;
+    }
+
+    #signatureSection #plaqueCheckbox {
+      accent-color: #3a4736 !important;
+      cursor: pointer !important;
+    }
+
+    #signatureSection .custom-input {
+      background: #fdfcf9 !important;
+      border: 1px solid rgba(44, 42, 38, 0.18) !important;
+      border-radius: 8px !important;
+      color: #151814 !important;
+    }
+
+    #signatureSection .custom-input:focus {
+      border-color: #3a4736 !important;
+      background: #ffffff !important;
+      box-shadow: 0 0 0 3px rgba(58, 71, 54, 0.12) !important;
+    }
+
+    #signatureSection .spotlight-media-wrap {
+      background: #ffffff !important;
+      border-radius: 18px !important;
+      box-shadow: 0 10px 30px rgba(44, 42, 38, 0.06) !important;
+    }
+
+    #signatureSection .thumb-btn {
+      background: #ffffff !important;
+      border: 1.5px solid rgba(44, 42, 38, 0.14) !important;
+      border-radius: 10px !important;
+      padding: 2px !important;
+      box-shadow: 0 2px 8px rgba(44, 42, 38, 0.04) !important;
+      transition: all 0.2s ease !important;
+    }
+
+    #signatureSection .thumb-btn:hover {
+      border-color: #3a4736 !important;
+      transform: translateY(-2px) !important;
+    }
+
+    #signatureSection .thumb-btn.active {
+      border-color: #3a4736 !important;
+      border-width: 2px !important;
+      box-shadow: 0 3px 12px rgba(58, 71, 54, 0.16) !important;
+    }
+
+    #signatureSection #bruceAddToCartBtn {
+      background-color: #9db097 !important;
+      color: #151814 !important;
+      border: 1px solid rgba(21, 24, 20, 0.12) !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.12em !important;
+      box-shadow: 0 4px 16px rgba(44, 42, 38, 0.08) !important;
+      transition: all 0.25s ease !important;
+    }
+
+    #signatureSection #bruceAddToCartBtn:hover {
+      background-color: #8fa289 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 24px rgba(44, 42, 38, 0.12) !important;
     }
 
     /* Testimonial Cards & Infinite Horizontal Auto-Scrolling Marquee in index-2 */
@@ -446,6 +572,157 @@
       .reviews-marquee-group .review-card {
         scroll-snap-align: start;
       }
+    }
+
+    /* Kew Boutique & Good To Know FAQ Section in index-2: Warm Champagne Parchment (#f1ead8) */
+    #boutiqueSection.fh-boutique-section,
+    .fh-boutique-section {
+      background: #f1ead8 !important;
+      background-color: #f1ead8 !important;
+      border-top: 1px solid rgba(44, 42, 38, 0.08) !important;
+      padding: clamp(4.5rem, 7vw, 6.5rem) 0 !important;
+    }
+
+    #boutiqueSection .fh-boutique-subhead {
+      color: #3a4736 !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.16em !important;
+    }
+
+    #boutiqueSection .fh-boutique-title {
+      color: #151814 !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.10em !important;
+    }
+
+    #boutiqueSection .fh-boutique-address {
+      color: #38352f !important;
+      font-weight: 400 !important;
+      font-size: 0.94rem !important;
+    }
+
+    #boutiqueSection .fh-hours-card {
+      background: #ffffff !important;
+      border: 1px solid rgba(44, 42, 38, 0.12) !important;
+      border-radius: 16px !important;
+      box-shadow: 0 4px 18px rgba(44, 42, 38, 0.05) !important;
+      overflow: hidden !important;
+    }
+
+    #boutiqueSection .fh-hours-row {
+      border-bottom: 1px solid rgba(44, 42, 38, 0.08) !important;
+      color: #151814 !important;
+    }
+
+    #boutiqueSection .fh-hours-row:last-child {
+      border-bottom: none !important;
+    }
+
+    #boutiqueSection .fh-hours-day {
+      color: #151814 !important;
+      font-weight: 500 !important;
+    }
+
+    #boutiqueSection .fh-hours-time {
+      color: #4a473e !important;
+      font-weight: 400 !important;
+    }
+
+    #boutiqueSection .fh-hours-row.is-today,
+    #boutiqueSection .fh-hours-row.active {
+      background: #dbe2d8 !important;
+      color: #151814 !important;
+    }
+
+    #boutiqueSection .fh-hours-row.is-today .fh-hours-day,
+    #boutiqueSection .fh-hours-row.is-today .fh-hours-time,
+    #boutiqueSection .fh-hours-row.active .fh-hours-day,
+    #boutiqueSection .fh-hours-row.active .fh-hours-time {
+      color: #151814 !important;
+      font-weight: 600 !important;
+    }
+
+    #boutiqueSection .fh-hours-note {
+      color: #4a473e !important;
+      font-weight: 450 !important;
+    }
+
+    #boutiqueSection .fh-boutique-btn-primary {
+      background: #151814 !important;
+      color: #ffffff !important;
+      border: 1px solid #151814 !important;
+      box-shadow: 0 4px 16px rgba(21, 24, 20, 0.16) !important;
+    }
+
+    #boutiqueSection .fh-boutique-btn-primary:hover {
+      background: #000000 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 24px rgba(21, 24, 20, 0.24) !important;
+    }
+
+    #boutiqueSection .fh-boutique-btn-outline {
+      background: #ffffff !important;
+      color: #151814 !important;
+      border: 1px solid rgba(44, 42, 38, 0.18) !important;
+      box-shadow: 0 2px 8px rgba(44, 42, 38, 0.04) !important;
+    }
+
+    #boutiqueSection .fh-boutique-btn-outline:hover {
+      background: #ffffff !important;
+      border-color: #151814 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 18px rgba(44, 42, 38, 0.08) !important;
+    }
+
+    #boutiqueSection .fh-faq-subhead {
+      color: #3a4736 !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.16em !important;
+    }
+
+    #boutiqueSection .fh-faq-item {
+      border-bottom: 1px solid rgba(44, 42, 38, 0.14) !important;
+      transition: background-color 0.25s ease, padding 0.25s ease, box-shadow 0.25s ease, border-radius 0.25s ease !important;
+    }
+
+    #boutiqueSection .fh-faq-item:not(.active):hover {
+      background: rgba(255, 255, 255, 0.6) !important;
+      border-bottom-color: transparent !important;
+      border-radius: 14px !important;
+    }
+
+    #boutiqueSection .fh-faq-trigger {
+      color: #151814 !important;
+      font-weight: 500 !important;
+    }
+
+    #boutiqueSection .fh-faq-icon {
+      border: 1px solid rgba(44, 42, 38, 0.25) !important;
+      color: #151814 !important;
+      background: #ffffff !important;
+    }
+
+    #boutiqueSection .fh-faq-item.active {
+      background: #73876e !important;
+      color: #ffffff !important;
+      border-radius: 16px !important;
+      box-shadow: 0 8px 24px rgba(58, 71, 54, 0.16) !important;
+      border-bottom-color: transparent !important;
+    }
+
+    #boutiqueSection .fh-faq-item.active .fh-faq-trigger {
+      color: #ffffff !important;
+    }
+
+    #boutiqueSection .fh-faq-item.active .fh-faq-body {
+      color: #f7faf5 !important;
+      font-weight: 350 !important;
+    }
+
+    #boutiqueSection .fh-faq-item.active .fh-faq-icon {
+      border-color: rgba(255, 255, 255, 0.6) !important;
+      color: #ffffff !important;
+      background: rgba(0, 0, 0, 0.18) !important;
     }
   </style>
 </head>
@@ -1355,7 +1632,7 @@
         <!-- Right: Configurator -->
         <div class="spotlight-info">
           <div
-            style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 700; color: var(--fh-primary-dark); margin-bottom: 0.5rem;">
+            style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 700; color: #3a4736; margin-bottom: 0.5rem;">
             Signature Masterpiece</div>
           <h2>The Bruce Chocolate Cake</h2>
           <div class="spotlight-price" id="brucePriceDisplay">$109.00</div>
@@ -1366,8 +1643,8 @@
           </p>
 
           <!-- Sizing Pills -->
-          <div
-            style="margin-bottom: 0.5rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fh-charcoal-light);">
+          <div class="size-select-heading"
+            style="margin-bottom: 0.5rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #4a473f;">
             Select Cake Size:</div>
           <div class="size-pill-row">
             <div class="size-pill-btn active bruce-size-btn" data-size="6">
@@ -1392,12 +1669,12 @@
             <label class="plaque-toggle-row">
               <span>Add Custom Chocolate Plaque (+ $7.90)</span>
               <input type="checkbox" id="plaqueCheckbox"
-                style="accent-color: var(--fh-primary); width: 17px; height: 17px;">
+                style="accent-color: #3a4736; width: 17px; height: 17px;">
             </label>
 
             <div class="plaque-input-row" id="plaqueInputRow">
               <label for="plaqueTextInput"
-                style="font-size: 0.75rem; color: var(--fh-charcoal-light); margin-bottom: 4px; display: block;">
+                style="font-size: 0.75rem; color: #5d5a52; margin-bottom: 4px; display: block;">
                 Piped in gold script on dark chocolate (Live preview on cake):
               </label>
               <input type="text" id="plaqueTextInput" class="custom-input" placeholder="e.g. Happy 30th Sophia! 🎂"
@@ -3097,6 +3374,27 @@
 
   <!-- Script -->
   <script src="app.js"></script>
+  <script>
+    // Clean today indicator in boutique opening hours table
+    (function() {
+      function cleanTodayText() {
+        var card = document.getElementById('fhHoursCard');
+        if (card) {
+          card.querySelectorAll('.fh-hours-day').forEach(function(el) {
+            if (el.textContent.includes('today')) {
+              el.textContent = el.textContent.replace(/[\u00C2Â\u00A0]*[·•]\s*today/gi, ' · today');
+            }
+          });
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', cleanTodayText);
+      } else {
+        cleanTodayText();
+      }
+      window.addEventListener('load', cleanTodayText);
+    })();
+  </script>
 </body>
 
 </html>
