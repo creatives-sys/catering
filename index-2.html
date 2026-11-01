@@ -29,6 +29,254 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- index-2 exclusive: Scalloped Borders Framing Explore by Collection Section (#a7b2a3) -->
+  <style>
+    /* Top scallop directly in the Hero Banner */
+    .hero-scallop-bottom {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: clamp(18px, 2.4vw, 26px);
+      z-index: 4;
+      pointer-events: none;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .hero-scallop-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      filter: none !important;
+    }
+
+    /* Seamless junction between hero and collections showcase in index-2 */
+    .hero-banner-section {
+      padding-bottom: 0 !important;
+      border: none !important;
+      border-bottom: none !important;
+    }
+
+    .hero-banner-card {
+      border: none !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Explore by Collection Section with Signature Sage Background (#a7b2a3) */
+    .collections-showcase-section {
+      background-color: #a7b2a3 !important;
+      border-top: none !important;
+      border-bottom: none !important;
+      padding: clamp(2.5rem, 4.5vw, 4rem) 0 clamp(3.5rem, 5.5vw, 4.75rem) !important;
+      position: relative;
+    }
+
+    .collections-showcase-section .showcase-kicker {
+      color: #242f22 !important;
+      font-weight: 600 !important;
+    }
+
+    .collections-showcase-section .showcase-title {
+      color: #151814 !important;
+    }
+
+    .collections-showcase-section .collection-tile-title {
+      color: #151814 !important;
+    }
+
+    .collections-showcase-section .collection-tile-count {
+      color: #2b3628 !important;
+      font-weight: 500 !important;
+    }
+
+    .collections-showcase-section .collection-tile-media {
+      background: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.45) !important;
+      box-shadow: 0 4px 14px rgba(21, 24, 20, 0.08) !important;
+    }
+
+    /* Bottom Scallop Border below Explore by Collection Section (matching reference) */
+    .collections-scallop-bottom {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: clamp(16px, 2.2vw, 24px);
+      z-index: 3;
+      pointer-events: none;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .collections-scallop-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      filter: none !important;
+    }
+
+    /* Unboxed Atelier Cinema Showcase Section (#cinemaSection) in index-2: Signature Sage (#a7b2a3) */
+    #cinemaSection,
+    #cinemaSection.atelier-cinema-section,
+    .atelier-cinema-section {
+      background: #a7b2a3 !important;
+      background-color: #a7b2a3 !important;
+      background-image: none !important;
+      padding: clamp(3.5rem, 6vw, 5.5rem) 0 !important;
+      border: none !important;
+      position: relative;
+      overflow: visible !important;
+    }
+
+    /* Top Scalloped Wave Border for Atelier Cinema Showcase (#cinemaSection) */
+    .cinema-scallop-top {
+      position: absolute;
+      top: calc(-1 * clamp(18px, 2.4vw, 24px) + 2px);
+      left: 0;
+      width: 100%;
+      height: clamp(18px, 2.4vw, 24px);
+      z-index: 5;
+      pointer-events: none;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    /* Bottom Scalloped Wave Border for Atelier Cinema Showcase (#cinemaSection) */
+    .cinema-scallop-bottom {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: clamp(16px, 2.2vw, 24px);
+      z-index: 3;
+      pointer-events: none;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .cinema-scallop-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      filter: none !important;
+    }
+
+    .atelier-cinema-section .cinema-card-container {
+      background: transparent !important;
+      background-image: none !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      overflow: visible !important;
+      display: grid !important;
+      grid-template-columns: 1.25fr 1fr !important;
+      gap: clamp(2.5rem, 5vw, 4.5rem) !important;
+      align-items: center !important;
+    }
+
+    .atelier-cinema-section .cinema-media-frame {
+      border-radius: 16px !important;
+      overflow: hidden !important;
+      box-shadow: 0 16px 44px rgba(21, 24, 20, 0.20) !important;
+      min-height: 440px !important;
+    }
+
+    .atelier-cinema-section .cinema-editorial-body {
+      background: transparent !important;
+      background-image: none !important;
+      padding: 0 !important;
+    }
+
+    .atelier-cinema-section .cinema-overhead-label {
+      color: #242f22 !important;
+      font-weight: 700 !important;
+    }
+
+    .atelier-cinema-section .cinema-title {
+      color: #151814 !important;
+    }
+
+    .atelier-cinema-section .cinema-quote {
+      color: #242c22 !important;
+      border-left-color: #242f22 !important;
+    }
+
+    .atelier-cinema-section .cinema-feature-pill {
+      color: #1a2218 !important;
+      font-weight: 500 !important;
+    }
+
+    .atelier-cinema-section .cinema-feature-dot {
+      background: #242f22 !important;
+    }
+
+    .atelier-cinema-section .open-catering-trigger {
+      background: #151814 !important;
+      color: #ffffff !important;
+      border-color: #151814 !important;
+    }
+
+    .atelier-cinema-section .open-catering-trigger:hover {
+      background: #283027 !important;
+      color: #ffffff !important;
+    }
+
+    .atelier-cinema-section .open-pdf-menu-trigger {
+      background: transparent !important;
+      color: #151814 !important;
+      border: 1.5px solid rgba(21, 24, 20, 0.5) !important;
+    }
+
+    .atelier-cinema-section .open-pdf-menu-trigger:hover {
+      background: #ffffff !important;
+      color: #151814 !important;
+      border-color: #ffffff !important;
+    }
+
+    @media (max-width: 960px) {
+      .atelier-cinema-section .cinema-card-container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+
+      .atelier-cinema-section .cinema-media-frame {
+        min-height: clamp(240px, 48vw, 360px) !important;
+        border-radius: 14px !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .atelier-cinema-section {
+        padding: 3rem 0 !important;
+      }
+
+      .atelier-cinema-section .cinema-features-list {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+      }
+    }
+
+    /* Signature Masterpiece (The Bruce Cake Spotlight) in index-2: Blush Rose (#d8959869) */
+    #signatureSection.spotlight-section,
+    .spotlight-section {
+      background-color: #d8959869 !important;
+      padding: clamp(3.5rem, 5vw, 5rem) 0 !important;
+      position: relative;
+    }
+
+    #signatureSection .size-pill-btn {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    }
+
+    #signatureSection .plaque-customizer {
+      background: rgba(255, 255, 255, 0.85) !important;
+      border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -212,10 +460,7 @@
           <span class="ph-nav-num">07</span>
           <span class="ph-nav-text">The Bruce Cake Configurator</span>
         </a>
-        <a href="#portionSection" class="ph-drawer-nav-item" data-drawer-link>
-          <span class="ph-nav-num">08</span>
-          <span class="ph-nav-text">Cake Portion Calculator</span>
-        </a>
+
         <a href="#cinemaSection" class="ph-drawer-nav-item" data-drawer-link>
           <span class="ph-nav-num">09</span>
           <span class="ph-nav-text">Inside the Kew Atelier (Film)</span>
@@ -279,7 +524,7 @@
     <div class="hero-banner-card">
 
       <!-- Full-Width Background Photo -->
-      <img src="assets/images/hero-celebration-sparkler.jpg" alt="Frank & Harri Handcrafted Birthday & Celebration Cakes"
+      <img src="assets/images/hero.jpg" alt="Frank & Harri Handcrafted Birthday & Celebration Cakes"
         class="hero-banner-bg" id="heroBannerBg">
       <div class="hero-banner-overlay"></div>
 
@@ -305,6 +550,18 @@
             SHOP NOW
           </a>
         </div>
+      </div>
+
+      <!-- Scalloped Wave Bottom Border directly in the Hero Banner -->
+      <div class="hero-scallop-bottom" aria-hidden="true">
+        <svg class="hero-scallop-svg" preserveAspectRatio="none">
+          <defs>
+            <pattern id="heroBannerScallop" width="32" height="60" patternUnits="userSpaceOnUse">
+              <path d="M 0,0 A 16 16 0 0 0 32,0 L 32,60 L 0,60 Z" fill="#a7b2a3" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#heroBannerScallop)" />
+        </svg>
       </div>
 
     </div>
@@ -392,6 +649,18 @@
       </div>
 
     </div>
+
+    <!-- Scalloped Wave Bottom Border for Explore by Collection Section (matching reference) -->
+    <div class="collections-scallop-bottom" aria-hidden="true">
+      <svg class="collections-scallop-svg" preserveAspectRatio="none">
+        <defs>
+          <pattern id="collectionsBottomScallop" width="32" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 0,16 A 16 16 0 0 1 32,16 L 32,60 L 0,60 Z" fill="#ffffff" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#collectionsBottomScallop)" />
+      </svg>
+    </div>
   </section>
 
   <!-- ========================================================================
@@ -447,7 +716,8 @@
           </div>
           <div class="product-card-info">
             <div class="product-card-cat">Signature 5-Layer Masterpiece</div>
-            <h3 class="product-card-title"><a href="product.html?id=bruce-chocolate-cake" style="color: inherit; text-decoration: none;">Bruce Chocolate Cake</a></h3>
+            <h3 class="product-card-title"><a href="product.html?id=bruce-chocolate-cake"
+                style="color: inherit; text-decoration: none;">Bruce Chocolate Cake</a></h3>
             <div class="product-card-meta">
               <span class="product-card-price">$109.00</span>
               <span class="product-card-dot">·</span>
@@ -457,7 +727,8 @@
         </div>
 
         <!-- Card 2: The Signature Sprinkles / Funfetti -->
-        <div class="product-card" data-category="cakes" onclick="window.location.href='product.html?id=sprinkles-celebration-cake'" style="cursor: pointer;">
+        <div class="product-card" data-category="cakes"
+          onclick="window.location.href='product.html?id=sprinkles-celebration-cake'" style="cursor: pointer;">
           <div class="product-card-media">
             <span class="product-dietary-badge">100% GF</span>
             <img src="assets/images/real/sprinkles-cake.png" alt="The Signature Sprinkles / Funfetti"
@@ -472,7 +743,8 @@
           </div>
           <div class="product-card-info">
             <div class="product-card-cat">Celebration Layer Cake</div>
-            <h3 class="product-card-title"><a href="product.html?id=sprinkles-celebration-cake" style="color: inherit; text-decoration: none;">The Signature Sprinkles / Funfetti</a></h3>
+            <h3 class="product-card-title"><a href="product.html?id=sprinkles-celebration-cake"
+                style="color: inherit; text-decoration: none;">The Signature Sprinkles / Funfetti</a></h3>
             <div class="product-card-meta">
               <span class="product-card-price">$109.00</span>
               <span class="product-card-dot">·</span>
@@ -482,21 +754,23 @@
         </div>
 
         <!-- Card 3: Classic Butter Croissants Box -->
-        <div class="product-card" data-category="pastries" onclick="window.location.href='product.html?id=box-of-mini-croissants'" style="cursor: pointer;">
+        <div class="product-card" data-category="pastries"
+          onclick="window.location.href='product.html?id=box-of-mini-croissants'" style="cursor: pointer;">
           <div class="product-card-media">
             <img src="assets/images/real/mini-croissants-box.png" alt="Classic Butter Croissants Box"
               class="product-card-img" loading="lazy">
             <div class="product-card-overlay">
               <button class="product-quick-btn"
-                onclick="event.stopPropagation(); window.fhApp.quickAdd('box-of-mini-croissants')" title="Quick Add to Bag"
-                aria-label="Add Croissants Box">
+                onclick="event.stopPropagation(); window.fhApp.quickAdd('box-of-mini-croissants')"
+                title="Quick Add to Bag" aria-label="Add Croissants Box">
                 <span>+ Quick Add</span>
               </button>
             </div>
           </div>
           <div class="product-card-info">
             <div class="product-card-cat">Lescure Viennoiserie</div>
-            <h3 class="product-card-title"><a href="product.html?id=box-of-mini-croissants" style="color: inherit; text-decoration: none;">Classic Butter Croissants Box (12 Pcs)</a></h3>
+            <h3 class="product-card-title"><a href="product.html?id=box-of-mini-croissants"
+                style="color: inherit; text-decoration: none;">Classic Butter Croissants Box (12 Pcs)</a></h3>
             <div class="product-card-meta">
               <span class="product-card-price">$60.00</span>
               <span class="product-card-dot">·</span>
@@ -506,7 +780,8 @@
         </div>
 
         <!-- Card 4: Burnt Basque Cheesecake -->
-        <div class="product-card" data-category="cakes" onclick="window.location.href='product.html?id=basque-cheesecake'" style="cursor: pointer;">
+        <div class="product-card" data-category="cakes"
+          onclick="window.location.href='product.html?id=basque-cheesecake'" style="cursor: pointer;">
           <div class="product-card-media">
             <span class="product-dietary-badge">100% GF</span>
             <img src="assets/images/collection-traditional.jpg" alt="San Sebastián Burnt Basque Cheesecake"
@@ -521,7 +796,8 @@
           </div>
           <div class="product-card-info">
             <div class="product-card-cat">San Sebastián Specialty</div>
-            <h3 class="product-card-title"><a href="product.html?id=basque-cheesecake" style="color: inherit; text-decoration: none;">Burnt Basque Cheesecake</a></h3>
+            <h3 class="product-card-title"><a href="product.html?id=basque-cheesecake"
+                style="color: inherit; text-decoration: none;">Burnt Basque Cheesecake</a></h3>
             <div class="product-card-meta">
               <span class="product-card-price">$78.00</span>
               <span class="product-card-dot">·</span>
@@ -531,7 +807,8 @@
         </div>
 
         <!-- Card 5: Rose Celebration Cake -->
-        <div class="product-card" data-category="cakes" onclick="window.location.href='product.html?id=rose-celebration-cake'" style="cursor: pointer;">
+        <div class="product-card" data-category="cakes"
+          onclick="window.location.href='product.html?id=rose-celebration-cake'" style="cursor: pointer;">
           <div class="product-card-media">
             <img src="assets/images/real/rose-cake.jpg" alt="Rose Celebration Cake" class="product-card-img"
               loading="lazy">
@@ -545,7 +822,8 @@
           </div>
           <div class="product-card-info">
             <div class="product-card-cat">Floral Celebration Cake</div>
-            <h3 class="product-card-title"><a href="product.html?id=rose-celebration-cake" style="color: inherit; text-decoration: none;">Rose Celebration Cake</a></h3>
+            <h3 class="product-card-title"><a href="product.html?id=rose-celebration-cake"
+                style="color: inherit; text-decoration: none;">Rose Celebration Cake</a></h3>
             <div class="product-card-meta">
               <span class="product-card-price">$100.00</span>
               <span class="product-card-dot">·</span>
@@ -555,7 +833,8 @@
         </div>
 
         <!-- Card 6: Cake Tasting Box (6 Signature Flavours) -->
-        <div class="product-card" data-category="cakes" onclick="window.location.href='product.html?id=cake-tasting-box'" style="cursor: pointer;">
+        <div class="product-card" data-category="cakes"
+          onclick="window.location.href='product.html?id=cake-tasting-box'" style="cursor: pointer;">
           <div class="product-card-media">
             <img src="assets/images/real/cake-tasting-box.png" alt="Cake Tasting Box" class="product-card-img"
               loading="lazy">
@@ -569,7 +848,8 @@
           </div>
           <div class="product-card-info">
             <div class="product-card-cat">Curated Tasting Box</div>
-            <h3 class="product-card-title"><a href="product.html?id=cake-tasting-box" style="color: inherit; text-decoration: none;">Cake Tasting Box (6 Signature Flavours)</a></h3>
+            <h3 class="product-card-title"><a href="product.html?id=cake-tasting-box"
+                style="color: inherit; text-decoration: none;">Cake Tasting Box (6 Signature Flavours)</a></h3>
             <div class="product-card-meta">
               <span class="product-card-price">$79.00</span>
               <span class="product-card-dot">·</span>
@@ -579,7 +859,8 @@
         </div>
 
         <!-- Card 7: French Lemon Meringue Tart -->
-        <div class="product-card" data-category="pastries" onclick="window.location.href='product.html?id=lemon-meringue-tart'" style="cursor: pointer;">
+        <div class="product-card" data-category="pastries"
+          onclick="window.location.href='product.html?id=lemon-meringue-tart'" style="cursor: pointer;">
           <div class="product-card-media">
             <img src="assets/images/collection-patisserie.png" alt="French Lemon Meringue Tart" class="product-card-img"
               loading="lazy">
@@ -593,7 +874,8 @@
           </div>
           <div class="product-card-info">
             <div class="product-card-cat">Artisanal French Tart</div>
-            <h3 class="product-card-title"><a href="product.html?id=lemon-meringue-tart" style="color: inherit; text-decoration: none;">French Lemon Meringue Tart (7")</a></h3>
+            <h3 class="product-card-title"><a href="product.html?id=lemon-meringue-tart"
+                style="color: inherit; text-decoration: none;">French Lemon Meringue Tart (7")</a></h3>
             <div class="product-card-meta">
               <span class="product-card-price">$38.00</span>
               <span class="product-card-dot">·</span>
@@ -603,7 +885,8 @@
         </div>
 
         <!-- Card 8: Italian Lemon Ricotta Cake -->
-        <div class="product-card" data-category="cakes" onclick="window.location.href='product.html?id=lemon-ricotta-cake'" style="cursor: pointer;">
+        <div class="product-card" data-category="cakes"
+          onclick="window.location.href='product.html?id=lemon-ricotta-cake'" style="cursor: pointer;">
           <div class="product-card-media">
             <span class="product-dietary-badge">100% GF</span>
             <img src="assets/images/real/lemon-ricotta-cake.png" alt="Italian Lemon Ricotta Cake"
@@ -618,7 +901,8 @@
           </div>
           <div class="product-card-info">
             <div class="product-card-cat">Rustic Flourless Torte</div>
-            <h3 class="product-card-title"><a href="product.html?id=lemon-ricotta-cake" style="color: inherit; text-decoration: none;">Italian Lemon Ricotta Cake</a></h3>
+            <h3 class="product-card-title"><a href="product.html?id=lemon-ricotta-cake"
+                style="color: inherit; text-decoration: none;">Italian Lemon Ricotta Cake</a></h3>
             <div class="product-card-meta">
               <span class="product-card-price">$72.90</span>
               <span class="product-card-dot">·</span>
@@ -960,11 +1244,153 @@
 
     </div>
   </section>
+  <!-- ========================================================================
+       Boutique Catering & Events Feature Showcase (Frank & Harri Luxury Studio)
+       Redirects directly to catering landing page: catering.html
+       ======================================================================== -->
+  <section class="fh-catering-feature-section" id="cateringFeatureSection" aria-label="Boutique Catering & Events">
+    <div class="container">
+      <div class="fh-cat-grid">
+
+        <!-- Left Column: Editorial & Interactive Category Navigation -->
+        <div class="fh-cat-info-col">
+          <div class="fh-cat-kicker">Catering &amp; events</div>
+
+          <h2 class="fh-cat-title">Let us set <em>the whole table</em></h2>
+
+          <p class="fh-cat-desc">
+            From office breakfasts to milestone banquets, baked in Kew and delivered across Melbourne. Fully gluten-free
+            menus on request.
+          </p>
+
+          <!-- Interactive Catering Categories List -->
+          <nav class="fh-cat-list" id="fhCatList" aria-label="Catering categories list">
+            <!-- 01 Morning Viennoiserie -->
+            <a href="catering.html?cat=patisserie" class="fh-cat-item" data-cat="01"
+              data-photo="assets/images/real/mini-pastries-box.png" data-badge="PHOTO · ARTISANAL MORNING BOXES"
+              data-count="12" data-title="Morning viennoiserie"
+              data-desc="Golden butter croissants, pain au chocolat &amp; fruit danishes baked fresh at 5am."
+              data-href="catering.html?cat=patisserie">
+              <div class="fh-cat-item-left">
+                <span class="fh-cat-item-num">01</span>
+                <span class="fh-cat-item-name">Morning viennoiserie</span>
+              </div>
+              <span class="fh-cat-item-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <!-- 02 Grazing & Banquets -->
+            <a href="catering.html?cat=boxes" class="fh-cat-item" data-cat="02"
+              data-photo="assets/images/real/mini-quiche.jpg" data-badge="PHOTO · SAVOURY GRAZING &amp; TARTS"
+              data-count="16" data-title="Grazing &amp; banquets"
+              data-desc="Individual Gruyère quiches, gourmet ribbon sandwiches &amp; artisanal grazing boards."
+              data-href="catering.html?cat=boxes">
+              <div class="fh-cat-item-left">
+                <span class="fh-cat-item-num">02</span>
+                <span class="fh-cat-item-name">Grazing &amp; banquets</span>
+              </div>
+              <span class="fh-cat-item-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <!-- 03 Cakes & Dessert Tables -->
+            <a href="catering.html?cat=desserts" class="fh-cat-item" data-cat="03"
+              data-photo="assets/images/real/cake-tasting-box.png" data-badge="PHOTO · CELEBRATION DESSERT SPREAD"
+              data-count="9" data-title="Cakes &amp; dessert tables"
+              data-desc="Bespoke celebration showstoppers, baby cakes, and tiered sweet courses."
+              data-href="catering.html?cat=desserts">
+              <div class="fh-cat-item-left">
+                <span class="fh-cat-item-num">03</span>
+                <span class="fh-cat-item-name">Cakes &amp; dessert tables</span>
+              </div>
+              <span class="fh-cat-item-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <!-- 04 100% Gluten-Free -->
+            <a href="catering.html?cat=gluten-free" class="fh-cat-item" data-cat="04"
+              data-photo="assets/images/real/flourless-orange-cake.png" data-badge="PHOTO · DEDICATED GLUTEN-FREE"
+              data-count="8" data-title="100% gluten-free"
+              data-desc="Flourless orange cakes, chocolate gateaux &amp; savoury bakes in an allergen protocol."
+              data-href="catering.html?cat=gluten-free">
+              <div class="fh-cat-item-left">
+                <span class="fh-cat-item-num">04</span>
+                <span class="fh-cat-item-name">100% gluten-free</span>
+              </div>
+              <span class="fh-cat-item-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <!-- 05 Corporate Functions (Default Active) -->
+            <a href="catering.html?cat=boxes" class="fh-cat-item active" data-cat="05"
+              data-photo="assets/images/hero-catering.png" data-badge="PHOTO · CORPORATE BREAKFAST SETUP"
+              data-count="11" data-title="Corporate functions" data-desc="Launches, client events and recurring orders"
+              data-href="catering.html?cat=boxes">
+              <div class="fh-cat-item-left">
+                <span class="fh-cat-item-num">05</span>
+                <span class="fh-cat-item-name">Corporate functions</span>
+              </div>
+              <span class="fh-cat-item-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+          </nav>
+
+          <!-- Action Buttons -->
+          <div class="fh-cat-actions">
+            <a href="catering.html" class="fh-cat-btn-primary" id="fhCatMainCta">
+              <span>Explore catering &rarr;</span>
+            </a>
+            <button type="button" class="fh-cat-btn-outline open-catering-trigger">
+              <span>Start an enquiry</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Visual Showcase Card -->
+        <div class="fh-cat-visual-col">
+          <a href="catering.html?cat=boxes" class="fh-cat-card" id="fhCatVisualCard"
+            aria-label="View catering collection details">
+            <!-- Background Image -->
+            <div class="fh-cat-card-media">
+              <img src="assets/images/hero-catering.png" alt="Corporate catering setup" id="fhCatCardImg"
+                class="fh-cat-card-img">
+            </div>
+
+            <!-- Top Left Photo Description Badge -->
+            <div class="fh-cat-photo-badge" id="fhCatPhotoBadge">PHOTO · CORPORATE BREAKFAST SETUP</div>
+
+            <!-- Top Right Category Options Counter Badge -->
+            <div class="fh-cat-count-card">
+              <span class="fh-cat-count-num" id="fhCatCountNum">11</span>
+              <span class="fh-cat-count-lbl">catering options</span>
+            </div>
+
+            <!-- Floating Bottom Card -->
+            <div class="fh-cat-float-card">
+              <div class="fh-cat-float-info">
+                <h4 class="fh-cat-float-title" id="fhCatFloatTitle">Corporate functions</h4>
+                <p class="fh-cat-float-desc" id="fhCatFloatDesc">Launches, client events and recurring orders</p>
+              </div>
+              <span class="fh-cat-float-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ========================================================================
        Inside the Atelier Cinema Video Showcase (25-Second Artisan Reel)
        ======================================================================== -->
-  <section class="atelier-cinema-section" id="cinemaSection">
+  <section class="atelier-cinema-section" id="cinemaSection" style="background: #a7b2a3 !important; background-color: #a7b2a3 !important; background-image: none !important;">
+    <!-- Scalloped Wave Top Border in #a7b2a3 (Matching Reference Design) -->
+    <div class="cinema-scallop-top" aria-hidden="true">
+      <svg class="cinema-scallop-svg" preserveAspectRatio="none">
+        <defs>
+          <pattern id="cinemaTopScallop" width="32" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 0,0 A 16 16 0 0 0 32,0 L 32,60 L 0,60 Z" fill="#a7b2a3" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#cinemaTopScallop)" />
+      </svg>
+    </div>
+
     <div class="container">
       <div class="cinema-card-container">
 
@@ -1026,7 +1452,7 @@
               <span>Enquire For Catering</span>
             </button>
             <button class="btn-outline-pill open-pdf-menu-trigger"
-              style="background: transparent; color: #ffffff; border-color: rgba(255, 255, 255, 0.4);">
+              style="background: transparent; color: #151814; border-color: rgba(21, 24, 20, 0.35);">
               <span>Spring/Summer Menu (PDF)</span>
             </button>
           </div>
@@ -1034,195 +1460,23 @@
 
       </div>
     </div>
-  </section>
 
-  <!-- ========================================================================
-       Boutique Catering & Events Feature Showcase (Frank & Harri Luxury Studio)
-       Redirects directly to catering landing page: catering.html
-       ======================================================================== -->
-  <section class="fh-catering-feature-section" id="cateringFeatureSection" aria-label="Boutique Catering & Events">
-    <div class="container">
-      <div class="fh-cat-grid">
-
-        <!-- Left Column: Editorial & Interactive Category Navigation -->
-        <div class="fh-cat-info-col">
-          <div class="fh-cat-kicker">Catering &amp; events</div>
-
-          <h2 class="fh-cat-title">Let us set <em>the whole table</em></h2>
-
-          <p class="fh-cat-desc">
-            From office breakfasts to milestone banquets, baked in Kew and delivered across Melbourne. Fully gluten-free menus on request.
-          </p>
-
-          <!-- Interactive Catering Categories List -->
-          <nav class="fh-cat-list" id="fhCatList" aria-label="Catering categories list">
-            <!-- 01 Morning Viennoiserie -->
-            <a href="catering.html?cat=patisserie" class="fh-cat-item" data-cat="01"
-              data-photo="assets/images/real/mini-pastries-box.png"
-              data-badge="PHOTO · ARTISANAL MORNING BOXES"
-              data-count="12"
-              data-title="Morning viennoiserie"
-              data-desc="Golden butter croissants, pain au chocolat &amp; fruit danishes baked fresh at 5am."
-              data-href="catering.html?cat=patisserie">
-              <div class="fh-cat-item-left">
-                <span class="fh-cat-item-num">01</span>
-                <span class="fh-cat-item-name">Morning viennoiserie</span>
-              </div>
-              <span class="fh-cat-item-arrow" aria-hidden="true">&nearr;</span>
-            </a>
-
-            <!-- 02 Grazing & Banquets -->
-            <a href="catering.html?cat=boxes" class="fh-cat-item" data-cat="02"
-              data-photo="assets/images/real/mini-quiche.jpg"
-              data-badge="PHOTO · SAVOURY GRAZING &amp; TARTS"
-              data-count="16"
-              data-title="Grazing &amp; banquets"
-              data-desc="Individual Gruyère quiches, gourmet ribbon sandwiches &amp; artisanal grazing boards."
-              data-href="catering.html?cat=boxes">
-              <div class="fh-cat-item-left">
-                <span class="fh-cat-item-num">02</span>
-                <span class="fh-cat-item-name">Grazing &amp; banquets</span>
-              </div>
-              <span class="fh-cat-item-arrow" aria-hidden="true">&nearr;</span>
-            </a>
-
-            <!-- 03 Cakes & Dessert Tables -->
-            <a href="catering.html?cat=desserts" class="fh-cat-item" data-cat="03"
-              data-photo="assets/images/real/cake-tasting-box.png"
-              data-badge="PHOTO · CELEBRATION DESSERT SPREAD"
-              data-count="9"
-              data-title="Cakes &amp; dessert tables"
-              data-desc="Bespoke celebration showstoppers, baby cakes, and tiered sweet courses."
-              data-href="catering.html?cat=desserts">
-              <div class="fh-cat-item-left">
-                <span class="fh-cat-item-num">03</span>
-                <span class="fh-cat-item-name">Cakes &amp; dessert tables</span>
-              </div>
-              <span class="fh-cat-item-arrow" aria-hidden="true">&nearr;</span>
-            </a>
-
-            <!-- 04 100% Gluten-Free -->
-            <a href="catering.html?cat=gluten-free" class="fh-cat-item" data-cat="04"
-              data-photo="assets/images/real/flourless-orange-cake.png"
-              data-badge="PHOTO · DEDICATED GLUTEN-FREE"
-              data-count="8"
-              data-title="100% gluten-free"
-              data-desc="Flourless orange cakes, chocolate gateaux &amp; savoury bakes in an allergen protocol."
-              data-href="catering.html?cat=gluten-free">
-              <div class="fh-cat-item-left">
-                <span class="fh-cat-item-num">04</span>
-                <span class="fh-cat-item-name">100% gluten-free</span>
-              </div>
-              <span class="fh-cat-item-arrow" aria-hidden="true">&nearr;</span>
-            </a>
-
-            <!-- 05 Corporate Functions (Default Active) -->
-            <a href="catering.html?cat=boxes" class="fh-cat-item active" data-cat="05"
-              data-photo="assets/images/hero-catering.png"
-              data-badge="PHOTO · CORPORATE BREAKFAST SETUP"
-              data-count="11"
-              data-title="Corporate functions"
-              data-desc="Launches, client events and recurring orders"
-              data-href="catering.html?cat=boxes">
-              <div class="fh-cat-item-left">
-                <span class="fh-cat-item-num">05</span>
-                <span class="fh-cat-item-name">Corporate functions</span>
-              </div>
-              <span class="fh-cat-item-arrow" aria-hidden="true">&nearr;</span>
-            </a>
-          </nav>
-
-          <!-- Action Buttons -->
-          <div class="fh-cat-actions">
-            <a href="catering.html" class="fh-cat-btn-primary" id="fhCatMainCta">
-              <span>Explore catering &rarr;</span>
-            </a>
-            <button type="button" class="fh-cat-btn-outline open-catering-trigger">
-              <span>Start an enquiry</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Right Column: Interactive Visual Showcase Card -->
-        <div class="fh-cat-visual-col">
-          <a href="catering.html?cat=boxes" class="fh-cat-card" id="fhCatVisualCard" aria-label="View catering collection details">
-            <!-- Background Image -->
-            <div class="fh-cat-card-media">
-              <img src="assets/images/hero-catering.png" alt="Corporate catering setup" id="fhCatCardImg" class="fh-cat-card-img">
-            </div>
-
-            <!-- Top Left Photo Description Badge -->
-            <div class="fh-cat-photo-badge" id="fhCatPhotoBadge">PHOTO · CORPORATE BREAKFAST SETUP</div>
-
-            <!-- Top Right Category Options Counter Badge -->
-            <div class="fh-cat-count-card">
-              <span class="fh-cat-count-num" id="fhCatCountNum">11</span>
-              <span class="fh-cat-count-lbl">catering options</span>
-            </div>
-
-            <!-- Floating Bottom Card -->
-            <div class="fh-cat-float-card">
-              <div class="fh-cat-float-info">
-                <h4 class="fh-cat-float-title" id="fhCatFloatTitle">Corporate functions</h4>
-                <p class="fh-cat-float-desc" id="fhCatFloatDesc">Launches, client events and recurring orders</p>
-              </div>
-              <span class="fh-cat-float-arrow" aria-hidden="true">&nearr;</span>
-            </div>
-          </a>
-        </div>
-
-      </div>
+    <!-- Scalloped Wave Bottom Border for Atelier Cinema Showcase (matching reference) -->
+    <div class="cinema-scallop-bottom" aria-hidden="true">
+      <svg class="cinema-scallop-svg" preserveAspectRatio="none">
+        <defs>
+          <pattern id="cinemaBottomScallop" width="32" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 0,16 A 16 16 0 0 1 32,16 L 32,60 L 0,60 Z" fill="#ffffff" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#cinemaBottomScallop)" />
+      </svg>
     </div>
   </section>
 
+
+
   <!-- ========================================================================
-       Portion Guide Calculator (Ultra-Minimal)
-       ======================================================================== -->
-  <section class="portion-section" id="portionSection">
-    <div class="container">
-      <div class="portion-card">
-
-        <div>
-          <div
-            style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 600; color: var(--fh-primary-dark); margin-bottom: 0.5rem;">
-            Concierge Sizing Tool</div>
-          <h2 style="font-size: 1.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.12em;">Cake
-            Portion Calculator</h2>
-          <p
-            style="font-size: 0.95rem; font-weight: 300; color: var(--fh-charcoal-muted); margin-top: 0.5rem; line-height: 1.6;">
-            Slide to your guest count for an instant recommended tier and dimension:
-          </p>
-
-          <input type="range" min="2" max="35" value="8" step="1" class="range-slider" id="guestSlider"
-            aria-label="Number of guests">
-
-          <div class="portion-guests-row">
-            <span>Guests: <strong id="guestCountVal"
-                style="color: var(--fh-primary-dark); font-size: 1.15rem; font-weight: 600;">8 Guests</strong></span>
-            <span style="color: var(--fh-charcoal-light);">Portions: 1" × 2" × 6"</span>
-          </div>
-        </div>
-
-        <div class="recommendation-box">
-          <div
-            style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; color: var(--fh-primary-dark); margin-bottom: 0.35rem;">
-            Recommended Tier</div>
-          <h3
-            style="font-size: 1.55rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.10em; margin-bottom: 0.5rem;"
-            id="recSize">6" Signature Cake</h3>
-          <p style="font-size: 0.90rem; font-weight: 300; color: var(--fh-charcoal-muted); line-height: 1.65; margin-bottom: 1.25rem;"
-            id="recDetail">
-            Comfortably serves 7–8 generous dessert portions. Handcrafted in 5 tender layers with Swiss buttercream.
-          </p>
-          <button class="btn-primary" id="recFilterBtn">
-            <span>Filter Cakes For This Size</span>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ========================================================================
        Customer Reviews & Press Accolades (GBP 4.9⭐ & Facebook 5.0⭐)
        ======================================================================== -->
@@ -1401,7 +1655,8 @@
                 <span class="fh-faq-icon" aria-hidden="true">+</span>
               </button>
               <div class="fh-faq-body">
-                Whole celebration cakes need 72 hours. Cheesecakes and tarts need 24 hours, and the Lemon Ricotta Cake 48 hours.
+                Whole celebration cakes need 72 hours. Cheesecakes and tarts need 24 hours, and the Lemon Ricotta Cake
+                48 hours.
               </div>
             </div>
 
@@ -1412,7 +1667,8 @@
                 <span class="fh-faq-icon" aria-hidden="true">+</span>
               </button>
               <div class="fh-faq-body">
-                Yes, refrigerated Melbourne Metro courier transit is available Tuesday through Saturday. Delivery fee is calculated by postcode at checkout and is complimentary on celebration orders over $150.
+                Yes, refrigerated Melbourne Metro courier transit is available Tuesday through Saturday. Delivery fee is
+                calculated by postcode at checkout and is complimentary on celebration orders over $150.
               </div>
             </div>
 
@@ -1423,7 +1679,8 @@
                 <span class="fh-faq-icon" aria-hidden="true">+</span>
               </button>
               <div class="fh-faq-body">
-                Boutique order collection is available Tuesday through Saturday between 11:00am and 3:00pm from our dedicated express collection counter at 259 High Street, Kew.
+                Boutique order collection is available Tuesday through Saturday between 11:00am and 3:00pm from our
+                dedicated express collection counter at 259 High Street, Kew.
               </div>
             </div>
 
@@ -1434,7 +1691,8 @@
                 <span class="fh-faq-icon" aria-hidden="true">+</span>
               </button>
               <div class="fh-faq-body">
-                Yes! We offer dedicated gluten-free celebration showstoppers including our Flourless Orange &amp; Almond Cake and Belgian Chocolate Gateau, handcrafted in a certified allergen protocol.
+                Yes! We offer dedicated gluten-free celebration showstoppers including our Flourless Orange &amp; Almond
+                Cake and Belgian Chocolate Gateau, handcrafted in a certified allergen protocol.
               </div>
             </div>
 
@@ -1445,7 +1703,8 @@
                 <span class="fh-faq-icon" aria-hidden="true">+</span>
               </button>
               <div class="fh-faq-body">
-                Every whole celebration cake includes an optional hand-piped Belgian chocolate plaque with your custom message (up to 28 characters), plus a complimentary embossed Frank &amp; Harri keepsake card.
+                Every whole celebration cake includes an optional hand-piped Belgian chocolate plaque with your custom
+                message (up to 28 characters), plus a complimentary embossed Frank &amp; Harri keepsake card.
               </div>
             </div>
           </div>
@@ -1632,7 +1891,8 @@
     <div class="drawer-header">
       <div class="drawer-title">
         <span>Shopping Bag</span>
-        <small id="cartDrawerCount" style="font-size: 0.8rem; color: var(--fh-charcoal-light); margin-left: 6px;">(0 items)</small>
+        <small id="cartDrawerCount" style="font-size: 0.8rem; color: var(--fh-charcoal-light); margin-left: 6px;">(0
+          items)</small>
       </div>
       <button class="drawer-close-btn" id="cartCloseBtn" aria-label="Close Shopping Bag">✕</button>
     </div>
@@ -1749,14 +2009,15 @@
   <div class="checkout-journey-modal" id="journeyModal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="checkout-journey-backdrop" id="journeyBackdrop"></div>
     <div class="checkout-journey-dialog">
-      
+
       <!-- Modal Header -->
       <div class="checkout-journey-header">
         <div>
           <span class="checkout-journey-brand-eyebrow">Frank & Harri · Kew Atelier</span>
           <h2 class="checkout-journey-title" id="journeyHeaderTitle">Celebration Order & Reservation</h2>
         </div>
-        <button type="button" class="checkout-journey-close" id="journeyCloseBtn" aria-label="Close reservation">✕</button>
+        <button type="button" class="checkout-journey-close" id="journeyCloseBtn"
+          aria-label="Close reservation">✕</button>
       </div>
 
       <!-- 4-Step Stepper Ribbon -->
@@ -1782,11 +2043,12 @@
 
       <!-- Stepper Body Content Panels -->
       <div class="checkout-journey-body">
-        
+
         <!-- STEP 1: Occasion & Contact Details -->
         <div class="journey-panel active" id="journeyPanel1">
           <h3 class="journey-section-title">What are we celebrating?</h3>
-          <p class="journey-section-subtitle">Select your celebration so our pâtissiers can style your creation with occasion-perfect elegance.</p>
+          <p class="journey-section-subtitle">Select your celebration so our pâtissiers can style your creation with
+            occasion-perfect elegance.</p>
 
           <div class="journey-occasion-grid" id="journeyOccasionGrid">
             <button type="button" class="journey-occasion-btn active" data-occasion="Birthday">
@@ -1817,7 +2079,8 @@
 
           <div class="journey-form-group">
             <label class="journey-label" for="journeyCelebrantName">Celebrant's Name (Optional)</label>
-            <input type="text" id="journeyCelebrantName" class="journey-input" placeholder="e.g. Sarah / The Robertson Family">
+            <input type="text" id="journeyCelebrantName" class="journey-input"
+              placeholder="e.g. Sarah / The Robertson Family">
           </div>
 
           <div class="journey-form-row">
@@ -1846,7 +2109,8 @@
         <!-- STEP 2: Fulfillment & Logistics -->
         <div class="journey-panel" id="journeyPanel2">
           <h3 class="journey-section-title">How would you like to receive your order?</h3>
-          <p class="journey-section-subtitle">Collect fresh from our Kew ovens or opt for chilled Melbourne metro courier transit.</p>
+          <p class="journey-section-subtitle">Collect fresh from our Kew ovens or opt for chilled Melbourne metro
+            courier transit.</p>
 
           <div class="journey-fulfillment-cards">
             <button type="button" class="journey-method-card active" id="journeyMethodCardPickup">
@@ -1871,11 +2135,15 @@
 
           <!-- Pickup Details Box -->
           <div id="journeyPickupDetailsBox" class="journey-pickup-info-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
             <div class="journey-pickup-text">
               <strong>Frank & Harri Boutique Pâtisserie</strong>
               259 High Street, Kew VIC 3101 · Easy 15-min pickup parking right out front.
-              <br><small style="color: var(--fh-charcoal-muted);">Opening Hours: Tuesday – Saturday, 7:30am – 3:30pm (Sunday & Monday closed for dough resting)</small>
+              <br><small style="color: var(--fh-charcoal-muted);">Opening Hours: Tuesday – Saturday, 7:30am – 3:30pm
+                (Sunday & Monday closed for dough resting)</small>
             </div>
           </div>
 
@@ -1888,7 +2156,8 @@
             <div class="journey-form-row">
               <div>
                 <label class="journey-label" for="journeySuburb">Suburb *</label>
-                <input type="text" id="journeySuburb" class="journey-input" placeholder="e.g. Kew / Hawthorn / Richmond">
+                <input type="text" id="journeySuburb" class="journey-input"
+                  placeholder="e.g. Kew / Hawthorn / Richmond">
               </div>
               <div>
                 <label class="journey-label" for="journeyPostcode">Postcode *</label>
@@ -1896,14 +2165,18 @@
               </div>
             </div>
             <div class="journey-form-group">
-              <label class="journey-label" for="journeyDeliveryNotes">Delivery Instructions (Gate code, concierge, ring bell)</label>
-              <input type="text" id="journeyDeliveryNotes" class="journey-input" placeholder="e.g. Leave with building concierge on Level 1">
+              <label class="journey-label" for="journeyDeliveryNotes">Delivery Instructions (Gate code, concierge, ring
+                bell)</label>
+              <input type="text" id="journeyDeliveryNotes" class="journey-input"
+                placeholder="e.g. Leave with building concierge on Level 1">
             </div>
           </div>
 
           <!-- Schedule Review Row -->
-          <div style="background: #fafbfa; border: 1px solid var(--fh-border); border-radius: var(--radius-sm); padding: 0.9rem 1.15rem; margin-top: 1rem;">
-            <div style="font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fh-primary-dark); margin-bottom: 0.25rem;">
+          <div
+            style="background: #fafbfa; border: 1px solid var(--fh-border); border-radius: var(--radius-sm); padding: 0.9rem 1.15rem; margin-top: 1rem;">
+            <div
+              style="font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fh-primary-dark); margin-bottom: 0.25rem;">
               Confirmed Date & Collection Window
             </div>
             <div style="font-size: 0.9rem; font-weight: 600; color: var(--fh-charcoal);" id="journeyConfirmedDateTime">
@@ -1915,28 +2188,34 @@
         <!-- STEP 3: Handwritten Gift Note & Baker's Special Touch -->
         <div class="journey-panel" id="journeyPanel3">
           <h3 class="journey-section-title">Complimentary Handwritten Gift Card</h3>
-          <p class="journey-section-subtitle">Every celebration order includes our embossed Frank & Harri keepsake card, handwritten in ink by our atelier team.</p>
+          <p class="journey-section-subtitle">Every celebration order includes our embossed Frank & Harri keepsake card,
+            handwritten in ink by our atelier team.</p>
 
           <div class="journey-card-preview">
             <div class="journey-card-seal">FRANK & HARRI · ATELIER KEW</div>
-            <div class="journey-card-content" id="journeyLiveCardText">Wishing you the most wonderful and joyous birthday celebration!</div>
+            <div class="journey-card-content" id="journeyLiveCardText">Wishing you the most wonderful and joyous
+              birthday celebration!</div>
           </div>
 
           <div class="journey-form-group">
-            <label class="journey-label" for="journeyGiftNoteInput">Your Message for the Gift Card (Max 140 chars)</label>
-            <textarea id="journeyGiftNoteInput" class="journey-textarea" maxlength="140" placeholder="Write your heartfelt message here..."></textarea>
+            <label class="journey-label" for="journeyGiftNoteInput">Your Message for the Gift Card (Max 140
+              chars)</label>
+            <textarea id="journeyGiftNoteInput" class="journey-textarea" maxlength="140"
+              placeholder="Write your heartfelt message here..."></textarea>
           </div>
 
           <div class="journey-form-group">
             <label class="journey-label" for="journeyBakersNote">Special Dietary or Handling Notes for our Chefs</label>
-            <input type="text" id="journeyBakersNote" class="journey-input" placeholder="e.g. Severe peanut allergy at party; please pack in sealed transport box">
+            <input type="text" id="journeyBakersNote" class="journey-input"
+              placeholder="e.g. Severe peanut allergy at party; please pack in sealed transport box">
           </div>
         </div>
 
         <!-- STEP 4: Review Order & Payment Simulation -->
         <div class="journey-panel" id="journeyPanel4">
           <h3 class="journey-section-title">Review & Complete Reservation</h3>
-          <p class="journey-section-subtitle">Verify your celebration creation details and confirm your reservation with our Kew team.</p>
+          <p class="journey-section-subtitle">Verify your celebration creation details and confirm your reservation with
+            our Kew team.</p>
 
           <div class="journey-review-list" id="journeyReviewItemsList">
             <!-- Dynamically populated from Cart -->
@@ -1951,7 +2230,8 @@
             </div>
             <div id="journeyCardFields">
               <div class="journey-form-group">
-                <input type="text" class="journey-input" placeholder="Card number: 4532 •••• •••• 8820" value="4532 •••• •••• 8820" readonly>
+                <input type="text" class="journey-input" placeholder="Card number: 4532 •••• •••• 8820"
+                  value="4532 •••• •••• 8820" readonly>
               </div>
               <div class="journey-form-row">
                 <input type="text" class="journey-input" placeholder="MM/YY" value="12/28" readonly>
@@ -1961,7 +2241,10 @@
           </div>
 
           <div class="journey-security-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
             <span>256-Bit SSL Encrypted · 100% Melbourne Artisan Freshness Guarantee</span>
           </div>
         </div>
@@ -1988,13 +2271,14 @@
   <div class="checkout-journey-modal" id="orderConfirmModal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="checkout-journey-backdrop" id="orderConfirmBackdrop"></div>
     <div class="checkout-journey-dialog order-confirm-dialog">
-      
+
       <div class="order-confirm-header">
         <div class="order-confirm-icon-wrap">✓</div>
         <span class="checkout-journey-brand-eyebrow">FRANK & HARRI · ATELIER KEW</span>
         <h2 class="order-confirm-title">Celebration Order Reserved!</h2>
         <p style="font-size: 0.86rem; color: var(--fh-charcoal-muted); margin: 0;">
-          Your order has been scheduled in our Kew bakehouse ovens. A detailed confirmation has been dispatched to your email.
+          Your order has been scheduled in our Kew bakehouse ovens. A detailed confirmation has been dispatched to your
+          email.
         </p>
         <div class="order-confirm-ref" id="orderConfirmNumber">ORDER #FH-2026-84912</div>
       </div>
@@ -2002,42 +2286,55 @@
       <!-- 4-Stage Visual Timeline Tracker -->
       <div class="order-timeline-card">
         <div class="order-timeline-title">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
           <span>Live Pâtisserie Progress Tracker</span>
         </div>
         <div class="order-timeline-steps">
           <div class="order-timeline-step active">
             <div class="order-timeline-dot"></div>
             <span class="order-timeline-step-name">1. Order Confirmed & Booked</span>
-            <span class="order-timeline-step-desc">Entered into our Kew daily production master sheet. Ingredients reserved.</span>
+            <span class="order-timeline-step-desc">Entered into our Kew daily production master sheet. Ingredients
+              reserved.</span>
           </div>
           <div class="order-timeline-step active">
             <div class="order-timeline-dot"></div>
             <span class="order-timeline-step-name">2. 72-Hour Lamination & Artisan Bake</span>
-            <span class="order-timeline-step-desc">Lescure butter lamination and slow-baked buttermilk sponges prepared fresh.</span>
+            <span class="order-timeline-step-desc">Lescure butter lamination and slow-baked buttermilk sponges prepared
+              fresh.</span>
           </div>
           <div class="order-timeline-step">
             <div class="order-timeline-dot"></div>
             <span class="order-timeline-step-name">3. Hand-Piped Inscription & Final Dressing</span>
-            <span class="order-timeline-step-desc">White chocolate piped plaque, Swiss meringue buttercream, and head chef sign-off.</span>
+            <span class="order-timeline-step-desc">White chocolate piped plaque, Swiss meringue buttercream, and head
+              chef sign-off.</span>
           </div>
           <div class="order-timeline-step">
             <div class="order-timeline-dot"></div>
             <span class="order-timeline-step-name">4. Ready for Kew Collection / Metro Dispatch</span>
-            <span class="order-timeline-step-desc">Kept refrigerated below 4°C in our bespoke presentation box ready for your celebration.</span>
+            <span class="order-timeline-step-desc">Kept refrigerated below 4°C in our bespoke presentation box ready for
+              your celebration.</span>
           </div>
         </div>
       </div>
 
       <div class="order-confirm-actions">
         <a id="addToCalendarBtn" class="btn-calendar-add" href="#" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
           <span>Add Collection Date to Google Calendar</span>
         </a>
         <button type="button" class="btn-primary" onclick="window.print()" style="justify-content: center;">
           <span>Print Celebration Order Slip</span>
         </button>
-        <button type="button" class="journey-btn-back" id="orderConfirmDoneBtn" style="justify-content: center; width: 100%;">
+        <button type="button" class="journey-btn-back" id="orderConfirmDoneBtn"
+          style="justify-content: center; width: 100%;">
           Return to Atelier Showcase
         </button>
       </div>
@@ -2076,15 +2373,17 @@
   <!-- ========================================================================
        Kew Atelier Concierge Modal (Event & Catering Inquiry)
        ======================================================================== -->
-  <div class="catering-modal" id="cateringInquiryModal" role="dialog" aria-modal="true" aria-label="Kew Atelier Concierge Catering Inquiry">
+  <div class="catering-modal" id="cateringInquiryModal" role="dialog" aria-modal="true"
+    aria-label="Kew Atelier Concierge Catering Inquiry">
     <div class="catering-modal-inner">
       <button class="catering-modal-close" id="cateringModalCloseBtn" aria-label="Close dialog">✕</button>
-      
+
       <div class="catering-modal-header">
         <span class="catering-kicker">KEW ATELIER CONCIERGE</span>
         <h3 class="catering-modal-title">Event Catering & Grazing Enquiry</h3>
         <p class="catering-modal-desc">
-          Artisanal viennoiserie morning boxes, savory quiches, and bespoke celebration packages handcrafted in Kew, Melbourne.
+          Artisanal viennoiserie morning boxes, savory quiches, and bespoke celebration packages handcrafted in Kew,
+          Melbourne.
         </p>
       </div>
 
@@ -2129,7 +2428,8 @@
 
         <div class="form-group">
           <label for="catNotes">Event Details & Dietary Notes</label>
-          <textarea id="catNotes" class="custom-input" rows="3" placeholder="Tell us about your event, preferred items, dietary requirements..."></textarea>
+          <textarea id="catNotes" class="custom-input" rows="3"
+            placeholder="Tell us about your event, preferred items, dietary requirements..."></textarea>
         </div>
 
         <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
