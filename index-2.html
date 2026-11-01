@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -275,6 +275,177 @@
     #signatureSection .plaque-customizer {
       background: rgba(255, 255, 255, 0.85) !important;
       border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    }
+
+    /* Testimonial Cards & Infinite Horizontal Auto-Scrolling Marquee in index-2 */
+    .reviews-section {
+      overflow: hidden !important;
+      position: relative !important;
+      padding: clamp(3.5rem, 6vw, 5.5rem) 0 clamp(4rem, 6vw, 6rem) !important;
+      background: var(--fh-bg, #fcfbf7) !important;
+    }
+
+    .reviews-marquee-viewport {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 1.25rem 0 2rem;
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.8) 2%, black 6%, black 94%, rgba(0, 0, 0, 0.8) 98%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.8) 2%, black 6%, black 94%, rgba(0, 0, 0, 0.8) 98%, transparent 100%);
+    }
+
+    .reviews-marquee-row {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      user-select: none;
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .reviews-marquee-group {
+      display: flex;
+      align-items: stretch;
+      gap: 1.5rem;
+      flex-shrink: 0;
+      min-width: 100%;
+      animation: reviewsMarqueeScroll 55s linear infinite;
+    }
+
+    .reviews-marquee-row:hover .reviews-marquee-group,
+    .reviews-marquee-row:focus-within .reviews-marquee-group {
+      animation-play-state: paused;
+    }
+
+    @keyframes reviewsMarqueeScroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-100% - 1.5rem));
+      }
+    }
+
+    .reviews-marquee-group .review-card {
+      width: clamp(310px, 28vw, 370px) !important;
+      min-width: 310px !important;
+      max-width: 370px !important;
+      flex-shrink: 0 !important;
+      background: #ffffff !important;
+      border: 1px solid rgba(21, 24, 20, 0.08) !important;
+      border-radius: 18px !important;
+      padding: 1.5rem !important;
+      box-shadow: 0 4px 18px rgba(21, 24, 20, 0.04) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      box-sizing: border-box !important;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+    }
+
+    .reviews-marquee-group .review-card:hover {
+      transform: translateY(-6px) !important;
+      box-shadow: 0 16px 36px rgba(21, 24, 20, 0.09) !important;
+      border-color: var(--fh-primary, #a7b2a3) !important;
+    }
+
+    .reviews-marquee-group .review-card-media {
+      width: 100%;
+      height: 185px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1.15rem;
+      background: var(--fh-surface-subtle, #f4f3ee);
+      position: relative;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      flex-shrink: 0;
+    }
+
+    .reviews-marquee-group .review-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reviews-marquee-group .review-card:hover .review-card-img {
+      transform: scale(1.05);
+    }
+
+    .reviews-marquee-group .review-card-stars {
+      display: flex;
+      gap: 3px;
+      color: #e6a122;
+      font-size: 0.95rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .reviews-marquee-group .review-card-quote {
+      font-size: 0.93rem !important;
+      line-height: 1.6 !important;
+      color: var(--fh-charcoal, #151814) !important;
+      margin: 0 0 1.25rem 0 !important;
+      font-style: normal !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 4 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+      min-height: 4.8em;
+    }
+
+    .reviews-marquee-group .review-card-author {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.9rem;
+      border-top: 1px solid rgba(21, 24, 20, 0.08);
+      margin-top: auto;
+    }
+
+    .reviews-marquee-group .review-author-name {
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--fh-charcoal, #151814);
+    }
+
+    .reviews-marquee-group .review-platform-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--fh-charcoal-light, #7a7a72);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .reviews-marquee-group .review-card {
+        width: 290px !important;
+        min-width: 290px !important;
+        padding: 1.25rem !important;
+      }
+      .reviews-marquee-group .review-card-media {
+        height: 160px;
+      }
+      .reviews-marquee-group {
+        animation-duration: 42s;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reviews-marquee-group {
+        animation: none !important;
+      }
+      .reviews-marquee-row {
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 1rem;
+      }
+      .reviews-marquee-group .review-card {
+        scroll-snap-align: start;
+      }
     }
   </style>
 </head>
@@ -1480,95 +1651,577 @@
   <!-- ========================================================================
        Customer Reviews & Press Accolades (GBP 4.9⭐ & Facebook 5.0⭐)
        ======================================================================== -->
-  <section class="reviews-section" id="reviewsSection">
+      <section class="reviews-section" id="reviewsSection">
     <div class="container">
 
       <div class="reviews-header-block">
-        <div class="reviews-subhead">Guest Experiences & Critical Acclaim</div>
+        <div class="reviews-subhead">Guest Experiences &amp; Critical Acclaim</div>
         <h2 class="section-title" style="margin-bottom: 0.75rem;">Loved Across Melbourne</h2>
         <p style="font-size: 0.95rem; font-weight: 300; color: var(--fh-charcoal-muted); line-height: 1.65;">
           From our sunny corner on High Street in Kew Junction to celebration tables across Victoria, here is what our
-          guests share about Frank & Harri.
+          guests share about Frank &amp; Harri.
         </p>
       </div>
 
-      <!-- Testimonial Cards Grid -->
-      <div class="reviews-grid">
-        <!-- Review 1 -->
-        <div class="review-card">
-          <div>
-            <div class="review-card-stars">★★★★★</div>
-            <blockquote class="review-card-quote">
-              "Great service and great variety of pastry selection! The croissants and celebration cakes are without a
-              doubt the finest in the eastern suburbs."
-            </blockquote>
-          </div>
-          <div class="review-card-author">
-            <div>
-              <div class="review-author-name">Verified Kew Customer</div>
-              <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Local Guide · Melbourne</div>
+    </div>
+
+    <!-- Edge-to-Edge Horizontally Automatic Scrolling Marquee -->
+    <div class="reviews-marquee-viewport" aria-label="Customer Testimonials Carousel">
+      <div class="reviews-marquee-row">
+
+        <!-- Marquee Group 1 -->
+        <div class="reviews-marquee-group">
+          <!-- Review 1: Viennoiserie & Pastries -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/real/mini-pastries-box.png" alt="Handcrafted Viennoiserie &amp; Pastry Selection"
+                class="review-card-img" loading="lazy">
             </div>
-            <span class="review-platform-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
-              </svg>
-              Google Reviews
-            </span>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "Great service and great variety of pastry selection! The croissants and celebration cakes are without a
+                doubt the finest in the eastern suburbs."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Verified Kew Customer</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Local Guide &middot; Melbourne</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 2: Butter Croissants & Parisian Atmosphere -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/real/mini-croissants-box.png" alt="Butter Croissants &amp; Parisian Atmosphere"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "Great coffee, nice cosy atmosphere &amp; helpful staff. Sitting outside on High Street with their almond
+                croissant feels genuinely Parisian."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Melbourne Bruncher</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Regular Visitor &middot; High St</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 3: The Bruce Cake 30th Birthday Celebration -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/bruce-cake-1.png" alt="The Bruce Chocolate Cake 30th Birthday Celebration"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "The food was well presented, tasty and served quickly. We ordered The Bruce cake for my 30th birthday and
+                guests couldn't stop raving about the fudge layers!"
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Celebration Cake Host</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Celebration Pre-Order &middot; Kew</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Facebook 5.0 (9 votes)
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 4: Sophie Montgomery - Grand Banquet Bruce Cake -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/bruce-cake-2.png" alt="The Bruce 12-inch Grand Banquet Centerpiece"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "Ordered the 12&quot; Grand Banquet Bruce Cake for our engagement soir&eacute;e. The five whisper-thin buttermilk layers and Belgian fudge were an absolute showstopper!"
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Sophie Montgomery</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Hawthorn East &middot; Verified Order</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 5: Sophia Theodorou - Plaque Inscription -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/bruce-cake-3.png" alt="Custom Chocolate Plaque Inscription"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "The custom chocolate inscription plaque in gold piping was stunning. Arrived impeccably chilled in Kew right on schedule. Unforgettable centerpiece!"
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Sophia Theodorou</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Kew Junction &middot; Event Host</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 6: Julian Rossi - Tasting Flight -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/testimonials/cake-tasting-flight.webp" alt="Atelier Cake Tasting Flight Experience"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "The private tasting flight made choosing our wedding centerpiece an experience to remember. Every tier delivered exquisite artisan pastry craft."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Julian Rossi</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">South Yarra &middot; Private Banquet</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 7: Marcus & Claire Hughes - Anniversary Celebration -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/testimonials/wedding-heart-cake.webp" alt="Milestone Celebration Heart Cake"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "Frank &amp; Harri catered our milestone anniversary dinner in Balwyn. Fresh morning delivery, stunning presentation, and melt-in-the-mouth crumb."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Marcus &amp; Claire Hughes</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Balwyn &middot; Milestone Party</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Facebook 5.0 (14 votes)
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 8: Camilla Laurent - Basque Cheesecake -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/testimonials/basque-berries-cheesecake.webp" alt="Basque Berries Burnt Cheesecake"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "Finding gluten-free baked treats this refined in Melbourne is rare. The Basque berry cheesecake has the silkiest custard center imaginable."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Camilla Laurent</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Camberwell &middot; Verified Buyer</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 9: Elena Vassiliou - Vintage Lambeth Cake -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/testimonials/queen-bree-vintage-cake.webp" alt="Queen Bree Vintage Piped Lambeth Cake"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "The vintage piped lambeth cake for my sister's bridal brunch was breathtaking. Delicate, velvety buttercream and sublime sponge texture."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Elena Vassiliou</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Richmond &middot; Bridal Brunch</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 10: David & Sarah Sterling - Ferrero Celebration -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/testimonials/ferrero-celebration-cake.webp" alt="Ferrero Rocher Celebration Creation"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "From first consultation to morning pickup, the Kew team was delightful. The Ferrero celebration cake stole the spotlight at our family reunion."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">David &amp; Sarah Sterling</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Kew &middot; Celebration Pre-Order</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
           </div>
         </div>
 
-        <!-- Review 2 -->
-        <div class="review-card">
-          <div>
-            <div class="review-card-stars">★★★★★</div>
-            <blockquote class="review-card-quote">
-              "Great coffee, nice cosy atmosphere & helpful staff. Sitting outside on High Street with their almond
-              croissant feels genuinely Parisian."
-            </blockquote>
-          </div>
-          <div class="review-card-author">
-            <div>
-              <div class="review-author-name">Melbourne Bruncher</div>
-              <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Regular Visitor · High St</div>
+        <!-- Marquee Group 2 (Duplicate for infinite seamless loop) -->
+        <div class="reviews-marquee-group" aria-hidden="true">
+          <!-- Review 1: Viennoiserie & Pastries -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/real/mini-pastries-box.png" alt="Handcrafted Viennoiserie &amp; Pastry Selection"
+                class="review-card-img" loading="lazy">
             </div>
-            <span class="review-platform-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
-              </svg>
-              Google Reviews
-            </span>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "Great service and great variety of pastry selection! The croissants and celebration cakes are without a
+                doubt the finest in the eastern suburbs."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Verified Kew Customer</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Local Guide &middot; Melbourne</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 2: Butter Croissants & Parisian Atmosphere -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/real/mini-croissants-box.png" alt="Butter Croissants &amp; Parisian Atmosphere"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "Great coffee, nice cosy atmosphere &amp; helpful staff. Sitting outside on High Street with their almond
+                croissant feels genuinely Parisian."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Melbourne Bruncher</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Regular Visitor &middot; High St</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 3: The Bruce Cake 30th Birthday Celebration -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/bruce-cake-1.png" alt="The Bruce Chocolate Cake 30th Birthday Celebration"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "The food was well presented, tasty and served quickly. We ordered The Bruce cake for my 30th birthday and
+                guests couldn't stop raving about the fudge layers!"
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Celebration Cake Host</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Celebration Pre-Order &middot; Kew</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Facebook 5.0 (9 votes)
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 4: Sophie Montgomery - Grand Banquet Bruce Cake -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/bruce-cake-2.png" alt="The Bruce 12-inch Grand Banquet Centerpiece"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "Ordered the 12&quot; Grand Banquet Bruce Cake for our engagement soir&eacute;e. The five whisper-thin buttermilk layers and Belgian fudge were an absolute showstopper!"
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Sophie Montgomery</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Hawthorn East &middot; Verified Order</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 5: Sophia Theodorou - Plaque Inscription -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/bruce-cake-3.png" alt="Custom Chocolate Plaque Inscription"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "The custom chocolate inscription plaque in gold piping was stunning. Arrived impeccably chilled in Kew right on schedule. Unforgettable centerpiece!"
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Sophia Theodorou</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Kew Junction &middot; Event Host</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 6: Julian Rossi - Tasting Flight -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/testimonials/cake-tasting-flight.webp" alt="Atelier Cake Tasting Flight Experience"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "The private tasting flight made choosing our wedding centerpiece an experience to remember. Every tier delivered exquisite artisan pastry craft."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Julian Rossi</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">South Yarra &middot; Private Banquet</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 7: Marcus & Claire Hughes - Anniversary Celebration -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/testimonials/wedding-heart-cake.webp" alt="Milestone Celebration Heart Cake"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "Frank &amp; Harri catered our milestone anniversary dinner in Balwyn. Fresh morning delivery, stunning presentation, and melt-in-the-mouth crumb."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Marcus &amp; Claire Hughes</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Balwyn &middot; Milestone Party</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Facebook 5.0 (14 votes)
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 8: Camilla Laurent - Basque Cheesecake -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/testimonials/basque-berries-cheesecake.webp" alt="Basque Berries Burnt Cheesecake"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "Finding gluten-free baked treats this refined in Melbourne is rare. The Basque berry cheesecake has the silkiest custard center imaginable."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Camilla Laurent</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Camberwell &middot; Verified Buyer</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 9: Elena Vassiliou - Vintage Lambeth Cake -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/testimonials/queen-bree-vintage-cake.webp" alt="Queen Bree Vintage Piped Lambeth Cake"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "The vintage piped lambeth cake for my sister's bridal brunch was breathtaking. Delicate, velvety buttercream and sublime sponge texture."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">Elena Vassiliou</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Richmond &middot; Bridal Brunch</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
+          </div>
+
+          <!-- Review 10: David & Sarah Sterling - Ferrero Celebration -->
+          <div class="review-card">
+            <div class="review-card-media">
+              <img src="assets/images/testimonials/ferrero-celebration-cake.webp" alt="Ferrero Rocher Celebration Creation"
+                class="review-card-img" loading="lazy">
+            </div>
+            <div>
+              <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="review-card-quote">
+                "From first consultation to morning pickup, the Kew team was delightful. The Ferrero celebration cake stole the spotlight at our family reunion."
+              </blockquote>
+            </div>
+            <div class="review-card-author">
+              <div>
+                <div class="review-author-name">David &amp; Sarah Sterling</div>
+                <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Kew &middot; Celebration Pre-Order</div>
+              </div>
+              <span class="review-platform-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                </svg>
+                Google Reviews
+              </span>
+            </div>
           </div>
         </div>
 
-        <!-- Review 3 -->
-        <div class="review-card">
-          <div>
-            <div class="review-card-stars">★★★★★</div>
-            <blockquote class="review-card-quote">
-              "The food was well presented, tasty and served quickly. We ordered The Bruce cake for my 30th birthday and
-              guests couldn't stop raving about the fudge layers!"
-            </blockquote>
-          </div>
-          <div class="review-card-author">
-            <div>
-              <div class="review-author-name">Celebration Cake Host</div>
-              <div style="font-size: 0.72rem; color: var(--fh-charcoal-light);">Celebration Pre-Order · Kew</div>
-            </div>
-            <span class="review-platform-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
-              </svg>
-              Facebook 5.0 (9 votes)
-            </span>
-          </div>
-        </div>
       </div>
-
-
-
     </div>
   </section>
 
