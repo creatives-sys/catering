@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Brands Section Flow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Jost', sans-serif;
+      background: #fcfbf7;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Brands That Love Our Treats Section */
+    .fh-brands-section {
+      padding: clamp(2.75rem, 4.5vw, 3.85rem) 0 clamp(3.25rem, 5vw, 4.25rem);
+      background: #ffffff !important;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+    .fh-brands-header {
+      margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+    }
+    .fh-brands-kicker {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #6a7c64;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+    }
+    .fh-brands-title {
+      font-family: 'Jost', sans-serif;
+      font-size: clamp(1.4rem, 2.3vw, 2rem);
+      font-weight: 400;
+      color: #151814;
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+    .fh-brands-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(1.5rem, 3.5vw, 3rem);
+      align-items: center;
+      justify-items: center;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .fh-brand-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      height: 60px;
+      opacity: 0.65;
+      transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: default;
+    }
+    .fh-brand-item:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+    .fh-brand-logo {
+      display: block;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: filter 0.28s ease;
+    }
+    .fh-brand-item:hover .fh-brand-logo {
+      filter: grayscale(0%);
+    }
+    .fh-brand-porsche { max-height: 22px; }
+    .fh-brand-mecca { max-height: 38px; }
+    .fh-brand-witchery { max-height: 20px; }
+    .fh-brand-countryroad { max-height: 20px; }
+
+    /* Scallop transition at bottom of brands into collections (#a7b2a3) */
+    .brands-scallop-bottom {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: clamp(18px, 2.4vw, 26px);
+      z-index: 4;
+      pointer-events: none;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .brands-scallop-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Collections section mock */
+    .collections-mock {
+      background: #a7b2a3;
+      padding: 4rem 1rem;
+      text-align: center;
+      color: #151814;
+    }
+
+    @media (max-width: 768px) {
+      .fh-brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem 1rem;
+      }
+      .fh-brands-section {
+        padding: 2.25rem 0 3rem;
+      }
+      .fh-brand-item {
+        height: 50px;
+      }
+      .fh-brand-porsche { max-height: 19px; }
+      .fh-brand-mecca { max-height: 32px; }
+      .fh-brand-witchery { max-height: 18px; }
+      .fh-brand-countryroad { max-height: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Brands Section -->
+  <section class="fh-brands-section" id="brandsSection" aria-label="Brands that love our treats">
+    <div class="container">
+      <div class="fh-brands-header">
+        <span class="fh-brands-kicker">Corporate &amp; Event Partners</span>
+        <h2 class="fh-brands-title">Brands that love our treats</h2>
+      </div>
+      <div class="fh-brands-grid">
+        <div class="fh-brand-item" title="Porsche">
+          <img src="../assets/images/brands/porsche.svg" alt="Porsche" class="fh-brand-logo fh-brand-porsche" loading="lazy">
+        </div>
+        <div class="fh-brand-item" title="Mecca Cosmetica">
+          <img src="../assets/images/brands/mecca-cosmetica.svg" alt="Mecca Cosmetica" class="fh-brand-logo fh-brand-mecca" loading="lazy">
+        </div>
+        <div class="fh-brand-item" title="Witchery">
+          <img src="../assets/images/brands/witchery.svg" alt="Witchery" class="fh-brand-logo fh-brand-witchery" loading="lazy">
+        </div>
+        <div class="fh-brand-item" title="Country Road">
+          <img src="../assets/images/brands/country-road.svg" alt="Country Road" class="fh-brand-logo fh-brand-countryroad" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- Scallop into #a7b2a3 section -->
+    <div class="brands-scallop-bottom" aria-hidden="true">
+      <svg class="brands-scallop-svg" preserveAspectRatio="none">
+        <defs>
+          <pattern id="brandsBottomScallop" width="32" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 0,0 A 16 16 0 0 0 32,0 L 32,60 L 0,60 Z" fill="#a7b2a3" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#brandsBottomScallop)" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Next Section: Collections Showcase -->
+  <div class="collections-mock">
+    <h2>Explore by Collection</h2>
+  </div>
+
+</body>
+</html>
+

@@ -32,26 +32,6 @@
 
   <!-- index-2 exclusive: Scalloped Borders Framing Explore by Collection Section (#a7b2a3) -->
   <style>
-    /* Top scallop directly in the Hero Banner */
-    .hero-scallop-bottom {
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: clamp(18px, 2.4vw, 26px);
-      z-index: 4;
-      pointer-events: none;
-      overflow: hidden;
-      line-height: 0;
-    }
-
-    .hero-scallop-svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-      filter: none !important;
-    }
-
     /* Seamless junction between hero and collections showcase in index-2 */
     .hero-banner-section {
       padding-bottom: 0 !important;
@@ -761,6 +741,201 @@
       color: #ffffff !important;
       background: rgba(0, 0, 0, 0.18) !important;
     }
+
+    /* ==========================================================================
+       Brands That Love Our Treats Section (Exclusive to index-2)
+       Auto-scrolling infinite marquee ticker
+       ========================================================================== */
+    .fh-brands-section {
+      padding: clamp(2.75rem, 4.5vw, 3.85rem) 0 clamp(3.25rem, 5vw, 4.25rem);
+      background: #ffffff !important;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .fh-brands-header {
+      margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+      padding: 0 1.5rem;
+    }
+
+    .fh-brands-kicker {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #5d6f57;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+    }
+
+    .fh-brands-title {
+      font-family: var(--font-brand, 'Jost', sans-serif);
+      font-size: clamp(1.4rem, 2.3vw, 2rem);
+      font-weight: 400;
+      color: var(--fh-charcoal, #151814);
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+
+    /* Auto-scrolling Marquee Track */
+    .fh-brands-marquee-viewport {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 0.5rem 0;
+      user-select: none;
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.75) 4%, black 10%, black 90%, rgba(0, 0, 0, 0.75) 96%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.75) 4%, black 10%, black 90%, rgba(0, 0, 0, 0.75) 96%, transparent 100%);
+    }
+
+    .fh-brands-marquee-row {
+      display: flex;
+      width: max-content;
+      overflow: hidden;
+      gap: 3.5rem;
+      position: relative;
+    }
+
+    .fh-brands-marquee-group {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+      flex-shrink: 0;
+      animation: brandsMarqueeScroll 28s linear infinite;
+    }
+
+    .fh-brands-marquee-row:hover .fh-brands-marquee-group,
+    .fh-brands-marquee-row:focus-within .fh-brands-marquee-group {
+      animation-play-state: paused;
+    }
+
+    @keyframes brandsMarqueeScroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-100% - 3.5rem));
+      }
+    }
+
+    .fh-brand-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      min-width: clamp(160px, 16vw, 220px);
+      height: 60px;
+      opacity: 0.68;
+      transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: default;
+      flex-shrink: 0;
+    }
+
+    .fh-brand-item:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    .fh-brand-logo {
+      display: block;
+      width: auto;
+      object-fit: contain;
+      color: #151814;
+    }
+
+    .fh-brand-porsche {
+      max-height: 22px;
+    }
+
+    .fh-brand-mecca {
+      max-height: 38px;
+    }
+
+    .fh-brand-witchery {
+      max-height: 20px;
+    }
+
+    .fh-brand-countryroad {
+      max-height: 20px;
+    }
+
+    .brands-scallop-bottom {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: clamp(18px, 2.4vw, 26px);
+      z-index: 4;
+      pointer-events: none;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .brands-scallop-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      filter: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .fh-brands-section {
+        padding: 2.25rem 0 3rem;
+      }
+
+      .fh-brands-marquee-row {
+        gap: 2rem;
+      }
+
+      .fh-brands-marquee-group {
+        gap: 2rem;
+        animation-duration: 20s;
+      }
+
+      @keyframes brandsMarqueeScroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-100% - 2rem));
+        }
+      }
+
+      .fh-brand-item {
+        min-width: 140px;
+        height: 48px;
+        padding: 0.5rem 1rem;
+      }
+
+      .fh-brand-porsche {
+        max-height: 18px;
+      }
+
+      .fh-brand-mecca {
+        max-height: 30px;
+      }
+
+      .fh-brand-witchery {
+        max-height: 16px;
+      }
+
+      .fh-brand-countryroad {
+        max-height: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fh-brands-marquee-group {
+        animation: none;
+      }
+
+      .fh-brands-marquee-row {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+      }
+    }
   </style>
 </head>
 
@@ -1037,18 +1212,92 @@
         </div>
       </div>
 
-      <!-- Scalloped Wave Bottom Border directly in the Hero Banner -->
-      <div class="hero-scallop-bottom" aria-hidden="true">
-        <svg class="hero-scallop-svg" preserveAspectRatio="none">
-          <defs>
-            <pattern id="heroBannerScallop" width="32" height="60" patternUnits="userSpaceOnUse">
-              <path d="M 0,0 A 16 16 0 0 0 32,0 L 32,60 L 0,60 Z" fill="#a7b2a3" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#heroBannerScallop)" />
-        </svg>
-      </div>
+    </div>
+  </section>
 
+  <!-- ========================================================================
+       Brands That Love Our Treats (Auto-scrolling Marquee Ticker)
+       Porsche · Mecca Cosmetica · Witchery · Country Road
+       ======================================================================== -->
+  <section class="fh-brands-section" id="brandsSection" aria-label="Brands that love our treats">
+    <div class="fh-brands-header">
+      <span class="fh-brands-kicker">Corporate &amp; Event Partners</span>
+      <h2 class="fh-brands-title">Brands that love our treats</h2>
+    </div>
+
+    <!-- Infinite Auto-Scrolling Marquee Track -->
+    <div class="fh-brands-marquee-viewport" aria-label="Brands Carousel">
+      <div class="fh-brands-marquee-row">
+
+        <!-- Marquee Group 1 -->
+        <div class="fh-brands-marquee-group">
+          <div class="fh-brand-item" title="Porsche">
+            <img src="assets/images/brands/porsche.svg" alt="Porsche" class="fh-brand-logo fh-brand-porsche" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Mecca Cosmetica">
+            <img src="assets/images/brands/mecca-cosmetica.svg" alt="Mecca Cosmetica" class="fh-brand-logo fh-brand-mecca" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Witchery">
+            <img src="assets/images/brands/witchery.svg" alt="Witchery" class="fh-brand-logo fh-brand-witchery" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Country Road">
+            <img src="assets/images/brands/country-road.svg" alt="Country Road" class="fh-brand-logo fh-brand-countryroad" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Porsche">
+            <img src="assets/images/brands/porsche.svg" alt="Porsche" class="fh-brand-logo fh-brand-porsche" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Mecca Cosmetica">
+            <img src="assets/images/brands/mecca-cosmetica.svg" alt="Mecca Cosmetica" class="fh-brand-logo fh-brand-mecca" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Witchery">
+            <img src="assets/images/brands/witchery.svg" alt="Witchery" class="fh-brand-logo fh-brand-witchery" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Country Road">
+            <img src="assets/images/brands/country-road.svg" alt="Country Road" class="fh-brand-logo fh-brand-countryroad" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Marquee Group 2 (Duplicate for seamless continuous loop) -->
+        <div class="fh-brands-marquee-group" aria-hidden="true">
+          <div class="fh-brand-item" title="Porsche">
+            <img src="assets/images/brands/porsche.svg" alt="Porsche" class="fh-brand-logo fh-brand-porsche" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Mecca Cosmetica">
+            <img src="assets/images/brands/mecca-cosmetica.svg" alt="Mecca Cosmetica" class="fh-brand-logo fh-brand-mecca" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Witchery">
+            <img src="assets/images/brands/witchery.svg" alt="Witchery" class="fh-brand-logo fh-brand-witchery" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Country Road">
+            <img src="assets/images/brands/country-road.svg" alt="Country Road" class="fh-brand-logo fh-brand-countryroad" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Porsche">
+            <img src="assets/images/brands/porsche.svg" alt="Porsche" class="fh-brand-logo fh-brand-porsche" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Mecca Cosmetica">
+            <img src="assets/images/brands/mecca-cosmetica.svg" alt="Mecca Cosmetica" class="fh-brand-logo fh-brand-mecca" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Witchery">
+            <img src="assets/images/brands/witchery.svg" alt="Witchery" class="fh-brand-logo fh-brand-witchery" loading="lazy">
+          </div>
+          <div class="fh-brand-item" title="Country Road">
+            <img src="assets/images/brands/country-road.svg" alt="Country Road" class="fh-brand-logo fh-brand-countryroad" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scalloped Wave Bottom Border for Brands Section transitioning into Collections (#a7b2a3) -->
+    <div class="brands-scallop-bottom" aria-hidden="true">
+      <svg class="brands-scallop-svg" preserveAspectRatio="none">
+        <defs>
+          <pattern id="brandsBottomScallop" width="32" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 0,0 A 16 16 0 0 0 32,0 L 32,60 L 0,60 Z" fill="#a7b2a3" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#brandsBottomScallop)" />
+      </svg>
     </div>
   </section>
 
