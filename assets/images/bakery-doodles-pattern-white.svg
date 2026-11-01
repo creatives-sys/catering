@@ -1,0 +1,290 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <style>
+      .doodle {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .doodle-fill {
+        fill: #ffffff;
+      }
+      .doodle-soft {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 1.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+
+  <!-- Group with default doodle styling -->
+  <g class="doodle" opacity="0.9">
+
+    <!-- 1. Tiered Celebration Cake (x: 40, y: 35) -->
+    <g transform="translate(45, 35)">
+      <!-- Cake Stand Base -->
+      <path d="M 12 75 L 38 75 M 25 75 L 25 64" />
+      <path d="M 4 64 L 46 64" />
+      <!-- Bottom Tier -->
+      <path d="M 6 64 L 6 44 Q 25 48 44 44 L 44 64" />
+      <path d="M 6 44 Q 25 40 44 44" />
+      <path d="M 10 50 Q 15 54 20 49 Q 25 54 30 49 Q 35 54 40 50" class="doodle-soft" />
+      <!-- Top Tier -->
+      <path d="M 14 42 L 14 26 Q 25 30 36 26 L 36 42" />
+      <path d="M 14 26 Q 25 23 36 26" />
+      <!-- Candles -->
+      <path d="M 20 25 L 20 16 M 30 25 L 30 16" />
+      <path d="M 19 14 Q 20 10 20.5 14 Z M 29 14 Q 30 10 30.5 14 Z" class="doodle-fill" />
+    </g>
+
+    <!-- 2. French Butter Croissant (x: 160, y: 30) -->
+    <g transform="translate(160, 25)">
+      <path d="M 8 36 C 2 24 16 10 35 12 C 54 14 62 26 56 36 C 48 30 40 32 32 30 C 24 32 16 30 8 36 Z" />
+      <path d="M 22 13 C 21 22 23 30 25 31" />
+      <path d="M 40 14 C 41 22 39 29 37 31" />
+      <path d="M 13 21 C 12 26 15 31 16 34" class="doodle-soft" />
+      <path d="M 49 21 C 51 26 48 31 47 34" class="doodle-soft" />
+    </g>
+
+    <!-- 3. Whisk (x: 275, y: 30) -->
+    <g transform="translate(280, 25) rotate(35)">
+      <!-- Handle -->
+      <path d="M 25 65 L 25 45" stroke-width="2.6" />
+      <circle cx="25" cy="67" r="1.5" class="doodle-fill" />
+      <!-- Balloon wires -->
+      <path d="M 25 45 C 12 40 12 15 25 8 C 38 15 38 40 25 45 Z" />
+      <path d="M 25 45 C 17 38 17 18 25 8 C 33 18 33 38 25 45 Z" class="doodle-soft" />
+      <path d="M 25 45 L 25 8" class="doodle-soft" />
+    </g>
+
+    <!-- 4. Cupcake with Swirl & Cherry (x: 375, y: 35) -->
+    <g transform="translate(380, 30)">
+      <!-- Liner -->
+      <path d="M 10 38 L 14 62 L 38 62 L 42 38" />
+      <path d="M 20 38 L 22 62 M 26 38 L 26 62 M 32 38 L 30 62" class="doodle-soft" />
+      <!-- Frosting swirl -->
+      <path d="M 8 38 C 7 32 16 28 26 28 C 36 28 45 32 44 38 Z" />
+      <path d="M 13 29 C 14 20 22 17 26 17 C 31 17 38 20 38 29" />
+      <path d="M 20 18 C 22 13 26 11 27 11 C 30 11 32 14 31 18" />
+      <!-- Cherry -->
+      <circle cx="27" cy="8" r="3.5" class="doodle-fill" />
+      <path d="M 28 5 C 32 0 37 3 39 1" class="doodle-soft" />
+    </g>
+
+    <!-- 5. Artisan Wheat Stalk (x: 490, y: 25) -->
+    <g transform="translate(490, 25) rotate(15)">
+      <path d="M 20 70 L 20 10" />
+      <!-- Grains -->
+      <path d="M 20 10 C 16 6 16 2 20 0 C 24 2 24 6 20 10 Z" class="doodle-fill" />
+      <path d="M 20 20 C 13 18 11 12 15 10 C 18 12 19 16 20 20 Z" />
+      <path d="M 20 20 C 27 18 29 12 25 10 C 22 12 21 16 20 20 Z" />
+      <path d="M 20 32 C 13 30 11 24 15 22 C 18 24 19 28 20 32 Z" />
+      <path d="M 20 32 C 27 30 29 24 25 22 C 22 24 21 28 20 32 Z" />
+      <path d="M 20 44 C 13 42 11 36 15 34 C 18 36 19 40 20 44 Z" />
+      <path d="M 20 44 C 27 42 29 36 25 34 C 22 36 21 40 20 44 Z" />
+    </g>
+
+    <!-- 6. Rolling Pin (x: 35, y: 155) -->
+    <g transform="translate(30, 155) rotate(-20)">
+      <!-- Left Handle -->
+      <path d="M 0 16 L 14 16 M 4 13 L 4 19" />
+      <!-- Main Barrel -->
+      <rect x="14" y="9" width="60" height="14" rx="2" />
+      <path d="M 20 12 L 20 20 M 68 12 L 68 20" class="doodle-soft" />
+      <!-- Right Handle -->
+      <path d="M 74 16 L 88 16 M 84 13 L 84 19" />
+    </g>
+
+    <!-- 7. Cake Slice with Layers (x: 175, y: 150) -->
+    <g transform="translate(170, 145)">
+      <!-- Top wedge -->
+      <path d="M 10 32 L 48 14 L 62 26 L 22 42 Z" />
+      <!-- Front side -->
+      <path d="M 10 32 L 10 54 L 22 64 L 22 42 Z" />
+      <!-- Right side with sponge layers -->
+      <path d="M 22 42 L 22 64 L 62 48 L 62 26 Z" />
+      <path d="M 22 50 L 62 34" class="doodle-soft" />
+      <path d="M 22 57 L 62 41" class="doodle-soft" />
+      <!-- Dollop of Cream & Strawberry -->
+      <circle cx="34" cy="24" r="4.5" />
+      <path d="M 33 16 C 36 13 39 16 38 19 C 36 21 34 22 33 21 C 32 19 32 17 33 16 Z" class="doodle-fill" />
+    </g>
+
+    <!-- 8. Chef's Toque / Baker's Hat (x: 290, y: 145) -->
+    <g transform="translate(295, 145)">
+      <!-- Headband -->
+      <rect x="10" y="44" width="36" height="9" rx="1.5" />
+      <!-- Puffy Crown -->
+      <path d="M 12 44 C 4 36 6 22 16 20 C 18 10 32 10 36 18 C 44 14 52 24 46 36 C 47 40 45 44 44 44 Z" />
+      <!-- Crown Folds -->
+      <path d="M 20 44 L 22 28 M 32 44 L 32 26 M 38 44 L 40 32" class="doodle-soft" />
+    </g>
+
+    <!-- 9. Piping Bag with Rosette (x: 410, y: 140) -->
+    <g transform="translate(415, 140) rotate(15)">
+      <!-- Bag Cone -->
+      <path d="M 12 12 L 44 26 L 24 58 Z" />
+      <!-- Top Tie Folds -->
+      <path d="M 8 10 C 10 6 14 8 13 13" />
+      <path d="M 12 12 C 22 15 36 21 44 26" />
+      <path d="M 18 22 C 25 26 34 32 40 37" class="doodle-soft" />
+      <!-- Nozzle tip -->
+      <path d="M 24 58 L 22 65 L 26 65 Z" class="doodle-fill" />
+      <!-- Piped Cream Rosette below -->
+      <path d="M 18 72 C 18 68 24 67 27 69 C 30 67 36 68 36 72 C 36 75 30 77 27 77 C 24 77 18 75 18 72 Z" />
+      <path d="M 24 70 C 26 69 28 69 30 70" class="doodle-soft" />
+    </g>
+
+    <!-- 10. Parisian Macaron (x: 520, y: 155) -->
+    <g transform="translate(520, 155)">
+      <!-- Top Shell -->
+      <path d="M 6 22 C 6 12 36 12 36 22 Z" />
+      <!-- Ruffled Pied (Foot) -->
+      <path d="M 6 22 Q 13 25 21 22 Q 29 25 36 22" class="doodle-soft" />
+      <!-- Filling -->
+      <path d="M 8 26 L 34 26" stroke-width="2.5" />
+      <!-- Bottom Shell -->
+      <path d="M 6 27 Q 13 25 21 27 Q 29 25 36 27" class="doodle-soft" />
+      <path d="M 6 27 C 6 35 36 35 36 27 Z" />
+    </g>
+
+    <!-- 11. French Baguette / Artisan Loaf (x: 40, y: 265) -->
+    <g transform="translate(35, 260) rotate(-10)">
+      <path d="M 6 25 C 8 12 70 12 74 25 C 70 38 8 38 6 25 Z" />
+      <!-- Diagonal slash scores -->
+      <path d="M 22 18 C 24 22 25 28 27 32" />
+      <path d="M 37 17 C 39 22 40 28 42 32" />
+      <path d="M 52 18 C 54 22 55 28 57 32" />
+    </g>
+
+    <!-- 12. Steaming Coffee / Tea Cup with Heart Latte Art (x: 165, y: 265) -->
+    <g transform="translate(165, 260)">
+      <!-- Saucer -->
+      <path d="M 6 42 Q 26 48 46 42" />
+      <!-- Cup -->
+      <path d="M 12 24 L 14 38 Q 26 42 38 38 L 40 24 Z" />
+      <!-- Handle -->
+      <path d="M 40 26 C 46 26 47 34 40 36" />
+      <!-- Heart in Cup -->
+      <path d="M 26 27 C 24 25 21 26 21 29 C 21 32 26 34 26 34 C 26 34 31 32 31 29 C 31 26 28 25 26 27 Z" class="doodle-fill" transform="scale(0.8) translate(7, 3)" />
+      <!-- Steam Wisps -->
+      <path d="M 20 18 Q 22 13 20 8" class="doodle-soft" />
+      <path d="M 26 19 Q 29 14 26 9" class="doodle-soft" />
+      <path d="M 32 18 Q 34 13 32 8" class="doodle-soft" />
+    </g>
+
+    <!-- 13. Glazed Donut with Sprinkles (x: 275, y: 265) -->
+    <g transform="translate(280, 260)">
+      <!-- Outer Dough -->
+      <circle cx="26" cy="26" r="21" />
+      <!-- Center Hole -->
+      <circle cx="26" cy="26" r="7.5" />
+      <!-- Wavy Icing -->
+      <path d="M 8 26 C 9 17 17 8 26 8 C 35 8 43 17 44 26 C 43 29 40 30 38 28 C 36 26 35 29 32 32 C 30 34 28 32 27 30 C 25 28 23 31 21 34 C 18 36 16 34 14 31 C 12 28 9 29 8 26 Z" class="doodle-soft" />
+      <!-- Sprinkles -->
+      <line x1="16" y1="16" x2="20" y2="15" class="doodle-soft" />
+      <line x1="32" y1="15" x2="35" y2="18" class="doodle-soft" />
+      <line x1="35" y1="26" x2="38" y2="28" class="doodle-soft" />
+      <line x1="14" y1="23" x2="16" y2="26" class="doodle-soft" />
+      <circle cx="22" cy="12" r="1" class="doodle-fill" />
+      <circle cx="31" cy="23" r="1" class="doodle-fill" />
+    </g>
+
+    <!-- 14. Classic Pretzel (x: 395, y: 260) -->
+    <g transform="translate(395, 260)">
+      <path d="M 24 14 C 15 14 8 22 10 32 C 12 40 22 43 25 36 L 27 28 C 28 25 32 25 33 28 L 35 36 C 38 43 48 40 50 32 C 52 22 45 14 36 14 C 30 14 26 18 25 24 C 24 18 20 14 24 14 Z" />
+      <!-- Salt crystals -->
+      <circle cx="16" cy="24" r="0.9" class="doodle-fill" />
+      <circle cx="34" cy="20" r="0.9" class="doodle-fill" />
+      <circle cx="44" cy="28" r="0.9" class="doodle-fill" />
+      <circle cx="24" cy="38" r="0.9" class="doodle-fill" />
+      <circle cx="36" cy="38" r="0.9" class="doodle-fill" />
+    </g>
+
+    <!-- 15. Cake Stand with Cloche Dome (x: 505, y: 260) -->
+    <g transform="translate(505, 255)">
+      <!-- Pedestal Foot -->
+      <path d="M 16 52 L 34 52 M 25 52 L 25 44" />
+      <!-- Platter -->
+      <path d="M 8 44 L 42 44" />
+      <!-- Glass Dome Cloche -->
+      <path d="M 12 44 C 11 26 39 26 38 44 Z" />
+      <!-- Top Knob -->
+      <circle cx="25" cy="23" r="2.8" class="doodle-fill" />
+      <!-- Mini Tart inside -->
+      <path d="M 18 43 L 32 43 L 30 38 L 20 38 Z" class="doodle-soft" />
+    </g>
+
+    <!-- Whimsical Filler Accents: Sparkles, Mini Stars, Hearts, Pastry Flour Dots -->
+    <!-- Sparkles (4-point stars) -->
+    <g transform="translate(125, 95)">
+      <path d="M 8 0 Q 8 8 0 8 Q 8 8 8 16 Q 8 8 16 8 Q 8 8 8 0 Z" class="doodle-fill" />
+    </g>
+    <g transform="translate(245, 105) scale(0.7)">
+      <path d="M 8 0 Q 8 8 0 8 Q 8 8 8 16 Q 8 8 16 8 Q 8 8 8 0 Z" class="doodle-fill" />
+    </g>
+    <g transform="translate(470, 110) scale(0.75)">
+      <path d="M 8 0 Q 8 8 0 8 Q 8 8 8 16 Q 8 8 16 8 Q 8 8 8 0 Z" class="doodle-fill" />
+    </g>
+    <g transform="translate(115, 225) scale(0.65)">
+      <path d="M 8 0 Q 8 8 0 8 Q 8 8 8 16 Q 8 8 16 8 Q 8 8 8 0 Z" class="doodle-fill" />
+    </g>
+    <g transform="translate(365, 220) scale(0.8)">
+      <path d="M 8 0 Q 8 8 0 8 Q 8 8 8 16 Q 8 8 16 8 Q 8 8 8 0 Z" class="doodle-fill" />
+    </g>
+    <g transform="translate(475, 345) scale(0.7)">
+      <path d="M 8 0 Q 8 8 0 8 Q 8 8 8 16 Q 8 8 16 8 Q 8 8 8 0 Z" class="doodle-fill" />
+    </g>
+
+    <!-- Little 5-point sketch stars (matching reference style) -->
+    <g transform="translate(345, 90) scale(0.65)">
+      <path d="M 12 0 L 15 8 L 24 9 L 17 15 L 19 24 L 12 19 L 5 24 L 7 15 L 0 9 L 9 8 Z" />
+    </g>
+    <g transform="translate(225, 215) scale(0.55)">
+      <path d="M 12 0 L 15 8 L 24 9 L 17 15 L 19 24 L 12 19 L 5 24 L 7 15 L 0 9 L 9 8 Z" />
+    </g>
+    <g transform="translate(95, 350) scale(0.6)">
+      <path d="M 12 0 L 15 8 L 24 9 L 17 15 L 19 24 L 12 19 L 5 24 L 7 15 L 0 9 L 9 8 Z" />
+    </g>
+    <g transform="translate(565, 75) scale(0.6)">
+      <path d="M 12 0 L 15 8 L 24 9 L 17 15 L 19 24 L 12 19 L 5 24 L 7 15 L 0 9 L 9 8 Z" />
+    </g>
+
+    <!-- Little Hearts -->
+    <g transform="translate(130, 160) scale(0.7)">
+      <path d="M 10 3 C 7 0 2 1 2 6 C 2 11 10 16 10 16 C 10 16 18 11 18 6 C 18 1 13 0 10 3 Z" class="doodle-fill" />
+    </g>
+    <g transform="translate(460, 215) scale(0.65)">
+      <path d="M 10 3 C 7 0 2 1 2 6 C 2 11 10 16 10 16 C 10 16 18 11 18 6 C 18 1 13 0 10 3 Z" class="doodle-fill" />
+    </g>
+    <g transform="translate(230, 345) scale(0.65)">
+      <path d="M 10 3 C 7 0 2 1 2 6 C 2 11 10 16 10 16 C 10 16 18 11 18 6 C 18 1 13 0 10 3 Z" class="doodle-fill" />
+    </g>
+
+    <!-- Pastry Flour Dust Clusters -->
+    <circle cx="75" cy="120" r="1" class="doodle-fill" />
+    <circle cx="80" cy="123" r="0.7" class="doodle-fill" />
+    <circle cx="73" cy="125" r="0.8" class="doodle-fill" />
+
+    <circle cx="215" cy="85" r="0.9" class="doodle-fill" />
+    <circle cx="220" cy="88" r="0.7" class="doodle-fill" />
+
+    <circle cx="445" cy="95" r="0.9" class="doodle-fill" />
+    <circle cx="450" cy="98" r="0.7" class="doodle-fill" />
+
+    <circle cx="340" cy="340" r="1" class="doodle-fill" />
+    <circle cx="346" cy="343" r="0.7" class="doodle-fill" />
+
+    <circle cx="555" cy="225" r="0.8" class="doodle-fill" />
+    <circle cx="560" cy="228" r="0.6" class="doodle-fill" />
+
+    <circle cx="150" cy="355" r="0.9" class="doodle-fill" />
+    <circle cx="155" cy="358" r="0.7" class="doodle-fill" />
+
+  </g>
+</svg>
+

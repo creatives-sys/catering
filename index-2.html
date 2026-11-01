@@ -259,13 +259,31 @@
       }
     }
 
-    /* Signature Masterpiece (The Bruce Cake Spotlight) in index-2: Warm Champagne Parchment (#f1ead8) */
+    /* Signature Masterpiece (The Bruce Cake Spotlight) in index-2: Warm Champagne Parchment (#f1ead8) with Artisan Bakery Doodles */
     #signatureSection.spotlight-section,
     .spotlight-section {
       background: #f1ead8 !important;
       background-color: #f1ead8 !important;
       padding: clamp(4rem, 6vw, 5.5rem) 0 !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    #signatureSection::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/images/bakery-doodles-pattern.svg');
+      background-repeat: repeat;
+      background-size: 500px auto;
+      opacity: 0.16;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #signatureSection > .container {
       position: relative;
+      z-index: 1;
     }
 
     #signatureSection .spotlight-info h2 {
@@ -574,13 +592,32 @@
       }
     }
 
-    /* Kew Boutique & Good To Know FAQ Section in index-2: Warm Champagne Parchment (#f1ead8) */
+    /* Kew Boutique & Good To Know FAQ Section in index-2: Warm Champagne Parchment (#f1ead8) with Artisan Bakery Doodles */
     #boutiqueSection.fh-boutique-section,
     .fh-boutique-section {
       background: #f1ead8 !important;
       background-color: #f1ead8 !important;
       border-top: 1px solid rgba(44, 42, 38, 0.08) !important;
       padding: clamp(4.5rem, 7vw, 6.5rem) 0 !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    #boutiqueSection::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/images/bakery-doodles-pattern.svg');
+      background-repeat: repeat;
+      background-size: 500px auto;
+      opacity: 0.16;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #boutiqueSection > .container {
+      position: relative;
+      z-index: 1;
     }
 
     #boutiqueSection .fh-boutique-subhead {
