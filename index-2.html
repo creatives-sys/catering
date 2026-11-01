@@ -55,27 +55,45 @@
     }
 
     .collections-showcase-section .showcase-kicker {
-      color: #242f22 !important;
+      color: rgba(255, 255, 255, 0.85) !important;
       font-weight: 600 !important;
+      letter-spacing: 0.18em !important;
     }
 
     .collections-showcase-section .showcase-title {
-      color: #151814 !important;
+      color: #ffffff !important;
+      font-weight: 350 !important;
+      letter-spacing: 0.12em !important;
     }
 
     .collections-showcase-section .collection-tile-title {
-      color: #151814 !important;
+      color: #ffffff !important;
+      font-weight: 450 !important;
+      letter-spacing: 0.10em !important;
+      transition: opacity 0.2s ease, transform 0.2s ease !important;
+    }
+
+    .collections-showcase-section .collection-tile:hover .collection-tile-title,
+    .collections-showcase-section .collection-tile.active .collection-tile-title {
+      color: #ffffff !important;
+      opacity: 0.92 !important;
     }
 
     .collections-showcase-section .collection-tile-count {
-      color: #2b3628 !important;
-      font-weight: 500 !important;
+      color: rgba(255, 255, 255, 0.78) !important;
+      font-weight: 450 !important;
+      letter-spacing: 0.05em !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .collections-showcase-section .collection-tile:hover .collection-tile-count {
+      color: rgba(255, 255, 255, 0.95) !important;
     }
 
     .collections-showcase-section .collection-tile-media {
       background: #ffffff !important;
-      border: 1px solid rgba(255, 255, 255, 0.45) !important;
-      box-shadow: 0 4px 14px rgba(21, 24, 20, 0.08) !important;
+      border: 1px solid rgba(255, 255, 255, 0.5) !important;
+      box-shadow: 0 4px 16px rgba(21, 24, 20, 0.12) !important;
     }
 
     /* Bottom Scallop Border below Explore by Collection Section (matching reference) */
@@ -171,49 +189,60 @@
     }
 
     .atelier-cinema-section .cinema-overhead-label {
-      color: #242f22 !important;
-      font-weight: 700 !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.18em !important;
     }
 
     .atelier-cinema-section .cinema-title {
-      color: #151814 !important;
+      color: #ffffff !important;
+      font-weight: 350 !important;
+      letter-spacing: 0.08em !important;
     }
 
     .atelier-cinema-section .cinema-quote {
-      color: #242c22 !important;
-      border-left-color: #242f22 !important;
+      color: rgba(255, 255, 255, 0.92) !important;
+      border-left: 2px solid rgba(255, 255, 255, 0.75) !important;
     }
 
     .atelier-cinema-section .cinema-feature-pill {
-      color: #1a2218 !important;
-      font-weight: 500 !important;
+      color: rgba(255, 255, 255, 0.92) !important;
+      font-weight: 450 !important;
     }
 
     .atelier-cinema-section .cinema-feature-dot {
-      background: #242f22 !important;
+      background: #ffffff !important;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.45) !important;
     }
 
     .atelier-cinema-section .open-catering-trigger {
       background: #151814 !important;
       color: #ffffff !important;
-      border-color: #151814 !important;
+      border: 1px solid #151814 !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
     }
 
     .atelier-cinema-section .open-catering-trigger:hover {
-      background: #283027 !important;
+      background: #000000 !important;
       color: #ffffff !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
     }
 
     .atelier-cinema-section .open-pdf-menu-trigger {
-      background: transparent !important;
-      color: #151814 !important;
-      border: 1.5px solid rgba(21, 24, 20, 0.5) !important;
+      background: rgba(255, 255, 255, 0.08) !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.65) !important;
+      backdrop-filter: blur(4px) !important;
+      transition: all 0.25s ease !important;
     }
 
     .atelier-cinema-section .open-pdf-menu-trigger:hover {
       background: #ffffff !important;
       color: #151814 !important;
       border-color: #ffffff !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15) !important;
     }
 
     @media (max-width: 960px) {
@@ -2185,8 +2214,7 @@
             <button class="btn-primary open-catering-trigger" style="display: inline-flex;">
               <span>Enquire For Catering</span>
             </button>
-            <button class="btn-outline-pill open-pdf-menu-trigger"
-              style="background: transparent; color: #151814; border-color: rgba(21, 24, 20, 0.35);">
+            <button class="btn-outline-pill open-pdf-menu-trigger">
               <span>Spring/Summer Menu (PDF)</span>
             </button>
           </div>
