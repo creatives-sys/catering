@@ -389,23 +389,24 @@
     }
 
     #signatureSection .size-pill-btn {
-      background: #ffffff !important;
-      border: 1px solid rgba(58, 71, 54, 0.20) !important;
+      background: #d8ded6 !important;
+      border: 1px solid rgba(58, 71, 54, 0.22) !important;
       border-radius: 12px !important;
       box-shadow: 0 2px 8px rgba(44, 42, 38, 0.04) !important;
       transition: all 0.25s ease !important;
     }
 
     #signatureSection .size-pill-btn:hover {
+      background: #e2e8e0 !important;
       border-color: #3a4736 !important;
       transform: translateY(-2px) !important;
       box-shadow: 0 6px 16px rgba(58, 71, 54, 0.12) !important;
     }
 
     #signatureSection .size-pill-btn.active {
-      background: #ffffff !important;
+      background: var(--fh-primary, #a7b2a3) !important;
       border: 2px solid #3a4736 !important;
-      box-shadow: 0 4px 16px rgba(58, 71, 54, 0.16) !important;
+      box-shadow: 0 4px 16px rgba(58, 71, 54, 0.22) !important;
     }
 
     #signatureSection .size-pill-name {
@@ -413,9 +414,19 @@
       font-weight: 600 !important;
     }
 
+    #signatureSection .size-pill-btn.active .size-pill-name {
+      color: #1e2a1b !important;
+      font-weight: 700 !important;
+    }
+
     #signatureSection .size-pill-serves {
       color: #5d7059 !important;
       font-size: 0.72rem !important;
+    }
+
+    #signatureSection .size-pill-btn.active .size-pill-serves {
+      color: #2e3d2b !important;
+      font-weight: 500 !important;
     }
 
     #signatureSection .size-pill-price {
@@ -424,7 +435,8 @@
     }
 
     #signatureSection .size-pill-btn.active .size-pill-price {
-      color: #3a4736 !important;
+      color: #1e2a1b !important;
+      font-weight: 800 !important;
     }
 
     #signatureSection .plaque-customizer {

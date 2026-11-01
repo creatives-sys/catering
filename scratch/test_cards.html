@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Size Card Colors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f1ead8;
+      font-family: 'Jost', sans-serif;
+      padding: 40px;
+    }
+    .size-pill-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .size-pill-btn {
+      flex: 1;
+      padding: 16px 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .size-pill-name {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .size-pill-serves {
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .size-pill-price {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    /* OPTION A: Selected is #a7b2a3 (primary sage green) */
+    .opt-a .size-pill-btn {
+      background: #d8ded6;
+      border: 1px solid rgba(44, 42, 38, 0.12);
+      color: #263323;
+    }
+    .opt-a .size-pill-btn .size-pill-name { color: #263323; }
+    .opt-a .size-pill-btn .size-pill-serves { color: #556852; }
+    .opt-a .size-pill-btn .size-pill-price { color: #263323; }
+
+    .opt-a .size-pill-btn.active {
+      background: #a7b2a3;
+      border: 2px solid #3a4736;
+      box-shadow: 0 4px 16px rgba(58, 71, 54, 0.20);
+    }
+    .opt-a .size-pill-btn.active .size-pill-name { color: #151814; font-weight: 700; }
+    .opt-a .size-pill-btn.active .size-pill-serves { color: #263323; font-weight: 500; }
+    .opt-a .size-pill-btn.active .size-pill-price { color: #151814; font-weight: 800; }
+
+    /* OPTION B: Selected is #a7b2a3 with deep green text */
+    /* OPTION C: Selected is #3a4736 (deep primary green) with white text */
+    .opt-c .size-pill-btn {
+      background: #d8ded6;
+      border: 1px solid rgba(44, 42, 38, 0.12);
+      color: #3a4736;
+    }
+    .opt-c .size-pill-btn .size-pill-name { color: #3a4736; }
+    .opt-c .size-pill-btn .size-pill-serves { color: #5d7059; }
+    .opt-c .size-pill-btn .size-pill-price { color: #3a4736; }
+
+    .opt-c .size-pill-btn.active {
+      background: #3a4736;
+      border: 2px solid #242f22;
+      color: #ffffff;
+      box-shadow: 0 6px 20px rgba(58, 71, 54, 0.25);
+    }
+    .opt-c .size-pill-btn.active .size-pill-name { color: #ffffff; }
+    .opt-c .size-pill-btn.active .size-pill-serves { color: rgba(255, 255, 255, 0.85); }
+    .opt-c .size-pill-btn.active .size-pill-price { color: #ffffff; }
+  </style>
+</head>
+<body>
+  <h3>Option A: Selected = #a7b2a3 (Primary Sage Green), Non-selected = #d8ded6</h3>
+  <div class="size-pill-row opt-a">
+    <div class="size-pill-btn active">
+      <div class="size-pill-name">6" Petite</div>
+      <div class="size-pill-serves">Serves 7–8</div>
+      <div class="size-pill-price">$109.00</div>
+    </div>
+    <div class="size-pill-btn">
+      <div class="size-pill-name">9" Grand</div>
+      <div class="size-pill-serves">Serves 12–14</div>
+      <div class="size-pill-price">$159.00</div>
+    </div>
+    <div class="size-pill-btn">
+      <div class="size-pill-name">12" Banquet</div>
+      <div class="size-pill-serves">Serves 20–22</div>
+      <div class="size-pill-price">$209.00</div>
+    </div>
+  </div>
+
+  <h3>Option C: Selected = #3a4736 (Dark Primary Green), Non-selected = #d8ded6</h3>
+  <div class="size-pill-row opt-c">
+    <div class="size-pill-btn active">
+      <div class="size-pill-name">6" Petite</div>
+      <div class="size-pill-serves">Serves 7–8</div>
+      <div class="size-pill-price">$109.00</div>
+    </div>
+    <div class="size-pill-btn">
+      <div class="size-pill-name">9" Grand</div>
+      <div class="size-pill-serves">Serves 12–14</div>
+      <div class="size-pill-price">$159.00</div>
+    </div>
+    <div class="size-pill-btn">
+      <div class="size-pill-name">12" Banquet</div>
+      <div class="size-pill-serves">Serves 20–22</div>
+      <div class="size-pill-price">$209.00</div>
+    </div>
+  </div>
+</body>
+</html>
+
