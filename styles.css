@@ -12205,6 +12205,27 @@ iframe {
   display: block;
 }
 
+/* Real Dish Photography Cutout Icons */
+.cat-card-dish-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(20, 30, 20, 0.14));
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.25s ease;
+}
+
+.cat-menu-pill:hover .cat-card-dish-img {
+  transform: scale(1.12);
+  filter: drop-shadow(0 3px 6px rgba(20, 30, 20, 0.20));
+}
+
+.cat-menu-pill.active .cat-card-dish-img {
+  transform: scale(1.08);
+  filter: drop-shadow(0 2px 5px rgba(20, 30, 20, 0.18));
+}
+
 .cat-menu-pill.active .cat-card-icon-wrap {
   background: #ffffff;
   color: #1a1e19;
@@ -12348,6 +12369,11 @@ iframe {
   .cat-card-icon-wrap svg {
     width: 20px;
     height: 20px;
+  }
+
+  .cat-card-dish-img {
+    width: 28px;
+    height: 28px;
   }
 
   .cat-card-name {
