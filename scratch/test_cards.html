@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Test Size Card Colors</title>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Test White Text on Selected Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body {
       background: #f1ead8;
@@ -13,7 +13,8 @@
     .size-pill-row {
       display: flex;
       gap: 16px;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+      max-width: 550px;
     }
     .size-pill-btn {
       flex: 1;
@@ -22,66 +23,68 @@
       text-align: center;
       transition: all 0.2s ease;
       cursor: pointer;
+      background: #d8ded6;
+      border: 1px solid rgba(58, 71, 54, 0.22);
     }
     .size-pill-name {
       font-size: 17px;
       font-weight: 600;
+      color: #3a4736;
       margin-bottom: 4px;
     }
     .size-pill-serves {
       font-size: 12px;
+      color: #5d7059;
       margin-bottom: 6px;
     }
     .size-pill-price {
       font-size: 15px;
       font-weight: 700;
-    }
-
-    /* OPTION A: Selected is #a7b2a3 (primary sage green) */
-    .opt-a .size-pill-btn {
-      background: #d8ded6;
-      border: 1px solid rgba(44, 42, 38, 0.12);
-      color: #263323;
-    }
-    .opt-a .size-pill-btn .size-pill-name { color: #263323; }
-    .opt-a .size-pill-btn .size-pill-serves { color: #556852; }
-    .opt-a .size-pill-btn .size-pill-price { color: #263323; }
-
-    .opt-a .size-pill-btn.active {
-      background: #a7b2a3;
-      border: 2px solid #3a4736;
-      box-shadow: 0 4px 16px rgba(58, 71, 54, 0.20);
-    }
-    .opt-a .size-pill-btn.active .size-pill-name { color: #151814; font-weight: 700; }
-    .opt-a .size-pill-btn.active .size-pill-serves { color: #263323; font-weight: 500; }
-    .opt-a .size-pill-btn.active .size-pill-price { color: #151814; font-weight: 800; }
-
-    /* OPTION B: Selected is #a7b2a3 with deep green text */
-    /* OPTION C: Selected is #3a4736 (deep primary green) with white text */
-    .opt-c .size-pill-btn {
-      background: #d8ded6;
-      border: 1px solid rgba(44, 42, 38, 0.12);
       color: #3a4736;
     }
-    .opt-c .size-pill-btn .size-pill-name { color: #3a4736; }
-    .opt-c .size-pill-btn .size-pill-serves { color: #5d7059; }
-    .opt-c .size-pill-btn .size-pill-price { color: #3a4736; }
 
-    .opt-c .size-pill-btn.active {
-      background: #3a4736;
-      border: 2px solid #242f22;
-      color: #ffffff;
-      box-shadow: 0 6px 20px rgba(58, 71, 54, 0.25);
+    /* Option 1: #a7b2a3 with pure white text */
+    .card-sage.active {
+      background: #a7b2a3 !important;
+      border: 2px solid #3a4736 !important;
+      box-shadow: 0 4px 16px rgba(58, 71, 54, 0.22) !important;
     }
-    .opt-c .size-pill-btn.active .size-pill-name { color: #ffffff; }
-    .opt-c .size-pill-btn.active .size-pill-serves { color: rgba(255, 255, 255, 0.85); }
-    .opt-c .size-pill-btn.active .size-pill-price { color: #ffffff; }
+    .card-sage.active .size-pill-name,
+    .card-sage.active .size-pill-serves,
+    .card-sage.active .size-pill-price {
+      color: #ffffff !important;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Option 2: #52674e (rich primary green) with white text */
+    .card-rich.active {
+      background: #52674e !important;
+      border: 2px solid #3a4736 !important;
+      box-shadow: 0 4px 16px rgba(58, 71, 54, 0.25) !important;
+    }
+    .card-rich.active .size-pill-name,
+    .card-rich.active .size-pill-serves,
+    .card-rich.active .size-pill-price {
+      color: #ffffff !important;
+    }
+
+    /* Option 3: #3a4736 (deep primary green) with white text */
+    .card-dark.active {
+      background: #3a4736 !important;
+      border: 2px solid #273324 !important;
+      box-shadow: 0 4px 18px rgba(58, 71, 54, 0.28) !important;
+    }
+    .card-dark.active .size-pill-name,
+    .card-dark.active .size-pill-serves,
+    .card-dark.active .size-pill-price {
+      color: #ffffff !important;
+    }
   </style>
 </head>
 <body>
-  <h3>Option A: Selected = #a7b2a3 (Primary Sage Green), Non-selected = #d8ded6</h3>
-  <div class="size-pill-row opt-a">
-    <div class="size-pill-btn active">
+  <h3>1. Background #a7b2a3 (--fh-primary) with White Text</h3>
+  <div class="size-pill-row">
+    <div class="size-pill-btn active card-sage">
       <div class="size-pill-name">6" Petite</div>
       <div class="size-pill-serves">Serves 7–8</div>
       <div class="size-pill-price">$109.00</div>
@@ -98,9 +101,9 @@
     </div>
   </div>
 
-  <h3>Option C: Selected = #3a4736 (Dark Primary Green), Non-selected = #d8ded6</h3>
-  <div class="size-pill-row opt-c">
-    <div class="size-pill-btn active">
+  <h3>2. Background #3a4736 (--fh-primary-dark) with White Text</h3>
+  <div class="size-pill-row">
+    <div class="size-pill-btn active card-dark">
       <div class="size-pill-name">6" Petite</div>
       <div class="size-pill-serves">Serves 7–8</div>
       <div class="size-pill-price">$109.00</div>
@@ -118,4 +121,3 @@
   </div>
 </body>
 </html>
-
